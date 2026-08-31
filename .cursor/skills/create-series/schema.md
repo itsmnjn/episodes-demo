@@ -46,7 +46,7 @@ One file: `content/series/{id}/series.json`.
 
 ## Rules
 
-- `durationSeconds` lives on each episode. Integer, minimum 5. No default yet. Episodes in the same series can differ. H3 Max tops out at 15.
+- `durationSeconds` lives on each episode. Integer, minimum 5. Default 10. Episodes in the same series can differ. H3 Max tops out at 15.
 - `id` is the folder name.
 - `episodes` is an object keyed by episode id.
 - Root id is always `0`. Child ids are parent + `a` or `b`.

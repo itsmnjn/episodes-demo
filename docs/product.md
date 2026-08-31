@@ -12,7 +12,7 @@ One short first-person clip. The camera is the hero's eyes. People look into the
 
 The clip ends on a hold, not a fade. Two choices sit on that frozen last frame. Each choice is a verb you can see land in the next second. Tapping one plays the child clip, which was generated from that same last frame, so the cut should feel like the room kept going.
 
-Length is per episode, at least 5 seconds. There is no default yet. The player uses whatever `durationSeconds` is on that episode. Do not show a duration badge.
+Length is per episode, at least 5 seconds, default 10. The player uses whatever `durationSeconds` is on that episode. Do not show a duration badge.
 
 ## What a series is
 
@@ -88,5 +88,4 @@ The Invitation is the first series on the shelf. Harry Potter, Cho Chang and Her
 
 ## Open
 
-- Official default clip length. Unofficial experiments are using 5 seconds.
 - Pause on tap during playback. Fine if it stays out of the way. Do not add a scrubber.

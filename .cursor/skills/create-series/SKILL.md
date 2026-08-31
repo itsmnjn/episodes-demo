@@ -35,7 +35,7 @@ Update `catalog.json` when the series is playable (root video exists). Poster is
 - First-person POV. The camera is the hero's eyes. Describe what is in front of the lens (hands at the bottom of frame, people looking into the camera). Do not write negatives like "do not show the hero's face."
 - Popular IP named in the prompt for likeness. H3 Max has no reference images.
 - Style is otherwise loose. No style-lock object.
-- Clip length is per episode (`durationSeconds` on that episode). Minimum 5 seconds. Default is TBD. Set duration on the API, not in the prompt.
+- Clip length is per episode (`durationSeconds` on that episode). Minimum 5 seconds. Default 10. Set duration on the API, not in the prompt.
 - 9:16 on the root request only. Children inherit it from the parent's last frame. Do not mention aspect ratio or vertical in the prompt.
 
 ## JSON
@@ -110,15 +110,24 @@ Submit with `submit_job`. Poll `check_job`, then `get_job_result`. Download `res
 
 ### Last frame
 
+Extract locally, then upload with the REST script. Do not send the jpg through MCP.
+
 ```bash
 .cursor/skills/create-series/scripts/extract-last-frame.sh \
   content/series/{id}/media/{episodeId}.mp4 \
   content/series/{id}/media/{episodeId}.last.jpg
+
+.cursor/skills/create-series/scripts/upload-to-fal.sh \
+  content/series/{id}/media/{episodeId}.last.jpg
 ```
 
-After a wave, extract and upload every new last frame before the next wave. Last frames are small. Base64 the file and call `upload_file` with `data` + `file_name`. Do not pass `file_path` (hosted MCP rejects it). Keep the local jpg. Children already have `startFrame` pointing at the parent's local path. Use the CDN URL only for the request.
+The script prints a fal CDN `file_url`. That is the child's `image_url`. Keep the local jpg. `startFrame` already points at the parent path on disk.
 
-Write `video` and `lastFrame` into `series.json` as each episode in the wave finishes.
+Hosted fal MCP cannot read `file_path`. Passing the jpg as `upload_file` `data` also fails: a last frame is ~150KB and the base64 blows the tool-call limit. Do not recompress to squeeze it through MCP. REST initiate + PUT is the path that worked for The Invitation.
+
+`FAL_KEY` must be available. The script uses `$FAL_KEY` if set, otherwise the fal-ai Bearer in `~/.cursor/mcp.json`. Do not print the key.
+
+After a wave, extract and upload every new last frame before the next wave. Write `video` and `lastFrame` into `series.json` as each episode in the wave finishes.
 
 ## Episodes
 
@@ -126,7 +135,7 @@ Each episode is one beat that ends on a cliffhanger. Each branch `label` is shor
 
 Depth 3 leaves still get a full clip of their own length. They just have `"branches": []`.
 
-Child prompts start from the parent's last beat and play out the chosen `label`. Keep IP, POV, and the room continuous.
+Child prompts are written as if this is the first clip the model has ever seen. Restate POV, IP, place, and who is in frame. Positive only: write what happens. Quote a line only if someone speaks. Do not refer to a previous video. The model only gets this prompt and the last-frame image. Play out the chosen `label` as action now.
 
 ## Validate
 
