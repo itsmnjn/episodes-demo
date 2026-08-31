@@ -1,6 +1,10 @@
 import Link from "next/link";
-import { loadSeries } from "@/lib/content";
+import { loadCatalog, loadSeries } from "@/lib/content";
 import { Player } from "./player";
+
+export function generateStaticParams() {
+  return loadCatalog().map((card) => ({ seriesId: card.id }));
+}
 
 export default async function WatchPage({
   params,
