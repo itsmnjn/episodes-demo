@@ -1,15 +1,16 @@
 import { promises as fs } from "node:fs";
 import { fal } from "@fal-ai/client";
 import { openrouter } from "@openrouter/ai-sdk-provider";
-import { generateText, Output } from "ai";
-import { z } from "zod";
+import { generateText } from "ai";
 
 const model = openrouter("deepseek/deepseek-v4-flash");
 const FAL_ENDPOINT = "minimax/h3-max/image-to-video";
 
 fal.config({ credentials: process.env.FAL_KEY });
 
-const CHOICE_SYSTEM = `You write the two tappable choices for a branching first-person AI video story. Each episode is a short first-person POV clip that ends frozen on a cliffhanger frame. The two choices sit on that frame.
+// Exported for scripts/bench-suggest-choices.mts, which iterates on this
+// prompt and the reasoning config against live latency.
+export const CHOICE_SYSTEM = `You write the two tappable choices for a branching first-person AI video story. Each episode is a short first-person POV clip that ends frozen on a cliffhanger frame. The two choices sit on that frame.
 
 A choice is a short first-person move: a verb the viewer can see land in the next few seconds of video. Shipped examples: "Take his hand", "Push his hand away", "Ask who is hurt", "Tell him it's a crash".
 
@@ -18,32 +19,45 @@ Rules:
 - Concrete and physical, or a short spoken move ("Ask ...", "Tell him ...").
 - Both choices must be playable from the exact frozen frame the episode ends on.
 - The two choices pull in clearly different directions: one leans in, one pushes back, or they split the scene two ways.
-- Plain text. No trailing punctuation, no quotes, no "I" or "you" prefix, no A/B labels.`;
+- Plain text. No trailing punctuation, no quotes, no "I" or "you" prefix, no A/B labels.
+- Output exactly two lines: the first choice on line one, the second choice on line two. Nothing else.`;
 
+export function choicePrompt(input: {
+  seriesTitle: string;
+  ip: string;
+  episodePrompt: string;
+  takenLabels: string[];
+}): string {
+  const taken =
+    input.takenLabels.length > 0
+      ? `\n\nThe viewer already made these moves from this frame. Both of your choices must be clearly different from every one of them — a different action, not a reworded version:\n${input.takenLabels.map((label) => `- ${label}`).join("\n")}`
+      : "";
+  return `Series: ${input.seriesTitle} (${input.ip}).\n\nThe episode was generated from this prompt. Its last timed block is the frozen frame the viewer is looking at:\n\n${input.episodePrompt}${taken}\n\nWrite the two choices.`;
+}
+
+// Two plain lines instead of structured output: this model only honors a
+// JSON schema while reasoning, and reasoning costs seconds of latency here
+// (see scripts/bench-suggest-choices.mts).
 export async function suggestChoices(input: {
   seriesTitle: string;
   ip: string;
   episodePrompt: string;
   takenLabels: string[];
 }): Promise<[string, string]> {
-  const taken =
-    input.takenLabels.length > 0
-      ? `\n\nThe viewer already made these moves from this frame. Both of your choices must be clearly different from every one of them — a different action, not a reworded version:\n${input.takenLabels.map((label) => `- ${label}`).join("\n")}`
-      : "";
-  const { output } = await generateText({
+  const { text } = await generateText({
     model,
-    output: Output.object({
-      schema: z.object({
-        choices: z.array(z.string().min(1)).length(2),
-      }),
-    }),
     system: CHOICE_SYSTEM,
-    prompt: `Series: ${input.seriesTitle} (${input.ip}).\n\nThe episode was generated from this prompt. Its last timed block is the frozen frame the viewer is looking at:\n\n${input.episodePrompt}${taken}\n\nWrite the two choices.`,
-    // "none" makes DeepSeek v4 flash drop the object wrapper and fail the
-    // schema; "low" keeps structured output reliable and is still fast here.
-    providerOptions: { openrouter: { reasoning: { effort: "low" } } },
+    prompt: choicePrompt(input),
+    providerOptions: { openrouter: { reasoning: { effort: "none" } } },
   });
-  return [output.choices[0].trim(), output.choices[1].trim()];
+  const choices = text
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0);
+  if (choices.length !== 2) {
+    throw new Error(`The choice writer returned ${choices.length} lines.`);
+  }
+  return [choices[0], choices[1]];
 }
 
 const PROMPT_SYSTEM = `You write video-generation prompts for one episode of a branching first-person POV story. The video model (MiniMax H3 Max) receives only your prompt plus one start image: the final frame of the parent episode. It has no memory and no other context. Write the prompt as if this is the first clip the model has ever seen.
