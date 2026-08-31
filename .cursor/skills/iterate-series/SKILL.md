@@ -118,7 +118,7 @@ Write a complete H3 Max prompt as if this is the first clip the model has ever s
 
 The model only gets this text and one last-frame image. It does not get the parent prompt. It does not know the previous video.
 
-Restate first-person POV, the IP, the place, who is in frame, and their clothes. Add a First-frame line of visible facts only. Then the timed blocks. Follow prompting.md.
+Restate first-person POV, the place, who is in frame, and their clothes. If the concept uses an IP, restate it too. Add a First-frame line of visible facts only. Then the timed blocks. Follow prompting.md.
 
 Positive only. Write what is in frame and what happens. Do not write the absence of a thing.
 
@@ -175,7 +175,7 @@ Prompt:
 Adjacent {siblingId}: {siblingLabel}
 ```
 
-If the prompt is missing the POV lock, the place/IP line, who is in frame, or a First-frame line, say that. If the prompt uses relative language or refers to a previous clip, say that. If the prompt names an absence instead of an action, say that. If anyone speaks without a quoted line, or Audio skips a quoted line, say that. If the picked label is the same verb as the adjacent, or the prompt is the same room and beat with different blocking, say that. If the label is blocking and does not answer the last offer or demand, say that. Do not rewrite. Do not write JSON. Do not call fal.
+If the prompt is missing the POV lock, the place line, who is in frame, or a First-frame line, say that. If the concept uses an IP and the prompt does not name it, say that. If the prompt uses relative language or refers to a previous clip, say that. If the prompt names an absence instead of an action, say that. If anyone speaks without a quoted line, or Audio skips a quoted line, say that. If the picked label is the same verb as the adjacent, or the prompt is the same room and beat with different blocking, say that. If the label is blocking and does not answer the last offer or demand, say that. Do not rewrite. Do not write JSON. Do not call fal.
 
 Stop. Wait for the user.
 

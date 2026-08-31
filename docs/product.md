@@ -20,7 +20,7 @@ A full binary tree of those clips. Root is `0`. Left appends `a`, right appends 
 
 Every node in a shipped series already has a video. Baked forks never wait on fal. At a leaf the viewer can keep going: the app suggests two new moves or takes one the viewer types, writes the child prompt from the parent prompt, renders that episode from the held frame, and plays it. Viewer-made paths live in client memory for the demo. They survive restarts and shelf round-trips in the same tab; a refresh starts clean.
 
-The only hard lock across a series is first-person POV. Likeness comes from naming popular IP in the prompt. Style is otherwise loose. The player never says any of that.
+The only hard lock across a series is first-person POV. When a concept uses popular IP, likeness comes from naming it in the prompt; original concepts do not require an IP. Style is otherwise loose. The player never says any of that.
 
 ## Screens
 

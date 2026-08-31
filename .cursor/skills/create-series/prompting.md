@@ -21,7 +21,7 @@ Name clothes, bodies, and the room again. Do not write "the same."
 Every episode, in this order:
 
 1. POV lock: `First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.`
-2. Place and IP: `Photoreal {place from the IP}, {time of day}. {three or four visible things}.`
+2. Place and optional IP: `Photoreal {place}, {time of day}. {three or four visible things}.` If the concept uses a popular IP, name it here for likeness. Original concepts do not need an IP name.
 3. Who is in frame: name or likeness, clothes, where they stand, looking into the lens. Name them in the First-frame line and again in the timed blocks.
 4. Timed blocks that add to that episode's `durationSeconds` (minimum 5).
 5. Audio.

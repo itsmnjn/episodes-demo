@@ -33,7 +33,7 @@ Update `catalog.json` when the series is playable (root video exists). Poster is
 ## Hard locks
 
 - First-person POV. The camera is the hero's eyes. Describe what is in front of the lens (hands at the bottom of frame, people looking into the camera). Do not write negatives like "do not show the hero's face."
-- Popular IP named in the prompt for likeness. H3 Max has no reference images.
+- IP is optional. When the concept uses popular IP, name it in the prompt for likeness. Original concepts rely on concrete visual descriptions. H3 Max has no reference images.
 - Style is otherwise loose. No style-lock object.
 - Clip length is per episode (`durationSeconds` on that episode). Minimum 5 seconds. Default 10. Set duration on the API, not in the prompt.
 - 9:16 on the root request only. Children inherit it from the parent's last frame. Do not mention aspect ratio or vertical in the prompt.
@@ -135,7 +135,7 @@ Each episode is one beat that ends on a cliffhanger. Each branch `label` is shor
 
 Depth 3 leaves still get a full clip of their own length. They just have `"branches": []`.
 
-Child prompts are written as if this is the first clip the model has ever seen. Restate POV, IP, place, and who is in frame. Positive only: write what happens. Quote a line only if someone speaks. Do not refer to a previous video. The model only gets this prompt and the last-frame image. Play out the chosen `label` as action now.
+Child prompts are written as if this is the first clip the model has ever seen. Restate POV, place, who is in frame, and the IP when the concept uses one. Positive only: write what happens. Quote a line only if someone speaks. Do not refer to a previous video. The model only gets this prompt and the last-frame image. Play out the chosen `label` as action now.
 
 ## Validate
 
