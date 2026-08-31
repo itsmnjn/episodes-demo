@@ -14,8 +14,8 @@ The series skill, The Invitation, and the watch app are in. Run `npm run dev`.
 
 ## Create a series
 
-Agents: read `.cursor/skills/create-series/SKILL.md`.
+Agents: grow a series with `.cursor/skills/iterate-series/SKILL.md`. Write artifacts with `.cursor/skills/create-series/SKILL.md`.
 
-That skill plans a full binary tree to depth 3 (15 episodes), writes `content/series/{id}/series.json`, then renders wave by depth on fal MiniMax H3 Max. Root is text-to-video at 9:16. Every child is image-to-video from the parent's last frame.
+`create-series` writes `content/series/{id}/series.json` first, then renders media wave by depth on fal MiniMax H3 Max. Root is text-to-video at 9:16. Every child is image-to-video from the parent's last frame. Why one hop at a time: [docs/series-iteration.md](docs/series-iteration.md).
 
 fal MCP must be connected (`https://mcp.fal.ai/mcp`).

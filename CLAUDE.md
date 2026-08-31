@@ -11,15 +11,16 @@ Branching first-person AI video stories. Watch surface is the product. Series cr
 
 ## Layout
 
-- `.cursor/skills/write-series-draft/` — story tree only (scenes, choices). Approve before generating.
-- `.cursor/skills/create-series/` — prompt, render, validate a series
+- `.cursor/skills/iterate-series/` — walk the tree, spawn one worker per leaf, review, then media waves
+- `.cursor/skills/create-series/` — series.json first, then media by depth
+- `docs/series-iteration.md` — why one hop at a time
 - `content/catalog.json` — Netflix shelf (create when the first series exists)
 - `content/series/{id}/` — `series.json` + `media/`
 
 ## Rules
 
-- Read `.cursor/skills/create-series/SKILL.md` before creating or extending a series.
+- Grow a series with `.cursor/skills/iterate-series/SKILL.md`. Write artifacts with `.cursor/skills/create-series/SKILL.md`.
 - Generate with fal MCP, model `minimax/h3-max` only. Root: `text-to-video`. Children: `image-to-video` from the parent last frame.
-- Write all prompts first. Render wave by depth. Siblings in a wave can run in parallel.
+- Propose, human review, write JSON. Media waits until the tree is settled, then runs per depth in parallel. See `docs/series-iteration.md`.
 - Do not build a create-series form, style locker, or character uploader.
 - `AGENTS.md` is a symlink to this file.

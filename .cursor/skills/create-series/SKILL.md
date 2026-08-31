@@ -1,18 +1,20 @@
 ---
 name: create-series
 description: >-
-  Plans and generates a branching episode series for this demo using fal H3 Max.
-  Writes catalog + series.json, prompts the full tree, then renders wave by depth
-  (text-to-video root, then image-to-video from each parent's last frame).
-  Use when creating a series, generating episodes, baking a tree, seeding the
-  catalog, or extending a series past an existing leaf.
+  Writes series artifacts for this demo: series.json first, then media
+  wave by depth on fal H3 Max. Root is text-to-video. Children are
+  image-to-video from the parent last frame. Use when writing series.json,
+  rendering a depth wave, or seeding the catalog. Growing the tree is
+  iterate-series.
 ---
 
 # Create series
 
-Agent-only. There is no create-series UI. Draft the story first with [write-series-draft](../write-series-draft/SKILL.md). This skill is the render after that draft is approved.
+Agent-only. There is no create-series UI. Artifacts are split. JSON is the tree: prompts, labels, branches. Media is the clips. Settle the whole JSON tree before any fal job. Then render one depth at a time, every episode at that depth in parallel.
 
-Default tree is a full binary tree to depth 3: 15 episodes (`1 + 2 + 4 + 8`). Two branches on every non-leaf. Leaves have empty `branches`.
+Growing the tree is [iterate-series](../iterate-series/SKILL.md). This skill is how to write the files and how to run a media wave.
+
+Default tree is a full binary tree to depth 3: 15 episodes (`1 + 2 + 4 + 8`). Two branches on every non-leaf. Leaves have empty `branches`. A series may ship shallower.
 
 ## Output
 
@@ -36,42 +38,53 @@ Update `catalog.json` when the series is playable (root video exists). Poster is
 - Clip length is per episode (`durationSeconds` on that episode). Minimum 5 seconds. Default is TBD. Set duration on the API, not in the prompt.
 - 9:16 on the root request only. Children inherit it from the parent's last frame. Do not mention aspect ratio or vertical in the prompt.
 
-## Workflow
+## JSON
+
+Write `series.json` as episodes are approved. Do not render. `video` and `lastFrame` stay `""` until that episode's media wave finishes.
+
+On each approved episode:
+
+- Create `content/series/{id}/` if needed.
+- Write that episode's `id`, `depth`, `durationSeconds`, `prompt`, empty `video` / `lastFrame`, and `"branches": []`.
+- Root has no `startFrame`. Every other episode has `startFrame` set to `media/{parentId}.last.jpg` even before that file exists.
+- If this is a child, append one `{ "label", "to" }` on the parent. Do not invent the other fork.
+- Leaves at series depth keep empty `branches`.
+
+Exact field list: [schema.md](schema.md). Prompt shape: [prompting.md](prompting.md).
+
+Do not start media until every expected episode has a prompt and every non-leaf has two branches.
+
+Validate the JSON tree before the first wave:
+
+```
+python .cursor/skills/create-series/scripts/validate-series.py content/series/{id}
+```
+
+Empty media paths are fine. Missing prompts or missing branches are not.
+
+## Media
+
+Do not start until the JSON tree is settled. Never regenerate a finished episode.
 
 Copy and check off:
 
 ```
-- [ ] Premise: IP, title, logline, who the hero is
-- [ ] Plan: all 15 episode beats, durations, and branch labels
-- [ ] Write series.json (prompts filled, media paths set, videos empty until rendered)
 - [ ] Wave 0: text-to-video `0`
-- [ ] Save `0.mp4`, extract + upload `0.last.jpg`
-- [ ] Wave 1: image-to-video `0a`, `0b` in parallel
-- [ ] Wave 2: `0aa` `0ab` `0ba` `0bb` in parallel
-- [ ] Wave 3: eight leaves in parallel
-- [ ] Validate: python .cursor/skills/create-series/scripts/validate-series.py content/series/{id}
+- [ ] Save `0.mp4`, extract + upload `0.last.jpg`, write video + lastFrame
+- [ ] Wave 1: image-to-video every depth-1 episode in parallel
+- [ ] Extract + upload last frames for that wave
+- [ ] Wave 2: every depth-2 episode in parallel
+- [ ] Wave 3: every remaining leaf in parallel
 - [ ] Add or update the catalog entry
 ```
 
-Resume if `series.json` already exists: start at the first depth that is missing a video. Never regenerate a finished parent just to continue.
+A wave is every episode whose `depth` equals the wave index and whose `video` is still empty. Submit every job in that wave in the same turn. Poll them together. Do not wait for one sibling before submitting the next.
 
-Prompts for the whole tree are written before any render. Videos are not. A child cannot start until its parent's last frame exists. Siblings in one wave can run in parallel.
+A child cannot start until its parent's last frame exists on disk and on the fal CDN. That is why waves are by depth, not by episode.
 
-## Plan the tree
+Resume at the first wave that still has an empty `video`. Skip any episode that already has a file.
 
-Each episode is one beat that ends on a cliffhanger. Each branch `label` is short tappable copy and the story seed for the child.
-
-Write every episode's `prompt` and both `label`s first. Then render.
-
-Depth 3 leaves still get a full clip of their own length. They just have `"branches": []`.
-
-## Prompting
-
-Read [prompting.md](prompting.md) before writing prompts. Use that shape for every episode.
-
-Child prompts start from the parent's last-frame situation and play out the chosen `label`. Keep IP, POV, and the room continuous.
-
-## Render
+### fal
 
 Use fal MCP (`user-fal-ai`). Do not pick another model. Inspect schema with `get_model_schema` if anything is unclear.
 
@@ -103,13 +116,17 @@ Submit with `submit_job`. Poll `check_job`, then `get_job_result`. Download `res
   content/series/{id}/media/{episodeId}.last.jpg
 ```
 
-Upload the jpg to fal so the next wave can use it as `image_url`. Last frames are small. Base64 the file and call `upload_file` with `data` + `file_name`. Do not pass `file_path` (hosted MCP rejects it). Keep the local jpg. Set `startFrame` on each child to the parent's local last-frame path, and keep the CDN URL only for the request.
+After a wave, extract and upload every new last frame before the next wave. Last frames are small. Base64 the file and call `upload_file` with `data` + `file_name`. Do not pass `file_path` (hosted MCP rejects it). Keep the local jpg. Children already have `startFrame` pointing at the parent's local path. Use the CDN URL only for the request.
 
-Write `video` and `lastFrame` into `series.json` as you finish each episode.
+Write `video` and `lastFrame` into `series.json` as each episode in the wave finishes.
 
-## Schema
+## Episodes
 
-Exact field list and a filled example: [schema.md](schema.md).
+Each episode is one beat that ends on a cliffhanger. Each branch `label` is short tappable copy and the story seed for the child.
+
+Depth 3 leaves still get a full clip of their own length. They just have `"branches": []`.
+
+Child prompts start from the parent's last beat and play out the chosen `label`. Keep IP, POV, and the room continuous.
 
 ## Validate
 
