@@ -6,7 +6,7 @@ Direction, not description. Timed blocks for pacing. Audio as its own track. Fro
 
 1. POV lock, one line.
 2. Place and IP, a few concrete nouns.
-3. Three timed blocks that add to 10 seconds.
+3. Timed blocks that add to the series `durationSeconds` (minimum 5).
 4. Audio line.
 
 Do not put aspect ratio, vertical, resolution, or duration in the prompt. Do not write negative instructions ("do not show X", "no music", "no cuts"). Say what is in frame instead.
@@ -18,20 +18,20 @@ First-person POV. The camera is the hero's eyes. One continuous handheld take, w
 
 Photoreal {place from the IP}, {time of day}. {three or four visible things}.
 
-[0 to 3 seconds] Looking forward as {action}. {hero's hands if they touch something}.
+[0 to {early} seconds] Looking forward as {action}. {hero's hands if they touch something}.
 
-[3 to 7 seconds] {the beat develops}. {other character looks into the lens}. The hero's hands swing at the bottom of frame.
+[{early} to {mid} seconds] {the beat develops}. {other character looks into the lens}. The hero's hands swing at the bottom of frame.
 
-[7 to 10 seconds] {cliffhanger}. {person or object held in the lens}. End on that beat.
+[{mid} to {durationSeconds} seconds] {cliffhanger}. {person or object held in the lens}. End on that beat.
 
 Audio: {room, foley, voice if anyone speaks}.
 ```
 
-Branch `label`s are the child's `[3 to 7]` / `[7 to 10]` turn. The child's `[0 to 3]` continues from the parent's last frame: same place, same bodies, looking forward out of that still.
+Branch `label`s are the child's middle and last blocks. The child's first block continues from the parent's last frame: same place, same bodies, looking forward out of that still.
 
 ## Example (locked)
 
-This clip worked. Match this density and POV, not the McDonald's plot.
+This 10s clip worked. Match this density and POV, not the length or the McDonald's plot. Scale the timestamps to the series duration.
 
 ```
 First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.

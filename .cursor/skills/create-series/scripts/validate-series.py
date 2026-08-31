@@ -29,8 +29,9 @@ def main() -> None:
 
     if data.get("root") != "0":
         fail("root must be '0'")
-    if data.get("durationSeconds") != 10:
-        fail("durationSeconds must be 10")
+    duration = data.get("durationSeconds")
+    if not isinstance(duration, int) or isinstance(duration, bool) or duration < 5:
+        fail("durationSeconds must be an integer >= 5")
 
     episodes = data.get("episodes")
     if not isinstance(episodes, dict) or "0" not in episodes:
