@@ -6,7 +6,7 @@ import {
   writeEpisodePrompt,
 } from "@/lib/generate";
 
-// Grok's prompt write dominates this route and its latency swings by minutes.
+// The prompt write dominates this route and its latency can swing by minutes.
 export const maxDuration = 300;
 
 export async function POST(

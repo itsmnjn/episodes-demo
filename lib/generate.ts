@@ -1,10 +1,10 @@
 import { promises as fs } from "node:fs";
-import { xai } from "@ai-sdk/xai";
 import { fal } from "@fal-ai/client";
+import { openrouter } from "@openrouter/ai-sdk-provider";
 import { generateText, Output } from "ai";
 import { z } from "zod";
 
-const model = xai("grok-4.6");
+const model = openrouter("deepseek/deepseek-v4-flash");
 const FAL_ENDPOINT = "minimax/h3-max/image-to-video";
 
 fal.config({ credentials: process.env.FAL_KEY });
@@ -39,7 +39,9 @@ export async function suggestChoices(input: {
     }),
     system: CHOICE_SYSTEM,
     prompt: `Series: ${input.seriesTitle} (${input.ip}).\n\nThe episode was generated from this prompt. Its last timed block is the frozen frame the viewer is looking at:\n\n${input.episodePrompt}${taken}\n\nWrite the two choices.`,
-    providerOptions: { xai: { reasoningEffort: "low" } },
+    // "none" makes DeepSeek v4 flash drop the object wrapper and fail the
+    // schema; "low" keeps structured output reliable and is still fast here.
+    providerOptions: { openrouter: { reasoning: { effort: "low" } } },
   });
   return [output.choices[0].trim(), output.choices[1].trim()];
 }
@@ -91,7 +93,7 @@ export async function writeEpisodePrompt(input: {
     model,
     system: PROMPT_SYSTEM,
     prompt: `Series: ${input.seriesTitle} (${input.ip}).\nDuration: ${input.durationSeconds} seconds.\n\nParent episode prompt:\n\n${input.parentPrompt}\n\nThe viewer tapped: "${input.label}"\n\nWrite the child episode's prompt.`,
-    providerOptions: { xai: { reasoningEffort: "low" } },
+    providerOptions: { openrouter: { reasoning: { effort: "none" } } },
   });
   const prompt = text.trim();
   if (!prompt) throw new Error("The prompt writer returned nothing.");
