@@ -6,7 +6,7 @@ Direction, not description. Timed blocks for pacing. Audio as its own track. Fro
 
 1. POV lock, one line.
 2. Place and IP, a few concrete nouns.
-3. Timed blocks that add to the series `durationSeconds` (minimum 5).
+3. Timed blocks that add to that episode's `durationSeconds` (minimum 5).
 4. Audio line.
 
 Do not put aspect ratio, vertical, resolution, or duration in the prompt. Do not write negative instructions ("do not show X", "no music", "no cuts"). Say what is in frame instead.
@@ -31,7 +31,7 @@ Branch `label`s are the child's middle and last blocks. The child's first block 
 
 ## Example (locked)
 
-This 10s clip worked. Match this density and POV, not the length or the McDonald's plot. Scale the timestamps to the series duration.
+This 10s clip worked. Match this density and POV, not the length or the McDonald's plot. Scale the timestamps to that episode's duration.
 
 ```
 First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.

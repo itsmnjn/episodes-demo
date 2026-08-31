@@ -4,10 +4,10 @@ Branching first-person AI video stories. Watch surface is the product. Series cr
 
 ## Product
 
-- Episode: first-person POV clip, cliffhanger, two tappable branches. Length is per series, minimum 5s, default TBD.
+- Episode: first-person POV clip, cliffhanger, two tappable branches. Length is per episode, minimum 5s, default TBD.
 - Series: full binary tree, default depth 3 (15 episodes). Path ids: `0`, `0a`, `0b`, `0aa`, …
 - Style lock is loose. POV is the only hard lock. Use popular IP for likeness. No reference images.
-- Prompts: timed blocks that add to `durationSeconds`, directed audio, what is in frame. No negatives. No aspect ratio, vertical, or duration in the prompt. `9:16` and `duration` are API params.
+- Prompts: timed blocks that add to that episode's `durationSeconds`, directed audio, what is in frame. No negatives. No aspect ratio, vertical, or duration in the prompt. `9:16` and `duration` are API params.
 
 ## Layout
 

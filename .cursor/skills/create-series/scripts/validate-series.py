@@ -29,9 +29,8 @@ def main() -> None:
 
     if data.get("root") != "0":
         fail("root must be '0'")
-    duration = data.get("durationSeconds")
-    if not isinstance(duration, int) or isinstance(duration, bool) or duration < 5:
-        fail("durationSeconds must be an integer >= 5")
+    if "durationSeconds" in data:
+        fail("durationSeconds belongs on each episode, not the series")
 
     episodes = data.get("episodes")
     if not isinstance(episodes, dict) or "0" not in episodes:
@@ -51,6 +50,9 @@ def main() -> None:
             errors.append(f"{eid}: depth should be {depth}")
         if not ep.get("prompt"):
             errors.append(f"{eid}: empty prompt")
+        duration = ep.get("durationSeconds")
+        if not isinstance(duration, int) or isinstance(duration, bool) or duration < 5:
+            errors.append(f"{eid}: durationSeconds must be an integer >= 5")
 
         video = ep.get("video") or ""
         last = ep.get("lastFrame") or ""

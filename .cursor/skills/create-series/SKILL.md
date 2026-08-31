@@ -33,7 +33,7 @@ Update `catalog.json` when the series is playable (root video exists). Poster is
 - First-person POV. The camera is the hero's eyes. Describe what is in front of the lens (hands at the bottom of frame, people looking into the camera). Do not write negatives like "do not show the hero's face."
 - Popular IP named in the prompt for likeness. H3 Max has no reference images.
 - Style is otherwise loose. No style-lock object.
-- Clip length is chosen per series (`durationSeconds`). Minimum 5 seconds. Default is TBD. Set duration on the API, not in the prompt.
+- Clip length is per episode (`durationSeconds` on that episode). Minimum 5 seconds. Default is TBD. Set duration on the API, not in the prompt.
 - 9:16 on the root request only. Children inherit it from the parent's last frame. Do not mention aspect ratio or vertical in the prompt.
 
 ## Workflow
@@ -42,7 +42,7 @@ Copy and check off:
 
 ```
 - [ ] Premise: IP, title, logline, who the hero is
-- [ ] Plan: all 15 episode beats + branch labels
+- [ ] Plan: all 15 episode beats, durations, and branch labels
 - [ ] Write series.json (prompts filled, media paths set, videos empty until rendered)
 - [ ] Wave 0: text-to-video `0`
 - [ ] Save `0.mp4`, extract + upload `0.last.jpg`
@@ -63,7 +63,7 @@ Each episode is one beat that ends on a cliffhanger. Each branch `label` is shor
 
 Write every episode's `prompt` and both `label`s first. Then render.
 
-Depth 3 leaves still get a full clip of that length. They just have `"branches": []`.
+Depth 3 leaves still get a full clip of their own length. They just have `"branches": []`.
 
 ## Prompting
 
@@ -77,7 +77,7 @@ Use fal MCP (`user-fal-ai`). Do not pick another model. Inspect schema with `get
 
 Shared input:
 
-- `duration`: series `durationSeconds` (integer, minimum 5)
+- `duration`: that episode's `durationSeconds` (integer, minimum 5)
 - `resolution`: `"768P"`
 - `prompt_expansion_mode`: `"disabled"`
 

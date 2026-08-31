@@ -12,12 +12,12 @@ One file: `content/series/{id}/series.json`.
   "logline": "You are in the Forest of Death. The scroll is still out of reach.",
   "poster": "media/0.last.jpg",
   "model": "minimax/h3-max",
-  "durationSeconds": 8,
   "root": "0",
   "episodes": {
     "0": {
       "id": "0",
       "depth": 0,
+      "durationSeconds": 8,
       "prompt": "…",
       "video": "media/0.mp4",
       "lastFrame": "media/0.last.jpg",
@@ -29,6 +29,7 @@ One file: `content/series/{id}/series.json`.
     "0a": {
       "id": "0a",
       "depth": 1,
+      "durationSeconds": 6,
       "prompt": "…",
       "startFrame": "media/0.last.jpg",
       "video": "media/0a.mp4",
@@ -44,7 +45,7 @@ One file: `content/series/{id}/series.json`.
 
 ## Rules
 
-- `durationSeconds` is an integer, minimum 5. No default yet. Pick a length for that series and use it on every episode. H3 Max tops out at 15.
+- `durationSeconds` lives on each episode. Integer, minimum 5. No default yet. Episodes in the same series can differ. H3 Max tops out at 15.
 - `id` is the folder name.
 - `episodes` is an object keyed by episode id.
 - Root id is always `0`. Child ids are parent + `a` or `b`.
