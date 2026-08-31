@@ -6,6 +6,13 @@
       "ip": "Harry Potter",
       "logline": "Newly sorted. Cho and Hermione invited you over. Their door is already opening.",
       "poster": "series/the-invitation/media/0.last.jpg"
+    },
+    {
+      "id": "mcdonalds",
+      "title": "McDonald's",
+      "ip": "McDonald's",
+      "logline": "You walk in. She asks what you want.",
+      "poster": "series/mcdonalds/media/0.last.jpg"
     }
   ]
 }
