@@ -1,0 +1,90 @@
+{
+  "id": "the-invitation",
+  "title": "The Invitation",
+  "ip": "Harry Potter",
+  "logline": "Newly sorted. Cho and Hermione invited you over. Their door is already opening.",
+  "poster": "media/0.last.jpg",
+  "model": "minimax/h3-max",
+  "depth": 2,
+  "root": "0",
+  "episodes": {
+    "0": {
+      "id": "0",
+      "depth": 0,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.\n\nPhotoreal Hogwarts girls' dorm at night. Heavy wooden door, stone walls, four-poster beds, floating candles, a trunk with two glasses.\n\n[0 to 3 seconds] Looking forward as the hero's right hand knocks on the closed door. The door swings inward. Cho Chang and Hermione Granger in pajamas fill the doorway and look straight into the lens. Their hands are empty. They each grab a sleeve at the bottom of frame and pull. The camera lurches forward through the doorway with them.\n\n[3 to 7 seconds] They keep pulling the hero into the room. Walk with them, body sway, four-posters sliding past. They shut the door behind the camera. Still holding the sleeves, close, both faces in the lens. Cho Chang says, \"I'm Cho, that's Hermione. We saved you a bed.\" They let go and turn to the trunk.\n\n[7 to 10 seconds] They pick up the two glasses from the trunk and hold them into the lens. Cho Chang's glass is gold and fizzing. Hermione Granger's glass is dark with one spark circling the rim. Both look into the camera. Cho Chang says, \"First sip of the night. Hers, or mine?\" Hold on both faces and the two glasses. End on that beat.\n\nAudio: knock on wood, door hinge, their laughter, footsteps on stone, fire crackle, potion fizz, their voices close.",
+      "video": "media/0.mp4",
+      "lastFrame": "media/0.last.jpg",
+      "branches": [
+        { "label": "Cho's", "to": "0a" },
+        { "label": "Hermione's", "to": "0b" }
+      ]
+    },
+    "0a": {
+      "id": "0a",
+      "depth": 1,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway. Continue from this still: Cho Chang and Hermione Granger in pajamas, close, looking into the lens, holding two glasses forward. Stone wall, lattice window behind them.\n\n[0 to 3 seconds] Looking forward as the hero's right hand reaches up and takes Cho Chang's gold fizzing glass from her fingers. She lets go. The glass rises to the bottom of the lens. The hero tilts it and drinks. Gold fizz at the lip. Cho Chang watches the lens, delighted.\n\n[3 to 7 seconds] The hero lowers the empty glass. Both arms go around Cho Chang and Hermione Granger and pull them into the lens. Their faces come in close. Cho laughs into the camera. Hermione hugs back, her dark glass still in her hand at the side of frame.\n\n[7 to 10 seconds] Hold the group hug. Both girls' faces fill the lens, close, smiling, looking in. End on that beat.\n\nAudio: glass handoff, swallow, fizz, their laughter, fabric, fire crackle.",
+      "startFrame": "media/0.last.jpg",
+      "video": "media/0a.mp4",
+      "lastFrame": "media/0a.last.jpg",
+      "branches": [
+        { "label": "Tackle them into the pillows", "to": "0aa" },
+        { "label": "Snatch a pillow and swing at both", "to": "0ab" }
+      ]
+    },
+    "0b": {
+      "id": "0b",
+      "depth": 1,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway. Continue from this still: Cho Chang and Hermione Granger in pajamas, close, looking into the lens, holding two glasses forward. Stone wall, lattice window behind them.\n\n[0 to 3 seconds] Looking forward as the hero's right hand reaches up and takes Hermione Granger's dark glass from her fingers. She lets go. The glass rises to the bottom of the lens. The hero tilts it and drinks. A spark runs from the rim down the throat. Hermione leans in, checking the hero's face, pleased.\n\n[3 to 7 seconds] The hero lowers the glass. A warm rush hits. Hermione stays close in the lens. Cho Chang leans in from the left and says, \"Oh he felt that.\" The hero's wand is already in his left hand at the bottom of frame.\n\n[7 to 10 seconds] Hold on both girls looking into the camera, close, waiting for what the wand does. End on that beat.\n\nAudio: glass handoff, swallow, a low magical hum, their voices close, fire crackle.",
+      "startFrame": "media/0.last.jpg",
+      "video": "media/0b.mp4",
+      "lastFrame": "media/0b.last.jpg",
+      "branches": [
+        { "label": "Tickle both of them", "to": "0ba" },
+        { "label": "Give them both ridiculous hair", "to": "0bb" }
+      ]
+    },
+    "0aa": {
+      "id": "0aa",
+      "depth": 2,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace then a fall. Continue from this still: Cho Chang and Hermione Granger in pajamas, faces close in a group hug, looking into the lens.\n\n[0 to 3 seconds] Looking forward as the hero's arms stay around both of them and drive the hug backward toward the four-poster. Their faces stay in the lens. Feet shuffle. The bed hits the backs of their legs.\n\n[3 to 7 seconds] All three go down onto the pillows. The camera drops with them. White pillows fill the sides of frame. Feathers burst past the lens. Cho Chang laughs straight into the camera from above. Hermione Granger's hair crosses the frame as they roll.\n\n[7 to 10 seconds] They pin the hero. Both girls lean over the lens, faces filling the frame, laughing, hands on the hero's chest at the bottom of frame. Hold on both faces over the camera. End on that beat.\n\nAudio: shuffle, impact on pillows, feathers, their laughter, bed creak.",
+      "startFrame": "media/0a.last.jpg",
+      "video": "media/0aa.mp4",
+      "lastFrame": "media/0aa.last.jpg",
+      "branches": []
+    },
+    "0ab": {
+      "id": "0ab",
+      "depth": 2,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. Stay close. One continuous handheld take. Continue from this still: Cho Chang and Hermione Granger in pajamas, faces close in a group hug, looking into the lens.\n\n[0 to 3 seconds] Looking forward as the hero's right hand reaches past Hermione Granger and snatches a white pillow from the bed behind her. The pillow comes up into the bottom of the lens. The hero swings it at Cho Chang, then at Hermione. Soft hit. They break the hug, startled, laughing.\n\n[3 to 7 seconds] Cho Chang grabs a pillow and swings it at the lens. The pillow fills the frame and bursts. Feathers fly past the camera. Hermione Granger swings hers next. Both stay close, coming at the hero, delighted.\n\n[7 to 10 seconds] Hold on both girls mid-swing, pillows filling the sides of frame, feathers in the air, wrecked with laughter, looking into the camera. End on that beat.\n\nAudio: pillow whoosh, soft hits, feathers, their shouts and laughter.",
+      "startFrame": "media/0a.last.jpg",
+      "video": "media/0ab.mp4",
+      "lastFrame": "media/0ab.last.jpg",
+      "branches": []
+    },
+    "0ba": {
+      "id": "0ba",
+      "depth": 2,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take. Continue from this still: Cho Chang and Hermione Granger in pajamas, faces close, looking into the lens. Cho still holds her gold glass. The hero's wand is in his left hand at the bottom of frame, tip glowing.\n\n[0 to 3 seconds] Looking forward as the hero's left hand lifts the wand into the lower third of the lens and flicks it at both of them. Gold sparks leave the tip and hit Cho Chang, then Hermione Granger. They flinch, then the charm lands.\n\n[3 to 7 seconds] Cho Chang folds toward the lens, laughing too hard to stand, hands on her ribs. Hermione Granger tries to raise her own wand and cannot finish the word. Gold sparks keep popping on their pajamas. They grab at the hero's sleeves at the bottom of frame.\n\n[7 to 10 seconds] Both girls collapsed together, grabbing toward the lens, still laughing, the charm still going. Hold on both faces close, helpless. End on that beat.\n\nAudio: wand snap, gold spark pops, their helpless laughter, fabric, fire crackle.",
+      "startFrame": "media/0b.last.jpg",
+      "video": "media/0ba.mp4",
+      "lastFrame": "media/0ba.last.jpg",
+      "branches": []
+    },
+    "0bb": {
+      "id": "0bb",
+      "depth": 2,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take. Continue from this still: Cho Chang and Hermione Granger in pajamas, faces close, looking into the lens. Cho still holds her gold glass. The hero's wand is in his left hand at the bottom of frame, tip glowing.\n\n[0 to 3 seconds] Looking forward as the hero's left hand lifts the wand into the lower third of the lens and flicks it at Cho Chang, then at Hermione Granger. Cho Chang's hair blasts straight up into a ridiculous tall tower. Hermione Granger's hair turns bright pink and braids itself into a tall spiral.\n\n[3 to 7 seconds] They see each other first. Shock, then they both look into the lens. Cho Chang is already raising her wand toward the camera. Hermione Granger smiles like the hero is about to pay for this, her wand coming up too.\n\n[7 to 10 seconds] Hold on both faces looking into the camera, ridiculous hair filling the top of frame, both wands pointed at the lens. End on that beat.\n\nAudio: wand snap, hair whoosh, their shocked laugh, fire crackle.",
+      "startFrame": "media/0b.last.jpg",
+      "video": "media/0bb.mp4",
+      "lastFrame": "media/0bb.last.jpg",
+      "branches": []
+    }
+  }
+}

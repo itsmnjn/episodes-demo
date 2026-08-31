@@ -6,9 +6,11 @@ An episode is a short first-person clip that ends on a cliffhanger with two choi
 
 This repo is the watch surface plus the agent skill that bakes series. There is no create-series UI.
 
+User-facing spec: [docs/product.md](docs/product.md).
+
 ## Status
 
-The series creator skill is in. The Netflix-style player is not.
+The series skill, The Invitation, and the watch app are in. Run `npm run dev`.
 
 ## Create a series
 
