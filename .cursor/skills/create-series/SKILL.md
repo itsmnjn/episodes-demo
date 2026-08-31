@@ -10,7 +10,7 @@ description: >-
 
 # Create series
 
-Agent-only. There is no create-series UI. You write the tree and render it into `content/`.
+Agent-only. There is no create-series UI. Draft the story first with [write-series-draft](../write-series-draft/SKILL.md). This skill is the render after that draft is approved.
 
 Default tree is a full binary tree to depth 3: 15 episodes (`1 + 2 + 4 + 8`). Two branches on every non-leaf. Leaves have empty `branches`.
 

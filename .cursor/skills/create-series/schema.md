@@ -12,6 +12,7 @@ One file: `content/series/{id}/series.json`.
   "logline": "You are in the Forest of Death. The scroll is still out of reach.",
   "poster": "media/0.last.jpg",
   "model": "minimax/h3-max",
+  "depth": 3,
   "root": "0",
   "episodes": {
     "0": {
@@ -51,7 +52,7 @@ One file: `content/series/{id}/series.json`.
 - Root id is always `0`. Child ids are parent + `a` or `b`.
 - `depth` is `len(id) - 1` (`0` is 0, `0a` is 1, `0aaa` is 3).
 - Non-leaves have exactly two branches, `a` then `b`, `to` matching the child id.
-- Leaves (`depth === 3` on a default series) have `"branches": []`.
+- Series `depth` is how many letters a leaf id has after `0`. Default 3. Leaves have `"branches": []`.
 - Root has no `startFrame`. Every other episode has `startFrame` equal to the parent's `lastFrame`.
 - `video` / `lastFrame` are repo-relative paths under that series folder. Empty string until the file exists.
 - `prompt` is the exact string sent to H3 Max.

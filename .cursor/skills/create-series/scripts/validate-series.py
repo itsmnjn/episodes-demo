@@ -31,6 +31,9 @@ def main() -> None:
         fail("root must be '0'")
     if "durationSeconds" in data:
         fail("durationSeconds belongs on each episode, not the series")
+    max_depth = data.get("depth", 3)
+    if not isinstance(max_depth, int) or isinstance(max_depth, bool) or max_depth < 1:
+        fail("depth must be an integer >= 1")
 
     episodes = data.get("episodes")
     if not isinstance(episodes, dict) or "0" not in episodes:
@@ -75,7 +78,7 @@ def main() -> None:
             errors.append(f"{eid}: branches must be a list")
             return
 
-        is_leaf = depth >= 3
+        is_leaf = depth >= max_depth
         if is_leaf:
             if branches:
                 errors.append(f"{eid}: leaf must have empty branches")
@@ -83,7 +86,7 @@ def main() -> None:
         if len(branches) != 2:
             errors.append(f"{eid}: expected 2 branches")
             return
-        for letter, branch in zip("ab", branches, strict=True):
+        for letter, branch in zip("ab", branches):
             child = eid + letter
             if branch.get("to") != child:
                 errors.append(f"{eid}: branch {letter} should go to {child}")
@@ -93,7 +96,7 @@ def main() -> None:
 
     check_episode("0")
 
-    extra = set(episodes) - expected_ids()
+    extra = set(episodes) - expected_ids(max_depth)
     if extra:
         errors.append(f"unexpected episode ids: {sorted(extra)}")
 
@@ -105,10 +108,10 @@ def main() -> None:
     print(f"ok: {series_id} ({len(episodes)} episodes)")
 
 
-def expected_ids() -> set[str]:
+def expected_ids(max_depth: int) -> set[str]:
     ids = {"0"}
     frontier = ["0"]
-    for _ in range(3):
+    for _ in range(max_depth):
         nxt = []
         for eid in frontier:
             nxt.extend([eid + "a", eid + "b"])

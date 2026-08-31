@@ -1,6 +1,6 @@
 # Episodes demo
 
-Branching first-person AI video stories. Watch surface is the product. Series creation is an agent skill, not UI.
+Branching first-person AI video stories. Watch surface is the product. Series creation is an agent skill, not UI. User-facing spec: [docs/product.md](docs/product.md).
 
 ## Product
 
@@ -11,7 +11,8 @@ Branching first-person AI video stories. Watch surface is the product. Series cr
 
 ## Layout
 
-- `.cursor/skills/create-series/` — plan, prompt, render, validate a series
+- `.cursor/skills/write-series-draft/` — story tree only (scenes, choices). Approve before generating.
+- `.cursor/skills/create-series/` — prompt, render, validate a series
 - `content/catalog.json` — Netflix shelf (create when the first series exists)
 - `content/series/{id}/` — `series.json` + `media/`
 
