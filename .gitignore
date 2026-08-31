@@ -6,3 +6,7 @@ node_modules/
 *.log
 __pycache__/
 *.py[cod]
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
