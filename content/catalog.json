@@ -13,6 +13,13 @@
       "ip": "McDonald's",
       "logline": "You walk in. She asks what you want.",
       "poster": "series/mcdonalds/media/0.last.jpg"
+    },
+    {
+      "id": "wacky-street",
+      "title": "Wacky Street",
+      "ip": "Original",
+      "logline": "You walk down the street. Something weird is always in the way.",
+      "poster": "series/wacky-street/media/0.last.jpg"
     }
   ]
 }
