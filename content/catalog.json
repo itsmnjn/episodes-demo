@@ -20,6 +20,13 @@
       "ip": "Original",
       "logline": "You walk down the street. Something weird is always in the way.",
       "poster": "series/wacky-street/media/0.last.jpg"
+    },
+    {
+      "id": "tokyo-wild-encounters",
+      "title": "Tokyo Wild Encounters",
+      "ip": "Original",
+      "logline": "Walking through neon Tokyo, every stranger turns the street into a surreal confrontation.",
+      "poster": "series/tokyo-wild-encounters/media/0.last.jpg"
     }
   ]
 }

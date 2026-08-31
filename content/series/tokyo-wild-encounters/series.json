@@ -1,0 +1,108 @@
+{
+  "id": "tokyo-wild-encounters",
+  "title": "Tokyo Wild Encounters",
+  "ip": "Original",
+  "logline": "Walking through neon Tokyo, every stranger turns the street into a surreal confrontation.",
+  "poster": "media/0.last.jpg",
+  "model": "minimax/h3-max",
+  "depth": 2,
+  "root": "0",
+  "episodes": {
+    "0": {
+      "id": "0",
+      "depth": 0,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.\n\nPhotoreal Akihabara, Tokyo, neon-lit night. Animated billboards, glowing maid-cafe awnings, crowded arcades, and capsule-toy machines.\n\n[0 to 3 seconds] Looking forward as the hero walks along the packed sidewalk beneath pulsing signs. The hero's hands swing at the bottom of frame. Pedestrians part around a tiny wrestling ring painted across the pavement.\n\n[3 to 7 seconds] Walk toward the street ring. A cheerful maid-cafe girl in a black-and-white frilled dress raises a pink foam mallet inside it. A muscular yakuza in a burgundy suit rolls up his sleeves beside her. A silver-haired catgirl referee in a striped shirt and furry cat ears bounds between them, then looks straight into the lens. The hero's hands rise at the bottom of frame.\n\n[7 to 10 seconds] The silver-haired catgirl referee presents two glowing arcade buttons, pink beneath the maid-cafe girl and red beneath the yakuza. She points both paw-gloved hands at them and says, \"Choose your challenger.\" The maid-cafe girl and the yakuza lean toward the camera, staring into the lens. End on that beat.\n\nAudio: Catgirl referee, close and clear: \"Choose your challenger.\" Arcade jingles, pedestrian chatter, distant traffic, neon transformer hum, shoes on pavement, foam mallet squeak.",
+      "video": "media/0.mp4",
+      "lastFrame": "media/0.last.jpg",
+      "branches": [
+        {
+          "label": "Challenge the maid",
+          "to": "0a"
+        },
+        {
+          "label": "I press the red button",
+          "to": "0b"
+        }
+      ]
+    },
+    "0a": {
+      "id": "0a",
+      "depth": 1,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.\n\nPhotoreal Akihabara, Tokyo, neon-lit night. Animated billboards, glowing maid-cafe awnings, crowded arcades, and a tiny wrestling ring painted across the pavement.\nFirst frame: A silver-haired catgirl referee in a striped shirt, furry cat ears, and paw gloves presents two glowing arcade buttons. A cheerful maid-cafe girl in a black-and-white frilled dress grips a pink foam mallet beside the pink button. A muscular yakuza in a burgundy suit stands beside the red button. All three lean toward the camera and look into the lens.\n\n[0 to 3 seconds] Looking forward at the maid-cafe girl in her black-and-white frilled dress inside the street ring. The hero's right hand reaches down and slaps the glowing pink button. Pink lights race around the painted ring.\n\n[3 to 7 seconds] The hero challenges the maid by stepping into the ring and raising both hands. The maid-cafe girl grins into the lens, twirls her pink foam mallet overhead, and says, \"Welcome home, challenger!\"\n\n[7 to 10 seconds] The maid-cafe girl swings the pink foam mallet into the pavement. A towering swirl of pink heart-shaped smoke erupts around her, and a giant armored silhouette rises inside the glowing cloud behind her. She points the mallet into the lens. End on that beat.\n\nAudio: Maid-cafe girl, close and clear: \"Welcome home, challenger!\" Arcade jingles, pedestrian cheers, traffic, shoes on pavement, button chime, foam mallet whoosh, booming impact, magical sparkle crackle.",
+      "startFrame": "media/0.last.jpg",
+      "video": "media/0a.mp4",
+      "lastFrame": "media/0a.last.jpg",
+      "branches": [
+        {
+          "label": "Snatch the pink mallet",
+          "to": "0aa"
+        },
+        {
+          "label": "Charge into the heart-smoke",
+          "to": "0ab"
+        }
+      ]
+    },
+    "0b": {
+      "id": "0b",
+      "depth": 1,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.\n\nPhotoreal Akihabara, Tokyo, neon-lit night. Animated billboards, glowing maid-cafe awnings, crowded arcades, and a tiny wrestling ring painted across the pavement.\nFirst frame: A silver-haired catgirl referee in a striped shirt, furry cat ears, and paw gloves stands inside the street ring, presenting a pink glowing arcade button beneath a maid-cafe girl in a black-and-white frilled dress and a red glowing arcade button beneath a muscular yakuza in a burgundy suit; all three lean toward the lens.\n\n[0 to 3 seconds] Looking forward at the silver-haired catgirl referee between the maid-cafe girl and the yakuza inside the street ring. The hero's hands rise toward the two glowing arcade buttons.\n\n[3 to 7 seconds] The hero's right hand presses the red button. Red bulbs race around the ring as the muscular yakuza tears open his burgundy suit jacket, revealing a glittering gold karaoke vest, and snaps a jeweled microphone toward the lens.\n\n[7 to 10 seconds] The yakuza strides close, looks straight into the lens, and says, \"Sing for your life.\" He thrusts the jeweled microphone into the center of frame while the catgirl referee raises both paw-gloved hands. End on that beat.\n\nAudio: Yakuza, close and clear: \"Sing for your life.\" Arcade jingles, button click, electric bell, pedestrian cheers, distant traffic, shoes on pavement, microphone chime.",
+      "startFrame": "media/0.last.jpg",
+      "video": "media/0b.mp4",
+      "lastFrame": "media/0b.last.jpg",
+      "branches": [
+        {
+          "label": "Sing a maid-cafe anthem",
+          "to": "0ba"
+        },
+        {
+          "label": "Snatch a taiko drum and pound the beat",
+          "to": "0bb"
+        }
+      ]
+    },
+    "0aa": {
+      "id": "0aa",
+      "depth": 2,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.\n\nPhotoreal Akihabara, Tokyo, neon-lit night. Animated billboards, glowing maid-cafe awnings, crowded arcades, and a tiny wrestling ring painted across the pavement.\nFirst frame: A cheerful maid-cafe girl in a black-and-white frilled dress points a pink foam mallet into the lens. Pink heart-shaped smoke towers around her, with a giant armored silhouette rising inside the glowing cloud behind her.\n\n[0 to 3 seconds] Looking forward at the maid-cafe girl in her black-and-white frilled dress inside the street ring. The hero's right hand grabs the pink foam mallet near its head while the left hand catches its handle. She braces both boots on the painted pavement and pulls toward the lens.\n\n[3 to 7 seconds] The hero snatches the pink mallet free and lifts it across the bottom of frame. The maid-cafe girl spins backward through the pink heart-shaped smoke. A silver-haired catgirl referee in a striped shirt, furry cat ears, and paw gloves bounds into the ring, looks into the lens, and says, \"That mallet chooses its champion!\"\n\n[7 to 10 seconds] The pink foam mallet flashes in the hero's hands and expands into a huge glowing battle hammer. The armored silhouette steps out of the heart-shaped smoke as a muscular yakuza in ornate pink armor over a burgundy suit, looming over the ring and reaching toward the lens. End on that beat.\n\nAudio: Catgirl referee, close and clear: \"That mallet chooses its champion!\" Arcade jingles, pedestrian cheers, traffic, shoes scraping pavement, fabric rustle, foam squeak, magical sparkle crackle, rising energy hum, heavy armored footfall.",
+      "startFrame": "media/0a.last.jpg",
+      "video": "media/0aa.mp4",
+      "lastFrame": "media/0aa.last.jpg",
+      "branches": []
+    },
+    "0ab": {
+      "id": "0ab",
+      "depth": 2,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.\n\nPhotoreal Akihabara, Tokyo, neon-lit night. Animated billboards, glowing maid-cafe awnings, crowded arcades, and a tiny wrestling ring painted across the pavement.\nFirst frame: A cheerful maid-cafe girl in a black-and-white frilled dress points a pink foam mallet into the lens. Towering pink heart-shaped smoke surrounds her, with a giant armored silhouette rising inside the glowing cloud.\n\n[0 to 3 seconds] Looking forward at the maid-cafe girl in her black-and-white frilled dress as she points her pink foam mallet into the lens. The hero raises both hands and steps toward the towering heart-shaped smoke. The armored silhouette fills the center of the glowing cloud.\n\n[3 to 7 seconds] The hero charges into the heart-shaped smoke with both forearms visible at the bottom of frame. Pink hearts whirl past the camera. The hero pushes through them and reaches toward the giant armored silhouette.\n\n[7 to 10 seconds] The smoke parts around a huge catgirl knight in glittering pink samurai armor, furry ears poking through her horned helmet. She catches the hero's wrists in armored paw gauntlets, leans into the lens, and says, \"You found the boss battle.\" End on that beat.\n\nAudio: Catgirl knight, close and clear: \"You found the boss battle.\" Arcade jingles, pedestrian cheers, Tokyo traffic, running shoes on pavement, swirling magical crackle, armor clanks, gauntlets snapping around the hero's wrists.",
+      "startFrame": "media/0a.last.jpg",
+      "video": "media/0ab.mp4",
+      "lastFrame": "media/0ab.last.jpg",
+      "branches": []
+    },
+    "0ba": {
+      "id": "0ba",
+      "depth": 2,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.\n\nPhotoreal Akihabara, Tokyo, neon-lit night. Animated billboards, glowing maid-cafe awnings, crowded arcades, and a tiny wrestling ring painted across the pavement.\nFirst frame: A muscular yakuza in a burgundy suit and glittering gold karaoke vest leans close and thrusts a jeweled microphone toward the lens while a silver-haired catgirl referee in a striped shirt, furry cat ears, and paw gloves raises both hands inside the street ring; a maid-cafe girl in a black-and-white frilled dress stands beside them beneath glowing arcade signs.\n\n[0 to 3 seconds] Looking forward at the muscular yakuza in his open burgundy suit and glittering gold karaoke vest as the hero's right hand grips the jeweled microphone. The silver-haired catgirl referee pumps her paw-gloved hands overhead, and the maid-cafe girl steps onto the painted center mark.\n\n[3 to 7 seconds] The hero raises the jeweled microphone and sings, \"Welcome home, electric hearts!\" The maid-cafe girl in the black-and-white frilled dress leads a bouncy anthem dance, pointing into the lens as the yakuza claps to the rhythm.\n\n[7 to 10 seconds] The hero sings, \"Akihabara, light up the night!\" Neon bulbs surge around the ring, the catgirl referee strikes a paw-gloved bell, and the maid-cafe girl throws both arms skyward as gold streamers burst toward the lens. End on the jeweled microphone framed by their triumphant faces.\n\nAudio: Hero, close and clear: \"Welcome home, electric hearts!\" Hero, close and clear: \"Akihabara, light up the night!\" Upbeat maid-cafe pop backing track, rhythmic clapping, arcade jingles, ringing bell, streamer pop, pedestrian cheers, distant traffic.",
+      "startFrame": "media/0b.last.jpg",
+      "video": "media/0ba.mp4",
+      "lastFrame": "media/0ba.last.jpg",
+      "branches": []
+    },
+    "0bb": {
+      "id": "0bb",
+      "depth": 2,
+      "durationSeconds": 10,
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.\n\nPhotoreal Akihabara, Tokyo, neon-lit night. Animated billboards, glowing maid-cafe awnings, crowded arcades, and a tiny wrestling ring painted across the pavement.\nFirst frame: A muscular yakuza in an open burgundy suit and glittering gold karaoke vest stands close, thrusting a jeweled microphone into the center of frame, while a silver-haired catgirl referee in a striped shirt, furry cat ears, and paw gloves raises both hands inside the street ring.\n\n[0 to 3 seconds] Looking forward at the muscular yakuza in his open burgundy suit and glittering gold karaoke vest as he aims the jeweled microphone toward the lens. The silver-haired catgirl referee lowers one paw glove and points toward a red lacquered taiko drum carried into the ring by a maid-cafe girl in a black-and-white frilled dress.\n\n[3 to 7 seconds] The hero's hands snatch the red lacquered taiko drum from the maid-cafe girl, hook its strap across the bottom of frame, seize two wooden drumsticks, and pound a fast thunderous beat. The yakuza bobs his shoulders to the rhythm while the catgirl referee pumps both paw-gloved fists overhead.\n\n[7 to 10 seconds] The hero pounds one huge final strike. Red bulbs flare around the ring, the yakuza raises the jeweled microphone like a trophy, and the catgirl referee springs toward the lens with glowing furry ears and both paw gloves spread wide. End on her airborne pounce filling the frame.\n\nAudio: Deep taiko strikes accelerating into a thunderous final boom, arcade jingles, electric bell, pedestrian cheers, distant traffic, shoes on pavement, microphone chime.",
+      "startFrame": "media/0b.last.jpg",
+      "video": "media/0bb.mp4",
+      "lastFrame": "media/0bb.last.jpg",
+      "branches": []
+    }
+  }
+}
