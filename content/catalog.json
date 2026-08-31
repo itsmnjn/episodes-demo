@@ -20,6 +20,13 @@
       "ip": "Original",
       "logline": "You walk down the street. Something weird is always in the way.",
       "poster": "series/wacky-street/media/0.last.jpg"
+    },
+    {
+      "id": "the-shore",
+      "title": "The Shore",
+      "ip": "Lost",
+      "logline": "You wake on a deserted beach at midday. A stranger is already waiting.",
+      "poster": "series/the-shore/media/0.last.jpg"
     }
   ]
 }
