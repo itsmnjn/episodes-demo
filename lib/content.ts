@@ -108,6 +108,56 @@ export function loadCatalog(): CatalogCard[] {
   return cards;
 }
 
+export type EpisodeSource = {
+  id: EpisodeId;
+  prompt: string;
+  durationSeconds: number;
+  lastFramePath: string | null;
+  childIds: EpisodeId[];
+};
+
+export type SeriesSource = {
+  id: SeriesId;
+  title: string;
+  ip: string;
+  episodes: Record<EpisodeId, EpisodeSource>;
+};
+
+export function loadSeriesSource(id: SeriesId): SeriesSource | null {
+  const file = path.join(contentRoot, "series", id, "series.json");
+  if (!existsSync(file)) return null;
+  const raw = JSON.parse(readFileSync(file, "utf8")) as unknown;
+  const rec = asRecord(raw);
+  if (!rec || typeof rec.title !== "string" || !asRecord(rec.episodes)) {
+    return null;
+  }
+  const episodes: Record<EpisodeId, EpisodeSource> = {};
+  for (const [key, value] of Object.entries(asRecord(rec.episodes)!)) {
+    const episode = asRecord(value);
+    if (!episode || typeof episode.prompt !== "string") continue;
+    const lastFrame =
+      typeof episode.lastFrame === "string" && episode.lastFrame.length > 0
+        ? path.join(contentRoot, "series", id, episode.lastFrame)
+        : null;
+    episodes[key] = {
+      id: key,
+      prompt: episode.prompt,
+      durationSeconds:
+        typeof episode.durationSeconds === "number"
+          ? episode.durationSeconds
+          : 10,
+      lastFramePath: lastFrame && existsSync(lastFrame) ? lastFrame : null,
+      childIds: parseBranches(episode.branches).map((branch) => branch.to),
+    };
+  }
+  return {
+    id,
+    title: rec.title,
+    ip: typeof rec.ip === "string" ? rec.ip : "",
+    episodes,
+  };
+}
+
 export function loadSeries(id: SeriesId): Series | null {
   const file = path.join(contentRoot, "series", id, "series.json");
   if (!existsSync(file)) return null;

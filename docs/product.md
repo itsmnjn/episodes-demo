@@ -18,7 +18,7 @@ Length is per episode, at least 5 seconds, default 10. The player uses whatever 
 
 A full binary tree of those clips. Root is `0`. Left appends `a`, right appends `b`. Default depth is 3 (15 clips). A series may ship shallower. The Invitation is depth 2 (7 clips).
 
-Every node in a shipped series already has a video. The demo does not generate on tap and does not wait on fal. Empty nodes and a "this path is being made" wait are Mage work, not this build.
+Every node in a shipped series already has a video. Baked forks never wait on fal. At a leaf the viewer can keep going: the app suggests two new moves or takes one the viewer types, writes the child prompt from the parent prompt, renders that episode from the held frame, and plays it. Viewer-made paths live in client memory for the demo. They survive restarts and shelf round-trips in the same tab; a refresh starts clean.
 
 The only hard lock across a series is first-person POV. Likeness comes from naming popular IP in the prompt. Style is otherwise loose. The player never says any of that.
 
@@ -37,7 +37,7 @@ On a laptop the player is a 9:16 column on black, like a phone standing on the d
 - Autoplay the current episode when you enter it. Sound on. A mute control is fine. Do not start muted.
 - The last frame stays up until the viewer taps. Do not auto-advance.
 - The next clip should start on the same picture the last one ended on. If the seam pops, that is a content bug, not a reason to add a dissolve.
-- A leaf has no choices. Hold the last frame. Offer Restart (back to `0`) and Back to shelf. That is the ending.
+- A leaf has no baked choices. Hold the last frame. Offer any paths the viewer already made, a two-move suggestion, and a typed move, plus Restart and Back to shelf. Tapping a suggested or typed move renders the child episode and plays it when it lands. The wait is one quiet line on the held frame, not a progress bar.
 - Restart is allowed from any episode.
 - Back one episode is allowed. Replay the parent from the start, do not scrub to the last frame.
 - Do not persist the path across a refresh for v1. Opening the series always starts at `0`.
@@ -73,12 +73,11 @@ If a video path is missing or the file is gone, do not show a generate button. S
 
 ## Out of scope
 
-- Creating or extending a series
-- Live generation, job progress, or retries
+- Creating a series
+- Job progress, percentages, or retries. The wait is a single line.
 - A map or tree peek. The story is the tree. The viewer should feel it by tapping, not by reading a graph.
 - Accounts, history, likes, comments, share sheets
 - Landscape, captions, or a theater mode
-- Writing your own choice
 
 Mage can add the untraveled-path wait later without changing the shelf or the choice chrome. The hook is an empty `video` on a node that already has labels. Do not build that hook now.
 
