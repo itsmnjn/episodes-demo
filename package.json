@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "node scripts/sync-public-content.mjs && next dev",
-    "build": "node scripts/sync-public-content.mjs && next build",
+    "dev": "bun scripts/sync-public-content.mjs && next dev",
+    "build": "bun scripts/sync-public-content.mjs && next build",
     "start": "next start",
     "lint": "eslint",
-    "hop": "npx tsx --env-file=.env.local scripts/run-hop.mts",
-    "root": "npx tsx --env-file=.env.local scripts/run-root.mts",
-    "roots": "npx tsx --env-file=.env.local scripts/run-roots.mts",
-    "expansions": "npx tsx --env-file=.env.local scripts/run-expansions.mts",
-    "choices": "npx tsx --env-file=.env.local scripts/run-choices.mts",
-    "episodes": "npx tsx --env-file=.env.local scripts/run-episodes.mts"
+    "hop": "bun scripts/run-hop.mts",
+    "root": "bun scripts/run-root.mts",
+    "roots": "bun scripts/run-roots.mts",
+    "expansions": "bun scripts/run-expansions.mts",
+    "choices": "bun scripts/run-choices.mts",
+    "episodes": "bun scripts/run-episodes.mts"
   },
   "dependencies": {
     "@fal-ai/client": "^1.10.1",

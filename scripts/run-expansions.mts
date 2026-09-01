@@ -2,14 +2,14 @@
 // scenes, then each scene is written as a root prompt with two moves. Logs
 // latency and writes a report under evals/expansions/ after every premise.
 //
-//   npm run expansions
-//   PREMISES="zoo,dentist" N=5 npm run expansions
-//   PREMISES_FILE=premises.txt npm run expansions
+//   bun run expansions
+//   PREMISES="zoo,dentist" N=5 bun run expansions
+//   PREMISES_FILE=premises.txt bun run expansions
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import {
-  FAST_MODEL_ID,
+  CHOICE_MODEL_ID,
   ROOT_MODEL_ID,
   ROOT_TEMPERATURE,
   expandPremise,
@@ -67,7 +67,7 @@ async function writeReport(): Promise<void> {
     `# Premise expansion run — ${startedAt.toISOString()}`,
     "",
     `- Expander and root writer: \`${ROOT_MODEL_ID}\` at temperature ${ROOT_TEMPERATURE}`,
-    `- Choice writer: \`${FAST_MODEL_ID}\``,
+    `- Choice writer: \`${CHOICE_MODEL_ID}\``,
     `- Scenes per premise: ${n}`,
     `- Duration: ${durationSeconds}s`,
     `- Expanded: ${expansions.length}/${premises.length}` +
@@ -116,7 +116,7 @@ async function writeReport(): Promise<void> {
         startedAt: startedAt.toISOString(),
         model: ROOT_MODEL_ID,
         temperature: ROOT_TEMPERATURE,
-        choiceModel: FAST_MODEL_ID,
+        choiceModel: CHOICE_MODEL_ID,
         n,
         durationSeconds,
         premises,

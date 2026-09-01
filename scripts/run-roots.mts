@@ -2,14 +2,14 @@
 // choice writer for two moves off each. Logs latency per call and writes a
 // report under evals/roots/ after every premise. Renders nothing.
 //
-//   npm run roots
-//   PREMISES="zoo,dentist" N=10 npm run roots
-//   ROOT_MODEL=google/gemini-3.5-flash-lite npm run roots
+//   bun run roots
+//   PREMISES="zoo,dentist" N=10 bun run roots
+//   ROOT_MODEL=google/gemini-3.5-flash-lite bun run roots
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import {
-  FAST_MODEL_ID,
+  CHOICE_MODEL_ID,
   ROOT_MODEL_ID,
   ROOT_TEMPERATURE,
   suggestChoices,
@@ -67,7 +67,7 @@ async function writeReport(): Promise<void> {
     `# Root eval run — ${startedAt.toISOString()}`,
     "",
     `- Root writer: \`${ROOT_MODEL_ID}\` at temperature ${ROOT_TEMPERATURE}`,
-    `- Choice writer: \`${FAST_MODEL_ID}\``,
+    `- Choice writer: \`${CHOICE_MODEL_ID}\``,
     `- Candidates per premise: ${n}`,
     `- Duration: ${durationSeconds}s`,
     `- Written: ${candidates.length}/${total}` +
@@ -112,7 +112,7 @@ async function writeReport(): Promise<void> {
         startedAt: startedAt.toISOString(),
         rootModel: ROOT_MODEL_ID,
         rootTemperature: ROOT_TEMPERATURE,
-        choiceModel: FAST_MODEL_ID,
+        choiceModel: CHOICE_MODEL_ID,
         n,
         durationSeconds,
         premises,

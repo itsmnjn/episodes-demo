@@ -3,9 +3,9 @@
 // plus two fixed spoken moves — flag rule breaks, and write a report under
 // evals/episodes/. Renders nothing.
 //
-//   npm run episodes
-//   SERIES=the-invitation,mcdonalds npm run episodes
-//   EPISODE_MODEL=google/gemini-3.7-flash npm run episodes
+//   bun run episodes
+//   SERIES=the-invitation,mcdonalds bun run episodes
+//   EPISODE_MODEL=google/gemini-3.7-flash bun run episodes
 
 import { promises as fs } from "node:fs";
 import path from "node:path";

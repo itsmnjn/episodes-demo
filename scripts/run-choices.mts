@@ -2,8 +2,8 @@
 // choice writer for N pairs of moves, flag mechanical failures, and write a
 // report under evals/choices/.
 //
-//   npm run choices                       # latest evals/expansions run as fixtures
-//   FIXTURES=evals/expansions/<run>/run.json N=3 npm run choices
+//   bun run choices                       # latest evals/expansions run as fixtures
+//   FIXTURES=evals/expansions/<run>/run.json N=3 bun run choices
 
 import { promises as fs } from "node:fs";
 import path from "node:path";

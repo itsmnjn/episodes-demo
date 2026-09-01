@@ -1,9 +1,9 @@
 // Run one live creation hop from a baked leaf: suggest two moves, pick one,
 // write the child prompt off the real held frame, render it on fal.
 //
-//   npm run hop                              # the-invitation 0aa, first suggestion
-//   SERIES=mcdonalds EPISODE=0bb npm run hop
-//   LABEL="Summon a dragon" npm run hop      # skip suggestions, force a move
+//   bun run hop                              # the-invitation 0aa, first suggestion
+//   SERIES=mcdonalds EPISODE=0bb bun run hop
+//   LABEL="Summon a dragon" bun run hop      # skip suggestions, force a move
 //
 // Prints the suggestions and the finished prompt as they land, then the
 // rendered video's local path.

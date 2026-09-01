@@ -1,8 +1,8 @@
 // Write and render a root episode from a bare premise: the root writer
 // invents the opening shot, then text-to-video renders it at 9:16.
 //
-//   PREMISE="hero is at zoo" npm run root
-//   PREMISE="..." DURATION=12 npm run root
+//   PREMISE="hero is at zoo" bun run root
+//   PREMISE="..." DURATION=12 bun run root
 //
 // Prints the finished prompt as soon as it lands, then the video's local path.
 
