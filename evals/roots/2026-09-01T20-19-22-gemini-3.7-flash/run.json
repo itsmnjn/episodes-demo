@@ -1,0 +1,348 @@
+{
+  "startedAt": "2026-09-01T20:19:22.153Z",
+  "rootModel": "google/gemini-3.7-flash",
+  "choiceModel": "google/gemini-3.5-flash-lite",
+  "n": 5,
+  "durationSeconds": 10,
+  "premises": [
+    "zoo",
+    "dentist",
+    "first day at hogwarts",
+    "my roommate is a ghost",
+    "blind date",
+    "airport security"
+  ],
+  "candidates": [
+    {
+      "premise": "zoo",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Standing in the narrow concrete service corridor behind the big cat enclosure, facing Maya, a stocky zookeeper in an olive-drab canvas vest, thick leather forearm guards, and mud-flecked trousers. Through the heavy iron mesh behind her, a huge male lion stalks restlessly back and forth, its breath fogging in the cool air. Two gloved hands enter from the bottom of the frame holding heavy steel transfer tongs clamped around a thick slab of raw red meat. Maya leans forward, gripping the safety lever of the slide gate with both hands, staring directly into the camera as (S1), a sharp, breathless female voice, says <d>[English] He won't take the chute! Pitch it over the barrier or pull him back!</d> She yanks the gate lever halfway down, leaving the iron hatch rattling open just inches above the enclosure floor.\n\noverall_soundscape: Low resonant growls of a pacing lion, buzzing industrial overhead fluorescents, clanking heavy steel gate gears, and water dripping on concrete.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Thrust the meat toward the mesh",
+        "Slam the slide gate shut"
+      ],
+      "rootMs": 7470,
+      "choiceMs": 568
+    },
+    {
+      "premise": "zoo",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Inside a tiled concrete zoo service corridor, facing Maya, a zookeeper in her late thirties with tied-back dark hair, wearing a green canvas safari vest over a khaki short-sleeve shirt and leather work gloves. She stands before a reinforced steel mesh gate that shudders under heavy impacts from the dark enclosure behind it. Two hands enter from the bottom of the frame, the left holding a heavy brass master key ring and the right gripping long steel meat tongs clamped around a dripping slab of raw red beef. Maya points directly at the gate latch, then upward toward the feeding chute opening above the fence, looking straight into the camera as (S1), an urgent, strained female voice, says <d>[English] Distract him up top or open the pen right now!</d>\n\noverall_soundscape: Echoing concrete corridor resonance, loud metallic thuds against heavy steel mesh, low animal growls reverberating from the enclosure, meat wetly shifting in steel tongs.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Insert the brass key",
+        "Drop the raw beef"
+      ],
+      "rootMs": 6450,
+      "choiceMs": 785
+    },
+    {
+      "premise": "zoo",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Facing a heavy iron service gate inside an off-display zoo corridor, where Mateo, a stocky keeper in a green canvas uniform, mud-streaked rubber boots, and a leather tool belt, holds the latch barred with both hands and stares wide-eyed into the camera. Two gloved hands enter the bottom of the frame holding a steel bucket of raw bloody meat in the left hand and a heavy brass keyring with three distinct color-coded keys in the right hand. Beyond the mesh behind Mateo, a massive spotted leopard leaps against the interior fence with a loud metallic rattle, making Mateo flinch as (S1), an urgent, raspy male voice, shouts <d>[English] Give me the red key or toss the meat!</d> Mateo holds out an open, trembling hand toward the lens.\n\noverall_soundscape: Leopard growling and slamming against chain-link fencing, wet sloshing of raw meat inside a metal bucket, keys jingling, and fluorescent lights buzzing overhead.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the bucket into his palms",
+        "Throw the red key past him"
+      ],
+      "rootMs": 8021,
+      "choiceMs": 690
+    },
+    {
+      "premise": "zoo",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a concrete service corridor at Marcus, a broad-shouldered zookeeper in his thirties with stubble, wearing a dark green canvas utility vest with a radio clipped to the chest, standing beside a heavy steel-mesh sliding gate. Behind him inside the enclosure, a large female tiger paces restlessly along the perimeter fence, its tail lashing against the metal. A pair of bare hands enters from the bottom of the frame gripping the wire handle of a heavy plastic bucket loaded with raw, bloodied beef ribs and an iron gate pin lying across the top. Marcus leans forward, bracing both hands against the slide rail, looking directly into the lens as (S1), a sharp, breathless male voice, says <d>[English] Dump the bait in or slide the pin home!</d> The tiger turns toward the mesh, lowering its head as Marcus tightens his grip on the rail, waiting for the bucket or the latch to move.\n\noverall_soundscape: Low guttural growls resonating against concrete walls, claws scraping across wet pavement, raw meat shifting heavily in a plastic bucket, and rattling steel chain link.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Throw the ribs at Marcus",
+        "Slide the pin home"
+      ],
+      "rootMs": 9613,
+      "choiceMs": 512
+    },
+    {
+      "premise": "zoo",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down a narrow concrete service alley at a zookeeper, a woman in her late thirties with a dark ponytail, sweat on her brow, and an olive-green zoo uniform with a brass nametag reading \"Elena\", leaning her shoulder hard against a shuddering steel-mesh gate. Two hands clad in thick split-cowhide handling gloves enter from the bottom edge, the left gripping a heavy iron slip-bolt and the right holding a long steel feeding pole skewered with a thick slab of raw beef. Elena looks directly into the lens, her boots sliding half an inch against the wet floor, and (S1), a sharp, breathless female voice, shouts <d>[English] Drop the meat and pin the gate now!</d> A heavy, grey-furred clawed paw thrusts through the six-inch gap, metal hinges screeching under immense weight.\n\noverall_soundscape: Screeching metal hinges under strain, heavy animal growling reverberating off concrete, wet boots slipping on concrete, and the dull thud of heavy steel mesh rattling violently.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Thrust the feeding pole forward",
+        "Unlatch the iron slip-bolt"
+      ],
+      "rootMs": 8480,
+      "choiceMs": 624
+    },
+    {
+      "premise": "dentist",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down under the glare of a round overhead dental lamp at a middle-aged man in a reclined grey vinyl exam chair, a blue paper bib clipped around his collar and his mouth propped open with white cotton rolls. Standing beside the chair is a dental assistant in seafoam scrubs, her surgical mask pulled under her chin, her dark hair tied in a tight bun, staring directly into the camera. Gloved hands enter from the bottom edge of the frame holding a buzzing stainless-steel high-speed drill in the right hand and a curved extraction forceps in the left. The assistant points a metal probe directly at the patient's exposed lower molar, looks into the lens, and (S1), a sharp, urgent female voice, says <d>[English] The root is cracking under the pressure.</d> The patient's knuckles whiten against the chair armrests as the assistant leans closer, eyes fixed on the camera, and says <d>[English] Start drilling or pull it out now.</d>\n\noverall_soundscape: High-pitched electric whine of a dental drill idling, low hum of suction tubing, crinkle of paper bib under tension, squeak of vinyl armrests.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the drill into his lap",
+        "Slam the forceps on his chest"
+      ],
+      "rootMs": 12949,
+      "choiceMs": 794
+    },
+    {
+      "premise": "dentist",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking directly into the glare of an overhead surgical examination lamp at Dr. Ronald, a broad-shouldered dentist in teal scrubs with magnifying loupes pushed onto his forehead, leaning over a reclined patient in a green vinyl chair. Dr. Ronald holds a small mouth mirror deep in the patient's open jaw and looks up into the camera. Two hands clad in blue nitrile gloves enter from the bottom of the frame: the right hand holds a buzzing high-speed dental drill misting fine water droplets, while the left hand grips a pair of curved silver extraction forceps. Dr. Ronald extends an open, latex-gloved hand directly toward the lens and (S1), an urgent, clipped male voice, says <d>[English] We breached the root, drill or pull.</d> He holds his palm flat under the camera, waiting.\n\noverall_soundscape: High-pitched whine of a dental drill, sputtering water mist, hum of an overhead fluorescent lamp, quiet steady suction gurgle.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grab the silver extraction forceps",
+        "Smash the drill into the lamp"
+      ],
+      "rootMs": 9417,
+      "choiceMs": 582
+    },
+    {
+      "premise": "dentist",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down into the stark beam of an overhead examination lamp at a middle-aged man in a blue paper bib clutching the leather armrests of a reclined dental chair, staring wide-eyed up into the lens with his mouth propped open by a clear bite block. Beside the chair stands a dental assistant in teal scrubs, latex gloves, and protective eyewear, looking directly into the camera, and (S1), a brisk, urgent female voice, says <d>[English] The root canal is completely exposed.</d> Two blue nitrile-gloved hands enter from the bottom of the frame, the left steadying a curved dental mirror against the patient's lower lip while the right hovers a whirring, water-misting drill next to a prepped anesthetic syringe. The assistant leans closer, tapping a metal explorer against the tray rim, and (S1) says <d>[English] Drill now or inject the block?</d>\n\noverall_soundscape: High-pitched whine of a high-speed dental drill with fine water spray, continuous gurgle of a saliva ejector, fluorescent light hum, and the squeak of nitrile gloves on polished steel.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grab the syringe and inject",
+        "Smash the drill against tray"
+      ],
+      "rootMs": 9581,
+      "choiceMs": 615
+    },
+    {
+      "premise": "dentist",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking over a stainless-steel instrument tray held steady by two blue-nitrile-gloved hands entering from the bottom edge, where a loaded metallic dental syringe and a curved steel extraction elevator rest side by side. Across the tray stands Dr. Marcus Thorne, a sharp-featured man in his late forties with greying temples, clear safety goggles, a mint-green scrub top, and a surgical mask pulled down under his chin. He leans over a reclined vinyl dental chair where a white-knuckled patient grips the armrests, looking directly into the camera. Thorne points a gloved finger down at the chair and (S1), an urgent, clipped baritone, says <d>[English] The root is cracked deep.</d> He thrusts an open, empty gloved palm toward the tray and says <d>[English] Give me the syringe or the elevator right now.</d>\n\noverall_soundscape: High-pitched dental suction hum, the rattle of steel instruments on the metal tray, fluorescent light buzz, and the sharp hiss of a compressed air line.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Hand him the heavy syringe",
+        "Plunge the elevator into his palm"
+      ],
+      "rootMs": 7737,
+      "choiceMs": 664
+    },
+    {
+      "premise": "dentist",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down into a bright clinical dental operatory, where a tense man in his forties with slicked-back brown hair lies back in a turquoise vinyl examination chair, a disposable blue paper bib clipped to his neck. Beside the chair stands Dr. Vance, a tall woman in dark navy scrubs, clear protective goggles, and a paper surgical mask pulled beneath her chin, staring directly into the camera. Two hands wearing powder-free blue nitrile gloves enter from the bottom edge, holding a heavy stainless steel extraction forceps gripped firmly over an open metal tray. Dr. Vance taps the side of the overhead surgical lamp, angling the harsh yellow beam straight onto the patient's parted teeth, looks into the lens, and (S1), a sharp, commanding female voice, says <d>[English] The root is cracked, pull it out now.</d> The patient's knuckles turn white against the chair's vinyl armrests as his wide eyes fix on the steel instrument.\n\noverall_soundscape: Low hum of fluorescent overhead lights, the high-pitched idle hiss of an air compressor, rustle of paper bibs, and the sharp metallic clink of surgical steel instruments against a metal tray.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Clamp the forceps onto the tooth",
+        "Drop the forceps onto his chest"
+      ],
+      "rootMs": 6291,
+      "choiceMs": 688
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a long oak feast table beneath hundreds of hovering wax candles in the Great Hall at a boy with messy copper hair and an unbuttoned black robe, who leans over the bench with wide eyes locked on the camera. Between the place settings, an ornate brass mechanical egg rattles violently against the wood, its seam spitting blue sparks onto a roll of blank parchment. Two hands enter from the bottom edge of the frame, gripping a heavy silver ice-tongs in the left hand and an unlit polished wand in the right. The boy points urgently at the sparking egg, and (S1), a hurried, cracking young male voice, says <d>[English] Grip the hinge or freeze the core!</d> The egg snaps halfway open with a sharp metallic clatter, spilling a pool of bubbling blue flame across the table.\n\noverall_soundscape: Murmur of a crowded hall in high stone rafters, crackling wax flames, sharp metallic clicking and sizzling sparks, wood scraping under sudden movement.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Clamp the tongs onto the sparking seam",
+        "Cast a freezing charm into the blue flame"
+      ],
+      "rootMs": 17148,
+      "choiceMs": 806
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a candlelit flagstone floor at Professor Minerva McGonagall, a stern woman with tight silver-streaked hair beneath a black pointed hat and high-collared emerald robes, standing beside a four-legged wooden stool in the Great Hall under floating beeswax tapers. She extends a gloved left hand toward the empty seat, holding the battered, patched brown leather Sorting Hat in her right. Two hands enter from the bottom edge of the frame, holding a freshly polished, unblemished cherry-wood wand horizontally between them. Professor McGonagall looks directly into the camera, gestures firmly toward the stool, and (S1), a crisp, authoritative Scottish female voice, says <d>[English] Step forward now and take your place.</d> She lifts the Sorting Hat high with both hands, poised directly above the empty wooden seat, her gaze fixed on the lens.\n\noverall_soundscape: Murmuring chatter of hundreds of students echoing through a cavernous stone hall, the soft guttering and crackling of overhead floating candles, rustling wool robes, and hard leather shoes shifting on stone.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Place the cherry-wood wand across her palm",
+        "Smash the cherry-wood wand in half"
+      ],
+      "rootMs": 8543,
+      "choiceMs": 628
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking up the stone steps of the Great Hall beneath thousands of floating beeswax candles at Professor Minerva McGonagall, an elderly witch with sharp features, square spectacles, and dark hair pinned beneath an emerald-green velvet witch's hat. She holds a long yellow parchment scroll in one hand and the frayed, patched Sorting Hat in the other, gazing intently into the camera. Two hands enter from the bottom edge: the left hand holds out a pale, polished hawthorn wand, and the right hand clutches a heavy parchment envelope sealed in red wax. Professor McGonagall lowers the Sorting Hat onto the wooden stool, fixes her gaze directly on the lens, and (S1), a crisp, commanding female voice with a Scottish lilt, says <d>[English] Place your wand upon the stool, or step back.</d> She extends an open palm toward the two hands.\n\noverall_soundscape: Murmuring of hundreds of students echoing through a cavernous stone hall, the faint crackle and hiss of floating candle flames, rustling parchment, and the dry scuff of leather soles on flagstones.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the wand onto the wood",
+        "Drop the sealed envelope instead"
+      ],
+      "rootMs": 8860,
+      "choiceMs": 537
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Standing before the raised dais of the Great Hall beneath thousands of floating beeswax candles, Professor Minerva McGonagall, a stern woman in emerald-green velvet robes and square spectacles, holds an unrolled parchment scroll and looks directly into the camera. Two hands in black student robes enter from the bottom of the frame, holding a polished hawthorn wand horizontally across both palms. McGonagall gestures sharply with her free hand toward a four-legged wooden stool where the frayed, leather-creased Sorting Hat twitches, and (S1), a crisp, commanding Scottish female voice, says <d>[English] Step forward and place your wand upon the stool.</d> Her sharp gaze fixes on the lens as the brim of the Sorting Hat tears open into a wide mouth and begins to stir.\n\noverall_soundscape: Murmurs of hundreds of seated students echoing off vaulted stone, soft sputtering of suspended candles, rustle of heavy velvet, and the low creak of old leather stretching open.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the wand on the floor",
+        "Ask the hat who sent it"
+      ],
+      "rootMs": 7185,
+      "choiceMs": 674
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Standing at the front of the Great Hall beneath thousands of floating beeswax candles, Professor Minerva McGonagall, an elderly witch with sharp square spectacles, dark green velvet robes, and a pointed black hat, stands beside a four-legged wooden stool holding a frayed, patched leather Sorting Hat. Two hands in black student robes enter from the bottom of the frame, gripping an unlit wooden wand. McGonagall looks directly into the camera, unrolls a yellowed parchment scroll with her left hand, and (S1), a crisp, commanding Scottish female voice, says <d>[English] Step forward and place the hat upon your head.</d> She extends the Sorting Hat outward, its stitched mouth-fold twitching slightly.\n\noverall_soundscape: Murmur of hundreds of seated students echoing off stone walls, flickering hum of candle flames, rustle of heavy parchment, dry creak of aged leather.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Reach out and grab it",
+        "Smash the wand against it"
+      ],
+      "rootMs": 7606,
+      "choiceMs": 510
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a cluttered kitchen table at Toby, a semi-translucent young man in a frayed flannel shirt and faded jeans who floats two inches above a mismatched wooden chair, looking directly into the camera. A pair of bare hands enters the bottom of the frame holding an unlit wooden match and a glass shaker full of coarse salt. Toby leans forward across the table, his form slightly distorting the refrigerator behind him, and (S1), a hollow, echoing young male voice, says <d>[English] You promised you would stop using the salt.</d> He points a pale, wavering finger at the shaker, his translucent eyes wide with frantic urgency.\n\noverall_soundscape: Low electromagnetic hum, faint room reverberation on the speech, subtle wooden creaks, grain shifting inside a glass shaker.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Pour salt over his head",
+        "Strike the match on wood"
+      ],
+      "rootMs": 5225,
+      "choiceMs": 502
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a dimly lit apartment kitchen at Leo, a translucent young man with messy dark curls and pale sunken eyes wearing a faded oversized flannel shirt, hovering an inch above the hardwood floorboards and staring directly into the camera. Two hands enter from the bottom edge of the frame holding a heavy ceramic bowl filled with coarse white salt. Cold mist curls from Leo's mouth as he points down at a thin line of salt crystals separating him from the kitchen door, and (S1), a breathy hollow male voice, says <d>[English] Sweep it away right now or I freeze the pipes.</d> Frost blooms outward across the laminate floor beneath his bare feet, creeping straight toward the camera as he thrusts his pale open palm forward.\n\noverall_soundscape: Low droning apartment hum, sharp crackle of ice crystallizing across wood floorboards, soft rattle of salt grains shifting in a ceramic bowl.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Dump the salt over him",
+        "Ask him to freeze the sink"
+      ],
+      "rootMs": 7884,
+      "choiceMs": 534
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Across a cluttered laminate kitchen table, Toby, a pale young man in his early twenties with unruly dark curls, a moth-eaten flannel shirt, and a faint translucent shimmer along his silhouette, hovers two inches above the checkerboard linoleum floor and points directly into the camera. Two hands enter from the bottom edge of the frame, holding a heavy glass shaker of coarse kosher salt in the left hand and an open brass Zippo lighter with an unlit wick in the right. (S1), a hollow, echoing young male voice with a slight static rasp, says <d>[English] Put that down or I blow the breakers again.</d> Toby drifts forward through the back of a wooden chair, his semi-transparent palm reaching across the table toward the lighter.\n\noverall_soundscape: Low electrical hum fluctuating in pitch, faint draft rustling loose papers, subtle metallic click of the open lighter casing, dry salt grains shifting inside glass.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Pour salt across his path",
+        "Ignite the lighter wick directly"
+      ],
+      "rootMs": 9639,
+      "choiceMs": 610
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a laminate kitchen counter at Toby, a pale young man in his twenties with disheveled dark curls and a moth-eaten olive wool sweater, hovering two inches above the linoleum floor and staring directly into the camera. Frost spreads in white branching fractals across the counter beneath his translucent palms. Two hands enter from the bottom edge of the frame holding an open blue cardboard canister of coarse salt, its metal spout pried open over a break in the floorboards. Toby points a shimmering, semi-transparent finger at the canister, his dark eyes wide, and (S1), a hollow, echoing young male voice, says <d>[English] Don't pour that line.</d> He glides forward across the island until his face fills the frame, his breath pluming as pale cold mist, and says <d>[English] You promised we'd split this place.</d> He reaches his gray, spectral hands straight toward the open salt spout.\n\noverall_soundscape: Low eerie resonance, salt grains rattling within cardboard, delicate crackling of frost spreading on laminate, and a faint breathy hum.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Tilt the canister downward",
+        "Ask what he wants to split"
+      ],
+      "rootMs": 12187,
+      "choiceMs": 573
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Across a dimly lit apartment kitchen table, Julian, a translucent young man with mussed dark hair, hollowed cheekbones, and a faded 1970s striped knit sweater, hovers an inch above a mismatched wooden chair, staring directly into the camera. Two hands enter from the bottom edge of the frame holding an open brass lighter and a bundled stick of dried sage. The thumb strikes the flint wheel, producing a sharp yellow flame between the hands. Julian leans over the table, his spectral outline rippling like heat haze, and (S1), a breathy, resonant tenor with a slight metallic reverb, says <d>[English] Put that out, or I turn the gas on.</d> He points a semi-transparent index finger at the vintage stove behind him, where an iron burner knob slowly rotates on its own, his eyes locked onto the open flame.\n\noverall_soundscape: A low ambient hum of old apartment plumbing, the crisp metallic clink and scratch of a flint lighter striking, faint crackling of flame, and the heavy mechanical click of a gas stove dial turning.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Touch the flame to the sage",
+        "Smash the lighter against the table"
+      ],
+      "rootMs": 8903,
+      "choiceMs": 533
+    },
+    {
+      "premise": "blind date",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Sitting across a dimly lit bistro table from Maya, a woman in her late twenties with wavy auburn hair and a plum silk blouse, who leans forward over a flickering votive candle, her dark eyes locked onto the camera. Between two half-empty coupe glasses, she slides a sealed cream envelope with no name written on it to the center of the marble tabletop. She taps the wax seal once, looks up directly into the lens, and (S1), a smoky, expectant female voice, says <d>[English] Open it, or burn it right now.</d> A pair of hands enters from the bottom of the frame, the right hand gripping a heavy brass pocket lighter already sparked to a trembling yellow flame, the left hand reaching toward the edge of the envelope. Maya leans back against the velvet banquette, crossing her arms and waiting.\n\noverall_soundscape: Soft jazz and ambient murmur of a busy restaurant, the metallic strike of a lighter, the soft slide of heavy paper across polished marble, and low breath close to the microphone.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Touch the flame to the envelope",
+        "Flip the envelope over to Maya"
+      ],
+      "rootMs": 16973,
+      "choiceMs": 578
+    },
+    {
+      "premise": "blind date",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Sitting across a round marble café table in a dimly lit, crowded bistro is Clara, a woman in her late twenties with wavy chestnut hair pinned on one side, dark-rimmed glasses, and a structured emerald blazer over a black silk blouse. She leans forward on folded forearms, her gaze fixed directly on the lens over the flicker of a low glass votive candle. Two hands enter from the bottom edge of the frame, holding a sealed black envelope stamped with red wax. Clara points one manicured index finger at the table between two freshly poured coupe glasses—one filled with clear gin and a twist, the other dark crimson—and (S1), a crisp, dry female voice, says <d>[English] Break the wax, or tell me which one is yours.</d> Her eyes narrow expectantly as her finger stays pressed against the marble.\n\noverall_soundscape: Murmur of a crowded restaurant, clinking silverware and glassware, soft low-frequency jazz in the background, a candle wick softly hissing.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Crack the red wax open",
+        "Pick up the crimson glass"
+      ],
+      "rootMs": 7516,
+      "choiceMs": 580
+    },
+    {
+      "premise": "blind date",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a small, candlelit marble bistro table at Maya, a woman in her late twenties with curly auburn hair, a dark teal velvet blazer, and silver hoop earrings, leaning forward with her elbows on the linen napkin and her gaze fixed directly into the camera. Two hands enter from the bottom of the frame gripping an open bottle of deep red wine, tilted just above her empty glass. Maya reaches into her pocket, slides a thick, wax-sealed ivory envelope firmly against the base of her glass, and (S1), a low, husky female voice, says <d>[English] Pour the wine, or open what he left you.</d> Her manicured index finger presses down hard on the seal, holding the lens in an unblinking stare.\n\noverall_soundscape: Soft low restaurant murmur in the distance, a flickering candle wick crackling faintly, the sliding friction of thick paper across polished marble, and liquid swishing inside the glass bottle.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Fill her glass and speak",
+        "Break the wax seal now"
+      ],
+      "rootMs": 12816,
+      "choiceMs": 765
+    },
+    {
+      "premise": "blind date",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Across a candlelit marble bistro table, Chloe, a woman in her late twenties with an auburn bob, silver hoop earrings, and a fitted black velvet blazer, leans forward and looks directly into the camera. Two hands enter from the bottom edge of the frame, holding a heavy silver cocktail shaker poised above two empty coupe glasses. Chloe places a small, sealed black envelope between the glasses and taps its wax seal with one manicured finger. (S1), a smoky, confident female voice, says <d>[English] Pour the drink, then decide if we open it.</d> She keeps her finger pressed to the seal, waiting.\n\noverall_soundscape: Low murmur of a crowded restaurant, ice clinking inside a metal shaker, candle flame softly fluttering, distant jazz saxophone.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Pour the drink into her glass",
+        "Smash the shaker on the table"
+      ],
+      "rootMs": 10666,
+      "choiceMs": 903
+    },
+    {
+      "premise": "blind date",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a dark mahogany booth at Maya, a woman in her late twenties with a sharp jawline, braided dark hair, and a tailored plum velvet blazer, leaning forward over a flickering tea candle. Two hands enter from the bottom of the frame holding a heavy brass lighter, striking the flint wheel to raise an open yellow flame. Maya reaches into her blazer, drops a thick wax-sealed cream envelope onto the table between the two cocktail glasses, and locks her eyes on the camera. (S1), a low, deliberate female voice, says <d>[English] Choose right now before the waiter comes back.</d> She slides the sealed paper an inch closer to the flame, her fingertips resting on the wax seal.\n\noverall_soundscape: Murmur of a crowded upscale restaurant, clinking glassware, the metallic flick and steady hiss of a lighter flame, paper sliding on polished wood.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Blow out the candle flame",
+        "Snatch the envelope from her fingers"
+      ],
+      "rootMs": 14799,
+      "choiceMs": 825
+    },
+    {
+      "premise": "airport security",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Under harsh fluorescent strip lights across a scratched stainless-steel inspection counter, Officer Sterling, a broad-shouldered security agent in a navy uniform with a silver badge and purple nitrile gloves, stares directly into the camera. Two hands enter from the bottom edge holding a heavy, black-taped metal lockbox hovered inches above an empty gray plastic tray. Officer Sterling leans forward, resting both gloved palms flat on the cold steel, and (S1), a curt, commanding male voice, says <d>[English] Open the latch or step into secondary.</d> His index finger taps twice against the edge of the gray tray, eyes locked on the hands gripping the taped seam.\n\noverall_soundscape: Steady fluorescent lighting hum, metallic rattle of conveyor rollers, muffled airport terminal PA chimes echoing in the background, and the crisp squeak of rubber gloves against stainless steel.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the lockbox onto the tray",
+        "Smash the lockbox into his face"
+      ],
+      "rootMs": 10337,
+      "choiceMs": 567
+    },
+    {
+      "premise": "airport security",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Facing a stainless steel security roller table under harsh fluorescent lighting, where Officer Miller, a stern woman with closely cropped dark hair in a crisp navy TSA uniform and blue nitrile gloves, stands on the other side looking directly into the camera. Two hands enter from the bottom edge over an empty gray plastic bin, the left hand holding a dark leather passport wallet and the right gripping a heavy brass antique pocket watch attached to a loose chain. Officer Miller taps two gloved fingers on the rim of the bin, fixes her gaze on the watch, and (S1), a firm, clipped female voice, says <d>[English] Metal goes in the tray, sir.</d> She holds her open palm outstretched above the center of the tub, waiting.\n\noverall_soundscape: Fluorescent light hum, low rumble of conveyor belts, distant airport terminal announcements, and the dull plastic clatter of security bins on metal rollers.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the watch into her palm",
+        "Place the passport on the watch"
+      ],
+      "rootMs": 6194,
+      "choiceMs": 621
+    },
+    {
+      "premise": "airport security",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Standing at the stainless-steel inspection table under flickering fluorescent tubes, looking directly across at Officer Vance, a sharp-featured woman in her late forties wearing a navy Transportation Security Administration uniform, a brass nameplate, and purple nitrile gloves. She rests one hand flat beside an open black roller bag on the rollers and points a gloved index finger straight into the camera. Two hands enter from the bottom edge of the frame, the left holding a blue passport with a folded red boarding pass tucked inside, the right holding a heavy, unmarked titanium thumb drive between thumb and forefinger. Officer Vance leans forward across the metal divider, her eyes fixed on the camera lens, and (S1), a sharp, clipped female voice, says <d>[English] Put everything in the grey bin right now.</d> She slides an empty plastic bin forward across the stainless steel with a hard scrape, tapping her finger insistently against its rim as her gaze shifts between the passport and the drive.\n\noverall_soundscape: Fluorescent light hum, low distant terminal murmur and gate announcements, stainless steel luggage rollers rattling, plastic bin scraping against metal, nitrile gloves squeaking against polished surfaces.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the thumb drive inside",
+        "Tell her it is classified"
+      ],
+      "rootMs": 5118,
+      "choiceMs": 566
+    },
+    {
+      "premise": "airport security",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Standing directly before the stainless-steel inspection table at an airport security checkpoint under harsh fluorescent strips. Across the silver surface stands Officer Vance, a broad-shouldered security agent in a crisp navy-blue uniform and black nitrile gloves, looking straight into the camera with narrowed eyes. Two bare hands enter from the bottom edge of the frame, clutching a dark red passport along with a heavy, sealed brass compass wrapped tightly in clear packing tape. Vance taps a thick gloved forefinger against the metal counter, leans over the edge, and (S1), a sharp, no-nonsense baritone, says <d>[English] Drop that in the gray tray right now.</d> He slides an empty plastic bin forward across the steel, his hand resting beside it as he waits for the object to be released.\n\noverall_soundscape: Low rumble of luggage conveyor belts, fluorescent ballast hum, crisp squeak of nitrile gloves against polished steel, distant PA chime and ambient terminal chatter.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Smash the compass against his knuckles",
+        "Slide the passport across the tray"
+      ],
+      "rootMs": 6353,
+      "choiceMs": 473
+    },
+    {
+      "premise": "airport security",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Standing across a stainless-steel inspection table under harsh fluorescent lights, Officer Miller, a square-jawed security agent in a navy uniform with a gold badge and blue nitrile gloves, leans forward and stares directly into the camera. Two gray plastic bins sit motionless on the metal rollers between the table and the camera. Both hands enter from the bottom edge of the frame, holding an unlabelled, sealed matte-black thermos cylinder over the empty bin. Officer Miller taps a gloved index finger on the metal table edge and (S1), a sharp, commanding male voice, says <d>[English] Put the canister down and step back immediately.</d> He reaches both gloved hands across the roller track toward the cylinder.\n\noverall_soundscape: Hum of overhead fluorescent lighting, low mechanical drone of the X-ray conveyor belt, distant echoing public announcements over airport PA, latex gloves squeaking on stainless steel.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the canister into the bin",
+        "Slam the canister onto his hands"
+      ],
+      "rootMs": 7752,
+      "choiceMs": 622
+    }
+  ],
+  "failures": []
+}

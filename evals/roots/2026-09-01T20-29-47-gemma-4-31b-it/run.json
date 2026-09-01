@@ -1,0 +1,349 @@
+{
+  "startedAt": "2026-09-01T20:29:47.437Z",
+  "rootModel": "google/gemma-4-31b-it",
+  "rootTemperature": 1.5,
+  "choiceModel": "google/gemini-3.5-flash-lite",
+  "n": 5,
+  "durationSeconds": 10,
+  "premises": [
+    "zoo",
+    "dentist",
+    "first day at hogwarts",
+    "my roommate is a ghost",
+    "blind date",
+    "airport security"
+  ],
+  "candidates": [
+    {
+      "premise": "zoo",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. FIELD: Zoo service corridor\nSHOT: POV sequence\nSTYLE: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nWalking down a white-tiled corridor beneath flickering fluorescent tubes, following a man in a stained olive-drab jumpsuit. A plastic name tag on his chest reads \"ARTHUR\". He is in his late sixties, thin, with a deep, jagged scar running from his left temple to his jaw. Arthur stops at a heavy steel door with a yellow \"AUTHORIZED PERSONNEL ONLY\" sign. From the bottom of the frame, a right hand enters holding a pair of long-handled stainless steel feeding tongs. Arthur turns around and extends an open palm toward the lens. (S1), a raspy male voice, says <d>[English] Give them to me.</d>\n\noverall_soundscape: Hum of fluorescent lighting, rubber soles squeaking on damp tile, the metallic clink of steel tongs.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the tongs onto his boots",
+        "Clack the steel jaws against his palm"
+      ],
+      "rootMs": 45894,
+      "choiceMs": 652
+    },
+    {
+      "premise": "zoo",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. thought\n10 seconds.\nZoo.\nFirst-person POV, one continuous uncut shot, photoreal live-action.\nCamera person never seen, named, or addressed. Hands only (from bottom). No speech. No inner states. Stable IDs for speakers (S1, S2). Dialogue in `<d>[English] ...</d>`.\nEnds with someone wanting something from the camera, and an object in the camera's hands that could be used in multiple ways. Moment cannot stay as it is.\nField label, shot marker, style sentence.\n\n    *   Setting: A zoo. Specifically, a primate enclosure or an animal handling area to keep the action tight.\n    *   Character: A zookeeper or a captive animal (humans are easier for dialogue). Let's go with a distressed zookeeper in a primate wing.\n    *   Object in hand: A heavy-duty flashlight or a small cattle prod/electric stick? A heavy metal keyring? Let's go with a heavy, brass key ring with a large master key. It can unlock a door, or it can be used as a blunt instrument.\n\n    *   Start: Camera is looking at a wide door to an ape habitat.\n    *   Action: A zookeeper (S1) is frantic, sweat on her brow, wearing khaki scrubs.\n    *   Hands enter: Holding a set of keys.\n    *   S1 sees the keys and wants them.\n\n    *   *Field label*: SCENE 1\n    *   *Shot marker*: SHOT 1\n    *   *Style sentence*: Photoreal live-action, first-person POV, one continuous uncut shot.\n\n    *   *Prose*:\n        Looking at an iron-barred gate of an orangutan exhibit. Dust motes dance in the humid air. (S1), a woman in stained khaki scrubs with a smudge of mud on her cheek, leans against the bars, chest heaving. A right hand enters from the bottom of the frame holding a heavy brass key ring. (S1) locks eyes with the camera, her gaze dropping to the keys. She reaches out with a trembling hand. (S1), a desperate female voice, says <d>[English] Please. Give them to me. Now.</d>\n\n    *   *Check Constraints*:\n        - One shot? Yes.\n        - Hands from bottom? Yes.\n        - No camera name/address? Yes.\n        - Stable ID? (S1).\n        - Diameter of dialogue? Short. Yes.\n        - Someone wanting something from camera? Yes (the keys).\n        - Object with multiple uses? Yes (keys - lock door, hit someone).\n        - Moment cannot stay? She is reaching/demanding.\n        - 10 seconds timing? Roughly 30-40 words of action + a few words of dialogue fits 10s.\n\n    *   Updating descriptions for more specific \"beats\": Instead of just \"iron-barred gate,\" let's specify \"oxidized iron bars of the gorilla enclosure.\"\n\n    SCENE 1\n    SHOT 1\n    Photoreal live-action, first-person POV, one continuous uncut shot.\n    Looking through the oxidized iron bars of a gorilla enclosure toward a woman in stained khaki scrubs with a streak of grease across her forehead. She is backed against a concrete wall, breathing hard. A right hand enters from the bottom of the frame, holding a heavy brass ring with three oversized keys. The woman’s eyes snap to the keys. She stretches one arm out toward the lens, palm open. (S1), a strained female voice, says <d>[English] Give me those keys.</d>\n\n    overall_soundscape: Distant primate screeches, heavy rhythmic breathing, the metallic jingle of keys, humid air hiss.\n\n    *Wait, checking the prompt: \"Something in the camera's hands that could be used more than one way.\" A key ring works. Lock/Blunt force.*\n    *And \"End with someone who wants one thing from the camera.\" She wants the keys.*\n\n    Refining the action to ensure it doesn't feel \"static.\"\n\n    S1's posture: desperation.\n    Hands: Holding the keys.\n    End: The demand.\n\n    *Wait, let's check \"The moment cannot stay as it is.\"*\n    She is reaching for the keys, the scene concludes with her demand. This transition of power/ownership suggests immediate next action.\n\n    *Self-Correction on \"no inner states/mood words\":*\n    Avoid \"desperate\" or \"frantic\". Use \"breathing hard,\" \"trembling,\" \"eyes snap.\"\n\n    *Revised Draft:*\n    SCENE 1\n    SHOT 1\n    Photoreal live-action, first-person POV, one continuous uncut shot.\n    Looking at the heavy oxidized iron bars of a gorilla enclosure. A woman in stained khaki scrubs with a smear of mud on her left cheek leans against the concrete wall, chest heaving. A right hand enters from the bottom of the frame, gripping a heavy brass ring with three oversized keys. The woman's gaze shifts from the bars to the keys. She extends a shaking hand toward the lens. (S1), a strained female voice, says <d>[English] Give me those keys.</d>\n\n    overall_soundscape: Hooting in the distance, rapid breathing, jangling metal, humid wind.SCENE 1\nSHOT 1\nPhotoreal live-action, first-person POV, one continuous uncut shot.\nLooking at the heavy oxidized iron bars of a gorilla enclosure. A woman in stained khaki scrubs with a smear of mud on her left cheek leans against the concrete wall, chest heaving. A right hand enters from the bottom of the frame, gripping a heavy brass ring with three oversized keys. The woman's gaze shifts from the bars to the keys. She extends a shaking hand toward the lens. (S1), a strained female voice, says <d>[English] Give me those keys.</d>\n\noverall_soundscape: Primate hooting in the distance, rapid breathing, jangling metal, humid wind.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the keys into her palm",
+        "Smash the keys against the bars"
+      ],
+      "rootMs": 8603,
+      "choiceMs": 745
+    },
+    {
+      "premise": "zoo",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Field Label: ZOO_01\nShot Marker: Shot 1\nStyle: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking across concrete flooring with rusted drainage grates at a zookeeper in a sweat-stained olive-drab shirt with a jagged scar across his left cheek. He stands before a set of heavy iron bars where a silverback gorilla sits in the shadows. A right hand enters from the bottom of the frame holding a heavy, notched brass master key on a leather cord. The zookeeper tracks the key with his eyes, then extends an open palm toward the lens. (S1), a strained, breathless male voice, says <d>[English] Give it to me. Now.</d>\n\noverall_soundscape: Echoing primate grunts, the electric hum of overhead fluorescent lights, the dry friction of leather against skin.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the key into the drain grate",
+        "Press the brass key into his palm"
+      ],
+      "rootMs": 72144,
+      "choiceMs": 563
+    },
+    {
+      "premise": "zoo",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. thought\n*   Premise: Zoo.\n    *   Duration: 10 seconds.\n    *   Format: First-person POV, one continuous uncut shot, photoreal live-action.\n    *   Start: Field label, shot marker, style sentence.\n    *   Ending: Someone wanting something from the camera; an object in the camera's hand that could be used in multiple ways.\n    *   Constraint: Camera person is never seen/named/addressed. Only hands enter from the bottom. No speaking.\n    *   Dialogue format: (S1), (S2) <d>[English] ...</d>.\n    *   Prose: Specific details, no inner states or mood words.\n    *   Output: Only the prose and the `overall_soundscape`.\n\n    *   Location: Zoo. Specifically, something gritty or interesting. A primate enclosure or a feeding station. Let's go with a gorilla habitat—tension and raw power.\n    *   Action: Approaching a handler or an animal. Let's have a zookeeper in a weathered olive-drab uniform.\n    *   Object in hand: A heavy silver key ring or a canister of something. A \"heavy brass cattle prod\" or a \"sturdy metal flashlight\" (too simple). How about a \"heavy steel locking pin\"? No, maybe a \"thick glass vial of colored liquid\" (medication/vitamin). Or simpler: a heavy-duty multipurpose tool/leatherman? No, \"a heavy iron pry-bar\" is too aggressive. Let's go with a \"heavy brass master key\" on a leather strap. It can open doors, or it can be a blunt weapon. Or a \"thick canvas bag of raw meat\". No, that's messy.\n    *   Better object: A polished stainless steel surgical syringe. It can be used to medicate, or as a weapon/threat.\n    *   Character: (S1) Zookeeper. Mid-forties, sweating, wearing a name tag that says \"MARCUS\".\n\n    *   The camera moves toward a heavy steel gate of a gorilla exhibit.\n    *   Hands enter frame holding a stainless steel syringe.\n    *   Marcus (S1) is waiting by the gate, looking anxious.\n    *   He looks at the camera and then the syringe.\n    *   He asks for the syringe.\n\n    *   The camera moves forward on a concrete path toward a silver chain-link gate. A man in an olive-green utility vest with a \"CITY ZOO\" patch on the shoulder, sweating through a tan polo shirt, stands by the latch. A right hand enters from the bottom of the frame holding a stainless steel syringe filled with a milky-white liquid. The man, (S1), a strained male voice, looks at the needle and says <d>[English] Give it to me before he sees.</d> He reaches his open palm toward the syringe.\n\n    *   First-person POV? Yes.\n    *   One continuous shot? Yes.\n    *   Camera person not seen/named/addressed? Yes.\n    *   Hands from bottom? Yes.\n    *   Stable ID for speaker? Yes (S1).\n    *   Format for dialogue? Yes.\n    *   Ends with someone wanting something from the camera? Yes (the syringe).\n    *   Object that can be used more than one way? Yes (syringe: medicate or jab).\n    *   Specific details? Olive-green vest, \"CITY ZOO\" patch, milky-white liquid, concrete path.\n    *   No inner states? Yes.\n    *   No camera talk? Yes.\n    *   Soundscape included? Yes.\n\n    FIELD: Zoo.\n    SHOT: 1.\n    STYLE: Photoreal live-action, first-person POV, one continuous uncut shot.\n    Prose follows.\n\n    Check timings: 10 seconds. Minimal dialogue.\n    \"Give it to me before he sees.\" -> ~2 seconds.\n    Movement and reach -> 8 seconds. Fits.FIELD: Zoo\nSHOT: 1\nSTYLE: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nA slow forward move along a damp concrete path toward a heavy steel mesh gate. On the other side of the wire, a silverback gorilla sits motionless in the shade of a fake rock. A man in an olive-green utility vest with a \"CITY ZOO\" patch on the shoulder, sweating through a tan polo shirt, stands by the gate's slide-bolt. A right hand enters from the bottom of the frame holding a stainless steel syringe filled with milky-white liquid. The man, (S1), a strained male voice, looks from the gorilla to the needle and says <d>[English] Give it to me before he sees.</d> He holds out an open palm toward the syringe.\n\noverall_soundscape: Distant primate vocalizations, the hum of an industrial cooling fan, heavy boots on concrete, the metallic rattle of a chain-link fence.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the needle into his palm",
+        "Jab the plunger into his neck"
+      ],
+      "rootMs": 7733,
+      "choiceMs": 492
+    },
+    {
+      "premise": "zoo",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Field: zoo\nShot: Shot 1\nStyle: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking at Elias, a man in his forties with a vertical scar crossing his left cheek and a sweat-stained beige safari shirt, leaning against a gray concrete wall in a narrow service corridor where yellow Caution tape hangs from a steel doorframe. A right hand enters from the bottom of the frame, gripping a heavy, blackened steel flashlight. The thumb clicks the switch, and a sharp white beam hits Elias’s face. He blinks, shielding his eyes with his left hand and extending his right hand toward the lens, palm open. (S1), a strained, gravelly male voice, says <d>[English] Give me that light.</d> His hand remains outstretched, his fingers trembling slightly.\n\noverall_soundscape: Low electrical hum of industrial ventilation, the metallic click of a flashlight switch, heavy labored breathing, echo of a concrete hallway.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Shine the beam into his open palm",
+        "Tell him to earn it first"
+      ],
+      "rootMs": 70527,
+      "choiceMs": 640
+    },
+    {
+      "premise": "dentist",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. thought\n*   Duration: 10 seconds.\n    *   Premise: Dentist.\n    *   Constraint: Photoreal live-action, first-person POV, one continuous uncut shot.\n    *   Constraint: Camera is a person (hands only), not named/addressed, no speaking.\n    *   Constraint: Visible characters have IDs and voice tags, lines are short.\n    *   Constraint: Finish with someone wanting something and an object in hand that has multiple uses.\n    *   Constraint: No inner states, mood words, or timestamps.\n    *   Format: `FIELD LABEL`, `SHOT MARKER`, `STYLE SENTENCE`, then prose, followed by `overall_soundscape:`.\n\n    *   POV: A patient in a dentist's chair.\n    *   The dentist: Dr. Aristhos (inventing a name/look). Let's make him look overly sterile—stiff white coat, face shield, surgical mask.\n    *   Action: The POV character (the camera) is reclining.\n    *   Movement: A hand enters the frame. What is the object? A metal dental probe or a heavy stainless steel mirror. Let's go with a dental mirror on a long neck.\n    *   The climax: The dentist wants something (the patient to open wider or a specific document) and the camera holds a tool. Wait, the prompt says \"someone who wants one thing from the camera, and something in the camera's hands that could be used more than one way.\"\n    *   Re-evaluating: If the camera is the dentist, the patient is the object. If the camera is the patient, the dentist is the character. Let's make the camera the dentist. This allows more control over objects.\n\n    *   POV: Dentist.\n    *   Character: A patient (Patient X) strapped or tilted back in a leather chair. Mouth open.\n    *   Object in hand: A heavy, pointed dental scaler/pick. (Can be used for cleaning or for something more violent).\n    *   Action: Moving the tool toward the open mouth. Patient looks up at the camera.\n\n    *   POV: Patient.\n    *   Dentist (S1) is leaning over.\n    *   Object in the POV's (patient's) hand: A heavy glass water tumbler or a heavy metal dental instrument that fell on the tray. Let's use a heavy metal explorer/probe.\n    *   S1 says something.\n    *   Wait, the prompt says the camera's hands hold something. If the patient is the camera, they are in the chair. Their hand could be gripping the armrest or holding something they snatched from the side tray.\n\n    *   POV: Dentist.\n    *   Action: Looking down into a wide-open mouth of a patient in a blue surgical drape.\n    *   Person: (S1) the patient, muffled sounds, but can speak briefly if they can. Or a dental assistant.\n    *   Let's go with a dental assistant (S1).\n    *   Setting: Sterilized room, bright white LED light reflecting off steel.\n    *   Camera hand holds a stainless steel dental mirror.\n    *   Action: The assistant reaches out, wanting a different tool.\n\n    *Refining the object:* The prompt says \"something in the camera's hands that could be used more than one way.\" A dental mirror is just for seeing. A dental scaler (sharp pointed metal hook) is better. You can scale a tooth or stab.\n\n    *Drafting the scene:*\n    POV is the dentist. Looking down at a patient (S1) in a dental chair. The patient is an elderly man with a silver moustache and a blue bib. He is staring up, mouth wide open, gripping the armrests. A right hand enters from the bottom, holding a pointed stainless steel dental explorer. The camera lowers the tool toward the open mouth. (S1), a strained, wet male voice, says <d>[English] Please, just stop.</d> The patient's eyes lock on the lens, his gaze pleading.\n\n    *Wait, the \"wanting one thing from the camera\" part:*\n    The patient wants the camera to stop/leave. The camera has the tool.\n\n    *Check constraints:*\n    - Specific beats generic? Yes (silver moustache, blue bib).\n    - Someone who wants one thing from the camera? Yes (patient wants them to stop).\n    - Object in camera's hand used more than one way? Yes (dental explorer: clean or hurt).\n    - No inner states/moods? Need to remove \"pleading\" or \"strained\" (though voice descriptions are allowed). \"Strained\" refers to sound, \"pleading\" refers to mood/state. Change \"pleading\" to a physical description.\n\n    *Revised Version:*\n    POV looks down at a patient in a dental chair, an elderly man with a silver moustache and a blue plastic bib clipped to his neck. The man's mouth is open wide; he is gripping the black vinyl armrests of the chair. A right hand enters from the bottom, holding a stainless steel dental explorer with a sharp, hooked tip. The camera moves the tip toward the man's open mouth. The man's eyes remain fixed on the lens. (S1), a wet, muffled male voice, says <d>[English] Please stop.</d>\n\n    *Wait, the \"wanting one thing from the camera\":* He wants him to stop.\n    *Object use:* Dental explorer (medical tool vs weapon).\n\n    Let's refine:\n    POV: Dentist.\n    Character: Patient (S1).\n    Object: Scaler.\n\n    Double check constraints:\n    -- \"Someone who wants one thing from the camera\" -> The patient wants the dentist to stop.\n    -- \"Something in the camera's hands that could be used more than one way\" -> The scaler.\n    --- \"Do not use it yet.\" (Hand is just holding it, not yet in the tooth).\n    --- \"The moment cannot stay as it is.\" (The movement toward the mouth creates the tension).\n\n    Wait, maybe I can make the person who wants something a Dental Assistant?\n    Dentist's perspective. Dental Assistant (S1) is standing to the right. She wants the instrument.\n    \"Give me that,\" she says.\n    Object: Heavy stainless steel surgical forceps. (Extraction tool vs weapon).\n\n    Let's try the Assistant route:\n    POV looking at a patient in a dental chair. A dental assistant, (S1) a woman in lime-green scrubs and a plastic face shield, stands beside the chair. A right hand enters from the bottom, holding a pair of heavy stainless steel extraction forceps. (S1), a flat female voice, says <d>[English] Give me the forceps.</d> She holds out her open palm.\n\n    This fits the \"wanting something from the camera\" (the tool) perfectly. The tool (forceps) is multifaceted.\n\n    Let's refine the visual details:\n    - Location: a bright clinic.\n    - Person: Assistant (lime-green scrubs, face shield).\n    - Object: Forceps.\n\n    Checklist:\n    1. Field Label/Shot Marker/Style Sentence: Yes.\n    2. No cuts, no timestamps: Yes.\n    3. Camera not seen/named/addressed: Yes.\n    4. Hands enter from bottom: Yes.\n    5. Speaker IDs/Voice/Text format: Yes.\n    6. No inner states/moods: \"flat female voice\" - flat is sound/quality.\n    7. End on someone wanting something: Assistant wanting forceps.\n    8. Object multifaceted: Extraction forceps.\n\n    One more detail for \"specific beats generic\":\n    The patient should be there to establish context.\n    POV is the dentist. Looking at a man in a dental chair. The man has a gold crown on his upper left canine and a blue bib.\n    S1 (Assistant) is to the side.\n\n    Final Shot flow:\n    1. POV dental chair: Man with gold crown.\n    2. Hand comes up with forceps.\n    3. S1 assistant (scrubs, face shield) reaches out.\n    4. S1: \"Give me the forceps.\"\n    5. End.\n\n    Verify \"something in the camera's hands that could be used more than one way.\"\n    Forceps are for pulling teeth, but they are essentially heavy metal pliers. That works.\n\n    Check \"the moment cannot stay as it is.\"\n    The interaction (the request) demands a change in state.\n\n    Field Label: [TBD]\n    Shot Marker: [TBD]\n    Style: Photoreal live-action, first-person POV, one continuous uncut shot.\n\n    Sentence:\n    Looking down into the open mouth of a patient in a white dental chair, a man with a gold crown on one upper tooth and a blue paper bib. A right hand enters from the bottom of the frame holding a pair of polished stainless steel extraction forceps. To the right, (S1), a woman in lime-green scrubs and a clear plastic face shield, holds out an open palm. She looks into the lens. (S1), a flat female voice, says <d>[English] Give me the forceps.</d>\n\n    Linguistic check: \"flat\" - sound quality? Yes. \"flat female voice\" describes the auditory quality. \"Looking down\" establishes POV. \"Gold crown\" - specific detail. \"Lime-green scrubs\" - specific detail.\n\n    One small point: \"looking down into the open mouth\" implies the camera is pointing there. Then a hand comes up with forceps. Then the assistant reaches out.\n\n    Overall soundscape: High-pitched whine of a dental drill in the background, the rhythmic clicking of a metal instrument tray, shifting fabric of scrubs.\n\n    Wait, \"the moment cannot stay as it is\" is a principle. Ending on the request for the tool encapsulates that tension.\n\n    Let's refine the prompt's \"End with someone who wants one thing from the camera\"\n    S1 wants the forceps. That's the \"one thing\".\n    The camera's hands are holding the forceps.\n\n    Final Polish:\n    FIELD LABEL: CLINIC_INT\n    SHOT MARKER: SHOT_01\n    STYLE: Photoreal live-action, first-person POV, one continuous uncut shot.\n\n    Looking down into the open mouth of a patient reclining in a white dental chair, a man with a gold crown on a left canine and a blue paper bib clipped to his collar. A right hand enters from the bottom of the frame holding a pair of polished stainless steel extraction forceps. To the right, (S1), a woman in lime-green scrubs and a clear plastic face shield, extends an open palm. (S1), a flat female voice, says <d>[English] Give me the forceps.</d>\n\n    Wait, I should make sure the \"multifaceted\" tool is clear. Extraction forceps can pull a tooth or... perform a blunt crush.\n\n    Checking 10-second duration approx (about 2.5 words per second).\n    Dialogue: \"Give me the forceps.\" (4 words). 4/2.5 = 1.6 seconds.\n    Visuals take the rest. It fits.\n\n    One detail on the \"camera person\": they never speak. Yes. Hands from bottom. Yes.\n\n    Could the tool be used for something else in a *visible* way? a dental probe/scaler is a needle-like tool. A mirror. Forceps are pliers. Forceps are good.\n\n    Final text check: \"A right hand... enters from the bottom of the frame...\" Correct.\n\n    \"Give me the forceps.\"\n    Who wants it? S1.\n    What's in the camera's hand? Forceps.\n    Could it be used more than one way? Yes.\n\n    Overall soundscape check: no dialogue in the soundscape.\n    overall_soundscape: Dull hum of a fluorescent light, the distant whine of a dental drill, the rustle of medical scrubs.\n\n    One more scan: \"specific beats generic\". \"Gold crown on a left canine\" and \"lime-green scrubs\" are specific. \"White dental chair\" is generic but Necessary.\n\n    Everything looks tight.FIELD LABEL: CLINIC_INT\nSHOT MARKER: SHOT_01\nSTYLE: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking down into the open mouth of a patient reclining in a white dental chair, a man with a gold crown on his left canine and a blue paper bib clipped to his collar. A right hand enters from the bottom of the frame holding a pair of polished stainless steel extraction forceps. To the right, (S1), a woman in lime-green scrubs and a clear plastic face shield, extends an open palm toward the camera. (S1), a flat female voice, says <d>[English] Give me the forceps.</d>\n\noverall_soundscape: High-pitched whine of a distant dental drill, the hum of fluorescent lights, the fabric rustle of scrubs.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the forceps onto the tray",
+        "Squeeze the stainless steel handles together"
+      ],
+      "rootMs": 24171,
+      "choiceMs": 749
+    },
+    {
+      "premise": "dentist",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. POV_OPENING\nSHOT_1\nPhotoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking up from a vinyl headrest into a bright, circular LED lamp that flares the edges of the frame. Dr. Thorne, a man in his fifties with silver-rimmed glasses and a sharp jawline, leans over the camera wearing powder-blue scrubs, his surgical mask hanging loose around his neck. A left hand enters from the bottom of the frame holding a slender, hooked metal dental explorer. Dr. Thorne looks at the pointed silver tip, then locks eyes with the camera. (S1), a clipped, formal male voice, says <d>[English] Now, give that back.</d> He extends an open palm toward the explorer.\n\noverall_soundscape: The high-pitched intermittent whine of a distant drill, the rhythmic hiss of an air compressor, the soft crinkle of plastic sheeting.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the explorer onto his palm",
+        "Stab the explorer into the tray"
+      ],
+      "rootMs": 65275,
+      "choiceMs": 638
+    },
+    {
+      "premise": "dentist",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. FIELD: DENTAL OPERATORY\nSHOT: POV\nSTYLE: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking up from a reclined leather dental chair at Dr. Sterling, a man in his fifties with silver-rimmed glasses and a blue pleated surgical mask, looming close over the frame. A high-intensity surgical lamp overhead creates a bright white halo around his head. A right hand enters from the bottom of the frame, gripping a stainless steel dental explorer with a sharp, needle-like hook. Dr. Sterling looks at the metal tip, then stares directly into the lens. (S1), a sharp, pinched male voice, says <d>[English] I’ll take that from you now.</d> He holds his glove-covered hand open and motionless in the center of the frame, waiting.\n\noverall_soundscape: High-pitched whine of a dental drill in a distant room, rhythmic ticking of a wall clock, heavy nasal breathing through a surgical mask.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the explorer into his palm",
+        "Bite the thumb of his glove"
+      ],
+      "rootMs": 59971,
+      "choiceMs": 737
+    },
+    {
+      "premise": "dentist",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. STORY_START\nSHOT 1\nPhotoreal live-action, first-person POV, one continuous uncut shot.\n\nLying back in a charcoal-grey vinyl dental chair, looking up into a circular LED surgical light that casts a white glare. (S1), a man wearing a light-blue surgical mask and gold-rimmed magnifying loupes, leans deep into the frame. A right hand enters from the bottom of the frame, gripping a thin, stainless steel dental explorer with a sharp, curved hook. The man stops, his eyes shifting to the instrument. (S1), a thin nasal male voice, says <d>[English] Just hold it there.</d> He reaches his open palm toward the tool. <d>[English] Give that to me.</d>\n\noverall_soundscape: High-pitched whine of a distant dental drill, rhythmic clicking of a foot pedal, fabric shifting against vinyl.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Press the sharp metal against his palm",
+        "Drop the explorer down his throat"
+      ],
+      "rootMs": 85317,
+      "choiceMs": 799
+    },
+    {
+      "premise": "dentist",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. FIELD: Dental Clinic\nSHOT: Opening\nSTYLE: This is a photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking down into the open mouth of (S1), a man in his late forties with a thin mustache and beads of sweat on his brow, reclining in a white vinyl dental chair with a blue paper bib pinned to his chest. A pair of blue nitrile-gloved hands enters from the bottom of the frame, one holding a small round mirror to reflect a gold crown on a molar, the other holding a sharp, stainless steel explorer probe. The gloved hand pulls the mirror away and slowly lowers the pointed tip of the probe toward the man's gumline. (S1), a strained, raspy male voice, says <d>[English] Give me that tool. Now.</d> His hand shoots up from the armrest and clamps tightly around the POV's gloved wrist, pulling the probe toward himself.\n\noverall_soundscape: High-pitched hum of a fluorescent light, the wet rhythmic hiss of a suction tool, a distant drill's whine, and the friction of skin gripping a rubber glove.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Squeeze the probe handle harder",
+        "Drop the mirror into his mouth"
+      ],
+      "rootMs": 139116,
+      "choiceMs": 598
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. thought\n*   Duration: 10 seconds.\n    *   Premise: First day at Hogwarts.\n    *   Format: Photoreal live-action, first-person POV, one continuous uncut shot.\n    *   Constraints:\n        *   One shot, no cuts, no timestamps.\n        *   Camera = unseen person, never named/addressed.\n        *   Hands enter from bottom.\n        *   Visible characters speak (S1, S2, etc.).\n        *   Lines short (10 words max, ~2.5 words per second).\n        *   No inner states/moods.\n        *   End on someone wanting something from the camera, with an object in hand that has multiple uses.\n        *   No Cuts.\n        *   Output format: field label, shot marker, style sentence, prose, then `overall_soundscape:`.\n\n    *   *Setting:* The Great Hall entrance or a corridor. Let's go with the Great Hall entrance to capture the \"arrival/first day\" feel. High stone arches, floating candles overhead.\n    *   *Characters:* A fellow first-year student, maybe nervous or excited.\n    *   *Object in hand:* A wand. A wand can be used for magic, for pointing, or as a weapon/tool.\n    *   *The Action:* Walking through the doors, meeting a classmate.\n    *   *The Climax:* Someone asking for the wand or asking the camera to do something with the wand.\n\n    *   Setting: Tall stone archway leading into the Great Hall. Vaulted ceiling with flickers of gold.\n    *   Character: A young boy with oversized robes, messy hair, glasses (Harry? No, keep it a generic student or another canon character if I'm bold, but the prompt says \"keep its people... canon\"). Let's use ageneric first-year with aSorting Hat nearby. No, a peer is better.\n    *   Action: Two hands enter the frame holding a piece of parchment—the class schedule. The hands fold it.\n    *   A girl with bushy hair (Hermione-esque, let's keep it canon-consistent: Hermione) stops the camera.\n    *   Dialogue: She points to the schedule.\n    *   Ending: The camera is holding a wand. She reaches for it or wants the camera to use it. Wait, the prompt says \"someone who wants one thing from the camera, and something in the camera's hands that could be used more than one way.\"\n    *   Item: The wand. Use cases: Spell casting, poking someone, stirring something.\n\n    *   Wait, the constraint is: \"someone who wants one thing from the camera, and something in the camera's hands that could be used more than one way.\"\n    *   Scenario: Camera (POV student) is holding a wand. A fellow student (S1) looks at the camera and asks for the wand (or wants the POV to cast a spell).\n\n    *   *POV:* Entering the Great Hall. Stone floors.\n    *   *Action:* A hand enters from the bottom, holding a slender piece of polished wood (the wand).\n    *   *Interaction:* A small boy with a round face (Neville type) bumps into the camera.\n    *   *Dialogue:* (S1) \"Have you seen my toad?\"\n    *   *Ending:* (S1) looks at the wand in the camera's hand. (S1) says <d>[English] Can you help me find him?</d> He reaches for the wand.\n\n    *   Specifics: Rubbed stone, flickering candles, oversized black robes.\n    *   Lighting: Warm glow of a thousand candles.\n    *   Movement: Approaching the massive oak doors.\n\n    *   Shot marker: SETTING: GREAT HALL ENTRANCE\n    *   Style: Photoreal live-action, first-person POV, one continuous uncut shot.\n    *   Action: Looking at the heavy oak doors of the Great Hall, flickering light leaking through the cracks. A hand enters from the bottom holding a piece of polished hawthorn wood. A boy in oversized black robes, his tie crooked and face flushed, steps into view, nearly colliding with the lens. He looks up. (S1), a high-pitched, breathless male voice, says <d>[English] I can't find Trevor anywhere!</d> He notices the wand in the hand. He reaches his open palm toward it. (S1) says <d>[English] Try a summoning charm.</d>\n\n    *   Duration check: 10 seconds. Two short lines. Accurate.\n    *   Hands from bottom? Yes.\n    *   No inner state/moods? Yes.\n    *   S1 used? Yes.\n    *   Object multiple uses? Wand (spell, pointy stick).\n    *   Wants something from camera? Wants the wand/spell.\n    *   No cuts? Yes.\n\n    Field label: SCENE 1\n    Shot: SHOT 1\n    Style sentence: Photoreal live-action, first-person POV, one continuous uncut shot.\n    Prose...\n    overall_soundscape: ...\n\n    *Self-Correction on Dialogue:* \"Try a summoning charm\" is 4 words. \"I can't find Trevor anywhere!\" is 5 words. Total 9 words. Roughly 3.6 seconds of talking. Perfect.\n\n    Check phrasing \"End with someone who wants one thing from the camera, and something in the camera's hands that could be used more than one way.\"\n    Boy wants the wand. Wand can be a tool or a weapon.\n\n    *Wait, does the prompt require a generic \"something\" or a specific \"objet\"?* \"something in the camera's hands that could be used more than one way.\" A wand is perfect.\n\n    *One last check:* \"The moment cannot stay as it is.\" - Transitioning from walking to stopping/interacting.\n\n    *Detailed visual check:*\n    1. Heavy oak doors.\n    2. Hand with wand.\n    3. Round-faced boy in oversized robes.\n    4. Dialogue.\n    5. End on the reach.\n\n    *Revised Dialogue for tighter pace:*\n    S1: <d>[English] I've lost my toad!</d>\n    S1: <d>[English] Help me find him.</d>\n\n    (Duration: 10s)\n\n    *Wait, the stylistic instructions:* \"Format. The system writes the opening of the document for you: the field label, the shot marker, and a style sentence that establishes photoreal live-action, first-person POV, one continuous uncut shot. Start a new sentence after it...\"\n\n    Does the system write the *first* part for me? No, the instructions say \"The system writes the opening... for you\" but then says \"write the rest of the shot as prose.\" Usually, this means I provide the full block including the label/marker.\n\n    Let's re-read: \"The system writes the opening of the document for you: the field label, the shot marker, and a style sentence... Start a new sentence after it and write the rest of the shot as prose.\"\n\n    This suggests the *format* must start with:\n    FIELD LABEL\n    SHOT MARKER\n    STYLE SENTENCE\n    Prose...\n\n    Let's use \"LOCATION: THE GREAT HALL ENTRANCE\" etc.\n\n    Actually, I'll use the same style as the example provided in the system prompt.\n\n    Location: Hogwarts Great Hall Entrance.\n    Marker: SHOT 1.\n    Style: Photoreal live-action, first-person POV, one continuous uncut shot.\n\n    *Double check Constraints:* \"Do not use it yet. Do not have anyone list the options — the viewer will find them.\" (Referring to the multi-use object).\n\n    Object: Wand.\n    Ready.\n\n    *Refining the soundscape:* Chattering students, echoing footsteps, a distant chime.\n\n    *Drafting prose:*\n    Looking at the towering oak doors of the Great Hall, where warm light spills through a gap in the wood. A right hand enters from the bottom of the frame, gripping a ten-inch wand of polished dark wood. A round-faced boy in oversized black robes and a loosened tie steps out from the crowd, stumbling slightly and nearly bumping the lens. He looks up into the camera. (S1), a high-pitched, anxious male voice, says <d>[English] I can't find Trevor!</d> He looks down at the wand in the hand and reaches out, palm open. (S1) says <d>[English] Please, use a spell.</d>\n\n    - Hands from bottom? Yes.\n    - No camera one named/addressed? Yes.\n    - Dialogue stable? Yes.\n    - Length? < 10 words.\n    - No moods? Yes. (Note: \"Anxious\" describes the voice—stable descriptor for voice ID, generally acceptable, but \"high-pitched\" is safer). Let's use \"breathy\".\n    - Multi-use object? Wand. (Spell casting / Poke).\n\n    One last check on the prompt: \"someone who wants one thing from the camera, and something in the camera's hands that could be used more than one way.\"\n    The boy wants the wand (or the magic it produces). The wand is in the camera's hands. Done.\n\n    Wait, \"everything given is canon\". Premises given: \"first day at hogwarts\". I invented the boy (Neville type) and the wand. Correct.SCENE 1\nSHOT 1\nPhotoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking at the towering oak doors of the Great Hall, where yellow light spills through the gap in the wood. A right hand enters from the bottom of the frame, gripping a slender wand of polished dark wood. A round-faced boy in oversized black robes and a loose tie steps forward from a crowd of students, nearly colliding with the lens. He stops and looks up. (S1), a breathy, high-pitched male voice, says <d>[English] I can't find Trevor!</d> He looks down at the wand in the hand and reaches out with an open palm. (S1) says <d>[English] Please, cast a spell.</d>\n\noverall_soundscape: Distant chatter of many children, echo of leather shoes on stone, the low hum of flickering torches.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Point the wand at his feet",
+        "Poke him in the chest"
+      ],
+      "rootMs": 15756,
+      "choiceMs": 705
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Field: Hogwarts Lake\nShot: 1\nStyle: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nA small wooden boat glides through black, mirrored water toward a looming silhouette of stone turrets and glowing windows. Cold mist clings to the surface. From the bottom of the frame, two hands emerge, gripping a ten-inch length of polished yew wood. Seated across the boat is Ron Weasley, a boy with bright red hair, a smudge of dirt on his cheek, and an oversized black robe that swallows his shoulders. He looks from the castle back to the lens. (S1), a thin, cracking adolescent voice, says <d>[English] I hope I'm not in the wrong house.</d> The boat jolts as the hull scrapes against a muddy bank. Ron reaches out, his hand open and expectant, fingers gesturing toward the piece of wood in the POV's grip. (S1) says <d>[English] Give it here for a second.</d>\n\noverall_soundscape: Slow lap of water against wood, distant wind whistling through stone gaps, a heavy thud of a boat hitting mud, the rustle of heavy wool fabric.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Snap the yew wood in half",
+        "Drop the wand into the black water"
+      ],
+      "rootMs": 91938,
+      "choiceMs": 605
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. SCENE: The Great Hall\nSHOT 1\nPhotoreal live-action, first-person POV, one continuous uncut shot.\nLooking at the open oak doors of the Great Hall, where hundreds of floating wax candles hover below a ceiling of shifting grey clouds. A girl in black robes with a silver \"Prefect\" badge on her chest stands in the threshold. A right hand enters from the bottom of the frame and takes a pointed silver stylus from the girl's open palm. She holds out a roll of thick, yellowed parchment toward the lens. (S1), a crisp teenage female voice, says <d>[English] Sign the registry. Quickly.</d> She holds the parchment steady, her eyes locked on the lens.\n\noverall_soundscape: Heavy oak doors creaking, a dense hum of overlapping voices, distant owl screeches, boots echoing on stone, the rustle of heavy fabric.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Sign your name in large sloppy cursive",
+        "Drop the stylus onto the stone floor"
+      ],
+      "rootMs": 90360,
+      "choiceMs": 652
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. POV\nSHOT 1\nPhotoreal live-action, first-person POV, one continuous uncut shot.\n\nA high-ceilinged hall of grey stone with iron torches flickering along the walls and a sea of children in oversized black robes. A boy with round glasses and a smudge of soot on his left cheek (S1) walks alongside the camera, his shoulder nearly touching the frame. A right hand enters from the bottom, gripping a long, thin object wrapped in yellowed brown paper and tied with twine. The boy glances at the package, then looks directly into the camera. (S1), a shaky, high-pitched boy's voice, says <d>[English] Give it here. I can feel it vibrating.</d> He reaches his open hand toward the wrapped object.\n\noverall_soundscape: Hundreds of echoing footsteps on stone, a distant rumble of a heavy door closing, crackling torch fire, the low hum of a hundred whispering children.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Toss the parcel across his chest",
+        "Slam the package into his glasses"
+      ],
+      "rootMs": 35935,
+      "choiceMs": 744
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Field: POV\nShot: SH01\nStyle: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking at a weathered, brown leather hat resting on a wooden stool in a stone hall filled with floating white candles. A woman in emerald green robes and a pointed black hat stands beside the stool. A right hand enters from the bottom of the frame, clutching a polished, ten-inch length of hawthorn wood. The camera moves forward through a line of children in oversized black cloaks. (S1), a crisp, authoritative female voice, says <d>[English] Please remain in a single file.</d> Beside the camera, (S2), a boy with a smudge of soot on his cheek, leans in close. (S2), a small, hurried male voice, whispers <d>[English] Give it here.</d> He extends an open palm toward the wand.\n\noverall_soundscape: Echoing footsteps on stone, the soft hum of hundreds of floating candles, rustle of heavy wool robes, distant chatter of a large crowd.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Tap the polished wood against his palm",
+        "Smack the weathered leather hat off the stool"
+      ],
+      "rootMs": 48535,
+      "choiceMs": 730
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. SCENE 1\nSHOT 1\nPhotoreal live-action, first-person POV, one continuous uncut shot.\nLooking into a dim living room with a beige velvet sofa and piles of old magazines. A man (S1) in a translucent grey oversized hoodie and blue jeans floats four inches above the coffee table, his outline shivering like television static. A right hand enters from the bottom of the frame holding a heavy steel letter opener with a weighted pommel. (S1), a distant, echoing male voice, says <d>[English] Hand it over.</d> He reaches out a semi-transparent hand toward the letter opener.\n\noverall_soundscape: Faint static electricity crackle, the distant drone of city traffic, rhythmic breathing close to the microphone.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Toss the opener onto the rug",
+        "Slash the letter opener through his wrist"
+      ],
+      "rootMs": 62294,
+      "choiceMs": 641
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. FIELD: Apartment\nSHOT: POV\nSTYLE: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking into a dim studio apartment with peeling yellow wallpaper and a stack of cardboard pizza boxes on a glass coffee table. A man, S1, with skin the color of skim milk and eyes clouded white, wearing an oversized red flannel shirt and gray sweatpants, floats two inches above a brown velvet sofa. Two hands enter from the bottom of the frame, gripping a heavy, hexagonal crystal award. The camera moves closer to S1, who drifts forward, his translucent chest shimmering against the wall. (S1), a thin, echoing male voice, says <d>[English] You are late with the rent.</d> He extends a translucent hand, palm up, toward the crystal award.\n\noverall_soundscape: A low refrigerator hum, the faint whistling of a draft, and the dry rustle of flannel fabric.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Smash the crystal against his palm",
+        "Drop the award on the floor"
+      ],
+      "rootMs": 34116,
+      "choiceMs": 574
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Field: POV_Internal\nShot: 001\nStyle: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking at Marcus (S1), a man in his early twenties with translucent, bluish-grey skin and a faded, oversized varsity jacket, hovering four inches above a stained beige carpet in a room crowded with stacked cardboard boxes. He drifts slowly toward a pile of old records. A right hand enters from the bottom of the frame, holding a heavy, serrated silver cake server. Marcus stops and rotates in mid-air to face the lens, extending a pale, shimmering hand. (S1), a hollow, echoing male voice, says <d>[English] Give it back, now.</d>\n\noverall_soundscape: Wind whistling through a window gap, a distant siren’s wail, the faint metallic ring of the silver server.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the server onto the vinyl",
+        "Slash the air between our hands"
+      ],
+      "rootMs": 30626,
+      "choiceMs": 715
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. FIELD: Apartment | SHOT: 1 | A photoreal live-action, first-person POV, one continuous uncut shot.\n\nA living room with mustard-yellow wallpaper and a coffee table stacked with empty pizza boxes. Elias, a man in his twenties with translucent, shimmering blue-grey skin and a faded flannel shirt, sits on a beige sofa, staring into the camera. A right hand enters from the bottom of the frame, holding a long, pointed silver letter opener. The camera moves closer to Elias, the tip of the blade hovering inches from his chest. (S1), a hollow, airy male voice, says <d>[English] You found it in the attic.</d> He reaches out with a transparent hand, palm up. (S1) <d>[English] Give it to me.</d>\n\noverall_soundscape: Low hum of a refrigerator, a faint electric crackle, fabric shifting, rhythmic breathing close to the microphone.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Press the blade into his palm",
+        "Drop the letter opener on pizza boxes"
+      ],
+      "rootMs": 28700,
+      "choiceMs": 512
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. FIELD: Living Room\nSHOT: 1\nSTYLE: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking at a living room with beige walls and a peeling ceiling, where Elias (S1), a semi-transparent man in a moth-eaten cream cable-knit sweater and brown corduroy trousers, hovers six inches above a mustard yellow couch. He tilts his head, gazing into the lens. A right hand enters from the bottom of the frame holding a tapered silver letter opener with a heavy obsidian handle. The hand rotates the blade. Elias extends his open palm toward the camera. (S1), a hollow, echoing male voice, says <d>[English] Hand it over.</d> He keeps his palm open, eyes fixed on the lens.\n\noverall_soundscape: A low electrical hum, the faint rattle of a windowpane, a metallic schlick, a hollow echoing voice.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Slash his palm with the blade",
+        "Drop the opener on the couch"
+      ],
+      "rootMs": 47644,
+      "choiceMs": 578
+    },
+    {
+      "premise": "blind date",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. FIELD: Blind Date\nSHOT: SHOT 1\nStyle: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nAcross a small bistro table with a red-checked tablecloth, a glass of red wine and a small bowl of olives sit next to a mobile phone. (S1) sits opposite, a woman with copper-red hair in a loose bun and a white silk blouse with a brown smudge on the collar. A right hand enters from the bottom of the frame holding a gold-plated Zippo lighter. (S1) looks up and (S1), a crisp, airy female voice, says <d>[English] Ten minutes late.</d> The hand holds the lighter still above the table. (S1) looks at the gold metal and extends her open palm.\n\noverall_soundscape: Muffled restaurant chatter, clinking silverware, a distant espresso machine, fabric of a sleeve brushing against the table.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Snap the lighter shut and slide it onto her palm",
+        "Ask if the smudge on her collar is chocolate or blood"
+      ],
+      "rootMs": 71626,
+      "choiceMs": 761
+    },
+    {
+      "premise": "blind date",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. SCENE 1\nSHOT 1\nPhotoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking across a marble bistro table at a woman in her late twenties with a sharp black bob and a shimmering emerald green slip dress, sitting in a red velvet booth beneath a dim amber pendant light. A right hand enters from the bottom of the frame and slides a polaroid photograph across the white linen tablecloth. She reaches out, picks up the photo, looks at it, then locks eyes with the camera. (S1), a soft, tentative female voice, says <d>[English] This isn't the person I was expecting.</d> She extends her open hand, wanting the photo returned. In the POV's other hand, resting at the bottom of the frame, is a heavy silver steak knife.\n\noverall_soundscape: Low chatter of a distant restaurant, the faint clink of silverware on porcelain, the soft rustle of a photo sliding on linen.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Flip the heavy silver blade over",
+        "Toss the photograph into her lap"
+      ],
+      "rootMs": 106408,
+      "choiceMs": 613
+    },
+    {
+      "premise": "blind date",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Field: Opening Scene\nShot: One continuous uncut shot\nStyle: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking across a red leather booth in a dim bistro at a woman with a tight blonde bun, gold hoop earrings, and a black cocktail dress, her right hand drumming against the table beside a flickering tea candle. A right hand enters from the bottom of the frame, gripping a serrated silver steak knife. (S1), a crisp female voice, says <d>[English] I almost didn't come tonight.</d> She leans forward, extending a finger toward a slice of raw beef on a shared platter in the center of the table. (S1) says <d>[English] Will you cut this piece for me?</d> Her eyes fix on the lens.\n\noverall_soundscape: Low murmur of other patrons, clink of silverware on porcelain, the faint crackle of a tea candle, fabric of a dress shifting against leather.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Saw the meat in half",
+        "Eat the raw beef yourself"
+      ],
+      "rootMs": 58932,
+      "choiceMs": 602
+    },
+    {
+      "premise": "blind date",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. FIELD: Opening\nSHOT: Sequence 01\nSTYLE: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking across a narrow bistro table with a cream linen cloth at a woman wearing a navy silk blouse and gold-rimmed glasses; a single loose strand of dark hair falls across her chin. Between them sit two glasses of red wine and a small plate of seared scallops. A right hand enters from the bottom of the frame, gripping the handle of a heavy, serrated silver steak knife. (S1), a precise female voice, says <d>[English] You've barely touched your wine.</d> She leans forward and extends her open palm toward the knife.\n\noverall_soundscape: Muffled chatter of a dining room, the rhythmic clink of cutlery on porcelain, wine swirling in a glass.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Slide the cold blade into her palm",
+        "Smash your glass across the linen"
+      ],
+      "rootMs": 148991,
+      "choiceMs": 763
+    },
+    {
+      "premise": "blind date",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. FIELD: Blind Date\nSHOT: POV: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nAcross a red vinyl booth in a dimly lit bar, a woman with silver glitter on her eyelids and an oversized cream-colored cable-knit sweater leans forward, her fingertips brushing a condensation-ringed martini glass. A pair of hands enters from the bottom of the frame, gripping a tarnished silver letter opener with a heavy, ornate pommel. (S1), a rapid-fire female voice, says <d>[English] Honestly, the profile didn't mention the hardware.</d> She stops mid-gesture and stares at the silver blade, her right hand extending across the mahogany table toward the object.\n\noverall_soundscape: Muffled chatter of a crowd, the distant clink of glassware, a low bass hum from a speaker, the sliding of a glass on a wooden table.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Slide the silver blade across her palm",
+        "Lick the glitter off your thumb"
+      ],
+      "rootMs": 55576,
+      "choiceMs": 608
+    },
+    {
+      "premise": "airport security",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. POV_SHOT 01 Photoreal live-action, first-person POV, one continuous uncut shot. \n\nLooking down at a grey plastic bin on a moving conveyor belt in a bright airport security terminal. Two hands enter from the bottom of the frame and place a black laptop and a coiled brown leather belt into the bin. The bin slides forward toward a lead-lined X-ray tunnel. As the bin enters the machine, (S1), a TSA officer with a thick handlebar mustache and a navy blue polo shirt, steps into the frame. The camera's right hand remains visible, gripping a heavy, polished aluminum tactical flashlight. (S1), a stern nasal male voice, says <d>[English] Everything in the bin. Now.</d> He holds out an open palm and looks into the lens.\n\noverall_soundscape: Hum of a motorized conveyor belt, distant rhythmic beeping of an X-ray machine, muffled PA system announcements, shuffling feet on linoleum floors.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Slam the flashlight onto the belt",
+        "Say you forgot your gold watch"
+      ],
+      "rootMs": 40136,
+      "choiceMs": 592
+    },
+    {
+      "premise": "airport security",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. FIELD: Airport Security\nSHOT: Continuous uncut first-person POV\nSTYLE: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking down at a gray plastic bin moving on a black rubber conveyor belt. A right hand in a grey cashmere sleeve enters from the bottom of the frame and places a brown leather wallet and a black smartphone into the bin. Looking up at a TSA officer, a woman with olive skin and a high, tight bun wearing a navy blue uniform. She holds out her right hand, palm up. The hand in the frame raises a heavy, polished stainless steel tactical pen into the center of the frame. (S1), a sharp female voice, says <d>[English] Step back. Give me the pen.</d> She keeps her hand open, her gaze locked on the steel cylinder.\n\noverall_soundscape: Deep hum of a conveyor belt, rhythmic clatter of plastic bins, distant muffled intercom announcements, the crisp rustle of a cashmere sleeve.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the pen into her open palm",
+        "Toss the heavy pen past her head"
+      ],
+      "rootMs": 98593,
+      "choiceMs": 829
+    },
+    {
+      "premise": "airport security",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Field: Airport Security\nShot: 01\nStyle: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking down at a grey plastic bin on a black rubber conveyor belt under humming fluorescent lights. Both hands enter from the bottom and drop a ring of brass keys and a brown leather wallet into the bin. The bin slides right. The camera moves forward through a stainless steel metal detector frame. On the other side stands (S1), a man in a blue short-sleeved security shirt with a silver badge and a buzz cut. (S1), a dry nasal male voice, says <d>[English] That is not allowed.</d> The camera looks down at a right hand gripping a heavy, polished gold fountain pen with a tapered metal cap. (S1) extends his open palm and says <d>[English] Give me that.</d>\n\noverall_soundscape: Continuous mechanical hum of the conveyor, the rattle of plastic on rubber, a distant electronic chime, rubber soles scuffing on linoleum.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the pen into his palm",
+        "Unscrew the cap and ink his badge"
+      ],
+      "rootMs": 68175,
+      "choiceMs": 634
+    },
+    {
+      "premise": "airport security",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. FIELD: Airport Security Checkpoint\nSHOT: 1\nSTYLE: Photoreal live-action, first-person POV, one continuous uncut shot.\n\nLooking down at a gray plastic bin on a black rubber conveyor belt. A right hand enters from the bottom of the frame and drops a leather wallet into the bin. The camera moves forward, passing through the rectangular aluminum arch of a metal detector. The arch flashes red. (S1), a man in a navy blue uniform with a silver badge, steps in front of the lens with his arm extended. A right hand enters from the bottom, holding a knurled, matte-black titanium pen. (S1), a clipped male voice, says <d>[English] Step back. Give me the object.</d>\n\noverall_soundscape: Hum of a conveyor belt, distant airport chatter, a loud electronic buzzer, the scuff of rubber soles on linoleum.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Slide the pen across the belt",
+        "Snap the pen in half"
+      ],
+      "rootMs": 33796,
+      "choiceMs": 518
+    },
+    {
+      "premise": "airport security",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. POV\nOne continuous uncut shot.\nPhotoreal live-action, first-person POV, one continuous uncut shot.\n\nWalking through the gray steel archway of a security scanner onto a charcoal-gray industrial carpet. A TSA agent in a short-sleeved light blue button-down and a silver shield badge stands beside a monitor displaying a grayscale X-ray image. At the bottom of the frame, two hands emerge, fingers gripped tightly around a rectangular polished brass Zippo lighter. The agent steps forward, eyes fixed on the brass object, and (S1), a flat, authoritative male voice, says <d>[English] Hand over the lighter.</d> He holds out an open palm toward the camera.\n\noverall_soundscape: Distant terminal chatter, the hum of an X-ray machine, the rhythmic thud of rubber conveyor belts, the crisp click of a boot heel on carpet.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Flip the brass lid open",
+        "Drop the lighter into his palm"
+      ],
+      "rootMs": 85330,
+      "choiceMs": 519
+    }
+  ],
+  "failures": []
+}

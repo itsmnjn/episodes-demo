@@ -1,0 +1,775 @@
+{
+  "startedAt": "2026-09-01T22:47:50.061Z",
+  "choiceModel": "google/gemini-3.5-flash-lite",
+  "fixturePath": "evals/expansions/2026-09-01T22-42-20-gemini-3.7-flash/run.json",
+  "n": 2,
+  "system": "You write the protagonist's next move in a first-person video story. You are given the scene so far; it ends on a cliffhanger. Write two moves the protagonist could make right now, each one a different way the story could go next.\n\nA move is something the protagonist does to a person, an object, or the room in front of them, or something they say. It has to be possible from exactly where the scene stopped, and it has to change what happens next. Nothing done to their own body, and no waiting, watching, or stepping back.\n\nEach move is 2 to 6 words starting with a verb, like \"Hand him the apple\" or \"Ask who sent the note\". Plain text, no punctuation at the end, no quotation marks. Output exactly two lines, one move per line, nothing else.",
+  "results": [
+    {
+      "fixture": {
+        "premise": "zoo",
+        "scene": "The humid reptile house is quiet until a sudden scraping noise echoes from the ceiling above the terrariums. An overhead maintenance hatch swings open, and a green tree python slowly dangles down inches from your face.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking through the glass of an illuminated terrarium filled with wet ferns and mist. Two hands rest on a polished wooden guardrail at the bottom of the frame. A sharp metallic scraping sound echoes overhead, followed by a loud click. Looking straight up at the industrial ceiling, a square metal maintenance hatch drops open on its hinge with a metallic clatter. A vibrant emerald-green tree python lowers out of the opening, its body uncoiling downward in midair until its triangular head hangs stationary inches in front of the frame, its dark tongue flicking rapidly.\n\noverall_soundscape: Low electric hum of terrarium heat lamps, periodic hissing of water mist systems, sharp metallic scraping and latch click, heavy creak and bang of the swinging metal hatch, faint dry rustle of scales sliding over metal.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Slam the glass shut",
+            "Blow air at its head"
+          ],
+          "ms": 629,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Slam the glass shut",
+            "Blow air at its head"
+          ],
+          "ms": 614,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "zoo",
+        "scene": "A crowd of children giggles around the glass of the penguin exhibit while a trainer tosses fish into the pool. A soaked penguin launches itself completely over the acrylic barrier, landing with a wet thud right on your sneakers.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A low acrylic barrier separates the tiled walkway from a brightly lit penguin enclosure, where a zookeeper in a blue polo tosses small silvery fish into churning turquoise water. A dozen small children crowd the railing to the left, pointing and jumping. Hands enter from the bottom of the frame holding a folded zoo map. In the pool, a gentoo penguin shoots straight up out of the water like a missile, clearing the top edge of the acrylic wall. It flies through the air and crashes down with a heavy, wet slap across the tops of the white sneakers at the bottom of the frame. The drenched bird sits upright on the shoes, shakes its head rapidly, spraying droplets, and tilts its beak directly up into the camera.\n\noverall_soundscape: Splashing pool water, excited high-pitched giggling and chatter of children, a wet slapping thud on canvas shoes, rapid feather-shaking flapping sound, and background indoor zoo ambient echo.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Drop the map on it",
+            "Kick the penguin back in"
+          ],
+          "ms": 727,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Drop the map over it",
+            "Kick the penguin back in"
+          ],
+          "ms": 811,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "zoo",
+        "scene": "The open-air safari tram jerks to an unexpected halt on the dirt trail while the automated tour guide audio continues cheerfully playing. A massive adult ostrich strides directly to your side of the bench, tilts its head sideways, and pecks hard at your shiny belt buckle.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The open metal bench shakes as the safari tram skids to a sudden halt, kicking up a puff of dry orange dust along the dirt track. Two hands grip the green padded safety bar directly ahead. Through the open side of the vehicle, a tall adult ostrich with ruffled black plumage and a long, bare neck strides swiftly up the dirt shoulder. It stops beside the row, towering over the rail, and cocks its head flat to the side, fixing a round black eye on the seat. The bird snaps its neck downward, thrusting its broad beak directly into the polished chrome belt buckle between the hands.\n\noverall_soundscape: Brakes squealing, tram frame rattling, automated cheery tour guide narration over a tinny loudspeaker, rapid bird footsteps on gravel, and a loud metallic tap of a beak striking metal.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Pull the safety bar down",
+            "Smack the beak away"
+          ],
+          "ms": 834,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Grab the tall green bar",
+            "Shove the buckle toward it"
+          ],
+          "ms": 466,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "zoo",
+        "scene": "A keeper rushes down the boardwalk near the primate habitat, clutching an empty harness and looking around in a panic. A young capuchin monkey drops onto your shoulder from an overhead branch and wraps its tiny fingers tightly around your ear.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A wooden boardwalk stretches forward under a canopy of lush green leaves, bordered by a rope railing. A zoo keeper wearing a tan uniform, a young woman with a high ponytail, sprints toward the camera clutching an empty black nylon harness, scanning the trees frantically. (S1), an urgent, breathless female voice, says <d>[English] Please tell me you haven't seen a tiny monkey!</d> A sudden rustle shakes the foliage above, and a small brown capuchin monkey with a cream-colored face drops directly into the left side of the frame, landing on the left shoulder. Two pale hands enter from the bottom of the frame, rising open in surprise. The monkey's small, leathery fingers reach out and grip tightly around the left ear, its wide dark eyes staring straight into the camera as it bares its teeth in a silent grin.\n\noverall_soundscape: Rapid footsteps pounding on wooden planks, rustling canopy leaves, distant squawks of tropical birds, a heavy thump of a small body landing, and light chirping from the capuchin close to the microphone.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Reach up and grab it",
+            "Point at the fleeing zookeeper"
+          ],
+          "ms": 671,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Reach up to grab it",
+            "Point at the fleeing animal"
+          ],
+          "ms": 641,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "zoo",
+        "scene": "Dozens of visitors are relaxing on the lawn near the flamingo pond under the warm afternoon sun. A loud siren begins wailing over the park loudspeakers as a voice announces that all guests in your exact pavilion must remain completely still.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a grassy lawn at a shallow pond where bright pink flamingos wade, visitors lounging on picnic blankets beneath the bright sun. A pair of hands in blue denim cuffs enters the bottom of the frame, unscrewing the cap of a plastic water bottle. A high-pitched, oscillating siren blares from a speaker mounted on a wooden pavilion post just three feet away, cutting off the chatter. A park ranger in a khaki uniform and wide-brimmed hat steps directly in front of the lens, raises both open hands, and (S1), a stern female voice amplified through a handheld megaphone, says <d>[English] Attention Pavilion C! Do not move a single muscle!</d> The ranger's gaze shifts intently toward the grass right between the protagonist's sneakers.\n\noverall_soundscape: Distant bird squawks, a loud mechanical siren echoing, plastic bottle crackling, amplified megaphone feedback, and rustling grass.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Drop the water bottle down",
+            "Ask what is down there"
+          ],
+          "ms": 639,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Drop the water bottle down",
+            "Throw the bottle at her"
+          ],
+          "ms": 696,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "dentist",
+        "scene": "The dentist taps the glowing digital X-ray on the monitor while adjusting the heavy lead apron over your chest. He squints at your upper jaw, lowers his glasses, and asks if you have ever had a microchip implanted beneath your gums.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Under the harsh glare of an overhead dental lamp, a dentist in blue scrubs and clear wire-rimmed glasses reaches down, smoothing a heavy grey lead apron across the bottom of the frame. He turns to a glowing computer monitor on the wall, pointing a gloved index finger at a high-contrast digital X-ray of an upper jaw. He taps the glass twice over a bright, metallic rectangle wedged between two upper molars, leans in close, and pulls his glasses down to the tip of his nose. Looking directly down into the lens, (S1), a mild, inquisitive male voice, says <d>[English] Have you ever had a microchip placed under your gums?</d>\n\noverall_soundscape: Low hum of the dental light, soft crinkle and heavy thud of the lead apron settling, two sharp taps against a glass monitor screen, faint ventilation hiss.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Shake head side to side",
+            "Ask what that thing is"
+          ],
+          "ms": 690,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Deny ever seeing that before",
+            "Ask how it got there"
+          ],
+          "ms": 807,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "dentist",
+        "scene": "The high-pitched whine of the drill fills the small exam room as the assistant hovers with the suction tube near your cheek. The tip of the tool suddenly snaps off with a muffled pop, and the dentist freezes before urgently warning the assistant not to let you swallow.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking up past a bright circular overhead lamp into the faces of a male dentist and a female dental assistant wearing surgical masks and protective eyewear. The dentist holds an angled metallic drill emitting a shrill whine while the assistant extends a clear plastic suction tube hovering close to the lower edge of the view. The drill spins, then jerks with a sharp metallic snap, its spinning tip disappearing from the shaft. The dentist freezes in place, his eyes widening above his paper mask, and (S1), a sharp strained male voice, says <d>[English] Don't move. Keep the suction tight, do not let them swallow!</d> The assistant thrusts the suction tip deeper, her brow furrowed as both lean in closer.\n\noverall_soundscape: High-pitched mechanical dental drill whining then cutting out, a sharp metallic snap, constant wet suction hissing, fluorescent hum.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Bite down on the tube",
+            "Grab the dentist's wrist"
+          ],
+          "ms": 688,
+          "flags": [
+            "self-body:1",
+            "form:2"
+          ]
+        },
+        {
+          "moves": [
+            "Grip the dental chair armrests",
+            "Grab the suction tube away"
+          ],
+          "ms": 564,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "dentist",
+        "scene": "You sit tipped completely back in the padded chair while the oral surgeon cheerfully lays out heavy extraction forceps on a stainless steel tray. He pulls up his mask, winks, and loudly congratulates you on making the bold decision to pull out every single tooth at once.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking up at the bright circular overhead examination lamp and white acoustic ceiling tiles of a dental operatory. A silver metal tray swings into the upper edge of view, where a tall, broad-shouldered oral surgeon with silver-streaked hair and bright blue scrubs sets down three pairs of large, cross-hatched metal extraction forceps, each clinking against the tray. He reaches up with gloved hands, pulls a pleated blue surgical mask over his nose, leans down directly over the chair, and winks. (S1), an upbeat, resonant male voice, says <d>[English] Love this bold choice, pulling every single tooth today!</d> He raises a heavy pair of forceps in his right fist and brings the cross-hatched metal jaws down toward the lens.\n\noverall_soundscape: Low hum of the overhead lamp, ventilation airflow, metallic clanking of heavy forceps on a stainless steel tray, elastic snapping of a surgical mask.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Grab his wrist to stop him",
+            "Knock the metal tray away"
+          ],
+          "ms": 625,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Grab the heavy forceps",
+            "Knock the silver tray away"
+          ],
+          "ms": 565,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "dentist",
+        "scene": "Soft jazz plays through the ceiling speakers as the hygienist carefully flosses between your back molars with mint-flavored string. Her hands suddenly halt as the thread snags, pulling free a tiny plastic cylinder that immediately begins beeping with a steady red pulse.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking up from a reclined dental chair at a bright circular examination light and the face of a hygienist in blue scrubs, protective clear glasses, and a blue surgical mask. Her purple-gloved hands work near the lower edge of the view, pulling taut white dental floss between teeth. Both of her hands abruptly stop moving. She slowly lifts the floss out into the center of the light, revealing a black plastic cylinder the size of a grain of rice caught in the looped thread, blinking with a bright red LED light at rapid, regular intervals. The hygienist tilts her head down, her eyebrows furrowing above her mask, and (S1), a muffled calm female voice, says <d>[English] Keep your mouth completely still for a moment, please.</d> The blinking red light speeds up, its pitch rising.\n\noverall_soundscape: Soft smooth jazz over an overhead speaker, the gentle hum of dental equipment suction, the snap of dental floss, followed by a faint rhythmic electronic beep that accelerates in tempo.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Snatch the floss from her",
+            "Grab the blinking device now"
+          ],
+          "ms": 573,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Grab the dental tool tray",
+            "Knock the floss from her fingers"
+          ],
+          "ms": 647,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "dentist",
+        "scene": "The receptionist slides back the frosted glass window to hand you a clipboard while the waiting room fish tank hums in the corner. She glances down at your intake form, goes completely rigid, and quietly asks you not to move from your chair while she hits the panic button under her desk.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The frosted glass partition slides open along its metal track, revealing a middle-aged receptionist with short brown hair, silver-framed glasses, and a blue cardigan sitting behind a laminate desk. Two hands enter from the bottom of the frame and hold out a wooden clipboard with a completed white intake sheet. The receptionist takes the clipboard, looks down at the top page, and stops moving entirely, her shoulders locking in place. Without blinking or raising her head, (S1), a tight, barely audible female voice, says <d>[English] Please do not get up from your seat right now.</d> Her right shoulder drops as her right hand reaches down beneath the desk surface, followed by a faint metallic click under the counter, her eyes slowly shifting up to stare directly forward.\n\noverall_soundscape: The continuous low electric hum and water bubbling of a fish tank, sliding glass on metal, the rustle of a clipboard changing hands, a quiet metallic click under a desk.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Slam your palm against the glass",
+            "Grab the edge of the desk"
+          ],
+          "ms": 832,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Slam the clipboard onto her desk",
+            "Grab the edge of the counter"
+          ],
+          "ms": 532,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "first day at hogwarts",
+        "scene": "The Great Hall buzzes beneath thousands of floating candles as Professor McGonagall lowers the Sorting Hat onto your head. The hat’s frayed brim twists into a grimace before screaming out a house name that has been forbidden for centuries.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across the Great Hall beneath thousands of floating candles toward hundreds of seated students watching from long wooden tables. Standing immediately before the stool, Professor McGonagall, an elderly woman with square spectacles and dark emerald robes, lowers the frayed, patched brown leather Sorting Hat downward until its brim rests just above the field of view. Two hands in black school robes rest on the wooden edges of the stool. The leather folds of the hat's brow twist and split into a wide, gaping tear at the brim, and (S1), a raspy, booming theatrical voice, shouts <d>[English] MORGANA!</d>\n\noverall_soundscape: Murmur of hundreds of voices, flickering flame flutter, rustling heavy fabric, wood scraping softly, followed by a loud theatrical roar echoing through the hall.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Pull the stool back sharply",
+            "Gasp at the sudden announcement"
+          ],
+          "ms": 715,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Grab the frayed leather brim",
+            "Ask why everyone is staring"
+          ],
+          "ms": 659,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "first day at hogwarts",
+        "scene": "The grand marble staircase suddenly groans and swings away from the crowded corridor toward a dusty landing on the restricted third floor. A portrait of an armored knight points a trembling spear directly at you, whispering that the shadows at your heels do not belong to you.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down along the curving banister of the grand marble staircase as the stone treads grind against the wall, shifting sideways away from the bustling ground-floor hall and locking into a dark, dust-covered archway marked \"RESTRICTED 3RD FLOOR.\" Two hands in wool sweater cuffs reach out to grip the smooth marble rail. Directly ahead in the dim alcove, the painted figure inside a gold-framed oil portrait moves; (S1), an armored knight with a visor raised over glowing painted eyes, thrusts an iron-tipped spear forward out of the canvas, pointing the vibrating tip toward the lens, and says in a raspy, metallic whisper <d>[English] The shadows at your heels do not belong to you.</d>\n\noverall_soundscape: Deep grinding of heavy stone mechanisms, echoing chatter fading from below, the scrape of canvas, a hollow metallic whisper, and the hum of settling dust.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Grab the iron spear tip",
+            "Press your back against the wall"
+          ],
+          "ms": 799,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Grab the vibrating iron spearhead",
+            "Push past the gold frame"
+          ],
+          "ms": 550,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "first day at hogwarts",
+        "scene": "Steam rises from dozens of brass cauldrons in the chilly dungeon as Professor Snape glides silently between the workstations. He stops abruptly at your desk, eyes narrowing at the glowing violet liquid bubbling in your vial before asking whose forbidden notes you used to brew it.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A glass stirring rod held in a right hand swirls a bubbling, glowing violet liquid inside a clear glass vial resting on the wooden workstation. Pale steam drifts past from neighboring brass cauldrons in the stone dungeon. Black robes sweep into the frame from the aisle as Severus Snape, a pale man with shoulder-length greasy black hair and a hooked nose, comes to a sudden halt opposite the desk. The right hand places the stirring rod down onto the slate tabletop. Snape leans slightly forward, his dark eyes fixed directly on the luminous purple potion, then slowly rises to look straight into the camera lens. (S1), a low, silky, menacing male voice, says <d>[English] Whose forbidden notes did you steal to brew this concoction?</d>\n\noverall_soundscape: Bubbling liquids, gentle clink of glass on stone, hissing steam, the rustle of heavy black robes, echoing dungeon silence.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Hand him the glowing vial",
+            "Deny stealing any forbidden notes"
+          ],
+          "ms": 752,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Push the glowing vial toward him",
+            "Hand him the stolen parchment notes"
+          ],
+          "ms": 604,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "first day at hogwarts",
+        "scene": "Trunks pop open around the circular common room as excited first-years compare wands and unpack their squawking owls. A breathless prefect rushes over and thrusts a smoking, screeching red envelope into your hands, warning you that the Howler will detonate in three seconds.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a circular stone common room lit by a roaring hearth, where children in black robes unpack brass-bound trunks and hold up polished wooden wands while caged owls hoot and flutter on velvet armchairs. A tall older boy with a shining silver badge on his robes rushes through the cluster of students, carrying a crimson envelope emitting thick grey smoke and high-pitched mechanical shrieks. Two hands in black wool sleeves enter from the bottom of the frame with palms open. The older boy slaps the vibrating red envelope directly into the hands, and (S1), a breathless teenage boy's voice, says <d>[English] Catch that! It’s going to blow in three seconds!</d> The envelope’s wax seal rips open on its own, expanding into the shape of a wide, jagged paper mouth that glows bright red and draws in a massive breath.\n\noverall_soundscape: Crackling fireplace, fluttering wings, owl hoots, chattering students, rushing footsteps on stone floor, high-pitched screeching and hissing smoke, sharp intake of air from the tearing envelope.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Toss the screaming envelope away",
+            "Hurl it into the fireplace"
+          ],
+          "ms": 682,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Toss it into the fire",
+            "Throw it at the floor"
+          ],
+          "ms": 638,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "first day at hogwarts",
+        "scene": "The fleet of wooden boats glides silently across the black glass of the Great Lake toward the towering silhouette of the castle. Hagrid suddenly turns his lantern toward your boat, shouting for you to keep your hands inside as a massive, glowing tentacle wraps around your hull.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A fleet of small wooden boats glides smoothly over black, mirror-like water toward the distant silhouette of a massive stone castle with glowing amber windows. Two hands reach forward from the bottom of the frame and rest on the wooden gunwale. In the lead boat ahead, Rubeus Hagrid, a towering man with a thick, tangled black beard and heavy coat, swings a brass lantern around, directing its bright yellow beam back at the boat. (S1), a booming, rough male voice, says <d>[English] Keep yer hands inside the boat, right now!</d> The hands pull back quickly from the rim. The water churns, and a massive, bioluminescent tentacle rises from the depths and curls tightly over the wooden bow, squeezing the timber until it groans.\n\noverall_soundscape: Gentle lapping of lake water, low distant wind, creaking wood, Hagrid's booming shout, a heavy surge and splash of water, wet suction, and splintering boat timber.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Grab Hagrid's nearby lantern",
+            "Strike the slimy tentacle"
+          ],
+          "ms": 760,
+          "flags": [
+            "form:1"
+          ]
+        },
+        {
+          "moves": [
+            "Grasp the heavy wooden oar",
+            "Scream at Hagrid for help"
+          ],
+          "ms": 680,
+          "flags": [
+            "noise:2"
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "my roommate is a ghost",
+        "scene": "The kitchen sponge is floating over the sink, scrubbing a bowl in mid-air while a breezy voice hums an eerie 1920s jazz tune. A translucent hand suddenly reaches out of the cabinet and offers you a dripping wet teacup.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A yellow kitchen sponge hovers in mid-air over the stainless-steel sink, rubbing in small circles inside a floating ceramic cereal bowl under a thin stream of running tap water while an airy, melodic humming carries a jaunty 1920s jazz tune from the empty space above. Two hands enter from the bottom of the frame, reaching toward the faucet handle, but freeze in place as the upper cabinet door swings slowly outward on squeaking hinges. A pale, semi-transparent human hand extends from the dark interior shelf, holding out a steaming, dripping wet porcelain teacup directly toward the lens.\n\noverall_soundscape: Thin stream of running water splashing in the sink, wet sponge squelching rhythmically against ceramic, a distant breezy hummed 1920s jazz melody, and the slow squeak of wooden cabinet hinges.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Grab the floating teacup",
+            "Push the cabinet door shut"
+          ],
+          "ms": 956,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Grab the steaming teacup",
+            "Turn off the running faucet"
+          ],
+          "ms": 565,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "my roommate is a ghost",
+        "scene": "Three ancient silver coins drop onto your laptop keyboard from the ceiling, clinking softly against the spacebar. A misty silhouette coalesces across the kitchen table, crosses its arms, and politely asks if this covers their half of the Wi-Fi bill.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down at an open laptop on a wooden kitchen table, hands typing on the keyboard. Three heavy, tarnished silver coins fall from above, clattering onto the keys and settling against the spacebar. The hands stop typing, hovering above the keys. Tilting upward, a translucent grey mist swirls across the opposite side of the table, condensing into the faint figure of a person in a Victorian waistcoast. The figure crosses its translucent arms, leans forward slightly, and (S1), an airy, polite male voice, says <d>[English] Does this adequately settle my half of the internet bill?</d> The figure tilts its head, waiting for a response.\n\noverall_soundscape: Rapid plastic keyboard clicking, the sharp metallic clinking of coins hitting the keys and table, faint ethereal wind whooshing softly, refrigerator hum in the background.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Push the coins away",
+            "Ask how he died"
+          ],
+          "ms": 690,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Pick up the silver coins",
+            "Push the laptop away slowly"
+          ],
+          "ms": 679,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "my roommate is a ghost",
+        "scene": "The bathroom mirror is heavily fogged over despite the ice-cold running tap, and unseen fingers slowly trace letters through the condensation. The dripping message finishes spelling out, \"We need to talk about who you brought home last night.\"",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking into a white porcelain basin where a chrome faucet runs cold water over the metal drain. A right hand enters from the bottom of the frame and twists the cold tap handle tight, but the water continues to gush out. Looking up to the medicine cabinet mirror, thick white condensation covers the glass. Clear vertical and horizontal lines drag through the fog with high-pitched squeaks, droplets rolling down the reflective surface as invisible strokes finish spelling out the final words: \"We need to talk about who you brought home last night.\"\n\noverall_soundscape: Steady rush of running water into a full basin, high-friction squeaks of movement on wet glass, light dripping on porcelain.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Smash your fist into the mirror",
+            "Wipe the fog away with your palm"
+          ],
+          "ms": 828,
+          "flags": [
+            "form:2"
+          ]
+        },
+        {
+          "moves": [
+            "Wipe the fog away",
+            "Smash the mirror glass"
+          ],
+          "ms": 586,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "my roommate is a ghost",
+        "scene": "The television remote levitates off the sofa, aggressively flipping channels until it lands on a true-crime documentary. An icy draft brushes the back of your neck as a voice whispers that the suspect on screen used to live in your bedroom.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across the living room at a black television remote resting on the grey fabric cushion of the sofa. The remote lifts into the air, floating horizontally, its buttons pressing downward in rapid succession. The television screen cycles rapidly through a cartoon, a football match, and a cooking show before stopping on a mugshot of a bearded man with the onscreen text \"UNSOLVED: THE BEDROOM KILLER.\" A translucent, pale grey silhouette of a woman materializes beside the television, leaning slightly forward, and (S1), a breathy, chill female whisper, says <d>[English] He slept right where your bed is now.</d> The remote drops straight down, hitting the floorboards beneath the sofa.\n\noverall_soundscape: Rapid electronic channel clicks, the distant low drone of the true-crime narration, a faint rush of cold wind, and the sharp plastic clatter of the remote hitting wooden floorboards.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Point at the television screen",
+            "Ask who she is"
+          ],
+          "ms": 684,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Ask who the bearded man is",
+            "Pick up the dropped remote"
+          ],
+          "ms": 647,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "my roommate is a ghost",
+        "scene": "Cardboard moving boxes are hovering in mid-air, neatly unpacking themselves into the hallway closet with impossible precision. The closet door abruptly slams shut on its own, and a glowing piece of parchment slides out from underneath warning you never to open the bottom drawer.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Standing in a narrow wooden hallway, watching three sealed cardboard moving boxes levitate two feet off the floor. The top flaps of the center box peel open by themselves with a crisp tear of tape, and a stack of folded white towels floats out in a steady arc, gliding through the open hallway closet doorway and settling onto an upper shelf. The wooden closet door swings violently shut with a heavy bang. From the thin gap beneath the closed door, a slip of parchment glowing with pale golden light slides rapidly across the floorboards, stopping inches away, displaying crisp black ink that reads, \"DO NOT OPEN THE BOTTOM DRAWER.\"\n\noverall_soundscape: Soft humming of levitation, tearing packing tape, smooth sliding of fabric through air, loud wooden door slam, and the faint hiss of paper sliding across hardwood.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Pick up the glowing parchment",
+            "Kick the wooden closet door"
+          ],
+          "ms": 753,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Step on the glowing parchment",
+            "Pull open the closet door"
+          ],
+          "ms": 576,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "blind date",
+        "scene": "The candlelit bistro is quiet except for soft jazz, and the waiter has just poured two glasses of red wine. A person in a full suit of medieval armor sits down across from you, lifts the visor with a metallic clatter, and asks if you are ready for destiny.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Sitting at a small bistro table draped in a white cloth, where a single tea candle flickers beside two filled glasses of red wine. A right hand enters from the bottom of the frame to adjust the stem of one wine glass. Across the table, a figure clad entirely in polished medieval steel plate armor pulls out the wooden chair and sits down. The armored right gauntlet reaches up to the helmet, pushing the hinged visor upward with a sharp metallic clatter, revealing a pair of wide, unblinking eyes. (S1), an echoing, slightly muffled male voice inside the helmet, says <d>[English] Are you prepared to meet your destiny tonight?</d> The figure leans forward, resting both heavy steel gauntlets flat on the white tablecloth.\n\noverall_soundscape: Soft jazz saxophone in the background, a chair scraping across a hardwood floor, metal armor clinking and rattling, the metallic snap of a raised visor, breathing echoing inside a steel helmet.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Raise your glass to toast",
+            "Grab the wine glass immediately"
+          ],
+          "ms": 633,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Raise my glass to toast",
+            "Ask what destiny he means"
+          ],
+          "ms": 588,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "blind date",
+        "scene": "Rain streams down the coffee shop window as you wait by the counter with the red carnation your matchmaker told you to bring. Two identical twins in matching trench coats slide into your booth at the exact same second, point at each other, and simultaneously warn you that the other is an imposter.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a dark wooden booth table where rain runs down a glass window beside it. A right hand enters from the bottom of the frame and sets a single red carnation beside an empty ceramic cup. Two identical clean-shaven men in wet beige trench coats slide onto the opposite bench seat in exact unison. Both snap their right index fingers up to point at each other's chests and lean forward over the table. (S1), a sharp tenor voice, and (S2), an identical sharp tenor voice, say together <d>[English] Do not trust him, he is an imposter.</d> Their fingers remain leveled at each other, their eyes locked on the lens.\n\noverall_soundscape: Steady rain against glass, porcelain scraping lightly on wood, the squeak and rustle of wet trench coats sliding across vinyl seating.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Point at the left man",
+            "Lift the red carnation"
+          ],
+          "ms": 781,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Point your finger at the left man",
+            "Push the carnation toward the right man"
+          ],
+          "ms": 547,
+          "flags": [
+            "form:1",
+            "form:2"
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "blind date",
+        "scene": "The afternoon sun warms the park bench where you sit waiting with two takeout iced coffees. A breathless jogger runs up wearing an infant carrier, hands you a tangle of leashes attached to six barking pugs, and apologizes for bringing the whole family along.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down at two clear plastic takeout cups of iced coffee resting on the sunlit wooden slats of a park bench. Sneaker steps crunch over gravel as a runner in a neon headband and a chest-mounted infant carrier jogs directly in front of the bench. Six fawn pugs on tangled nylon leashes mill around the runner's shins, snorting and barking. The runner thrusts the gathered leash handles forward. Hands reach up from the bottom of the frame and grip the clump of nylon. The runner releases them, rests hands on knees, and (S1), a breathless high-pitched male voice, says <d>[English] Sorry, couldn't find a sitter for the whole family!</d> The six pugs instantly bolt forward together, snapping the leashes taut and yanking both hands toward the wobbling cups of iced coffee.\n\noverall_soundscape: Park ambiance, rustling leaves, rapid gravel footsteps, dog panting and yapping, plastic cups rattling on wooden slats, fabric stretching under sudden tension.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Grab the sweating coffee cups",
+            "Pull the tangled leashes back"
+          ],
+          "ms": 789,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Grab the iced coffee cups",
+            "Drop the tangled leash handles"
+          ],
+          "ms": 707,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "blind date",
+        "scene": "Modern abstract paintings line the sleek white walls of the gallery while a string quartet plays softly in the corner. Your date suddenly slips a heavy velvet pouch into your jacket pocket, leans in close, and whispers that the museum guards have spotted you both.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Standing in a bright art gallery where colorful canvas squares hang on pristine white walls, a woman with dark hair in a sleek navy cocktail dress turns from a painting and steps close. She slides her right hand down, slipping a small, heavy black velvet pouch directly into the left lapel pocket of a grey suit jacket. Her gaze darts past toward the gallery entrance, then locks directly forward as she leans in close, and (S1), an urgent, breathy female voice, says <d>[English] Don't look back. The guards spotted us both.</d> Across the room, two tall security guards in black blazers step briskly around a pedestal sculpture, walking directly forward with their eyes fixed ahead.\n\noverall_soundscape: Soft classical violin and cello quartet music echoing faintly, the rustle of tailored fabric, quiet murmured gallery chatter, and muffled heavy footsteps approaching on polished hardwood floors.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Grab her arm and run",
+            "Throw the pouch at them"
+          ],
+          "ms": 782,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Grab her hand and run",
+            "Pull the velvet pouch out"
+          ],
+          "ms": 528,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "blind date",
+        "scene": "Neon lights buzz above a red vinyl diner booth while the waitress drops off a basket of hot fries. A smiling stranger slides into the seat opposite you, clicks a digital stopwatch, and lays out a thick binder titled \"Spouse Compatibility Exam (Section 1).\"",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A neon-lit red vinyl booth table sits below. A waitress in a striped apron steps up, places a red plastic basket of steaming golden french fries on the laminate table, and walks out of view. A hand reaches in from the bottom of the frame and picks up a single fry. A man in a sharp gray suit and tie slides into the opposite booth seat, beaming directly at the camera. He raises a black digital stopwatch, presses the top button with a sharp click, and slams a thick three-ring binder onto the table, its front cover labeled \"Spouse Compatibility Exam (Section 1).\" Leaning forward over the binder, (S1), a cheerful, brisk male voice, says <d>[English] Question one: describe your relationship with your mother.</d>\n\noverall_soundscape: Low electrical hum of neon lighting, diner clatter of silverware and distant chatter, plastic basket thudding on laminate, sharp plastic click of a stopwatch, heavy binder slapping the tabletop.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Throw the fries at him",
+            "Slam the binder shut"
+          ],
+          "ms": 702,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Slam the binder shut",
+            "Eat the entire fry"
+          ],
+          "ms": 521,
+          "flags": [
+            "self-body:2"
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "airport security",
+        "scene": "The full-body scanner hums to a halt, and the monitor facing the checkpoint illuminates a bright red warning square directly over your chest. The TSA agent narrows his eyes, presses a button under the console, and quietly asks everyone in line to back away from the machine.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Standing inside the frosted glass cylinder of the full-body airport scanner, looking out through the transparent exit panel at a uniformed TSA agent, a broad-shouldered man in a navy blue shirt and black gloves stationed behind a sleek computer console. The rotating scanner paddles hum to a sudden halt on either side. On the display monitor mounted on the console, a stylized human silhouette lights up with a glowing red square centered directly over the chest. The agent leans forward, narrows his eyes at the screen, and reaches beneath the desk counter to press a concealed switch. A muted yellow warning light blinks on the floor track outside the cylinder, and (S1), a steady, controlled baritone voice, says <d>[English] Everyone in line, please take five steps back.</d> The agent looks directly into the scanner glass, raises one open gloved palm toward the screen, and grips a radio at his collar.\n\noverall_soundscape: High-pitched electric deceleration hum of the scanner mechanism, low airport terminal murmur, click of an under-desk toggle switch, muffled shuffle of feet on linoleum.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Press the emergency glass release",
+            "Demand an explanation right now"
+          ],
+          "ms": 727,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Tap sharply on the glass",
+            "Shove the exit panel open"
+          ],
+          "ms": 587,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "airport security",
+        "scene": "The conveyor belt grinds to an abrupt stop, trapping your grey plastic bin inside the X-ray tunnel while three officers crowd around the operator’s screen. An armed supervisor slips on a pair of reinforced gloves and steps up to you, asking why there appears to be a rapid heartbeat coming from your duffel bag.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking over a stainless-steel airport security counter at an X-ray tunnel where a grey plastic bin sits motionless halfway inside. Three uniformed officers lean in closely around a monitor screen beside the belt, pointing at the display. A burly supervisor in a dark tactical vest steps past them, pulling a pair of black reinforced gloves over his thick hands with sharp snaps of elastic. He plants his boots opposite the counter, looks up with a rigid stare, and (S1), a stern authoritative male voice, says <d>[English] Why is there a rapid heartbeat inside your duffel bag?</d> He rests one gloved hand on the holstered sidearm at his belt.\n\noverall_soundscape: Abrupt clunk and mechanical whine of a halted conveyor belt, distant airport terminal hum, sharp snap of stretching rubberized gloves, low murmur of security personnel.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Open the duffel bag slowly",
+            "Throw the passport at him"
+          ],
+          "ms": 792,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Open the duffel bag slowly",
+            "Tell him it's a medical device"
+          ],
+          "ms": 637,
+          "flags": [
+            "form:2"
+          ]
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "airport security",
+        "scene": "A golden retriever working the snaking line suddenly darts forward and sits down firmly right on top of your left shoe. The handler instantly tenses, drops one hand toward his utility belt, and loudly orders you to raise your empty palms into the air.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking forward in a tile-floored security line between black nylon stanchions, travelers with roller bags shuffle ahead. A golden retriever wearing a blue working vest trotting down the adjacent aisle suddenly darts forward, plants its rear down, and sits solidly atop the left leather shoe at the bottom edge of the frame, tilting its head back to stare directly into the lens. The dog's handler, an officer in a dark blue tactical uniform, steps forward instantly, planting his boots wide, his right hand gripping a pouch on his utility belt. (S1), a sharp assertive male voice, says <d>[English] Keep still! Raise your empty palms into the air!</d> Two open, empty hands enter from the bottom of the frame and rise into view as the dog remains firmly seated.\n\noverall_soundscape: Murmur of airport crowd chatter, rolling luggage wheels on hard tile, squeak of rubber boots, the firm thud of the dog sitting, heavy jingling of tactical belt gear.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Raise empty hands higher",
+            "Say I am unarmed"
+          ],
+          "ms": 804,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Show him your empty hands",
+            "Ask why the dog sat"
+          ],
+          "ms": 566,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "airport security",
+        "scene": "The gate agent scans your boarding pass, only for the scanner to let out a sharp, continuous siren that brings the entire checkpoint to a dead silence. Two plainclothes marshals materialize from the side hallway, one of them pulling out a pair of zip-ties while whispering the exact name on your passport.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A right hand extends from the bottom of the frame, holding a paper boarding pass toward a countertop barcode scanner. The gate agent, a woman with pinned dark hair and a blue blazer, pulls the pass across the red laser line. A piercing, continuous siren wails from the console, flashing a red light bar, and the surrounding crowd stops moving. From a narrow access door behind the podium, two men in dark jackets step into view. The first man, tall with cropped hair, reaches into his jacket, pulls out heavy plastic zip-ties, and (S1), a sharp, quiet male voice, says <d>[English] Julian Mercer. Keep both hands where I can see them.</d> He steps forward, looping the plastic tie between his fingers.\n\noverall_soundscape: Background terminal chatter instantly cutting out, high-pitched mechanical siren blaring, rapid leather-soled footsteps on polished floor tile, plastic zip-ties ratcheting once.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Slam the boarding pass down",
+            "Fling the scanner at him"
+          ],
+          "ms": 847,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Slam the boarding pass down",
+            "Thrust both hands forward fast"
+          ],
+          "ms": 618,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "fixture": {
+        "premise": "airport security",
+        "scene": "Travelers hurry past in their socks, tossing electronics into grey bins under the harsh fluorescent lights of the terminal. A breathless stranger bumps hard against your shoulder, slips a heavily taped stainless-steel canister into your jacket pocket, and begs you not to let them find it.",
+        "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A conveyor belt rattles under overhead fluorescent tubes, carrying grey plastic bins loaded with laptops and phones. Travelers in socks shuffle past in parallel lanes. Two hands enter from the bottom of the frame, setting a grey plastic bin onto the metal rollers. A man in a rumpled navy blazer collides against the right side of the frame, knocking the bin sideways. His hand shoves a thick, duct-taped stainless-steel canister into the open pocket of a dark jacket. He grips the canvas lapel and looks straight forward. (S1), a breathless, raspy male voice, says <d>[English] Please, do not let them find it.</d> He releases the lapel and bolts toward an exit door as an alarm chimes at the metal detector archway ahead.\n\noverall_soundscape: Conveyor belt motor humming, plastic bins clattering on steel rollers, shuffling socks on linoleum, muffled terminal announcements, abrupt electronic chime.\n\nnon_diegetic_music: None."
+      },
+      "pairs": [
+        {
+          "moves": [
+            "Grab the duct-taped canister",
+            "Run after the fleeing man"
+          ],
+          "ms": 696,
+          "flags": []
+        },
+        {
+          "moves": [
+            "Grab his navy blazer",
+            "Push the canister away"
+          ],
+          "ms": 543,
+          "flags": []
+        }
+      ]
+    }
+  ]
+}

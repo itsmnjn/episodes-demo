@@ -1,0 +1,423 @@
+# Root eval run — 2026-09-01T22:31:03.303Z
+
+- Root writer: `google/gemini-3.7-flash` at temperature 1.5
+- Choice writer: `google/gemini-3.5-flash-lite`
+- Candidates per premise: 5
+- Duration: 10s
+- Written: 30/30
+
+## Latency
+
+| premise | written | root write | choice write |
+|---|---|---|---|
+| zoo | 5/5 | median 2110ms, min 1877ms, max 2783ms | median 524ms, min 415ms, max 554ms |
+| dentist | 5/5 | median 3828ms, min 1610ms, max 4923ms | median 466ms, min 426ms, max 627ms |
+| first day at hogwarts | 5/5 | median 1750ms, min 1441ms, max 2953ms | median 464ms, min 448ms, max 518ms |
+| my roommate is a ghost | 5/5 | median 1522ms, min 1341ms, max 1732ms | median 480ms, min 406ms, max 595ms |
+| blind date | 5/5 | median 1498ms, min 1088ms, max 5517ms | median 391ms, min 360ms, max 447ms |
+| airport security | 5/5 | median 1925ms, min 1698ms, max 2351ms | median 454ms, min 404ms, max 558ms |
+| **all** | 30/30 | median 1877ms, min 1088ms, max 5517ms | median 460ms, min 360ms, max 627ms |
+
+## Candidates
+
+### zoo
+
+#### zoo 1 — root 2599ms, choices 554ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Leaning both hands on the smooth wooden railing of an open-air red panda enclosure, the grassy habitat stretches ahead under bright sunlight. A zookeeper in a khaki uniform and sun hat walks over along the inner stone path, holding an empty metal feeding bowl. He stops at the fence, looks past the railing toward the ground just behind the camera, points, and (S1), a cheerful young male voice, says <d>[English] Excuse me, but that one followed you out.</d> A soft scratching sound scrapes directly against the base of the wooden post below.
+
+overall_soundscape: Distant chatter of zoo visitors, chirping birds, footsteps on gravel, a light breeze through leaves, and the sharp scrape of claws on wood.
+
+non_diegetic_music: None.
+```
+
+1. Turn around to look down
+2. Lick the zookeeper's empty bowl
+
+#### zoo 2 — root 2783ms, choices 443ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Resting both hands on the smooth wooden railing overlooking the lush green sunlit moat of a primate enclosure, a zoo keeper in a tan uniform and sun hat, (S1), a brisk friendly female voice, walks past carrying a large metal clipboard, stops, turns toward the camera, and says <d>[English] Did you remember to latch the service gate behind us?</d> Just over her shoulder, a heavy chain-link gate swings slowly outward into the public pathway.
+
+overall_soundscape: Distant bird squawks, chatter of zoo visitors, breeze rustling tree canopies, gravel crunching underfoot, a slow metallic squeak of a swinging gate.
+
+non_diegetic_music: None.
+```
+
+1. Point at the open gate
+2. Sing the national anthem loudly
+
+#### zoo 3 — root 2110ms, choices 415ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking past a wooden railing into a lush, sunken exhibit labeled "Capybara Haven" on a carved sign. Two hands in blue denim sleeves rest on the smooth top rail. Across the grass, a large brown capybara waddles out of a shallow pool, stops directly beneath the viewing ledge, and rears up on its hind legs to push open an unlatched maintenance gate that swings toward the walkway. A zoo attendant in khaki shorts and a green polo shirt runs up beside the gate, raises both hands, and (S1), a cheerful young female voice, says <d>[English] Please stay still, he figured out the new lock!</d> The capybara steps completely through the open frame onto the public path.
+
+overall_soundscape: Splashing water, ambient crowd chatter, distant peacock calls, wooden gate hinge creaking, gravel crunching under running shoes.
+
+non_diegetic_music: None.
+```
+
+1. Offer the capybara my wallet
+2. Clap loudly to scare him
+
+#### zoo 4 — root 1877ms, choices 524ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Walking along a paved zoo path toward a tall glass enclosure labeled "PENGUIN COVE". Two hands enter from the bottom of the frame carrying an open paper bag of popcorn, holding it up against the clean glass. On the other side, an adult emperor penguin waddles rapidly toward the glass, stops inches away, tilts its head, and taps its beak firmly against the pane three times. A zoo keeper in a green polo shirt, (S1), a bright energetic female voice, steps into view beside the enclosure and says <d>[English] Don't move, he thinks you have the master keys.</d> The penguin presses its chest flat against the glass, staring directly into the lens.
+
+overall_soundscape: Murmur of distant crowd chatter, children laughing, squeaking rubber soles on smooth pavement, three sharp clicks of a beak against thick glass, paper bag rustling.
+
+non_diegetic_music: None.
+```
+
+1. Offer popcorn to the glass
+2. Slap the glass with both hands
+
+#### zoo 5 — root 1882ms, choices 536ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking over the wooden railing of an open-air meerkat enclosure under bright morning sunlight. Two hands enter from the bottom of the frame, holding a red plastic map of the zoo spread flat against the railing. A zookeeper in a khaki polo shirt and bucket hat walks into view from the right, stops, points down into the empty enclosure, and (S1), a cheerful, clear female voice, says <d>[English] Don’t worry, they usually pop right out of that tunnel.</d> A large, scaly green iguana crawls out of the meerkat burrow instead, blinking directly up into the camera.
+
+overall_soundscape: Distant chatter of zoo visitors, tropical bird calls in the background, rustling of paper map on wood, crunch of dry gravel.
+
+non_diegetic_music: None.
+```
+
+1. Drop the map onto it
+2. Ask if it eats meerkats
+
+### dentist
+
+#### dentist 1 — root 4923ms, choices 459ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking up into the circular beam of an overhead examination lamp. Two hands enter from the bottom of the frame and grip the textured grey armrests of the reclined chair. A woman in a blue scrub top, paper mask, and glasses leans into view, holding an angled metal probe and a small circular mirror. She lowers the instruments toward the lens, taps twice against enamel, and abruptly stops. Her eyebrows rise above her mask, and (S1), a crisp muffled female voice, says <d>[English] Well. That was definitely not on your x-rays.</d>
+
+overall_soundscape: Low mechanical hum of ceiling ventilation, faint metallic clinking of dental tools, two sharp taps against a tooth.
+
+non_diegetic_music: None.
+```
+
+1. Bite her metal probe
+2. Sing opera at her
+
+#### dentist 2 — root 1610ms, choices 466ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A round overhead dental lamp shines down from the ceiling of a sterile exam room. Two hands grip the textured grey armrests at the bottom of the frame. A dentist in a pale blue scrub cap, surgical mask, and clear protective glasses leans in over the chair, holding a metallic dental explorer and an angled mouth mirror. He lowers the instruments toward the lens, taps lightly against a lower tooth, and then freezes, his eyes widening behind the lenses as he lowers his mask, and (S1), a calm, measured male voice, says <d>[English] We need to get the oral surgeon in here immediately.</d> He presses a red wall button without looking away.
+
+overall_soundscape: Steady hum of fluorescent lights and overhead ventilation, a faint metallic tap on enamel, click of a plastic wall switch.
+
+non_diegetic_music: None.
+```
+
+1. Grip the dental chair armrests
+2. Lick the dentist's silver mirror
+
+#### dentist 3 — root 4184ms, choices 627ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Reclined in a blue vinyl dental chair, looking up at the white ceiling tiles and a round overhead lamp. Two hands in beige sweater cuffs enter from the bottom of the frame and grip the textured black armrests. A dentist in mint-green scrubs, a surgical cap, and protective glasses leans into the frame from the right, holding an angled metal explorer and a small round mirror. She adjusts the lamp, shining a bright beam directly forward, then leans closer to inspect. She freezes her tools in mid-air, lowers her brow, and (S1), a steady clinical female voice, says <d>[English] Open wider. Wait, that isn't a normal root.</d> She leans down until her glasses fill the frame.
+
+overall_soundscape: Low hum of the dental unit suction, fluorescent light buzz, squeak of vinyl upholstery under shifting weight, metallic clink of instruments.
+
+non_diegetic_music: None.
+```
+
+1. Bite the metal mirror
+2. Compliment her surgical cap
+
+#### dentist 4 — root 3635ms, choices 597ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking up into the circular glow of an overhead surgical lamp in a white dental operatory. Two hands in navy blue sleeves enter from the bottom of the frame and grip the vinyl armrests of the dental chair. A dentist in mint-green scrubs, clear safety glasses, and a surgical mask leans forward holding a stainless steel dental probe and mirror. He peers downward toward the lens, freezes with the instruments poised mid-air, and pulls down his mask. (S1), a crisp clinical male voice, says <d>[English] Wait a second, that is definitely not a tooth.</d>
+
+overall_soundscape: Low hum of the overhead lamp fan, faint hiss of a suction tube in the background, vinyl creaking under gripping hands, quiet metallic clinking of held instruments.
+
+non_diegetic_music: None.
+```
+
+1. Ask what he found
+2. Bite the dental mirror
+
+#### dentist 5 — root 3828ms, choices 426ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking up at a bright rectangular dental lamp against a white drop ceiling. Two hands grip the textured gray armrests at the bottom of the frame. A dentist in a pale blue scrub top, paper mask, and clear safety glasses leans into the frame from the right, holding a small angled mirror and a metal dental explorer. He pulls the lamp closer, angling the beam directly downward, then peers closely toward the lens. (S1), a muffled calm male voice, says <d>[English] Well, that shouldn't be growing under the gumline.</d> He slowly lowers the mirror and reaches toward a tray of surgical instruments.
+
+overall_soundscape: Low hum of fluorescent lights, hiss of an air compressor, faint rustle of latex gloves, and the click of metal tools on a stainless-steel tray.
+
+non_diegetic_music: None.
+```
+
+1. Grab the metal tray
+2. Swat the dentist glasses
+
+### first day at hogwarts
+
+#### first day at hogwarts 1 — root 1750ms, choices 483ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across the stone flags of the Great Hall toward the four long dining tables filled with students in black robes, beneath hundreds of candles floating in midair beneath an enchanted ceiling showing a cloudy night sky. A pair of hands in plain black Hogwarts robes enters from the bottom of the frame, holding a heavy parchment envelope with a wax seal stamped with the Hogwarts crest. Ahead, Professor McGonagall, a stern older witch in emerald green robes and a pointed black hat (S1), stands beside a wooden stool holding a frayed, patched leather Sorting Hat. She unrolls a long scroll of parchment, looks up, and (S1), a crisp, authoritative Scottish female voice, says <d>[English] When I call your name, step forward and sit.</d> The leather mouth of the Sorting Hat on the stool suddenly rips open, turns toward the camera, and opens wide.
+
+overall_soundscape: Murmuring chatter of hundreds of students echoing in a vast stone hall, the soft crackle and flicker of floating candles, rustling parchment, and a sharp leather creak as the hat twists open.
+
+non_diegetic_music: None.
+```
+
+1. Throw the letter into the open mouth
+2. Swallow the wax seal whole
+
+#### first day at hogwarts 2 — root 1441ms, choices 464ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a stone-walled corridor at a tall wooden stool where a patched leather hat rests under the glow of floating taper candles. Two hands wearing black wizarding robes reach into the lower frame to smooth down the dark wool fabric. Ahead, an elderly witch in emerald robes, holding a long parchment scroll, steps aside and gestures toward the stool. The leather hat on the stool twists its folds into the shape of a mouth, opens wide, and (S1), a raspy, booming male voice, says <d>[English] Step up, we have an impossible choice today!</d> The hat's stitched seams stretch wide as it stares forward.
+
+overall_soundscape: Murmuring of a large crowd echoing in a stone hall, crackling of candle flames, rustling of heavy wool robes, and the dry, creaking leather voice of the Sorting Hat.
+
+non_diegetic_music: None.
+```
+
+1. Sit on the stool
+2. Wear the sorting hat
+
+#### first day at hogwarts 3 — root 2049ms, choices 448ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Walking down the center aisle of the Great Hall between long wooden tables lined with students in black robes, toward the raised high table where professors sit beneath hundreds of floating lit candles and a starry, cloud-filled ceiling. Professor McGonagall, an older woman with sharp features, square spectacles, and emerald green robes, stands beside a three-legged wooden stool holding a frayed, pointed brown leather hat. Two hands in black robe sleeves reach out from the bottom of the frame to adjust the front hem of the robe. Professor McGonagall looks directly ahead, unrolls a long scroll of parchment, and (S1), a crisp Scottish female voice, says <d>[English] When I call your name, step forward.</d> She lowers the parchment slightly, her eyes locking straight onto the lens.
+
+overall_soundscape: Hundreds of echoing murmurs, rustling fabric, gentle flickering hum of floating candles, soft footsteps on stone flags.
+
+non_diegetic_music: None.
+```
+
+1. Sit on the stool
+2. Grab her square spectacles
+
+#### first day at hogwarts 4 — root 2953ms, choices 460ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Walking behind a line of children in black robes across the flagged stone floor of the Great Hall, looking past hundreds of floating beeswax candles toward the head table. Two hands enter from the bottom of the frame, smoothing the front of a black robe. At the front of the hall, an elderly woman in emerald-green robes and a pointed black hat holds a frayed, patched leather hat above a wooden stool, looks directly into the camera, and (S1), a crisp, authoritative Scottish female voice, says <d>[English] Step forward to be sorted.</d> The mouth-like tear in the leather hat suddenly rips open wide and turns directly toward the camera.
+
+overall_soundscape: Murmuring chatter of hundreds of students, echoing footsteps on flagstones, flickering candle flames, and the rustle of heavy wool robes.
+
+non_diegetic_music: None.
+```
+
+1. Walk up and sit down
+2. Grip the hat and shout
+
+#### first day at hogwarts 5 — root 1648ms, choices 518ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking up past a long oak banquet table loaded with silver platters to the high stone ceiling where hundreds of tapered candles float in the air. Two hands in black robe sleeves enter from the bottom of the frame and lift an ornate silver goblet, setting it down closer to the plate. An older boy sitting opposite in a black robe with red trim leans forward, and (S1), a clear adolescent male voice, says <d>[English] Watch the ceiling, the mail is coming early today.</d> A loud screech sounds from above, and the floating candles begin to sway violently as hundreds of owls swoop downward together toward the tables.
+
+overall_soundscape: Murmur of a crowded hall, clinking silver cutlery on ceramic, rustling robes, the faint hum of drafty stone, sudden fluttering of countless wings, and piercing owl screeches overhead.
+
+non_diegetic_music: None.
+```
+
+1. Grab a roast chicken and hurl it at the boy
+2. Catch a swooping owl out of the air
+
+### my roommate is a ghost
+
+#### my roommate is a ghost 1 — root 1522ms, choices 429ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Two hands enter from the bottom of the frame holding a white ceramic mug, carrying it into a sunlit apartment kitchen. Across the countertop stands a pale, translucent young man in an oversized 1980s graphic tee, levitating four inches above the linoleum floor with his arms crossed. A carton of oat milk sits on the granite between them. The translucent man leans forward, his semi-transparent fingers tapping against the milk carton, and (S1), an airy, resonant male voice, says <d>[English] You bought the wrong milk again, and I cannot drink it.</d> The carton suddenly slides across the counter and tips off the edge.
+
+overall_soundscape: Quiet hum of a refrigerator, footsteps on linoleum, ceramic clinking against the counter, a faint airy resonance behind the speaking voice, the soft thump and scrape of a cardboard carton tipping.
+
+non_diegetic_music: None.
+```
+
+1. Catch the falling carton
+2. Pour the milk on him
+
+#### my roommate is a ghost 2 — root 1383ms, choices 487ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a bright kitchen island toward a semi-translucent man in a faded 1970s bowling shirt floating four inches off the linoleum floor. Two hands reach into the frame from the bottom, holding a carton of oat milk and tilting it toward an empty mug on the countertop. The floating man drifts closer, crosses his arms through the back of a solid wooden chair, and (S1), an airy, slightly echoing male voice, says <d>[English] Did you seriously buy the vanilla-flavored one again?</d> A ceramic cereal bowl on the counter suddenly slides six inches to the left on its own.
+
+overall_soundscape: Quiet refrigerator hum, liquid splashing into a ceramic mug, a sudden sharp scrape of a bowl sliding across a granite countertop.
+
+non_diegetic_music: None.
+```
+
+1. Pour oat milk on him
+2. Lick the kitchen counter clean
+
+#### my roommate is a ghost 3 — root 1732ms, choices 480ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A bright apartment kitchen. Hands enter from the bottom of the frame, setting a steaming mug of black coffee onto a wooden table. Across the table, an empty wooden chair scrapes backward across the linoleum on its own. A semi-transparent figure in an oversized vintage sweater flickers into view on the seat, leaning forward over the table. (S1), a cheerful, echoey female voice, says <d>[English] You made coffee! Too bad I cannot hold the mug.</d> She plunges both of her translucent hands directly through the hot porcelain and into the steam, looking up with wide, unblinking eyes.
+
+overall_soundscape: Quiet refrigerator hum, the ceramic thud of a coffee mug on wood, the scraping of chair legs against linoleum, and a faint, ethereal chime beneath the voice.
+
+non_diegetic_music: None.
+```
+
+1. Push the mug toward her
+2. Pour coffee in her lap
+
+#### my roommate is a ghost 4 — root 1728ms, choices 595ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A hand reaches down to pick up a plastic milk carton from a small kitchen table. Across the table, a translucent young man in a 1980s neon track jacket floats a few inches above a wooden chair, holding a dry cereal bowl. He looks directly forward, taps his spoon against the empty bowl, and (S1), an airy, echoey young male voice, says <d>[English] Hey, you're drinking the milk I bought in 1986.</d> He slowly leans his face through the center of the cereal box standing between them.
+
+overall_soundscape: Quiet refrigerator hum, plastic milk carton crinkling, a light metallic clink of a spoon on porcelain, and a faint supernatural chime when the ghost speaks.
+
+non_diegetic_music: None.
+```
+
+1. Pour milk into his bowl
+2. Smash the carton against his face
+
+#### my roommate is a ghost 5 — root 1341ms, choices 406ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a sunny kitchen island toward a semi-transparent young man in a faded 1970s graphic tee and flared jeans, floating several inches above the linoleum floor. Two hands enter from the bottom of the frame, setting down a ceramic mug of steaming coffee on the counter. The floating man drifts forward, phasing his hand straight through the mug's handle, and (S1), a light, airy male voice, says <d>[English] Rent is due, and I only have eighteenth-century coins.</d> He pulls out a glowing, ethereal drawstring pouch and dumps heavy, solid gold doubloons that clatter onto the modern countertop.
+
+overall_soundscape: Refrigerator hum, steam hissing faintly, ceramic clinking on quartz, and the loud, metallic clatter of heavy coins spilling onto the counter.
+
+non_diegetic_music: None.
+```
+
+1. Bite a golden doubloon
+2. Ask for a receipt
+
+### blind date
+
+#### blind date 1 — root 1393ms, choices 360ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Approaching a corner booth in a dimly lit restaurant where a woman in a green blazer sits behind a small candle, checking her phone. On the wooden tabletop rests a folded origami crane and a glass of water. A right hand enters from the bottom of the frame and slides a red carnation onto the table beside the crane. She looks up, gasps slightly, and (S1), a bright, sharp female voice, says <d>[English] Oh, it's you... what are you doing here?</d>
+
+overall_soundscape: Low restaurant chatter, clinking cutlery and glassware, soft jazz playing in the background, a light rustle of clothing.
+
+non_diegetic_music: None.
+```
+
+1. Sit down opposite her
+2. Crush the origami crane
+
+#### blind date 2 — root 1531ms, choices 447ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a small candlelit restaurant table at a woman in a red blazer with shoulder-length dark hair, sitting with a glass of white wine in hand. A right hand enters from the bottom of the frame and sets a small bouquet of yellow roses onto the white tablecloth. She looks down at the flowers, looks up at the camera with wide eyes, and (S1), a sharp, surprised female voice, says <d>[English] Dave? What are you doing here?</d> A man in a tailored grey suit steps up behind her chair, places his hand on her shoulder, and looks directly at the camera.
+
+overall_soundscape: Low restaurant chatter, the clinking of cutlery and glasses against ceramic, a chair scraping softly on the wooden floor.
+
+non_diegetic_music: None.
+```
+
+1. Reach for his glass
+2. Offer her the vase
+
+#### blind date 3 — root 1498ms, choices 391ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Walking toward a corner booth in a busy, softly lit restaurant, where a woman in her late twenties with curly dark hair and a yellow blazer sits checking her watch. On the white tablecloth rests a small red rosebud and a folded paper tent reading "Reserved for Sam". She looks up, makes direct eye contact, and smiles warmly. Two hands enter from the bottom of the frame, lifting a chair back to sit down. (S1), a cheerful, clear female voice, says <d>[English] Hi! You must be the date my mom set up.</d> She reaches into her tote bag and pulls out a large framed family portrait, setting it upright on the table facing forward.
+
+overall_soundscape: Murmur of restaurant chatter, clinking cutlery and glassware, the scrape of a wooden chair across the floor, and the thump of a wooden picture frame on the table.
+
+non_diegetic_music: None.
+```
+
+1. Set the framed portrait face down
+2. Smash the framed portrait with your fist
+
+#### blind date 4 — root 5517ms, choices 366ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a candlelit wooden table at a young woman in a green cardigan holding an open paperback book with a bright yellow cover. A right hand enters from the bottom of the frame and places a matching yellow-covered paperback flat on the wood beside a glass of water. The woman lowers her book to the tabletop, looks directly into the lens, and (S1), a clear bright female voice, says <d>[English] Hi! My husband told me to meet you here instead.</d> She folds both hands over her book and holds her gaze forward.
+
+overall_soundscape: Soft restaurant chatter, clinking glassware, the dull thud of a book placed on wood, steady room tone.
+
+non_diegetic_music: None.
+```
+
+1. Ask where he went
+2. Eat the yellow book
+
+#### blind date 5 — root 1088ms, choices 414ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Walking between candlelit tables in a busy Italian restaurant, approaching a corner booth where a woman in her late twenties with dark curls and a green silk blouse sits alone, checking her watch. She looks up toward the camera with a bright smile, setting her wine glass down on the white tablecloth. Two hands reach forward into the bottom of the frame to pull out the opposite wooden chair. As the chair slides back, the woman’s eyes widen, her smile vanishes, and (S1), a sharp, startled female voice, says <d>[English] Mark? What are you doing here?</d>
+
+overall_soundscape: Soft restaurant chatter, clinking cutlery and wine glasses, muted acoustic guitar playing from ceiling speakers, the scrape of a wooden chair against hardwood floor.
+
+non_diegetic_music: None.
+```
+
+1. Sit across from her
+2. Spill her wine glass
+
+### airport security
+
+#### airport security 1 — root 1698ms, choices 454ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Two hands in navy jacket sleeves place a gray plastic bin onto the metal conveyor rollers of the X-ray scanner. The hands pull a black laptop from an unzipped backpack and lay it flat inside the bin, sliding the bin forward beneath the vinyl flaps. Across the stainless-steel metal detector frame, a TSA officer with a shaved head and a blue uniform points directly at the camera, and (S1), a stern, resonant male voice, says <d>[English] Step aside, sir. Do not touch that bag.</d> A red light on the scanner arch begins to flash.
+
+overall_soundscape: Low rumble of conveyor belts, plastic bins sliding across metal rollers, distant airport chatter, and the sharp electronic beep of an alarm.
+
+non_diegetic_music: None.
+```
+
+1. Step past the metal detector
+2. Start juggling your passport and boarding pass
+
+#### airport security 2 — root 2153ms, choices 433ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A gray plastic bin rests on the metal rollers of the x-ray conveyor belt. Two hands reach into the frame and set a black canvas carry-on bag flat inside the bin, then place a smartphone beside it. A TSA officer in a blue short-sleeved uniform, a tall woman with her hair in a tight bun, steps over and slides the bin into the dark rubber flaps of the x-ray tunnel. She looks at the screen above the belt, freezes, and points at the display. (S1), a firm female voice, says <d>[English] Step aside please, we need to open this bag immediately.</d>
+
+overall_soundscape: Humming conveyor belt motors, plastic bins sliding across metal rollers, distant airport intercom chimes, muted chatter of a crowded terminal.
+
+non_diegetic_music: None.
+```
+
+1. Ask what the problem is
+2. Eat the smartphone whole
+
+#### airport security 3 — root 2351ms, choices 471ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Two hands reach into the frame and push a grey plastic bin onto the metal rollers of an airport X-ray machine. The conveyor belt hums, carrying the bin beneath the black rubber flaps of the scanner tunnel. On the other side of the lane, an officer in a crisp blue uniform and blue nitrile gloves watches a monitor, suddenly taps the screen, and turns directly to the camera. (S1), an authoritative female security officer, says <d>[English] Step back from the conveyor belt right now.</d> She raises a hand, hits a red button that halts the rollers, and unclips the holster at her hip.
+
+overall_soundscape: Low mechanical hum of X-ray conveyors, plastic bins scraping on metal rollers, distant terminal chime announcements, and the click of a holster clasp.
+
+non_diegetic_music: None.
+```
+
+1. Push past the metal detector
+2. Swallow the security officer's badge
+
+#### airport security 4 — root 1827ms, choices 404ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Two hands slide a gray plastic bin containing a phone, wallet, and keys onto the stainless-steel rollers of an airport security belt. A TSA officer in a blue short-sleeved uniform, a stocky man with a close-shaved head and a name tag reading "MILLER", pulls the bin closer, peers into the screen of the x-ray monitor beside him, and presses a red button on the console. He turns to look directly into the camera, leans over the conveyor, and (S1), a dry monotone male voice, says <d>[English] Step aside please, do not touch the tray.</d> He reaches down toward a side pouch on his belt.
+
+overall_soundscape: Low hum of conveyor belts, rhythmic clatter of plastic bins sliding on metal rollers, distant terminal announcements, and a single sharp electronic beep from the console.
+
+non_diegetic_music: None.
+```
+
+1. Grab his uniform tie
+2. Show him a fake badge
+
+#### airport security 5 — root 1925ms, choices 558ms
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A gray plastic bin sits on the metal rollers of a conveyor belt under bright fluorescent lighting. Two hands reach into the frame, place a black carry-on bag and a smartphone into the bin, and slide it forward into the rubber flaps of the X-ray tunnel. On the other side of the metal detector frame, a TSA agent in a blue uniform, a broad-shouldered man with a closely shaved head, looks at the monitor, taps the glass with a gloved finger, and (S1), a firm, clear male voice, says <d>[English] Step aside, please. Do not touch that bag.</d> A red light on the scanner begins to flash rapidly.
+
+overall_soundscape: Fluorescent hum, the metallic rolling of plastic bins on conveyor tracks, distant airport terminal chatter, and a sharp rhythmic electronic beeping.
+
+non_diegetic_music: None.
+```
+
+1. Open the rubber flaps
+2. Swallow the smartphone whole

@@ -1,0 +1,341 @@
+=== zoo ===
+
+--- 1 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. <d>[English] Give it to the old girl!</d>
+
+overall_soundscape: Low metallic rattling, heavy breathing of a large animal, rustling dry foliage close to the microphone.
+
+non_diegetic_music: None.
+
+moves:
+  1. Grab the heavy iron chain
+  2. Demand she speaks the name first
+
+--- 2 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking through the iron bars of a heavy mesh enclosure at a silverback gorilla, a massive male with a silver-furred back, heavy brow, and deep amber eyes, sitting on packed dark earth and looking directly into the camera. A gloved right hand enters from the bottom of the frame holding a rusted iron ring attached to a thick canvas feed-sack filled with green stalks, thrusting it forward through the narrow gap in the vertical bars toward the beast. The gorilla shifts forward on its knuckles, its nostrils flaring as it grips the bottom of the sack with immense leather-palmed fingers. A zookeeper in a stiff navy canvas uniform with brass buttons, a weathered face, and short gray hair steps into the frame on the left, looking straight into the camera lens, and (S1), a raspy, gravelly male voice, says <d>[English] Let go of the sack right now.</d> The gorilla's shoulders tense, its teeth bared in a silent snarl as it begins to haul the weight backward through the bars.
+
+overall_soundscape: Low animal grunts, iron chain clinking against cold wire mesh, deep breath of a large beast, heavy cloth sliding over metal.
+
+non_diegetic_music: None.
+
+moves:
+  1. Drop the ring into dirt
+  2. Strike the zookeeper across the face
+
+--- 3 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. looking through thick chain-link fencing at a bearded zookeeper in his forties with a stained green canvas jumpsuit and a silver whistle on a cord around his neck, standing two paces away in crushed gravel and staring straight into the lens. He raises his right hand, pointing a thick brass padlock at the camera, and (S1), a sharp raspy male voice, says <d>[English] Lock the gate or he gets out.</d> A pair of bare hands enters the frame from the bottom, picking up a heavy iron ring of three different keys from a wooden crate and holding them out toward him. The zookeeper shakes his head, his gaze fixed on the lens, and (S1) says <d>[English] Not those ones, use the master key.</d> The hands drop the iron ring back into the crate with a heavy clatter, leaving a single brass key dangling between two fingers as a low wet growl vibrates the wire mesh directly in front of the lens.
+
+overall_soundscape: Crushed gravel crunching under boots, the heavy metallic rattle of chain-link wire, a low resonant animal growl, and a sharp metallic key ring clattering into wood.
+
+non_diegetic_music: None.
+
+moves:
+  1. Thrust the brass key through the wire
+  2. Throw the entire crate at his chest
+
+--- 4 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. looking at a zookeeper, a weathered woman in her forties with graying hair pulled into a tight bun, wearing a dirt-stained khaki shirt and a heavy leather tool belt, standing right in front of the lens with her face inches away and panic in her wide brown eyes. She reaches out and grabs the bottom edge of the frame with both hands, shaking it as she shouts <d>[English] The enclosure gate is jammed open!</d> Her fingers slip away and she points urgently past the lens toward a dark, massive opening in the concrete wall ten feet away. Your right hand enters from the bottom of the frame holding a heavy steel ring of oversized keys, dangling and clinking against your knuckles. She grabs your wrist, wrenching your hand toward the open gate, and screams <d>[English] You have to lock it now!</d>
+
+overall_soundscape: Heavy metallic clinking of keys, distant low animal growls, a woman's frantic breathing, rustling wind through enclosure foliage.
+
+non_diegetic_music: None.
+
+moves:
+  1. Drop the keys down the drain
+  2. Thrust the keys into her palm
+
+--- 5 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. reaching through the horizontal iron bars of an aging leopard enclosure toward Julian, a wiry zookeeper in his forties with a stained green canvas vest and dark stubble, standing on the concrete path and looking directly into the camera with wide, frantic eyes. A pair of calloused hands enters from the bottom of the frame holding a heavy brass key ring, swinging it forward and dropping the heaviest iron key into Julian's trembling open palm. Julian closes his fist over the key, leans closer to the lens, and (S1), a rasped, breathy male voice, says <d>[English] The latch is jammed, use the pin.</d> The hands immediately withdraw from the key ring, plunge into the vest pocket, and lift out a bent steel cotter pin, holding it up inches from Julian's face as a low animal growl vibrates the bars.
+
+overall_soundscape: Low deep animal growl, distant peacock cries, heavy keys clinking against metal bars, boots scraping on damp concrete.
+
+non_diegetic_music: None.
+
+moves:
+  1. Drop the pin between the bars
+  2. Jam the pin into Julian's teeth
+
+=== dentist ===
+
+--- 1 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. looking down at a pale woman in her thirties with matted dark hair, a tear-streaked face, a blue paper bib tied around her neck, and wide brown eyes staring straight into the camera from a tilted dental chair. Your gloved right hand enters from the bottom of the frame holding a heavy steel molar extractor, pressing the cold metal against the side of her gum while she flinches and whimpers. She turns her head sideways, her jaw trembling, and (S1), a thin shaky female voice, gasps <d>[English] Please, not that tooth.</d> The steel pincers click shut against the enamel as your fingers squeeze the handle, pressing harder against her lower jaw.
+
+overall_soundscape: A sterile overhead fluorescent hum, the sharp metallic click of surgical steel, heavy frightened breathing close to the lens.
+
+non_diegetic_music: None.
+
+moves:
+  1. Pry her trembling jaw open wider
+  2. Whisper her home address to her
+
+--- 2 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. , looking down at a middle-aged woman with fine wrinkles at her eyes, wearing a turquoise dental bib, her head tilted back in the beige vinyl chair and her eyes staring directly into the lens. A gloved right hand enters from the bottom of the frame holding a heavy stainless steel dental mirror, sliding its reflective edge against the lower left molars while (S1), a tense, raspy female voice, says <d>[English] Is that the one that’s cracked?</d> The gloved fingers tap the mirror twice against the tooth surface as the woman flinches slightly, her fingers gripping the armrests.
+
+overall_soundscape: Low hum of overhead fluorescent lights, the metallic clink of instruments against a porcelain tray, and the soft rustle of latex gloves.
+
+non_diegetic_music: None.
+
+moves:
+  1. Press the mirror hard against the tooth
+  2. Tell her the tooth has to go
+
+--- 3 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. , reaching across the chrome tray to pick up a heavy steel scaler with gloved fingertips, the metal glinting under the harsh overhead lamp. Standing directly over the camera is Dr. Hayes, a middle-aged dentist with crows' feet around his sterile blue eyes, wearing a turquoise surgical mask and a crisp white coat, looking straight into the lens. He tilts his chin down and (S1), a muffled, clinical male voice from behind the mask, says <d>[English] Open wider for me right now.</d> The gloved hands slide the steel tip toward his open mouth while his fingers press against his lower lip to force the jaw further apart.
+
+overall_soundscape: Overhead fluorescent light hum, metal clinking on a stainless steel tray, latex gloves stretching tight.
+
+non_diegetic_music: None.
+
+moves:
+  1. Bite down on the steel
+  2. Slam the tray into him
+
+--- 4 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down at a patient, a nervous woman in her late thirties with tangled blonde hair, pale blue scrubs, and a white bib tucked under her chin, her mouth wide open while she stares straight up into the camera with tear-filled eyes. A gloved right hand enters from the bottom of the frame holding a steel dental mirror and a sharp metal explorer, and taps them against the edge of a porcelain spittoon bowl on the metal tray. The woman flinches, grabs the armrests of the dental chair, and (S1), a tight, trembling female voice, says <d>[English] Please don't drill that one.</d> The gloved right hand drops the explorer onto the stainless steel tray with a sharp metallic clatter, picks up a heavy syringe filled with clear anesthetic, and advances the needle straight toward the center of the frame.
+
+overall_soundscape: Fluorescent lights buzzing overhead, a sharp metal instrument clattering against a steel tray, nervous breathing close to the microphone.
+
+non_diegetic_music: None.
+
+moves:
+  1. Direct the needle into her palm
+  2. Ask what she's hiding inside
+
+--- 5 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. looking down at a middle-aged woman with a tight, nervous jaw, fine crow's feet around her eyes, and a damp paper bib tucked into the collar of a floral blouse, sitting back in a reclined vinyl dental chair and staring straight into the camera lens with wide, unblinking eyes. She clenches her hands over the armrests, her knuckles turning white, and (S1), a high, tight female voice, says <d>[English] Please just tell me it's not a root canal.</d> A gloved right hand enters the bottom of the frame holding a heavy metal dental probe, clicks the overhead halogen lamp higher with a sharp metallic snap, and extends the pointed steel tip directly toward her open mouth. She freezes, her breathing instantly stopping as her eyes dart down from the lens to the approaching sharp tip of the instrument.
+
+overall_soundscape: The mechanical click of an overhead lamp arm, a low electrical hum from dental equipment, fabric shifting against vinyl, and shallow, trembling breaths.
+
+non_diegetic_music: None.
+
+moves:
+  1. Tap the metal against her teeth
+  2. Scrape the probe across her gum
+
+=== first day at hogwarts ===
+
+--- 1 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Professor McGonagall, a stern woman in her sixties with a tight emerald-green hat and dark robes, stands before the camera in the flickering torchlight of the Great Hall, her hands clasped in front of her. A right hand in a worn black Hogwarts school robe sleeve enters from the bottom of the frame and lifts the heavy, frayed sorting hat by its pointed tip, holding it suspended in the air. McGonagall narrows her eyes at the lens and (S1), a sharp, clipped Scottish female voice, says <d>[English] Put it on your head.</d> The hand lowers the hat slightly toward the center of the frame, hovering just above the lens.
+
+overall_soundscape: Murmuring voices echoing in a large stone hall, distant crackle of torches, heavy wool fabric shifting close to the microphone.
+
+non_diegetic_music: None.
+
+moves:
+  1. Drop the hat on the stone floor
+  2. Place the hat upon your head
+
+--- 2 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. <d>[English] Move along now, first years.</d> Professor McGonagall, a stern-faced woman with tightly drawn black hair and dark emerald-green robes, stands in the massive stone entryway, her chin tilted down as she looks into the camera and taps a thick parchment scroll against her palm. A bare right hand enters from the bottom of the frame, lifting the heavy iron latch of a massive oak trunk, swinging the lid wide to reveal rows of glowing glass vials and parchment rolls inside. She steps closer, the towering stone arches of the Great Hall looming behind her, and (S1), a sharp Edinburgh-accented female voice, says <d>[English] Your house is waiting inside.</d> Her outstretched hand points sharply toward the towering double doors, fingers trembling slightly with expectation.
+
+overall_soundscape: Heavy oak doors creaking on stone hinges, distant echoes of student chatter in a vast hall, fabric shifting, parchment rustling close to the microphone.
+
+non_diegetic_music: None.
+
+moves:
+  1. Grab a glowing glass vial
+  2. Hand her the parchment roll
+
+--- 3 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Professor McGonagall, a stern-faced woman in emerald-green robes and a pointed black hat, stands before the camera in the bustling stone-flagged Entrance Hall, pointing a gnarled wooden finger at the heavy oak doors ahead. A right hand in dark woolen robes enters from the bottom of the frame, holding a slightly dented brass pocket watch by its chain, flipping the hinged lid open to reveal erratic spinning hands. McGonagall leans closer, her eyes fixed on the lens, and (S1), a crisp Scottish alto voice, says <d>[English] Put that away before it's confiscated.</d> The hand flicks the watch shut with a sharp metal snap as students surge past on both sides toward the Great Hall.
+
+overall_soundscape: Echoing footsteps on stone, low murmurs of excited children, the metallic click of a pocket watch lid snapping shut.
+
+non_diegetic_music: None.
+
+moves:
+  1. Point the spinning watch at her
+  2. Ask her why it spins backwards
+
+--- 4 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. ...Professor McGonagall, a severe woman with spectacles, emerald-green robes, and a tightly drawn bun, stands at the end of the stone corridor, looking straight into the camera. She raises her parchment scroll and (S1), a crisp Scottish-accented female voice, says <d>[English] Step forward when your name is called.</d> A right hand in an oversized black woolen school robe enters from the bottom of the frame and lifts the heavy brass latch of the oak door. The latch lifts with a loud click, and the heavy door swings outward on its iron hinges, revealing the candlelit Great Hall. Professor McGonagall steps closer, her gaze fixed on the lens, and (S1) says <d>[English] Well? Are you entering or not?</d>
+
+overall_soundscape: Heavy iron latch clicking, massive oak door groaning on stone, distant echoing chatter of students, soft wind against stone walls.
+
+non_diegetic_music: None.
+
+moves:
+  1. Step past her into the hall
+  2. Grab the parchment from her hands
+
+--- 5 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. looking down a narrow stone corridor at Professor McGonagall, a stern woman in her fifties with black hair drawn into a tight bun, dark emerald-green robes, and wire-rimmed spectacles, standing before a heavy oak door and looking directly into the camera with her hands folded neatly in front of her. A pair of hands in oversized grey school robes enters from the bottom of the frame, holding a heavy brass key ring by its central ring, and reaches forward to drop the keys with a sharp metallic clatter onto the stone floor between her polished black boots. She looks down at the keys, then back up at the lens, and (S1), a crisp, sharp Scottish female voice, says <d>[English] Pick those up at once, Mr. Potter.</d> Her chin tilts upward slightly while she waits, her eyes fixed on the camera.
+
+overall_soundscape: Echoing footsteps on cold stone, heavy keys striking pavement with a sharp metallic clatter, distant muffled chatter of students.
+
+non_diegetic_music: None.
+
+moves:
+  1. Push the door open
+  2. Turn and run away
+
+=== my roommate is a ghost ===
+
+--- 1 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. resting on the scarred surface of the wooden kitchen table, next to a half-empty mug of cold black coffee and a flickering fluorescent tube overhead. A right hand enters from the bottom of the frame, fingers curling around the heavy ceramic salt shaker. The hand lifts the shaker and shakes a thick white mound of salt directly onto the dark wood, right over a faint, semi-transparent bare foot that is planted on the grain. The foot belongs to Arthur, a young man in his twenties with translucent skin, wearing a frayed gray sweatshirt and dark jeans, standing right in front of the table and looking straight into the camera. Arthur's face is pale and unblinking, and (S1), a breathy, hollow male voice that seems to echo from inside the walls, says <d>[English] That is not going to stop me.</d> The hand sets the salt shaker down with a sharp clack, leaving the white heap intact over the phantom's toes as he steps closer.
+
+overall_soundscape: A persistent electrical buzz from the overhead light, the sharp clatter of ceramic on wood, and a soft, hollow exhalation of air close to the microphone.
+
+non_diegetic_music: None.
+
+moves:
+  1. Smear the salt across his feet
+  2. Ask him what he wants
+
+--- 2 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. looking down at a warped wooden kitchen table where an overturned ceramic cereal bowl leaks a slow, transparent puddle onto the grain, and sitting opposite across the table is Thomas, a translucent young man in his twenties with pale hollow eyes, a grease-stained gray hoodie, and skin you can see the peeling floral wallpaper through, staring directly into the camera. He points a trembling, see-through finger at the spreading puddle and (S1), a dry hollow voice that echoes as if inside a metal pipe, says <d>[English] Clean that up right now.</d> Two bare hands enter the frame from the bottom edge, gripping the heavy porcelain handle of a blue-checkered dish towel lying beside the mess, and press it firmly down into the watery spill. The liquid absorbs instantly into the fabric, soaking the cotton dark blue while Thomas's pale face drifts an inch closer to the lens, his jaw working as he whispers <d>[English] Or I'll turn the cold tap back on.</d>
+
+overall_soundscape: A low hollow room tone, water dripping slowly onto wood, distant whistling wind through floorboards, fabric pressing against a table surface.
+
+non_diegetic_music: None.
+
+moves:
+  1. Lift the soaking towel
+  2. Throw the wet towel at his face
+
+--- 3 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. dust motes drift through cold gray air above a linoleum kitchen counter where Julian, a translucent young man with dark tousled hair, a faded flannel shirt, and pale fingers, stands leaning against the sink, looking directly into the camera. His left hand is raised, pointing at a stack of unpaid bills vibrating slightly on the formica. A bare right hand enters from the bottom of the frame, fingers curling around a heavy ceramic coffee mug and sliding it across the counter toward him. Julian watches the mug slide, his eyes fixed on the lens, and (S1), a breathy, hollow male voice, says <d>[English] You forgot to pay the electric again.</d> The mug hits the counter with a dull clack, the steam from it suddenly freezing into jagged frost crystals across the ceramic surface.
+
+overall_soundscape: A low, humming refrigerator drone, faint kitchen drafts, the scrape of ceramic on formica, and the sharp crackle of spreading frost.
+
+non_diegetic_music: None.
+
+moves:
+  1. Tap the frozen frost with a knuckle
+  2. Push the mug off the counter
+
+--- 4 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. looking across the dark, peeling wallpaper of a cramped hallway at Arthur, a translucent young man in his twenties with hollow cheekbones, a stained gray college hoodie, and bare feet hovering two inches off the scuffed linoleum, looking directly into the camera. A pale right hand enters from the bottom edge of the frame, holding a heavy silver-plated soup ladle by the handle, and dips the bowl forward to tap sharply against the suspended corner of Arthur's left shoulder. Arthur ripples like oil on water upon contact, his face twisting in annoyance, and (S1), a breathy, hollow male voice that echoes as if inside a metal pipe, says <d>[English] Stop doing that with the silverware.</d> He points a pale, semi-transparent finger straight at the lens, his jaw set in a silent demand.
+
+overall_soundscape: A low, cold wind howling through interior walls, the sharp metallic clink of silver hitting an empty phantom shoulder, distant floorboards creaking.
+
+non_diegetic_music: None.
+
+moves:
+  1. Scrape the ladle across his chest
+  2. Ask who taught him to hover
+
+--- 5 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. floating three inches above the linoleum kitchen floor is Arthur, a semi-translucent man in his thirties with a faint indigo tint, wearing a faded gray college hoodie and washed-out jeans, staring directly into the camera with hollow, glowing white eyes. His pale, shimmering right hand points a trembling finger at a scorched ceramic toaster smoking heavily on the counter. Arthur (S1), an airy, resonant whisper that seems to echo from inside the walls, says <d>[English] You burned the bagels again.</d> Your right hand enters from the bottom of the frame, holding a heavy chrome fire extinguisher by the safety pin. The hand snaps the pin out with a sharp metallic clack, grips the primary lever, and aims the nozzle straight at his midsection. Arthur's jaw drops as he hovers backward, raising both glowing hands in defense, and (S1) says <d>[English] Wait, not at me!</d>
+
+overall_soundscape: A low spectral hum, the harsh hiss of a smoke detector, metal scraping against metal as a pin is pulled, and a heavy canister shifting in a hand.
+
+non_diegetic_music: None.
+
+moves:
+  1. Squeeze the primary lever
+  2. Ask him to unplug it
+
+=== blind date ===
+
+--- 1 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. looking down at a red leather booth table in a dimly lit bistro where an empty white wine glass sits beside a small silver candle holder with a flickering flame. A right hand in a dark wool coat sleeve enters from the bottom of the frame, holding a crumpled white cloth napkin by its center and pressing it down into the pool of spilled red wine on the polished wood. Across the table, Claire, a woman in her late twenties with sharp hazel eyes, dark bobbed hair tucked behind her left ear, and wearing a emerald silk blouse, looks directly into the camera with her chin resting on her interlaced fingers and (S1), a clear crisp alto voice, says <d>[English] You are five minutes late.</d> The hand lifts the soaked napkin away from the table, revealing the dark stain spreading across the grain. Claire's gaze hardens as she slides a small square black velvet jewelry box across the table toward the lens.
+
+overall_soundscape: Soft restaurant murmur, jazz bassline playing in the background, fabric dragging across wood, glass clinking softly.
+
+non_diegetic_music: None.
+
+moves:
+  1. Slide the velvet box back
+  2. Push the velvet box open
+
+--- 2 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Across a sticky mahogany table in a dim bistro, a woman in her late twenties with a sharp dark bob, a emerald-green silk blouse, and a small gold hoop in her left nostril, leaning forward and staring intently into the camera. A pair of hands in rolled-up white shirtsleeves enter from the bottom of the frame, holding a heavy ceramic teapot by the handle, and tilt it sharply toward the center of the table. A thin brown stream pours out, splashing violently against the rim of an empty teacup and spilling over the white tablecloth into a widening puddle. She doesn't blink, her fingers drumming against the ceramic salt shaker, and (S1), a quick, clipped alto voice, says <d>[English] Is this your idea of charm?</d> Her gaze narrows, fixing on the lens as the dark liquid continues to spread toward the edge of the frame.
+
+overall_soundscape: Ambient low restaurant chatter, clinking silverware, the steady hiss of tea pouring and liquid splashing against ceramic.
+
+non_diegetic_music: None.
+
+moves:
+  1. Pour tea into her lap
+  2. Slap the salt shaker away
+
+--- 3 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a dimly lit restaurant table at Marcus, a man in his early thirties with slicked-back dark hair, thick stubble, a stiff navy blazer, and a white button-down shirt, sitting upright and staring directly into the camera with a nervous smile. Your right hand enters from the bottom of the frame holding the stem of a half-empty red wine glass and sets it down with a sharp clink on the dark wood surface. Marcus leans forward, resting his forearms on the table, and (S1), a tense, slightly raspy male voice, says <d>[English] Honestly, I didn't think you looked like your photos.</d> Your fingers slide across the smooth mahogany table, pushing a small silver cardholder toward him. Marcus stops, his eyes darting down to the cardholder and back up to the lens, and (S2) [same voice as S1] says <d>[English] Are we splitting the check already?</d>
+
+overall_soundscape: Low restaurant murmur, muffled silverware clinking, the dull scrape of wood on wood, and a glass settling on a table.
+
+non_diegetic_music: None.
+
+moves:
+  1. Flip the cardholder open
+  2. Pour wine over his hand
+
+--- 4 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a dimly lit mahogany restaurant table at Marcus, a man in his early thirties with slicked-back dark hair, thick-rimmed tortoiseshell glasses, and a charcoal blazer, sitting upright and staring directly into the camera. Your right hand enters from the bottom of the frame, holding a heavy glass water pitcher, and tilts it forward, pouring a steady stream of water that splashes violently over his untouched salmon fillet. Marcus blinks through his wet glasses, his jaw tight, and (S1), a sharp, nervous male voice, says <d>[English] We just ordered our drinks.</d> Your hand sets the rattling glass pitcher down hard on the wooden table surface, right beside his left hand. Marcus freezes, staring down at the ruined plate and then back up into the lens with wide, unblinking eyes.
+
+overall_soundscape: Low restaurant murmur, the sharp chime of silverware, water pouring and splashing heavily against ceramic, a pitcher clattering onto wood.
+
+non_diegetic_music: None.
+
+moves:
+  1. Slam your palm on the table
+  2. Whisper that the fish is poisoned
+
+--- 5 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. ...resting on a dark polished wooden tabletop opposite a woman in her late twenties with sharp hazel eyes, a pale silk blouse, and long dark hair tucked behind her left ear, leaning forward and looking intently into the camera. Two hands enter from the bottom edge of the frame, picking up a heavy crystal water pitcher and pouring a steady stream into the empty glass directly in front of her. She watches the water fill the brim, her fingers tapping impatiently against the porcelain coaster, and (S1), a sharp, clipped female voice, says <d>[English] You are twenty minutes late.</d> Her gaze shifts from the glass straight into the lens, her right hand sliding a small black velvet box across the table toward the bottom edge of the frame.
+
+overall_soundscape: Water pouring into glass, crystal clinking against wood, fingernails tapping porcelain, low restaurant ambient murmur.
+
+non_diegetic_music: None.
+
+moves:
+  1. Open the black velvet box
+  2. Push the water pitcher aside
+
+=== airport security ===
+
+--- 1 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. , pressing a heavy gray plastic bin forward along the cold stainless steel rollers of a busy airport security conveyor belt. Standing just beyond the metal detector arch in a creased navy TSA uniform with a silver badge pinned to the chest, a stocky woman in her forties with pulled-back dark hair and stern eyes looks directly into the lens and says <d>[English] Step back and empty your pockets.</d> The protagonist's bare right hands enter from the bottom frame edge, unzipping a worn black leather pouch and pulling out a heavy brass padlock and a fistful of loose coins, then dropping them clattering against the bottom of the gray plastic bin. The officer crosses her arms over her chest, tapping her pen against her clipboard as she stares down at the lens and says <d>[English] All of it, right now.</d>
+
+overall_soundscape: Plastic bins sliding on metal rollers, low muffled announcements over a PA system, distant rolling luggage wheels, and squeaking rubber shoes on linoleum.
+
+non_diegetic_music: None.
+
+moves:
+  1. Dump the entire leather pouch
+  2. Smash the padlock into the bin
+
+--- 2 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. looking across a gray plastic baggage table at a TSA officer, a stern woman in her forties with hair pulled back in a tight bun, a crisp blue uniform shirt, and a gold badge pinned to her chest, standing under harsh fluorescent lights and staring directly into the camera. A pair of bare hands enters from the bottom of the frame, lifting a heavy black laptop out of an unzipped canvas bag and setting it flat on the stainless steel surface. The officer points a sharp acrylic-tipped finger at the screen while (S1), a dry, nasal female voice, says <d>[English] Electronics out of the case now.</d> The hands push the laptop forward toward her uniform belt, bumping the plastic tray against the metal roller track. Her eyes narrow as she reaches out with both palms to shove the bin back toward the lens.
+
+overall_soundscape: Fluorescent lights buzzing, plastic bins scraping against metal rollers, muffled airport announcements in the distance.
+
+non_diegetic_music: None.
+
+moves:
+  1. Slam the laptop onto her desk
+  2. Ask to see a supervisor
+
+--- 3 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. resting on the grey plastic conveyor belt, pushing forward against a thick black rubber strip. A right hand in a dark wool coat sleeve enters from the bottom of the frame, lifting a heavy grey laptop out of a black canvas bag and setting it down beside a shallow plastic tub. Across the silver metal roller table, a woman in a high-vis blue security jacket with a silver badge pinned to her chest looks directly into the camera, her mouth moving. (S1), a sharp, flat female voice, says <d>[English] Empty all pockets right now.</d> Her right hand stabs a blunt finger at the blue inspection sign taped to the glass barrier.
+
+overall_soundscape: The mechanical hum and clatter of the airport security belt, plastic bins sliding on metal rollers, muffled announcements in the distance.
+
+non_diegetic_music: None.
+
+moves:
+  1. Empty pockets onto the belt
+  2. Show her the empty badge
+
+--- 4 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. crossing the scuffed linoleum of a brightly lit terminal security checkpoint toward a woman in a slate-blue TSA uniform with silver badge-pins and short-cropped dark hair, standing behind a stainless-steel table and looking directly into the camera. Two bare hands reach into the frame from the bottom, setting a grey molded plastic bin onto the metal rollers with a sharp metallic clatter. The officer drops a heavy leather wallet with a torn seam into the bottom of the bin and (S1), a sharp, clipped female voice, says <d>[English] Empty all pockets right now.</d> Her right hand taps the rim of the plastic tray twice with a ballpoint pen while her left hand stays flat on the metal table.
+
+overall_soundscape: Fluorescent lights humming high overhead, plastic bins sliding across stainless steel rollers, distant PA announcements echoing off concrete floors, a pen tapping against hard plastic.
+
+non_diegetic_music: None.
+
+moves:
+  1. Dump the contents of the wallet
+  2. Ask her to check the lining
+
+--- 5 ---
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. , the blue plastic bin sliding across the stainless steel rollers toward the mouth of the X-ray machine. Standing behind the black rubber strip curtain, Maria, a heavy-set woman in her mid-forties with a pinned-on silver name badge reading M. GOMEZ, a dark blue uniform blouse, and thick-rimmed glasses pushed up on her forehead, looks directly into the camera and taps her bare index finger impatiently against the side of the machine. (S1), a sharp, flat female voice, says <d>[English] Laptop out, right now, sir.</d> A pair of bare hands enters from the bottom edge of the frame, reaches into the gray fabric backpack resting inside the bin, grasps the silver aluminum edge of a closed laptop, and lifts it straight up.
+
+overall_soundscape: The metallic hum of the conveyor belt motor, plastic bins clacking against each other, the squeak of rubber rollers.
+
+non_diegetic_music: None.
+
+moves:
+  1. Place the laptop on the belt
+  2. Drop the laptop on her feet

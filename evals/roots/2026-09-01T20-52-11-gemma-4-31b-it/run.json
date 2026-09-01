@@ -1,0 +1,349 @@
+{
+  "startedAt": "2026-09-01T20:52:11.492Z",
+  "rootModel": "google/gemma-4-31b-it",
+  "rootTemperature": 1.5,
+  "choiceModel": "google/gemini-3.5-flash-lite",
+  "n": 5,
+  "durationSeconds": 10,
+  "premises": [
+    "zoo",
+    "dentist",
+    "first day at hogwarts",
+    "my roommate is a ghost",
+    "blind date",
+    "airport security"
+  ],
+  "candidates": [
+    {
+      "premise": "zoo",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Walking down a concrete corridor. A right hand enters from the bottom of the frame holding a ring of silver keys. The hand reaches forward and inserts a key into a lock on a heavy steel door. A plastic sign on the door reads \"GORILLA HABITAT - SERVICE ENTRANCE\". The lock turns and the hand pushes the door open. Inside, a room contains shattered glass shards across the floor and flipped metal tables. A man in a tan jumpsuit sits against the far wall with a red streak across his forehead. A hand reaches down and grips the man's shoulder. He looks up and (S1), a raspy male voice, says <d>[English] Run. It is still in the vents.</d> A metallic crash sounds from above. A large, dark-furred primate drops from a ceiling vent, landing on all fours and blocking the exit.\n\noverall_soundscape: Boots echoing on concrete, jingle of keys, heavy metal door creaking, labored breathing, the loud clang of a ventilation grate hitting the floor.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Pull him to his feet",
+        "Throw the keys at it"
+      ],
+      "rootMs": 116083,
+      "choiceMs": 643
+    },
+    {
+      "premise": "zoo",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A hand enters from the bottom of the frame and swipes a plastic ID card through an electronic reader on a gray concrete wall. A red light turns green. A handle is gripped and the door swings open into a dimly lit corridor with white tiled floors. Further down the hall, a woman in a tan khaki uniform with a name tag reading \"SARAH\" stands by a reinforced steel gate, her chest rising and falling rapidly. As the camera approaches, (S1), a high-pitched female voice, says <d>[English] The secondary seal failed. It's already in the transit tunnels.</d> Sarah points a shaking finger toward the steel gate. She steps back, leaning against the wall. (S1) says <d>[English] Do not open that door unless you have the sedative.</d> A hand reaches forward and grips the heavy iron lever of the gate. It is pulled down with a loud metallic clank. The gate slides open six inches. A thick, wet, gray-scaled claw with four black talons slams against the gap, gripping the edge of the metal and ripping the gate wide open.\n\noverall_soundscape: Electronic beep, humming fluorescent lights, heavy footsteps on tile, rapid breathing, metallic clang of the lever, a guttural hiss, screeching metal.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grab the heavy iron lever",
+        "Throw Sarah through the opening"
+      ],
+      "rootMs": 56058,
+      "choiceMs": 533
+    },
+    {
+      "premise": "zoo",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down at a folded paper map held by a hand from the bottom of the frame. The map is lowered to reveal a concrete path lined with tropical ferns and high glass walls. To the right, a large silverback gorilla sits motionless behind a glass pane, staring at the lens. A woman in a khaki uniform and a wide-brimmed hat walks into the frame and stops. (S1), a mid-pitched female voice, says <d>[English] You cannot be back here, visitor.</d> The hand with the map reaches out and points toward a white sign that reads \"Research Wing.\" The woman looks at the sign and then looks back at the lens. She turns and walks through a black iron gate, gesturing with her arm to follow. She leads the way down a grey concrete hallway with white tiles and flickering fluorescent lights. She stops at a heavy steel door with a small sliding viewing slot. She slides the metal slot open. She looks inside, and her eyes widen. (S1) says <d>[English] It is out. Get back.</d> She steps aside as a heavy, wet thud hits the door from the other side, bending the steel plate inward toward the lens.\n\noverall_soundscape: Distant animal cries, humming fluorescent lights, rhythmic footsteps on concrete, metallic slide of a door slot, a heavy concussive bang against metal.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Push the metal door open",
+        "Bite the woman's khaki hat"
+      ],
+      "rootMs": 96276,
+      "choiceMs": 548
+    },
+    {
+      "premise": "zoo",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking at a stainless steel door with a plaque reading \"Primate Sector - Level 4\". A right hand enters from the bottom of the frame and swipes a blue plastic ID badge over a silver sensor. A green light flickers. The hand grips the lever handle and pushes the door open into a dimly lit concrete room. Shards of thick, reinforced glass litter the grey floor. A man in a sweat-stained khaki vest stands five feet away, staring at a jagged opening in the enclosure wall. He turns his head toward the camera, and (S1), a shaking male voice, says <d>[English] Don't step any closer.</d> The right hand enters the frame and reaches toward a shard of glass on the floor. A loud metallic crash echoes from the ceiling vent above. The man looks up and (S1) says <d>[English] It is in the ceiling.</d> A long, dark-haired arm drops suddenly from the vent, fingers outstretched toward the lens.\n\noverall_soundscape: Hum of fluorescent lights, the beep of an electronic lock, heavy door creaking, boots crunching on glass, a loud metallic bang.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grab the hanging arm",
+        "Offer the man a banana"
+      ],
+      "rootMs": 36083,
+      "choiceMs": 963
+    },
+    {
+      "premise": "zoo",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking at a grey concrete hallway with flickering fluorescent lights. A right hand enters from the bottom of the frame and slides a brass key into a heavy iron lock. The key turns, and the hand pushes the gate open. Walking past large glass panes filled with green algae and stagnant water. Ahead, a woman in a khaki zoo uniform with sweat beading on her forehead stands by a steel door. (S1), a shaky female voice, says <d>[English] Put the keys down and run.</d> The right hand reaches forward and grips the handle of the steel door, pulling it open. A room of dense ferns and a broken water trough. On the concrete floor, a handheld radio emits static. (S1) says <d>[English] I told you to leave!</d> The right hand reaches toward the ferns. A thick, scaled grey limb lashes out from the foliage, sweeping the radio across the floor. Looking up, two vertical yellow pupils blink three feet from the lens.\n\noverall_soundscape: Buzzing fluorescent lights, metallic jingle of keys, heavy door creaking, wet footsteps on concrete, radio static, a deep guttural hiss.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grab the scaled limb",
+        "Feed it the radio"
+      ],
+      "rootMs": 78622,
+      "choiceMs": 647
+    },
+    {
+      "premise": "dentist",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. White ceiling tiles and a circular surgical lamp. A man in blue scrubs and a white surgical mask, (S1), a clinical mid-range voice, says <d>[English] You are waking up a bit early.</d> He leans closer, eyes narrowed. A right hand enters from the bottom of the frame and tugs at a leather strap bolted to the metal armrest. S1 reaches for a stainless steel tray and picks up a heavy, serrated surgical saw. He holds the blade an inch from the camera, the steel reflecting the overhead light. He leans in, the fabric of the mask brushing the lens, and says <d>[English] This part will not be covered by insurance.</d> His finger flips a red toggle switch on the saw's handle.\n\noverall_soundscape: Constant electrical hum of the lamp, rhythmic clicking of a clock, the metallic clink of a tray, the sudden high-pitched whine of a motorized saw.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grab the surgical saw",
+        "Lick his surgical mask"
+      ],
+      "rootMs": 118436,
+      "choiceMs": 580
+    },
+    {
+      "premise": "dentist",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking at a stainless steel tray containing dental mirrors and explorers. A right hand enters from the bottom of the frame and picks up a thin metal probe. The view shifts to a man in a dental chair, wearing a blue bib, his mouth open and supported by a rubber block. A woman in blue scrubs stands beside him. She (S1), a high-pitched female voice, says <d>[English] We need to clear the necrotic tissue now.</d> The right hand moves the probe into the man's lower jaw, pressing against a blackened molar. The man's eyes open wide. He (S2), a muffled male voice, says <d>[English] Something is moving inside the gum.</d> The right hand jerks the probe backward. A translucent, pale finger, three inches long, is hooked on the tip of the probe and pulled from the gum line, twitching.\n\noverall_soundscape: High-pitched whine of a distant drill, the wet slurp of a suction tube, heavy nasal breathing, the metallic clink of instruments on steel.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop it into her pocket",
+        "Feed it to the patient"
+      ],
+      "rootMs": 209676,
+      "choiceMs": 549
+    },
+    {
+      "premise": "dentist",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking up at a circular white LED light. A pair of hands grip the edges of blue vinyl armrests. (S1), a soft-spoken man with thin wire-rimmed glasses and a blue surgical mask, leans into the frame holding a dental mirror. He probes the upper molars and (S1) says <d>[English] Stay very still now.</d> He pulls back and glances at a monitor displaying a black-and-white X-ray of a jaw with a jagged metal object embedded in the bone. A right hand releases the armrest and points toward a stainless steel instrument tray. Next to a metal pick and a roll of gauze lies a curved black obsidian blade. The man looks at the blade and then looks into the camera. He pulls the surgical mask down, revealing a mouth of blackened, jagged stumps, and (S1) says <d>[English] It is time for the harvest.</d> He reaches for the obsidian blade.\n\noverall_soundscape: Electrical hum of the overhead light, skin rubbing against vinyl, the snap of a surgical mask, steady rhythmic breathing.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grab the obsidian blade first",
+        "Lick his exposed black teeth"
+      ],
+      "rootMs": 75405,
+      "choiceMs": 630
+    },
+    {
+      "premise": "dentist",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Hands reach up and pivot the overhead white LED lamp, focusing the beam on a man reclined in a contoured black leather chair. A blue paper bib is clipped around the man's neck. The man, a pale man in a white collared shirt, stares upward with wide eyes. Hand reaches for a thin metal explorer probe on a stainless steel tray and lifts it. The probe enters the man's open mouth, pressing against the gums of the upper right quadrant. (S1), a strained, trembling male voice, says <d>[English] Is it supposed to feel like that?</d> The probe pushes against a blackened molar, which slides three millimeters to the left. A small, rectangular sliver of polished chrome is revealed beneath the tooth. Hand picks up a pair of silver forceps and grips the edge of the chrome sliver. As the object is pulled halfway from the gum, a sharp, high-pitched electronic chirp emits from inside the mouth. The man's eyes lock onto the lens, and (S1) says <d>[English] Stop. They will know you found it.</d> Hand pulls the sliver completely free; it is a small microchip with a rapidly pulsing red light. The light flashes once and turns solid green.\n\noverall_soundscape: High-pitched hum of the LED lamp, clink of metal tools on a tray, shallow breathing, a piercing electronic chirp, a metallic click.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Place the chip on his forehead",
+        "Swallow the glowing microchip"
+      ],
+      "rootMs": 171106,
+      "choiceMs": 540
+    },
+    {
+      "premise": "dentist",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking up at white fluorescent ceiling panels and a large round clinical lamp. Two hands grip the black leather armrests of a reclining chair. (S1), a man in blue scrubs and a white surgical mask, leans into the frame. He holds a silver dental mirror. (S1) says <d>[English] Just a quick check of the lower molars.</d> He uses a pointed metal probe to touch the mouth area. He stops and pulls the probe back. (S1) says <d>[English] This feels like metal.</d> He switches to silver forceps and grips a small object. He pulls it out. It is a tiny, clicking cylinder with a pulsing red light. (S1) says <d>[English] This is not a filling.</d> A heavy thud echoes from the hallway. The office door slams shut. A man in a black tactical vest stands in the doorway. (S2), a deep gravelly voice, says <d>[English] Hand over the device.</d>\n\noverall_soundscape: Humming fluorescent lights, leather creaking under hands, the rhythmic clicking of a small mechanical device, a heavy door slamming, heavy boots on tile.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Swat the mirror away",
+        "Swallow the blinking cylinder"
+      ],
+      "rootMs": 39906,
+      "choiceMs": 708
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking at a stone corridor filled with students in black robes. Floating white candles of various sizes drift beneath a ceiling that reflects a night sky. A hand enters from the bottom of the frame and pushes past the shoulder of a student in the crowd. At the end of the line, (S1), a woman in emerald green robes, says <d>[English] Please form a single line.</d> A hand reaches forward and takes a piece of parchment from her. Moving toward a weathered brown conical hat resting on a four-legged wooden stool, a right hand reaches up and grasps the brim of the hat. The hat is lifted upward, the brown fabric descending to cover the top of the lens until only a thin slice of the stone floor is visible at the bottom. (S2), a raspy, muffled voice, says <d>[English] Hmm. Difficult. Very difficult.</d> A silence follows. (S2) continues <d>[English] I have not seen a mind like this in centuries.</d> The hat suddenly lets out a sharp, loud scream <d>[English] Get this child away from me!</d>\n\noverall_soundscape: Echoing hall, low murmur of many voices, distant fluttering of wax, hard footsteps on stone, fabric rustle.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Slam the hat onto the floor",
+        "Ask the hat for dating advice"
+      ],
+      "rootMs": 34153,
+      "choiceMs": 503
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking through a pair of open oak doors into a hall filled with floating white candles. A stone floor leads toward a four-legged wooden stool. A right hand enters from the bottom of the frame and touches the surface of a grey stone wall. A woman in green robes stands by the stool, holding a parchment scroll. (S1), a clipped female voice, says <d>[English] When I call your name, step forward.</d> The right hand pushes past the black fabric sleeve of another student. (S2), a thin adolescent voice, says <d>[English] I hope I am in Gryffindor.</d> As the camera moves closer to the stool, a pair of pale hands lowers a patched brown leather hat over the lens. The frame goes dark. (S3), a gravelly, muffled voice, says <d>[English] Very interesting... very interesting indeed.</d> The voice grows louder, shouting <d>[English] GRYFFINDOR!</d>\n\noverall_soundscape: Footsteps on stone, a low hum of many voices, the faint crackle of floating candles, the rustle of heavy wool robes, the muffled sound of the leather hat descending.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Lift the hat off",
+        "Eat the sorting hat"
+      ],
+      "rootMs": 44204,
+      "choiceMs": 582
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A right hand pushes open two heavy oak doors. Floating candles hover above long wooden tables filled with students in black robes. A woman in emerald green robes with a pointed black hat and a tight bun stands by a three-legged stool. On the stool sits a pointed, patched brown hat. (S1), a stern female voice, says <d>[English] Line up! Single file, please!</d> A right hand reaches out and grips the edge of a stone pillar. The view moves forward through the line of students. (S1) looks down at a long scroll of parchment. (S1) says <d>[English] Step forward. It is your turn.</d> A hand reaches out and touches the dusty brim of the brown hat. The woman lifts the hat and lowers it toward the camera, the brim expanding to cover the entire field of vision in black. (S2), a raspy muffled voice, says <d>[English] I see it now. You are not who you say.</d> The hat suddenly shrieks with a piercing, metallic sound.\n\noverall_soundscape: Heavy doors creaking, hundreds of overlapping student whispers, distant flickering of flames, soft footsteps on stone, fabric of the hat rustling.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Pull the hat off",
+        "Sing a nursery rhyme"
+      ],
+      "rootMs": 40779,
+      "choiceMs": 606
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a vast hall illuminated by thousands of floating white candles against a ceiling reflecting a starry night sky. Long wooden tables are crowded with students in black robes with red, blue, green, and yellow ties. Two hands in black robe sleeves reach into the frame to pinch and pull the fabric of the cloak straight. The view moves forward, passing a row of wide-eyed students. A tall woman in an emerald green robe and a pointed black hat stands beside a four-legged wooden stool. (S1), a crisp Scottish female voice, says <d>[English] Step forward. It is your turn.</d> Hands reach out to grip the edge of the stool's seat. Looking up at a patched, weathered brown leather hat resting on the stool. A thin hand from the side of the frame lifts the hat high and brings it down toward the lens. The dark brown brim expands to cover the entire field of vision, cutting off the light.\n\noverall_soundscape: Low murmur of hundreds of voices, the clatter of plates and cutlery, soft footsteps on stone, the rustle of heavy fabric, a sudden silence as the hat descends.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Lift the stool instead",
+        "Whisper the hat stinks"
+      ],
+      "rootMs": 17744,
+      "choiceMs": 521
+    },
+    {
+      "premise": "first day at hogwarts",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking through towering oak doors into a hall with a ceiling depicting a starry night sky. Thousands of floating white candles drift above four long wooden tables crowded with students in black robes. A right hand enters from the bottom of the frame, clutching a yellowed piece of parchment. Moving forward, the crowd of students parts. Standing before a three-legged stool is a tall woman in emerald green robes with a tight bun and square glasses. (S1), a stern Scottish female voice, says <d>[English] Please step forward.</d> The right hand reaches out and takes the rough fabric of a weathered, patched brown pointed hat sitting on the stool. The hand lifts the hat and pulls it down over the camera's view, plunging the frame into darkness except for a thin sliver of light at the bottom. (S2), a dry, rasping voice, speaks <d>[English] A curious mind, quite a curious mind.</d> The voice increases in volume and shouts <d>[English] GRYFFINDOR!</d> A loud, metallic crash echoes from the entrance. Right and left hands reach up and grip the brim of the hat, pulling it off. The view opens to a dark figure standing in the doorway, surrounded by shattered wood.\n\noverall_soundscape: Footsteps echoing on stone, distant chatter of children, hum of candle flames, fabric rubbing against the microphone, a violent sound of wood splintering.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Throw the hat at him",
+        "Ask if he brought snacks"
+      ],
+      "rootMs": 44898,
+      "choiceMs": 654
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking at a formica kitchen table with a half-empty bowl of cornflakes. A right hand reaches from the bottom and slides a white ceramic plate toward the center. (S1), a quiet, hollow male voice, says <d>[English] The mail came an hour ago.</d> Mark is seated opposite, a thin man with sallow skin wearing a grey V-neck sweater. A left hand enters the frame, picking up a sealed manila envelope from the table. Mark leans forward, his chin resting on a pale hand. He says <d>[English] Don't open that one yet.</d> The right hand grips the envelope's edge. Mark stands up. The wooden chair does not move or make a sound. He walks toward the closed pantry door. The right hand reaches out to touch Mark's shoulder. The fingers pass through the grey fabric and pale skin, moving through his body. Mark turns, his torso becoming semi-transparent, revealing the white pantry door through his chest. He says <d>[English] I forgot to tell you about the accident.</d>\n\noverall_soundscape: Ceramic sliding on formica, paper ruffling, a total lack of chair movement noise, quiet footsteps, a hollow voice.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Tear open the manila envelope",
+        "Lick the grey V-neck sweater"
+      ],
+      "rootMs": 49946,
+      "choiceMs": 607
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking at a cluttered wooden dining table strewn with old newspapers and half-empty coffee mugs. A right hand enters from the bottom of the frame and picks up a white ceramic bowl filled with cereal. To the left, a man in a faded blue t-shirt and grey sweatpants sits in a chair; he is semi-transparent, his legs visible through the fabric of the seat. He is staring at the bowl. (S1), a thin, echoing male voice, says <d>[English] I told you that milk expired three days ago.</d> The right hand lowers the bowl back to the table. The camera pans slowly toward the narrow hallway. At the end of the hall, a heavy iron door stands slightly ajar, a sliver of absolute darkness visible in the gap. (S1), the echoing voice, says <d>[English] Do not open that door. Not today.</d> The right hand reaches forward, fingers curling around the edge of the iron door and pulling it wide. A figure in a matching blue t-shirt and grey sweatpants, skin solid and opaque, stands in the dark, staring back with wide eyes.\n\noverall_soundscape: Soft hum of a refrigerator, the clink of a ceramic bowl on wood, the rhythmic echo of a voice, the slow creak of a heavy metal door on rusted hinges.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Push the figure back inside",
+        "Offer him the cereal bowl"
+      ],
+      "rootMs": 38080,
+      "choiceMs": 644
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. thought\nFirst-person video story opening.\nMy roommate is a ghost.\n\n        *   One continuous shot (no cuts, timestamps, camera directions).\n        *   POV = Protagonist's eyes.\n        *   Hands only from the bottom.\n        *   No names/references to \"you\".\n        *   No speaking by protagonist.\n        *   Protagonist acts on objects/others, not self.\n        *   Visible characters speak max 10 words per line.\n        *   No internal monologue, feelings, or mood words.\n        *   End on a cliffhanger.\n        *   Output format: Prose with speakers tagged `(S1), [description], says <d>[English] line</d>`.\n        *   `overall_soundscape` at the end.\n\n    *   Setting: A shared apartment living room.\n    *   Action: protagonist is cleaning or organizing, interacting with a roommate who behaves strangely (clues to being a ghost).\n    *   Ghost realization: Roommate's presence is seen, but maybe not felt? Or reflecting in a mirror/window?\n    *   Cliffhanger: The roommate does something impossible or tells the protagonist something chilling.\n\n    *   POV: Protagonist enters the kitchen/living room area.\n    *   Right hand reaches for a coffee mug on a table. (Interaction with object).\n    *   Roommate is there. (S1).\n    *   S1's appearance: Pale, wearing a worn-out hoodie, translucent? (Wait, I need to avoid mood words, just visual facts).\n    *   S1 is sitting on a chair. No indentation in the cushion? Or just sitting still.\n    *   Protagonist puts the mug down.\n    *   Interaction: S1 speaks.\n    *   Action: Protagonist reaches for a plate, it slides away. S1 is smiling.\n    *   Ending: S1 says something that reveals their state.\n\n    *   Hand pushes open a door.\n    *   A living room with a singular lamp on.\n    *   Leo (the roommate) sits on a gray sofa, wearing a faded blue sweatshirt and jeans, skin a matte pale white, staring straight ahead.\n    *   A right hand reaches out and puts a stack of mail on the coffee table.\n    *   Leo doesn't move his head, but his eyes shift to the mail.\n    *   (S1), a soft, airy voice, says <d>[English] You forgot to pay the heating bill again.</d>\n    *   The right hand reaches for a remote on the table. It slides six inches to the left.\n    *   Leo doesn't move.\n    *   The hand reaches again; the remote slides back.\n    *   (S1) says <d>[English] It is getting very cold in here.</d>\n    *   The hand reaches for the thermostat on the wall. The dial is set to 75, but the room is foggy.\n    *   Leo stands up. He doesn't push off the couch; he simply ascends.\n    *   He walks toward the camera, his feet not touching the carpet.\n    *   He stops an inch from the lens.\n    *   (S1) says <d>[English] I can't feel my heart beating.</d>\n\n    *   Continuous shot? Yes.\n    *   No cuts? Yes.\n    *   POV eyes? Yes.\n    *   Hands from bottom? Yes.\n    *   No \"you\" or naming protagonist? Yes.\n    *   No protagonist speech? Yes.\n    *   No action on body? Yes.\n    *   Visible characters speak <10 words? Yes.\n    *   Only visible/heard? No feelings/mood words? Check (avoid \"scary\", \"creepy\", etc.).\n    *   Cliffhanger? Yes.\n\n    *   (S1), a soft, airy male voice, says <d>[English] You forgot to pay the heating bill again.</d>\n    *   Wait, (S1) cannot say \"you\". Oh wait, the *protagonist* is \"you\" in my head, but in the story, S1 is speaking *to* the protagonist. The prompt says \"They never speak\" referring to the protagonist. The other characters *can* use the word \"you\" because they are talking to the protagonist. Let me double-check. \"They never speak\" refers to the protagonist. Correct.\n\n    Wait, the \"Only visible characters speak\" part means S1 can speak. And the limit of 10 words. \"You forgot to pay the heating bill again\" (8 words). Fine.\n\n    Let's refine the a bit to be more \"video-like\".\n\n    *Scene*: A dim living room. A right hand enters the frame holding a set of keys. The keys are placed on a wooden table. A man sits on the couch. He has pale, colorless skin and a gray oversized t-shirt. (S1), a thin, breathy male voice, says <d>[English] You are late tonight.</d> The hand reaches for a glass of water on the table. The glass slides away quickly. The man remains still. The hand reaches again, and the glass slides back. (S1) says <d>[English] I don't like it when you're gone.</d> The hand reaches for the man's shoulder. The fingers pass through the fabric of the shirt and through his skin, leaving a trail of white mist. The man looks down at the hand, then back at the camera. (S1) says <d>[English] I can't remember how it felt to touch.</d> He leans in closer. He reaches up, and his fingers press against the lens of the camera, leaving a frost mark. (S1) says <d>[English] Look behind you.</d>\n\n    \"Pass through the fabric\" \"trailing white mist\" are visual. \"Frost mark\" is visual.\n\n    Let's tighten the constraints on \"feelings/mood words\".\n    - \"Thin, breathy\" describes sound.\n    - \"Colorless\" describes visual.\n    - \"White mist\" describes visual.\n    - \"Frost mark\" describes visual.\n\n    Wait, \"I don't like it\" contains a feeling word, but it is spoken dialogue. The constraints on mood words usually apply to the narrator/description, not the character's speech.\n\n    Revised draft:\n    Walking into a dim living room. A man in a gray t-shirt and black sweatpants sits on a navy sofa, his skin a matte white. A right hand from the bottom of the frame places a set of keys on the wooden coffee table. (S1), a thin, breathy male voice, says <d>[English] You are late tonight.</d> The right hand reaches for a glass of water on the table. The glass slides six inches to the right. The man does not move. The hand reaches again, and the glass slides back to its original spot. (S1) says <d>[English] I don't like it when you're gone.</d> The right hand moves toward the man's shoulder. The fingers penetrate the gray fabric of the shirt and the white skin of the shoulder, exiting through the back. The man looks at the hand, then stares into the camera. (S1) says <d>[English] I forgot how skin feels.</d> He leans forward, bringing his face inches from the lens. His hand rises and presses a fingertip against the glass, leaving a circular patch of frost. (S1) says <d>[English] There is something under the bed.</d>\n\n    *Wait, \"something under the bed\" is a good cliffhanger.*\n\n    Double check: \"The fingers penetrate\" -> interaction with someone else. Correct. \"Right hand from the bottom\" -> camera是 eyes. Correct. \"No names\" -> Only the speaker tag (S1).\n\n    Checking constraints one more time:\n    - No cuts? Yes.\n    - No timestamps? Yes.\n    - No camera directions (like \"Zoom in\" or \"POV\")? Use descriptions of what is seen. \"Walking into...\", \"A right hand enters...\".\n    - Speaker tags: (S1), [description], says <d>[English] line</d>.\n    - Overall soundscape at end.\n\n    Actually, \"Walking into...\" might be a camera direction? No, it's a description of the action in a continuous shot.\n\n    Let's refine \"matte white skin\" and ensure no feelings.\n    \"Thin, breathy voice\" is a description of sound.\n\n    \"I don't like it when you're gone\" -> Speaking.\n    \"I forgot how skin feels\" -> Speaking.\n\n    Wait, \"penetrate the gray fabric\" describes a visual act.\n\n    Final polish.\n\n    Scene: Entering a dim living room. A man in a gray t-shirt and black sweatpants sits on a navy sofa, his skin a matte white. A right hand enters from the bottom of the frame and places a set of keys on the wooden coffee table. (S1), a thin, breathy male voice, says <d>[English] You are late tonight.</d> The right hand reaches for a glass of water on the table. The glass slides six inches to the right. The man remains motionless. The hand reaches again; the glass slides back to its previous position. (S1) says <d>[English] I dislike it when you leave.</d> The right hand reaches toward the man's shoulder. The fingers move through the gray fabric and the white skin of the shoulder, emerging from the other side. The man looks at the hand, then looks into the lens. (S1) says <d>[English] I forgot how warmth feels.</d> He leans forward, his face inches from the lens. His right hand rises and presses a fingertip against the glass, leaving a circle of frost. (S1) says <d>[English] Something is standing behind you.</d>\n\n    Soundscape: Door opening, keys clinking on wood, glass sliding on a hard surface, fabric rustling, breathing, a light frosty crackle.\n\n    Wait, \"Only visible characters speak\". Is \"Something is standing behind you\" referring to something visible? Usually, if the ghost says it, the threat isn't visible yet, which is the cliffhanger. That works.\n\n    One more check: \"No Feelings or Mood Words\".\n    \"Matte white\" (Color) - OK.\n    \"Thin, breathy\" (Sound description) - OK.\n    \"Motionless\" (Action/state) - OK.\n    \"Dislike\" (Spoken dialogue) - OK.\n    \"Warmth\" (Spoken dialogue) - OK.\n\n    One more check on protagonist actions:\n    - Places keys on table.\n    - Reaches for glass.\n    - Reaches toward shoulder.\n    All interactions with objects or others.\n\n    Protagonist's hands used? Yes.\n    No protagonist names? Yes.\n    No \"you\" when describing the protagonist? Yes. \"A right hand enters...\" avoids it.Entering a dim living room. A man in a gray t-shirt and black sweatpants sits on a navy sofa, his skin a matte white. A right hand enters from the bottom of the frame and places a set of keys on the wooden coffee table. (S1), a thin, breathy male voice, says <d>[English] You are late tonight.</d> The right hand reaches for a glass of water on the table. The glass slides six inches to the right. The man remains motionless. The hand reaches again; the glass slides back to its previous position. (S1) says <d>[English] I dislike it when you leave.</d> The right hand reaches toward the man's shoulder. The fingers move through the gray fabric and the white skin of the shoulder, emerging from the other side. The man looks at the hand, then looks into the lens. (S1) says <d>[English] I forgot how warmth feels.</d> He leans forward, his face inches from the lens. His right hand rises and presses a fingertip against the glass, leaving a circle of frost. (S1) says <d>[English] Something is standing behind you.</d>\n\noverall_soundscape: Door opening, keys clinking on wood, glass sliding on a hard surface, dry fabric rustling, a faint frosty crackle.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Tap his pale shoulder",
+        "Smash the glass coffee table"
+      ],
+      "rootMs": 12166,
+      "choiceMs": 616
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking at Leo, a man in a navy sweatshirt and gray sweatpants, standing in a dim living room. He is semi-transparent; the pattern of the wallpaper is visible through his torso. A right hand enters from the bottom of the frame and places a white ceramic mug on the coffee table. Leo drifts forward, his feet hovering three inches above the tan carpet. He reaches for the mug, but his fingers pass through the ceramic without moving it. (S1), a thin, echoing male voice, says <d>[English] I cannot hold things anymore.</d> The right hand reaches out and attempts to pat Leo's arm, the fingers sliding through his limb as if it were mist. Leo looks at the lens. (S1) says <d>[English] Stop pretending this is normal.</d> Leo points a translucent finger toward the space behind the camera. (S1) says <d>[English] Our other roommate is finally home.</d> A heavy weight slams onto the right shoulder from behind, and a grey, shriveled hand clamps firmly around the wrist at the bottom of the frame.\n\noverall_soundscape: Humming of a distant refrigerator, fabric rubbing, ceramic clicking on wood, a thin echoing voice, a heavy skin-on-skin slap.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grip the clamping hand",
+        "Lick the grey fingers"
+      ],
+      "rootMs": 98131,
+      "choiceMs": 655
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking at a wooden coffee table. A right hand reaches in from the bottom of the frame and picks up a newspaper clipping. The bold text reads 'OBITUARY: SAMUEL REED'. The hand sets the clipping back down. Standing by the window is Samuel, a man with pale skin and translucent fingers, wearing a grey sweater. (S1), a thin, echoing male voice, says <d>[English] Did you find any old letters?</d> A right hand moves forward and reaches for Samuel's shoulder, but the palm passes through his arm and shoulder into the air behind him. Samuel looks at the hand, then looks back into the camera. (S1), the thin, echoing voice, says <d>[English] The neighbors are calling the police again.</d> He turns his head toward the front door as a loud knock echoes through the room.\n\noverall_soundscape: Paper sliding on wood, soft floorboard creaks, a hollow echoing voice, a heavy metallic knocking on a wooden door.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Ask what he wants",
+        "Open the front door"
+      ],
+      "rootMs": 144712,
+      "choiceMs": 739
+    },
+    {
+      "premise": "blind date",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking at a white tablecloth with a silver fork and knife aligned. A right hand enters from the bottom of the frame and slides a glass of water two inches to the right. On the table, a smartphone screen illuminates with a text message: \"I'm here.\" Feet in black heels click across a hardwood floor. A woman in a red dress slides into the opposite chair. She has dark lipstick and eyes fixed on the lens. (S1), a sharp feminine voice, says <d>[English] Sorry I'm late. Traffic was a nightmare.</d> Her right hand reaches out and places a small, blinking black device on the table. She leans forward. (S1) says <d>[English] Your employer didn't mention you'd be this quiet.</d> Her hand moves under the table and returns with a black semi-automatic pistol, resting the muzzle on the white linen pointing at the lens.\n\noverall_soundscape: Muffled restaurant chatter, clink of glassware, clicking heels on wood, the rhythmic electronic beep of the device, a heavy metallic thud on fabric.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grab the gun barrel",
+        "Order a chocolate milkshake"
+      ],
+      "rootMs": 54890,
+      "choiceMs": 651
+    },
+    {
+      "premise": "blind date",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Walking past mahogany walls and white tablecloths. A right hand holds a brown leather briefcase. (S1), a neutral male voice, says <d>[English] Follow me to your table, sir.</d> Stop at a small circular table where a woman in a red dress with blonde hair tied in a bun is seated. The right hand places the briefcase on the velvet chair. The woman looks up. (S2), a high-pitched female voice, says <d>[English] I wasn't sure if you'd actually show up.</d> A right hand reaches for a glass of water on the table. The woman’s hand shoots out from beneath the table and grips the wrist. She pulls the arm down, disappearing below the table edge. She looks directly into the lens. (S2) says <d>[English] Did you bring the encrypted drive?</d>\n\noverall_soundscape: Low murmur of distant diners, clinking silverware, soft jazz playing from overhead speakers, the muffled thud of a briefcase hitting velvet.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Drop the briefcase onto her lap",
+        "Ask if she wants more water"
+      ],
+      "rootMs": 64946,
+      "choiceMs": 612
+    },
+    {
+      "premise": "blind date",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking at a white linen tablecloth with two empty wine glasses. A right hand enters from the bottom of the frame and slides a smartphone into view. The screen shows a photograph of a smiling man with dark hair and glasses. A woman in a red coat with short gray hair walks toward the table, carrying a leather briefcase. She stops and looks into the lens. (S1), a sharp female voice, says <d>[English] I assume you are the one who contacted me.</d> A right hand reaches for a water glass and slides it two inches to the left. The woman sits and places the briefcase on the table. She flips the metal latches open. She reaches inside, pulls out a thick manila envelope, and sets it beside the phone. Her hand returns to the briefcase and pulls out a silver handgun, placing it muzzle-down on the white tablecloth. (S1) says <d>[English] Let's skip the appetizers and talk about the money.</d>\n\noverall_soundscape: Clinking of silverware from distant tables, low murmur of crowd conversation, the slide of glass on linen, the metallic snap of briefcase latches, the heavy thud of a firearm on a table.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Slide the envelope toward her",
+        "Pick up the handgun"
+      ],
+      "rootMs": 38356,
+      "choiceMs": 704
+    },
+    {
+      "premise": "blind date",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Walking through a dimly lit restaurant with red velvet curtains and gold-trimmed tables. A woman in a sleeveless red dress sits at a corner booth, waving. Approaching the table, a right hand enters the frame and grips the leather seat, pulling the camera down into the chair. (S1), a woman with shoulder-length blonde hair and red lipstick, says <d>[English] You are even more handsome in person. I'm Sarah.</d> Her right hand reaches across the white tablecloth and touches fingertips resting there. A left hand enters the frame to pick up a crystal water glass. The woman's smile disappears. She reaches into a black clutch and slides a glossy photograph across the table. A right hand pulls the photo closer. The image shows a suburban house with a large red 'X' painted over the front door. (S1) says <d>[English] We have exactly three minutes before they arrive.</d> The restaurant's heavy front door slams open with a loud crash.\n\noverall_soundscape: Low hum of dinner conversation, clinking of silverware on china, the sliding of a photo on fabric, a distant heavy door slamming.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Flip the table over",
+        "Ask what she's wearing"
+      ],
+      "rootMs": 71125,
+      "choiceMs": 594
+    },
+    {
+      "premise": "blind date",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Walking through a pair of heavy velvet curtains into a dimly lit dining room with white tablecloths and flickering tea lights. A woman in a red satin dress sits at a small circular table, staring into a hand mirror. A right hand enters from the bottom of the frame and pulls back the heavy wooden chair. The camera lowers into the seat. The right hand reaches forward and settles on the white linen. The woman closes the mirror and looks into the lens. (S1), a soft feminine voice, says <d>[English] I didn't expect you to be so punctual.</d> She reaches into a small leather clutch and slides a manila envelope across the table. (S1) says <d>[English] Let us get the business out of the way first.</d> A hand reaches out and opens the envelope, pulling out a photograph of the protagonist sleeping in a bed. A loud crash of glass echoes from the kitchen area. The woman looks past the camera, her eyes widening, and says <d>[English] They found us.</d>\n\noverall_soundscape: Low jazz music, the muffled clink of silverware, fabric sliding on wood, the crisp snap of an envelope opening, a violent shatter of glass.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grab the envelope and run",
+        "Offer her a slice of toast"
+      ],
+      "rootMs": 62690,
+      "choiceMs": 727
+    },
+    {
+      "premise": "airport security",
+      "index": 1,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down at a gray plastic bin on a rubber conveyor belt. Two hands enter from the bottom of the frame, placing a leather wallet, a smartphone, and a silver watch into the bin. The hands push the bin forward. A heavy black briefcase is placed in a second bin and pushed onto the belt. The camera moves forward through two tall metal archways. (S1), a woman in a blue button-down shirt and a security badge, says <d>[English] Please step through.</d> The camera passes through the arch. A loud, sharp beep sounds. (S1) looks at the console, then back at the camera. She says <d>[English] Step back. We have a hit on your bag.</d> The camera pivots to the end of the conveyor belt. The black briefcase slides out of the X-ray tunnel. (S1) reaches down and pops the latches of the briefcase. She opens the lid. She stares inside the bag, her eyes widening. She steps back quickly, hands raised. (S2), a man in a black tactical vest with T-S-A printed in white on the chest, steps into the frame from the right. He reaches for a holster on his hip. (S2) says <d>[English] Do not move. Hands up. Now!</d> (S2) reaches forward and grips the wrist of the hand visible at the bottom of the frame.\n\noverall_soundscape: Low hum of airport machinery, the rhythmic clack of plastic bins on metal rails, a sharp electronic alarm beep, distant chatter of a crowd, a heavy metallic click of a briefcase latch, a sharp intake of breath.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grab the tactical vest",
+        "Swallow the silver watch"
+      ],
+      "rootMs": 24201,
+      "choiceMs": 580
+    },
+    {
+      "premise": "airport security",
+      "index": 2,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Gray plastic bins on a black rubber conveyor belt. A right hand enters from the bottom, placing silver keys and a smartphone into a bin. The hand pushes the bin forward. (S1), a woman in a blue uniform with a silver badge and hair in a tight bun, points toward a circular metal detector. The view passes through the sensor. A loud electronic buzz sounds. S1 walks forward with a handheld wand. She sweeps the wand down the frame. The wand buzzes. S1 looks into the lens and says <d>[English] Please step into the private screening area.</d> S1 turns and walks through a door into a white room with a metal table. S1 extends an open palm. A right hand enters from the bottom, placing a navy blue passport into her hand. S1 opens the passport and looks at the photo. She looks up into the lens and says <d>[English] This person died ten years ago.</d> A right hand enters from the bottom and grips S1's forearm, pulling her backward out of the frame.\n\noverall_soundscape: Low hum of a conveyor belt, mechanical x-ray whirring, a loud high-pitched electronic beep, rhythmic footsteps on linoleum, the crisp snap of a passport closing, a sudden fabric rustle and a muffled gasp.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Seize the security badge",
+        "Swallow the navy passport"
+      ],
+      "rootMs": 39337,
+      "choiceMs": 849
+    },
+    {
+      "premise": "airport security",
+      "index": 3,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Hands place a brown leather wallet and a set of silver keys into a grey plastic bin. The bin is pushed forward onto a black rubber conveyor belt. The camera moves through the narrow frame of a metal detector into a brightly lit terminal. An agent (S1), a man in a blue uniform and a navy cap, stands waiting. The bin reaches the end of the belt. Two hands reach down to grab the wallet and keys. (S1) reaches out and grips the right wrist, holding it tight. He looks directly into the camera and points to a monitor displaying a grey skeletal silhouette with a bright red blinking square over the ribs. (S1) says <d>[English] You need to come with me right now.</d> He pulls the arm toward a heavy steel door.\n\noverall_soundscape: Mechanical hum of the conveyor belt, distant airport chatter, rhythmic beeping of a scanner, the scuff of rubber soles on linoleum, the sound of skin gripping a wrist.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Yank the arm away",
+        "Lick the agent's palm"
+      ],
+      "rootMs": 30090,
+      "choiceMs": 913
+    },
+    {
+      "premise": "airport security",
+      "index": 4,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking at a gray conveyor belt beneath bright fluorescent lights. A right hand enters from the bottom of the frame and places a black leather wallet and a set of silver keys into a gray plastic bin. The bin slides forward. A left hand enters from the bottom of the frame, lifting a silver laptop and placing it into a second bin. Ahead, a man in a blue uniform with a gold badge stands by a metal detector arch. (S1), a nasal male voice, says <d>[English] Bins forward, please. Move it along.</d> The hands at the bottom of the frame remove a brown leather belt and drop it into the bin. The camera moves forward, stepping through the metal detector. A loud, high-pitched beep rings out. (S1) frowns, looks at a monitor, and holds up a hand to stop the movement. He reaches into the bin, pulling out the laptop case. He reaches into a side pocket and withdraws a thick, sealed manila envelope. He rips the seal and pulls out a translucent plastic bag containing a jagged piece of red crystalline rock. He looks directly into the lens. (S1), a nasal male voice, says <d>[English] We have a problem. Don't move a muscle.</d> He reaches for a radio on his shoulder.\n\noverall_soundscape: Constant hum of ventilation, rhythmic clatter of plastic bins on metal rollers, distant chatter of a crowd, a loud electronic beep, paper tearing, the static pop of a shoulder radio.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grab the red crystal",
+        "Lick the security guard's badge"
+      ],
+      "rootMs": 33783,
+      "choiceMs": 541
+    },
+    {
+      "premise": "airport security",
+      "index": 5,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking at a row of gray plastic bins on a black conveyor belt. A right hand enters from the bottom of the frame and places a leather wallet and a set of keys into a bin. The hand pushes the bin forward. Walking forward toward a metal detector. (S1), a man in a blue shirt with a silver badge, stands by the arch and points forward, saying <d>[English] Walk through and wait for the signal.</d> Moving forward through the archway. A sharp, repetitive alarm rings. (S1) steps into the frame and blocks the path with an open palm. He says <d>[English] Step back to the conveyor belt now.</d> Moving backward toward the baggage area. (S2), a woman with a high ponytail and a blue uniform, stands by a black suitcase that is sliced open. She reaches inside and pulls out a metallic cylinder with a red digital display counting down from ten seconds. She looks into the lens and says <d>[English] This was in the hidden compartment.</d> (S1) enters the frame, places a hand on the side of the lens, and pushes hard. He says <d>[English] Everybody clear the area! Now!</d>\n\noverall_soundscape: High-pitched electronic alarms, drone of conveyor belts, shuffle of shoes on hard tile, fabric rustling close to the microphone, distant airport intercom chatter.\n\nnon_diegetic_music: None.",
+      "moves": [
+        "Grab the counting cylinder",
+        "Give her your wallet"
+      ],
+      "rootMs": 114426,
+      "choiceMs": 615
+    }
+  ],
+  "failures": []
+}
