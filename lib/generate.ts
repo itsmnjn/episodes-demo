@@ -22,12 +22,11 @@ const FAL_ENDPOINT = "minimax/h3-max/image-to-video";
 const FAL_ROOT_ENDPOINT = "minimax/h3-max/text-to-video";
 
 // H3 reads a structured three-field document (integrated_multimodal_description /
-// overall_soundscape / non_diegetic_music). Two lines of it are product
-// invariants and owned by code, not writers: the Shot 1 opener that locks
-// first-person POV in one uncut shot, and the no-score declaration that keeps
-// the audio diegetic. Writers produce everything between them.
-export const PREAMBLE =
-  "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts.";
+// overall_soundscape / non_diegetic_music). Code owns the field label and
+// shot marker at the front and the no-score declaration at the back; the
+// writer opens with the style and the first-person one-shot facts, because
+// style follows the premise (photoreal unless it says anime, claymation...).
+export const PREAMBLE = "integrated_multimodal_description: [Shot 1]";
 
 function assemblePrompt(body: string): string {
   return `${PREAMBLE} ${body}\n\nnon_diegetic_music: None.`;
@@ -79,7 +78,8 @@ export async function suggestChoices(input: {
 
 // Shared by both prompt writers: the H3 document format, the invariants,
 // and one example.
-const SHOT_RULES = `- One continuous shot. No cuts, timestamps, or camera directions.
+const SHOT_RULES = `- The first sentence states the style and the shot: "{style}, first-person POV at eye level, one continuous shot, natural head sway, no cuts." The style is photoreal live-action unless the premise or the previous scene says otherwise (anime, claymation, watercolor); a story keeps the style it started with.
+- One continuous shot. No cuts, timestamps, or camera directions.
 - The camera is the protagonist's eyes. Only their hands can appear, from the bottom of the frame. Never name them or write "you". They never speak.
 - The protagonist acts on people, objects, and the room, never on their own body.
 - Only visible characters speak, about ten words per line.
@@ -87,13 +87,13 @@ const SHOT_RULES = `- One continuous shot. No cuts, timestamps, or camera direct
 
 Output format:
 
-[the scene as prose. Speakers are tagged at their first line, and spoken words are wrapped: (S1), a low weathered male voice, says <d>[English] line</d>. Quotation marks only for text visible in the scene.]
+[Style], first-person POV at eye level, one continuous shot, natural head sway, no cuts. [the scene as prose. Speakers are tagged at their first line, and spoken words are wrapped: (S1), a low weathered male voice, says <d>[English] line</d>. Quotation marks only for text visible in the scene.]
 
 overall_soundscape: [room tone and the sounds of the actions]
 
 Example:
 
-Looking across wet white sand at John Locke from Lost, a lean man in his fifties with receding sandy-blond hair, a beige linen shirt, and khaki pants, standing in the surf and looking into the camera, his open right hand reaching toward the lens. A right hand in a white dress-shirt cuff enters from the bottom of the frame and takes his hand. He grips it, turns, and walks toward the coconut palms, pulling the camera with him through shallow surf, joined hands at the bottom of the frame. At the treeline he stops, turns back to the camera, and (S1), a low weathered male voice, says <d>[English] Someone is hurt in the jungle.</d> His grip tightens, his eyes locked on the lens.
+Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across wet white sand at John Locke from Lost, a lean man in his fifties with receding sandy-blond hair, a beige linen shirt, and khaki pants, standing in the surf and looking into the camera, his open right hand reaching toward the lens. A right hand in a white dress-shirt cuff enters from the bottom of the frame and takes his hand. He grips it, turns, and walks toward the coconut palms, pulling the camera with him through shallow surf, joined hands at the bottom of the frame. At the treeline he stops, turns back to the camera, and (S1), a low weathered male voice, says <d>[English] Someone is hurt in the jungle.</d> His grip tightens, his eyes locked on the lens.
 
 overall_soundscape: Surf breaking, wind moving through palms, wet sand underfoot, fabric shifting close to the microphone.`;
 
@@ -134,7 +134,7 @@ export async function writeEpisodePrompt(input: {
 
 const EXPAND_SYSTEM = `You expand a premise for a first-person video story into several different opening scenes. The user gives you a premise and how many scenes to write.
 
-Each scene is two sentences: what is happening around the protagonist, then the cliffhanger it stops on. Keep everything the premise says; invent the rest. Make the scenes different from each other in what happens, not just in wording. The tone follows the premise: a zoo is a day at the zoo, not a horror film, unless the premise says so. A cliffhanger can be funny, awkward, strange, or dangerous.
+Each scene is two sentences: what is happening around the protagonist, then the cliffhanger it stops on. Keep everything the premise says; invent the rest. If the premise names a style, such as anime or claymation, every scene says so. Make the scenes different from each other in what happens, not just in wording. The tone follows the premise: a zoo is a day at the zoo, not a horror film, unless the premise says so. A cliffhanger can be funny, awkward, strange, or dangerous.
 
 The protagonist is never seen and never speaks. Things can be said to them, handed to them, or happen in front of them, but the scene ends before they do anything about it. Do not end a scene with a character telling the protagonist what to do.
 

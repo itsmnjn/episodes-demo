@@ -1,0 +1,210 @@
+{
+  "piece": "next",
+  "startedAt": "2026-09-01T23:35:06.529Z",
+  "episodeModel": "google/gemini-3.5-flash-lite",
+  "choiceModel": "google/gemini-3.7-flash",
+  "fixtures": [
+    {
+      "seriesId": "the-invitation",
+      "episodeId": "0aa",
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace then a fall. Continue from this still: Cho Chang and Hermione Granger in pajamas, faces close in a group hug, looking into the lens.\n\n[0 to 3 seconds] Looking forward as the hero's arms stay around both of them and drive the hug backward toward the four-poster. Their faces stay in the lens. Feet shuffle. The bed hits the backs of their legs.\n\n[3 to 7 seconds] All three go down onto the pillows. The camera drops with them. White pillows fill the sides of frame. Feathers burst past the lens. Cho Chang laughs straight into the camera from above. Hermione Granger's hair crosses the frame as they roll.\n\n[7 to 10 seconds] They pin the hero. Both girls lean over the lens, faces filling the frame, laughing, hands on the hero's chest at the bottom of frame. Hold on both faces over the camera. End on that beat.\n\nAudio: shuffle, impact on pillows, feathers, their laughter, bed creak.",
+      "durationSeconds": 10,
+      "lastFramePath": "/Users/itsmnjn/Developer/Projects/episodes-demo/content/series/the-invitation/media/0aa.last.jpg"
+    },
+    {
+      "seriesId": "the-invitation",
+      "episodeId": "0ab",
+      "prompt": "First-person POV. The camera is the hero's eyes. Stay close. One continuous handheld take. Continue from this still: Cho Chang and Hermione Granger in pajamas, faces close in a group hug, looking into the lens.\n\n[0 to 3 seconds] Looking forward as the hero's right hand reaches past Hermione Granger and snatches a white pillow from the bed behind her. The pillow comes up into the bottom of the lens. The hero swings it at Cho Chang, then at Hermione. Soft hit. They break the hug, startled, laughing.\n\n[3 to 7 seconds] Cho Chang grabs a pillow and swings it at the lens. The pillow fills the frame and bursts. Feathers fly past the camera. Hermione Granger swings hers next. Both stay close, coming at the hero, delighted.\n\n[7 to 10 seconds] Hold on both girls mid-swing, pillows filling the sides of frame, feathers in the air, wrecked with laughter, looking into the camera. End on that beat.\n\nAudio: pillow whoosh, soft hits, feathers, their shouts and laughter.",
+      "durationSeconds": 10,
+      "lastFramePath": "/Users/itsmnjn/Developer/Projects/episodes-demo/content/series/the-invitation/media/0ab.last.jpg"
+    },
+    {
+      "seriesId": "the-invitation",
+      "episodeId": "0ba",
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take. Continue from this still: Cho Chang and Hermione Granger in pajamas, faces close, looking into the lens. Cho still holds her gold glass. The hero's wand is in his left hand at the bottom of frame, tip glowing.\n\n[0 to 3 seconds] Looking forward as the hero's left hand lifts the wand into the lower third of the lens and flicks it at both of them. Gold sparks leave the tip and hit Cho Chang, then Hermione Granger. They flinch, then the charm lands.\n\n[3 to 7 seconds] Cho Chang folds toward the lens, laughing too hard to stand, hands on her ribs. Hermione Granger tries to raise her own wand and cannot finish the word. Gold sparks keep popping on their pajamas. They grab at the hero's sleeves at the bottom of frame.\n\n[7 to 10 seconds] Both girls collapsed together, grabbing toward the lens, still laughing, the charm still going. Hold on both faces close, helpless. End on that beat.\n\nAudio: wand snap, gold spark pops, their helpless laughter, fabric, fire crackle.",
+      "durationSeconds": 10,
+      "lastFramePath": "/Users/itsmnjn/Developer/Projects/episodes-demo/content/series/the-invitation/media/0ba.last.jpg"
+    },
+    {
+      "seriesId": "the-invitation",
+      "episodeId": "0bb",
+      "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take. Continue from this still: Cho Chang and Hermione Granger in pajamas, faces close, looking into the lens. Cho still holds her gold glass. The hero's wand is in his left hand at the bottom of frame, tip glowing.\n\n[0 to 3 seconds] Looking forward as the hero's left hand lifts the wand into the lower third of the lens and flicks it at Cho Chang, then at Hermione Granger. Cho Chang's hair blasts straight up into a ridiculous tall tower. Hermione Granger's hair turns bright pink and braids itself into a tall spiral.\n\n[3 to 7 seconds] They see each other first. Shock, then they both look into the lens. Cho Chang is already raising her wand toward the camera. Hermione Granger smiles like the hero is about to pay for this, her wand coming up too.\n\n[7 to 10 seconds] Hold on both faces looking into the camera, ridiculous hair filling the top of frame, both wands pointed at the lens. End on that beat.\n\nAudio: wand snap, hair whoosh, their shocked laugh, fire crackle.",
+      "durationSeconds": 10,
+      "lastFramePath": "/Users/itsmnjn/Developer/Projects/episodes-demo/content/series/the-invitation/media/0bb.last.jpg"
+    }
+  ],
+  "results": [
+    {
+      "fixture": {
+        "seriesId": "the-invitation",
+        "episodeId": "0aa",
+        "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace then a fall. Continue from this still: Cho Chang and Hermione Granger in pajamas, faces close in a group hug, looking into the lens.\n\n[0 to 3 seconds] Looking forward as the hero's arms stay around both of them and drive the hug backward toward the four-poster. Their faces stay in the lens. Feet shuffle. The bed hits the backs of their legs.\n\n[3 to 7 seconds] All three go down onto the pillows. The camera drops with them. White pillows fill the sides of frame. Feathers burst past the lens. Cho Chang laughs straight into the camera from above. Hermione Granger's hair crosses the frame as they roll.\n\n[7 to 10 seconds] They pin the hero. Both girls lean over the lens, faces filling the frame, laughing, hands on the hero's chest at the bottom of frame. Hold on both faces over the camera. End on that beat.\n\nAudio: shuffle, impact on pillows, feathers, their laughter, bed creak.",
+        "durationSeconds": 10,
+        "lastFramePath": "/Users/itsmnjn/Developer/Projects/episodes-demo/content/series/the-invitation/media/0aa.last.jpg"
+      },
+      "frameUrl": "https://v3b.fal.media/files/b/0aa8bcea/ErpV_f5a3ITyOUh-cS8-W_eval-the-invitation-0aa.last.jpg",
+      "choiceMs": 1301,
+      "written": [
+        {
+          "move": "Say you saw what happened",
+          "kind": "spoken",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger lean over the white pillows, their hands resting on the pyjamaed chest at the bottom of the frame, stopping their laughter instantly at the words. Cho Chang's smile vanishes, and (S1), a sharp teenage female voice, says <d>[English] You saw it? Who was in the corridor then?</d> Hermione Granger drops her gaze to the pillows, her fingers tightening into the fabric at the bottom of the frame while she turns her head toward the stone archway.\n\noverall_soundscape: Soft rustle of feathers, bedsprings settling, distant crackle of fireplace.\n\nnon_diegetic_music: None.",
+          "ms": 2005,
+          "flags": []
+        },
+        {
+          "move": "Ask who surrenders first",
+          "kind": "choice",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger lean over the lens, smiling down from the pillows. Two hands enter from the bottom of the frame and press against both of their chests, pushing them slightly upward. Cho Chang's smile widens, and (S1), a bright young female voice, says <d>[English] Never gonna happen.</d> Hermione Granger shakes her head, her brown hair swinging across the top of the frame. The hands at the bottom of the frame flex and grip the lapels of their pajamas. Hermione Granger leans closer, her face filling the entire upper half of the view, and (S2), a crisp British female voice, says <d>[English] You are pinned completely.</d> Both of their weights press down harder against the chest, shutting off the view of the room above them.\n\noverall_soundscape: Soft laughter, drifting feathers rustling against sheets, fabric shifting against the microphone, bedsprings creaking under pressure.\n\nnon_diegetic_music: None.",
+          "ms": 2505,
+          "flags": []
+        },
+        {
+          "move": "Throw feathers at Cho",
+          "kind": "choice",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang on the left and Hermione Granger on the right lean over the lens on white pillows, both smiling wide and pressing hands against the bottom of the frame. Right and left hands enter from the bottom, plunging into white goose feathers and flinging a white cloud directly upward at Cho's face. Cho blinks hard, her smile widening into a laugh, and (S1), a young clear female voice, says <d>[English] Oh, you are asking for it!</d> Hermione ducks left as a second handful of feathers flies past her ear, her brown hair sweeping across the right side of the frame. Both girls dive down out of sight, then pop back up with twin handfuls of ticking pillow stuffing, their arms cocked back to strike.\n\noverall_soundscape: Feathers rustling, muffled laughing, sheets sliding against the mattress, fabric tearing.\n\nnon_diegetic_music: None.",
+          "ms": 2574,
+          "flags": []
+        },
+        {
+          "move": "Ask what they want",
+          "kind": "spoken",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger lean over the white pillows, laughing down into the lens with hands pressed against the chest at the bottom of the frame. Their laughter subsides as they exchange a quick glance between themselves. Hermione Granger shifts her weight, her right hand remaining on the chest while her left hand reaches out of frame to grab a striped pillow. Cho Chang leans closer, her dark hair brushing the side of the lens, and (S1), a bright young female voice, says <d>[English] We just want everything you have hidden inside your trunk right now.</d> Hermione Granger nods, her smile widening as she raises the striped pillow directly over the lens.\n\noverall_soundscape: Soft laughter, rustling feathers, fabric shifting against sheets, rapid breathing close to the microphone.\n\nnon_diegetic_music: None.",
+          "ms": 2723,
+          "flags": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "fixture": {
+        "seriesId": "the-invitation",
+        "episodeId": "0ab",
+        "prompt": "First-person POV. The camera is the hero's eyes. Stay close. One continuous handheld take. Continue from this still: Cho Chang and Hermione Granger in pajamas, faces close in a group hug, looking into the lens.\n\n[0 to 3 seconds] Looking forward as the hero's right hand reaches past Hermione Granger and snatches a white pillow from the bed behind her. The pillow comes up into the bottom of the lens. The hero swings it at Cho Chang, then at Hermione. Soft hit. They break the hug, startled, laughing.\n\n[3 to 7 seconds] Cho Chang grabs a pillow and swings it at the lens. The pillow fills the frame and bursts. Feathers fly past the camera. Hermione Granger swings hers next. Both stay close, coming at the hero, delighted.\n\n[7 to 10 seconds] Hold on both girls mid-swing, pillows filling the sides of frame, feathers in the air, wrecked with laughter, looking into the camera. End on that beat.\n\nAudio: pillow whoosh, soft hits, feathers, their shouts and laughter.",
+        "durationSeconds": 10,
+        "lastFramePath": "/Users/itsmnjn/Developer/Projects/episodes-demo/content/series/the-invitation/media/0ab.last.jpg"
+      },
+      "frameUrl": "https://v3b.fal.media/files/b/0aa8bcea/vKhNXsyc3BsO1Xx3AADMs_eval-the-invitation-0ab.last.jpg",
+      "choiceMs": 1674,
+      "written": [
+        {
+          "move": "Say you saw what happened",
+          "kind": "spoken",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger are laughing and mid-swing with pillows, feathers drifting past the camera in the stone dormitory. They freeze instantly at the words. Cho lowers her pillow, her smile dropping. Hermione stares into the lens, her eyes widening. (S1), a sharp teenage female voice, says <d>[English] You saw what? Tell us right now.</d> Cho leans closer, her hand gripping Hermione's shoulder.\n\noverall_soundscape: Feathers rustling in the air, muffled giggles dying out, heavy stone room echo, fabric rustling.\n\nnon_diegetic_music: None.",
+          "ms": 1662,
+          "flags": [
+            "echo"
+          ]
+        },
+        {
+          "move": "Ask what they want",
+          "kind": "spoken",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger are frozen mid-swing with pillows raised on both sides of the frame, laughing with open mouths as white feathers drift through the air around them. Cho Chang stops laughing, lowers her pillow slightly, and (S1), a young clear female voice, says <d>[English] What are you doing in our room at midnight?</d> Hermione Granger drops her pillow, her smile fading into a sharp stare directly at the lens.\n\noverall_soundscape: Lingering giggles, rustling pillows, soft feathers drifting against the floorboards, stone room echo.\n\nnon_diegetic_music: None.",
+          "ms": 2134,
+          "flags": []
+        },
+        {
+          "move": "Pull the duvet over them",
+          "kind": "choice",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger stand close in the frame, wearing pajamas, pillows pressed against the sides of the lens, laughing with wide open mouths, loose feathers drifting through the air around their heads. Both hands enter from the bottom of the frame, grab the thick white duvet from the foot of the bed, and yank it upward. The heavy fabric rises, sweeping past the camera lens to cover the two girls. They scramble underneath, pulling the quilt down and trapping the camera in total darkness beneath the cotton. A heavy wooden door creaks open in the distance, and footsteps echo loudly on stone floor outside the bed curtains. (S1), a sharp older female voice, says <d>[English] Who is making all that noise at this hour?</d> The fabric presses tight against the lens as someone outside grips the outside of the curtains.\n\noverall_soundscape: Feathers rustling, high-pitched laughter, heavy fabric sliding, distant wooden door creaking, rapid footsteps on stone, muffled breathing.\n\nnon_diegetic_music: None.",
+          "ms": 2286,
+          "flags": []
+        },
+        {
+          "move": "Blow feathers at Cho",
+          "kind": "choice",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger stand close together in pajamas, holding white pillows at their sides, their heads tipped back in laughter with feathers stuck to their hair. A cluster of loose white feathers floats immediately in front of the lens. The camera leans in close, and a deep breath blows the feathers outward against Cho's face, scattering them past her cheeks. Cho blinks rapidly, gasping for air and wiping a feather from her forehead. (S1), a high energetic female voice, says <d>[English] Oh, you are in so much trouble now!</d> Hermione drops her pillow, reaches behind her into the bed, and pulls out a large, heavy bolster cushion, heaving it upward with both hands directly toward the lens while lunging forward with wide eyes.\n\noverall_soundscape: Sharp puffs of breath, fluttering feathers, high-pitched laughter, heavy fabric swishing through the air, and a wooden bed frame creaking.\n\nnon_diegetic_music: None.",
+          "ms": 2487,
+          "flags": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "fixture": {
+        "seriesId": "the-invitation",
+        "episodeId": "0ba",
+        "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take. Continue from this still: Cho Chang and Hermione Granger in pajamas, faces close, looking into the lens. Cho still holds her gold glass. The hero's wand is in his left hand at the bottom of frame, tip glowing.\n\n[0 to 3 seconds] Looking forward as the hero's left hand lifts the wand into the lower third of the lens and flicks it at both of them. Gold sparks leave the tip and hit Cho Chang, then Hermione Granger. They flinch, then the charm lands.\n\n[3 to 7 seconds] Cho Chang folds toward the lens, laughing too hard to stand, hands on her ribs. Hermione Granger tries to raise her own wand and cannot finish the word. Gold sparks keep popping on their pajamas. They grab at the hero's sleeves at the bottom of frame.\n\n[7 to 10 seconds] Both girls collapsed together, grabbing toward the lens, still laughing, the charm still going. Hold on both faces close, helpless. End on that beat.\n\nAudio: wand snap, gold spark pops, their helpless laughter, fabric, fire crackle.",
+        "durationSeconds": 10,
+        "lastFramePath": "/Users/itsmnjn/Developer/Projects/episodes-demo/content/series/the-invitation/media/0ba.last.jpg"
+      },
+      "frameUrl": "https://v3b.fal.media/files/b/0aa8bcea/GoUV6BVg_oAk6G8VjMigx_eval-the-invitation-0ba.last.jpg",
+      "choiceMs": 2921,
+      "written": [
+        {
+          "move": "Demand they surrender first",
+          "kind": "choice",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger are doubled over on the stone floor, their faces pressed close to the lens, laughing so hard tears stream down their cheeks. A glowing wand in a left hand at the bottom of frame presses against their joined wrists. Cho Chang tries to push the wand away, wheezing for breath. Hermione gasps, her shoulders shaking uncontrollably against the stone flagstones. Cho Chang looks up through tear-filled eyes, pointing a shaking finger at the lens, and (S1), a bright teenage female voice, says <d>[English] Drop the wand, just drop it, please stop.</d> Hermione nods rapidly, her fingers twitching on the fabric of the sleeve at the bottom of frame. A heavy oak door at the end of the stone hallway swings inward with a loud screech, and a tall shadow falls across the floor.\n\noverall_soundscape: Uncontrolled laughter, fabric rustling, gold sparks popping against stone, heavy door hinge screeching.\n\nnon_diegetic_music: None.",
+          "ms": 2093,
+          "flags": []
+        },
+        {
+          "move": "Say you saw what happened",
+          "kind": "spoken",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger are pressed close together in blue pajamas, heads tilted against each other, laughing uncontrollably with wide grins and crinkled eyes, clutching the wooden wand shafts at the bottom of the frame with both hands. Cho Chang stops laughing abruptly, her eyes widening, and (S1), a high youthful female voice, says <d>[English] No you didn't, tell me you didn't see that.</d> Hermione Granger drops her wand hand, turning her head sharply toward the dark stone archway behind them. A shadow detaches from the wall, moving fast across the stone, and the floorboards creak loudly as heavy footsteps approach the door.\n\noverall_soundscape: Uncontrolled giggling, sharp intakes of breath, wood scraping against fabric, heavy footsteps on stone, and low fire crackling.\n\nnon_diegetic_music: None.",
+          "ms": 2267,
+          "flags": []
+        },
+        {
+          "move": "Ask what they want",
+          "kind": "spoken",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger are pressed close together against the camera lens, their faces contorted in wide, helpless laughter with teeth bared. Two hands grip the camera from the bottom of the frame, fingers locked onto the fabric of their blue pajama collars while the left hand holds a glowing wooden wand downward. Gold sparks continue to pop and cascade across their shoulders and hair. Cho wipes a tear from her eye with her right hand while her left hand clutches at the bottom of the frame. Hermione shakes her head violently back and forth, her blonde curls bouncing against her cheeks as she tries to catch her breath. Cho gasps for air, her eyes watering, and (S1), a high breathless young female voice, says <d>[English] Stop it, please, we cannot breathe at all!</d> Hermione nods rapidly in agreement, her mouth still curled upward into a wide, uncontrollable grin, her eyes fixed directly on the lens. The stone walls of the dormitory blur behind them in the dim candlelight as both girls lean their weight heavily against the camera, their laughter subsiding into soft, rhythmic gasps. Hermione reaches her right hand up toward the lens, her fingers curling open, and (S2), a crisp anxious young female voice, says <d>[English] Give us the wand back right now!</d>\n\noverall_soundscape: Uncontrollable giggling, muffled gasps for air, magical spark crackles, fabric rustling against the microphone, stone room echo.\n\nnon_diegetic_music: None.",
+          "ms": 2691,
+          "flags": []
+        },
+        {
+          "move": "Snatch Hermione's wand away",
+          "kind": "choice",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger are laughing hysterically with teeth bared, faces pressed close together under a stone window arch. A right hand enters from the bottom of the frame, fingers closing sharply around the dark wooden wand held in Hermione's right hand and yanking it upward and out of her grip. Hermione's fingers snap shut on empty air as she shrieks with laughter, her head thrown back against Cho's shoulder. Cho gasps for breath, her eyes squeezed shut, pointing a shaking finger at the lens while gold sparks pop continuously against her blue pajama collar. The right hand drops the stolen wand out of frame, then shoots back up to grip Hermione's pajama collar and shake her gently. Hermione gasps, tears of laughter spilling down her cheeks, and (S1), a bright breathless female voice, says <d>[English] Stop it, please stop, we surrender completely!</d> Cho collapses entirely forward against the lens, blocking the view with a mass of dark hair and blue fabric.\n\noverall_soundscape: Loud uncontrollable giggling, fabric rustling, wooden wand clattering, gold spark crackles, heavy breathing.\n\nnon_diegetic_music: None.",
+          "ms": 2991,
+          "flags": []
+        }
+      ],
+      "errors": []
+    },
+    {
+      "fixture": {
+        "seriesId": "the-invitation",
+        "episodeId": "0bb",
+        "prompt": "First-person POV. The camera is the hero's eyes. One continuous handheld take. Continue from this still: Cho Chang and Hermione Granger in pajamas, faces close, looking into the lens. Cho still holds her gold glass. The hero's wand is in his left hand at the bottom of frame, tip glowing.\n\n[0 to 3 seconds] Looking forward as the hero's left hand lifts the wand into the lower third of the lens and flicks it at Cho Chang, then at Hermione Granger. Cho Chang's hair blasts straight up into a ridiculous tall tower. Hermione Granger's hair turns bright pink and braids itself into a tall spiral.\n\n[3 to 7 seconds] They see each other first. Shock, then they both look into the lens. Cho Chang is already raising her wand toward the camera. Hermione Granger smiles like the hero is about to pay for this, her wand coming up too.\n\n[7 to 10 seconds] Hold on both faces looking into the camera, ridiculous hair filling the top of frame, both wands pointed at the lens. End on that beat.\n\nAudio: wand snap, hair whoosh, their shocked laugh, fire crackle.",
+        "durationSeconds": 10,
+        "lastFramePath": "/Users/itsmnjn/Developer/Projects/episodes-demo/content/series/the-invitation/media/0bb.last.jpg"
+      },
+      "frameUrl": "https://v3b.fal.media/files/b/0aa8bcea/XF9hxIKoo7mRGMgQNk7_0_eval-the-invitation-0bb.last.jpg",
+      "choiceMs": 1645,
+      "written": [
+        {
+          "move": "Disarm Cho with a flick",
+          "kind": "choice",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger stand in pajamas with their wands pointed at the lens, tall black hair and pink spiral braids filling the top of the frame. A left hand at the bottom of the frame flicks the glowing wand tip toward Cho Chang. Cho's wand snaps out of her fingers, spinning upward past her tall black hair. Cho gasps and tracks the spinning wand with her wide eyes. Hermione Granger's smile vanishes, her pink spiral braid shaking as she grips her wand tighter, aiming straight at the center of the lens. Hermione (S1), a sharp young female voice, says <d>[English] That was a terrible mistake.</d> Hermione's wand tip flashes blinding white light.\n\noverall_soundscape: Stone room echo, wand snap, sharp whoosh of flying wood, crackling fireplace.\n\nnon_diegetic_music: None.",
+          "ms": 2127,
+          "flags": []
+        },
+        {
+          "move": "Ask what they want",
+          "kind": "spoken",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger stand in blue-and-pink pajamas under a stone arch, their tall towers of hair nearly brushing the high ceiling. Their two wands point directly at the camera lens from the bottom of the frame, tips glowing red. Cho Chang narrows her eyes, her smile tight. (S1), a bright young female voice, says <d>[English] You are going to regret doing that right now.</d> Hermione Granger tilts her head, her pink spiral braid shifting. (S2), a crisp young female voice, says <d>[English] Three, two, one, incarcercerous.</d> Both wands spark violently, yellow light flashing against the stone walls as two streams of thick ropes burst from the wooden tips, flying straight toward the camera lens.\n\noverall_soundscape: Stone room echo, crackling fire, sharp wand hums, heavy ropes whipping through the air.\n\nnon_diegetic_music: None.",
+          "ms": 2274,
+          "flags": []
+        },
+        {
+          "move": "Say you saw what happened",
+          "kind": "spoken",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Two wands point directly at the camera from the bottom of the frame, held by Cho Chang and Hermione Granger in blue pajamas, standing in a stone tower room. Cho Chang's black hair towers straight up near the stone ceiling, and Hermione Granger's pink hair spirals into a tall point. Both girls narrow their eyes at the lens, their wands steady. Cho Chang, a young woman with a sharp voice, says <d>[English] You think that is funny, do you?</d> Hermione Granger, a young woman with a crisp voice, says <d>[English] Let us see how you like our new look.</d> Both wand tips spark white light directly into the camera lens.\n\noverall_soundscape: Stone room echo, crackling fire, sharp magical humming sounds near the microphone\n\nnon_diegetic_music: None.",
+          "ms": 2535,
+          "flags": [
+            "untagged-line"
+          ]
+        },
+        {
+          "move": "Hand Hermione a mirror",
+          "kind": "choice",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Cho Chang and Hermione Granger stand close in blue pajamas inside the stone tower room, their wands pointed straight at the lens. Cho Chang's black hair stands straight up in a towering column, and Hermione Granger's pink hair is braided into a rigid spiral. A right hand enters from the bottom of the frame, holding a silver hand mirror, and presses it forward into Hermione Granger's hands. Hermione lowers her wand, grabs the handle of the mirror, and stares into the glass. Her mouth drops open. Cho Chang leans over Hermione's shoulder, peering into the mirror reflection. Cho Chang's eyes widen, and (S1), a sharp young female voice, says <d>[English] What did you do to my hair?</d> Both girls spin back toward the lens, wands raised high and glowing bright red.\n\noverall_soundscape: Stone room echo, crackling fire, rustle of silk pajamas, sharp clink of metal mirror against wood, indignant gasps.\n\nnon_diegetic_music: None.",
+          "ms": 2585,
+          "flags": []
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

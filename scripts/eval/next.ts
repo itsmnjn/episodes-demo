@@ -60,6 +60,10 @@ const FLAGS: { name: string; test: (prompt: string, move: string) => boolean }[]
   { name: "timing", test: (p) => /\[\d+\s*(to|-|–)\s*\d+ seconds?\]|At \d\d:\d\d|\[Shot [2-9]/i.test(p) },
   { name: "self-body", test: (p) => /\b(eats|drinks|swallows|licks|bites|chews|puts on|wears)\b/i.test(narration(p)) },
   { name: "double-opener", test: (p) => (p.match(/\[Shot 1\]/g) ?? []).length !== 1 },
+  {
+    name: "no-pov-opener",
+    test: (p) => !/\[Shot 1\] [^.\n]*first-person POV[^.\n]*one continuous shot/i.test(p),
+  },
   { name: "no-soundscape", test: (p) => !/^overall_soundscape:/m.test(p) },
   { name: "dialogue-in-soundscape", test: (p) => /^overall_soundscape:.*(<d>|\bsays\b)/m.test(p) },
 ];
