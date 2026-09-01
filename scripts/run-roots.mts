@@ -149,10 +149,12 @@ for (const premise of premises) {
       }
     }),
   );
+  console.log(`\n=== ${premise} ===`);
   for (const result of results) {
-    if (result) candidates.push(result);
+    if (!result) continue;
+    candidates.push(result);
+    console.log(`\n--- ${result.index} ---\n${result.prompt}\n\n1. ${result.moves[0]}\n2. ${result.moves[1]}`);
   }
-  console.log(`${premise}: ${results.filter(Boolean).length}/${n} written`);
   await writeReport();
 }
 

@@ -151,6 +151,8 @@ for (const premise of premises) {
     continue;
   }
   const expandMs = Date.now() - expandStart;
+  console.log(`\n=== ${premise} ===\n`);
+  console.log(scenes.map((scene, i) => `${i + 1}. ${scene}`).join("\n"));
 
   const failures: string[] = [];
   const results = await Promise.all(
@@ -169,14 +171,12 @@ for (const premise of premises) {
       }
     }),
   );
-  expansions.push({
-    premise,
-    scenes,
-    expandMs,
-    filmed: results.filter((result): result is Filmed => result !== null),
-    failures,
-  });
-  console.log(`${premise}: ${scenes.length} scenes, ${results.filter(Boolean).length} filmed`);
+  const filmed = results.filter((result): result is Filmed => result !== null);
+  for (const [i, f] of filmed.entries()) {
+    console.log(`\n--- ${i + 1} ---\n${f.prompt}\n\n1. ${f.moves[0]}\n2. ${f.moves[1]}`);
+  }
+  for (const error of failures) console.log(`\nFAILED: ${error}`);
+  expansions.push({ premise, scenes, expandMs, filmed, failures });
   await writeReport();
 }
 

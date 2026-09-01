@@ -1,0 +1,99 @@
+# Premise expansion run — 2026-09-01T23:20:06.356Z
+
+- Expander and root writer: `google/gemini-3.7-flash` at temperature 1.5
+- Choice writer: `google/gemini-3.7-flash`
+- Scenes per premise: 5
+- Duration: 10s
+- Expanded: 1/1
+
+## Latency
+
+| premise | expand | root write | choice write |
+|---|---|---|---|
+| japanese game show | 6441ms | median 2239ms, min 1509ms, max 4190ms | median 1660ms, min 1118ms, max 3269ms |
+| **all** | median 6441ms, min 6441ms, max 6441ms | median 2239ms, min 1509ms, max 4190ms | median 1660ms, min 1118ms, max 3269ms |
+
+## Expansions
+
+### japanese game show
+
+1. Strobe lights flash across a foam-padded arena while three men dressed as giant eggplants sprint toward a spinning turntable. The floor beneath suddenly drops two feet, and a massive mechanical mallet swings down from the ceiling directly on target.
+2. A host in a gold lamé suit screams into a microphone while a giant neon timer ticks down to zero above the podiums. A silver dome is whipped off the platter directly in front, revealing a writhing octopus wearing a tiny party hat.
+3. Gallons of neon-pink slime cascade down the steep staircase while the studio audience erupts into rhythmic chanting. Two contestants in slick vinyl sumo suits lose their grip at the top and come sliding down at full speed.
+4. The studio lights dim to a faint blue as a buzzing decibel meter monitors the dead-silent room. A man dressed as an angry samurai slides open a paper screen and raises an enormous feather duster an inch from the face.
+5. Sirens wail as a massive Styrofoam wall speeds down a track across a shallow pool of water. The cutout in the center of the oncoming wall is shaped like a human doing a contorted, upside-down split.
+
+#### japanese game show 1 — root 4125ms, choices 1118ms
+
+> Strobe lights flash across a foam-padded arena while three men dressed as giant eggplants sprint toward a spinning turntable. The floor beneath suddenly drops two feet, and a massive mechanical mallet swings down from the ceiling directly on target.
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. White strobe lights flash across a padded yellow floor, illuminating a large spinning turntable covered in red vinyl at the center of the arena. Three men in bulky purple eggplant costumes with green felt collars sprint side-by-side toward the rotating platform. Two hands in black fingerless gloves rise from the bottom of the frame and grip a foam-wrapped horizontal railing. The leftmost runner in the eggplant suit turns his head toward the others, and (S1), a muffled breathless male voice, says <d>[English] Watch out for the drop!</d> A metallic latch releases beneath them, and the twenty-foot square section of padded floor under the runners plunges two feet down into a concrete pit with a heavy thud. The runners lose balance and tumble onto their padded bellies inside the lowered pit. High above, a thick steel crane arm releases, and an oversized yellow-and-black foam mallet swings down from the ceiling rafters in a rapid arc directly toward the center of the pit.
+
+overall_soundscape: Pulsing electronic buzzer, rapid rhythmic thumping of feet on foam, metallic clanking of a hydraulic drop mechanism, squeaking vinyl, and the loud whoosh of a swinging pendulum mallet overhead.
+
+non_diegetic_music: None.
+```
+
+1. Yell to roll left
+2. Hit the emergency stop button
+
+#### japanese game show 2 — root 2239ms, choices 1914ms
+
+> A host in a gold lamé suit screams into a microphone while a giant neon timer ticks down to zero above the podiums. A silver dome is whipped off the platter directly in front, revealing a writhing octopus wearing a tiny party hat.
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Standing behind a glossy red game show podium beneath intense studio lights, looking toward a host in a shimmering gold lamé suit. Above him, a massive neon digital timer counts down: "00:03", "00:02", "00:01", "00:00", flashing bright red. (S1), a boisterous, echoing male voice, screams into a handheld microphone, <d>[English] Time is up, let us see your final dish!</d> An assistant's gloved hands reach in and whip a polished silver cloche off a large chrome platter resting on the podium. On the platter, a live, glistening purple-grey octopus writhes and curls its tentacles over the rim, sporting a tiny conical paper party hat with a gold foil tassel strapped under its mantle. One wet tentacle snaps outward, latching its suckers firmly onto the edge of the podium directly in front of the lens, hauling the rest of the creature forward.
+
+overall_soundscape: High-energy game show buzzers, loud studio audience cheering, the host's amplified voice booming through a PA system, metallic clatter of the cloche lifting, wet slapping suction sounds of tentacles against polished metal and plastic.
+
+non_diegetic_music: None.
+```
+
+1. Slap the cloche back down
+2. Introduce him as guest judge
+
+#### japanese game show 3 — root 1509ms, choices 1660ms
+
+> Gallons of neon-pink slime cascade down the steep staircase while the studio audience erupts into rhythmic chanting. Two contestants in slick vinyl sumo suits lose their grip at the top and come sliding down at full speed.
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Standing at the base of a towering, glossy white obstacle staircase bathed in hot studio spotlights, where thick neon-pink slime pours down the steps in heavy, splashing sheets. High in the tiered bleachers on both sides, the studio audience claps and shouts in unison. At the very top platform, two contestants encased in oversized, glossy blue and yellow vinyl sumo suits lose their footing on the slime-coated surface, their legs kicking out as they topple backward. Both hands, wearing fingerless neoprene gloves, reach up into the bottom of the frame to grip the slime-covered handrail on the left. The two padded contestants slide rapidly down the incline side by side, throwing up pink spray as they hurtle directly toward the bottom step.
+
+overall_soundscape: Rhythmic shouting and clapping from the audience, heavy liquid sloshing and splashing down hard plastic stairs, squeaking vinyl rubbing against wet surfaces, and loud studio air handlers humming overhead.
+
+non_diegetic_music: None.
+```
+
+1. Deflect the sliding blue suit
+2. Scream for them to duck
+
+#### japanese game show 4 — root 4190ms, choices 1462ms
+
+> The studio lights dim to a faint blue as a buzzing decibel meter monitors the dead-silent room. A man dressed as an angry samurai slides open a paper screen and raises an enormous feather duster an inch from the face.
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a polished studio floor illuminated by dim blue overhead lighting. To the left, a digital decibel meter mounted on a tripod displays glowing red digits reading "8.2 dB." Directly ahead, a white paper shoji screen slides open along a wooden track. A man with a high topknot, wearing black-lacquered samurai armor over a grey kimono, glares forward with bared teeth and a furrowed brow. He steps forward in white tabi socks, raises an enormous yellow ostrich-feather duster with both hands, and thrusts it forward, stopping the dense cloud of feathers one inch from the lens. The tip of a single feather trembles in the air, drifting closer toward the center of the frame.
+
+overall_soundscape: A low electronic buzz from the decibel meter, the sharp friction of the sliding wooden screen, the light rustle of stiff fabric and feathers through still air.
+
+non_diegetic_music: None.
+```
+
+1. Blow on the feather
+2. Whisper a fierce surrender
+
+#### japanese game show 5 — root 1826ms, choices 3269ms
+
+> Sirens wail as a massive Styrofoam wall speeds down a track across a shallow pool of water. The cutout in the center of the oncoming wall is shaped like a human doing a contorted, upside-down split.
+
+```text
+integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A giant pink Styrofoam wall rushes forward on metal rails over ankle-deep water in a brightly lit television studio. Water sprays outward from the sides of the base as flashing red emergency beacons pulse above the set. In the center of the approaching wall, a cutout reveals an empty silhouette of a human inverted in a wide, asymmetrical leg split with one arm crooked behind the back. Two hands wearing blue latex gloves rise from the bottom of the frame and plant firmly onto the slick, wet blue floor. The perspective flips rapidly upside down as the wall bears down, the opening expanding to fill the entire field of view, the foam edges rushing within inches of the lens.
+
+overall_soundscape: High-pitched wailing sirens, churning water splashing loudly against moving metal, mechanical hum of rail motors, wet rubber squeaking on smooth plastic flooring.
+
+non_diegetic_music: None.
+```
+
+1. Punch through the foam wall
+2. Scream at the host
