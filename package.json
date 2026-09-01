@@ -7,12 +7,10 @@
     "build": "bun scripts/sync-public-content.mjs && next build",
     "start": "next start",
     "lint": "eslint",
-    "hop": "bun scripts/run-hop.mts",
-    "root": "bun scripts/run-root.mts",
-    "roots": "bun scripts/run-roots.mts",
     "expansions": "bun scripts/run-expansions.mts",
-    "choices": "bun scripts/run-choices.mts",
-    "episodes": "bun scripts/run-episodes.mts"
+    "root": "bun scripts/run-root.mts",
+    "hop": "bun scripts/run-hop.mts",
+    "eval": "bun scripts/eval.mts"
   },
   "dependencies": {
     "@fal-ai/client": "^1.10.1",

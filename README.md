@@ -6,6 +6,7 @@ The watch surface is the Next.js app: `bun run dev`. The creation pipeline is in
 
 Needs `.env.local` with `OPENROUTER_API_KEY` and `FAL_KEY`.
 
+- `bun run expansions "zoo"` expands a premise into five different opening scenes.
 - `bun run root "zoo"` expands the premise into three scenes and writes a prompt for each. `--render` renders one (`--pick 2` to choose), `--direct` films the premise as written.
 - `bun run hop the-invitation 0aa` extends a baked leaf by one episode (`--move "..."` to choose the move).
-- `bun run roots`, `bun run expansions`, `bun run choices`, `bun run episodes` are eval runs; reports land under `evals/`. Each takes `--help`-style flags in its header comment.
+- `bun run eval <pipeline|expander|episode|choices|next>` runs an eval on the whole pipeline or one piece; reports land under `evals/`. Flags are in `scripts/eval.mts`.

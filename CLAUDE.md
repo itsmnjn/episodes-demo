@@ -24,8 +24,8 @@ Branching first-person AI video stories. Two surfaces: the watch surface (spec: 
 
 ## Scripts and evals
 
-- `bun run root "zoo"` expands the premise into scenes and writes a prompt for each; `--render --pick N` renders one, `--direct` skips the expander. `bun run hop <series> <episode>` extends a baked leaf. Both print every prompt as it lands. Arguments are positionals and `--flags`, never env vars; model overrides are `--model` flags on the evals, which set the env the library reads at import.
-- `bun run roots`, `bun run expansions`, `bun run choices`, `bun run episodes` are eval runs. Each writes `report.md` and `run.json` under `evals/<kind>/<stamp>-<model>/`, rewritten after every premise. The flags catch rule breaks; they reward blandness, so read the reports.
+- `bun run expansions "zoo"` expands a premise into scenes and prints them. `bun run root "zoo"` expands and writes a prompt for each scene; `--render --pick N` renders one, `--direct` skips the expander. `bun run hop <series> <episode>` extends a baked leaf. Everything prints as it lands. Arguments are positionals and `--flags`, never env vars; model overrides are `--model` flags, which set the env the library reads at import.
+- Evals are separate from the pipeline commands: `bun run eval pipeline` (expand → episode → choices), `eval expander`, `eval episode`, `eval choices` (pairs on the latest pipeline or episode run), `eval next` (next episodes on the baked leaves, with two fixed spoken moves per leaf). Each writes `report.md` and `run.json` under `evals/<piece>/<stamp>-<model>/`, rewritten after every premise. The flags catch rule breaks; they reward blandness, so read the reports.
 - Content: `content/catalog.json` is the shelf; `content/series/{id}/series.json` plus `media/` is a series. The baked series predate the current prompt format; their prompts are data, not examples.
 
 ## Rules
