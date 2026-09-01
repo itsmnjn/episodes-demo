@@ -24,7 +24,7 @@ Branching first-person AI video stories. Two surfaces: the watch surface (spec: 
 
 ## Scripts and evals
 
-- `bun run root` writes and renders an opening episode from `PREMISE` (or `PREMISE_FILE`). `bun run hop` extends a baked leaf by one episode. Both print every prompt as it lands.
+- `bun run root "zoo"` expands the premise into scenes and writes a prompt for each; `--render --pick N` renders one, `--direct` skips the expander. `bun run hop <series> <episode>` extends a baked leaf. Both print every prompt as it lands. Arguments are positionals and `--flags`, never env vars; model overrides are `--model` flags on the evals, which set the env the library reads at import.
 - `bun run roots`, `bun run expansions`, `bun run choices`, `bun run episodes` are eval runs. Each writes `report.md` and `run.json` under `evals/<kind>/<stamp>-<model>/`, rewritten after every premise. The flags catch rule breaks; they reward blandness, so read the reports.
 - Content: `content/catalog.json` is the shelf; `content/series/{id}/series.json` plus `media/` is a series. The baked series predate the current prompt format; their prompts are data, not examples.
 

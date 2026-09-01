@@ -1,15 +1,12 @@
-// Run one live creation hop from a baked leaf: suggest two moves, pick one,
-// write the child prompt off the real held frame, render it on fal.
+// Extend a baked leaf by one episode: suggest two moves, pick one, write the
+// next episode off the real held frame, render it.
 //
-//   bun run hop                              # the-invitation 0aa, first suggestion
-//   SERIES=mcdonalds EPISODE=0bb bun run hop
-//   LABEL="Summon a dragon" bun run hop      # skip suggestions, force a move
-//
-// Prints the suggestions and the finished prompt as they land, then the
-// rendered video's local path.
+//   bun run hop the-invitation 0aa
+//   bun run hop mcdonalds 0bb --move "Summon a dragon" --out out
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { parseArgs } from "node:util";
 import {
   checkEpisodeJob,
   frameUrlForParent,
@@ -19,8 +16,18 @@ import {
 } from "../lib/generate";
 import { loadSeriesSource } from "../lib/content";
 
-const seriesId = process.env.SERIES ?? "the-invitation";
-const episodeId = process.env.EPISODE ?? "0aa";
+const { values, positionals } = parseArgs({
+  allowPositionals: true,
+  options: {
+    move: { type: "string" },
+    out: { type: "string", default: "out" },
+  },
+});
+
+const [seriesId, episodeId] = positionals;
+if (!seriesId || !episodeId) {
+  throw new Error('usage: bun run hop <series> <episode> [--move "..."] [--out out]');
+}
 
 const source = loadSeriesSource(seriesId);
 if (!source) throw new Error(`Unknown series: ${seriesId}`);
@@ -33,7 +40,7 @@ if (!parent.lastFramePath) {
   throw new Error(`${episodeId} has no last frame on disk.`);
 }
 
-let label = process.env.LABEL;
+let label = values.move;
 if (!label) {
   const choices = await suggestChoices({
     episodePrompt: parent.prompt,
@@ -76,9 +83,8 @@ while (!videoUrl) {
   }
 }
 
-const outDir = process.env.OUT ?? "out";
-await fs.mkdir(outDir, { recursive: true });
-const outPath = path.join(outDir, `${seriesId}-${episodeId}-hop.mp4`);
+await fs.mkdir(values.out, { recursive: true });
+const outPath = path.join(values.out, `${seriesId}-${episodeId}-hop.mp4`);
 const clip = await fetch(videoUrl);
 await fs.writeFile(outPath, new Uint8Array(await clip.arrayBuffer()));
 console.log(`\nclip: ${outPath}`);

@@ -4,27 +4,33 @@
 // evals/episodes/. Renders nothing.
 //
 //   bun run episodes
-//   SERIES=the-invitation,mcdonalds bun run episodes
-//   EPISODE_MODEL=google/gemini-3.7-flash bun run episodes
+//   bun run episodes the-invitation mcdonalds
+//   bun run episodes --model google/gemini-3.7-flash --choice-model google/gemini-3.5-flash-lite
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { parseArgs } from "node:util";
 import { loadCatalog, loadSeriesSource } from "../lib/content";
-import {
-  EPISODE_MODEL_ID,
-  CHOICE_MODEL_ID,
-  frameUrlForParent,
-  suggestChoices,
-  writeEpisodePrompt,
-} from "../lib/generate";
+
+const { values, positionals } = parseArgs({
+  allowPositionals: true,
+  options: {
+    model: { type: "string" },
+    "choice-model": { type: "string" },
+  },
+});
+
+// The library reads its model config from the environment at import time.
+if (values.model) process.env.EPISODE_MODEL = values.model;
+if (values["choice-model"]) process.env.CHOICE_MODEL = values["choice-model"];
+const { EPISODE_MODEL_ID, CHOICE_MODEL_ID, frameUrlForParent, suggestChoices, writeEpisodePrompt } =
+  await import("../lib/generate");
 
 // Spoken moves that fit any scene. Every fixture runs both, so the rule that
 // the protagonist never speaks on screen is tested on every frame.
 const SPOKEN_MOVES = ["Ask what they want", "Say you saw what happened"];
 
-const seriesIds = process.env.SERIES
-  ? process.env.SERIES.split(",").map((id) => id.trim())
-  : loadCatalog().map((card) => card.id);
+const seriesIds = positionals.length > 0 ? positionals : loadCatalog().map((card) => card.id);
 
 type Fixture = {
   seriesId: string;

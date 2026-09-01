@@ -3,31 +3,40 @@
 // latency and writes a report under evals/expansions/ after every premise.
 //
 //   bun run expansions
-//   PREMISES="zoo,dentist" N=5 bun run expansions
-//   PREMISES_FILE=premises.txt bun run expansions
+//   bun run expansions zoo dentist --n 5
+//   bun run expansions --from premises.txt --model google/gemini-3.7-flash
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import {
+import { parseArgs } from "node:util";
+import { resolvePremises } from "./premises";
+
+const { values, positionals } = parseArgs({
+  allowPositionals: true,
+  options: {
+    from: { type: "string" },
+    n: { type: "string", default: "5" },
+    duration: { type: "string", default: "10" },
+    model: { type: "string" },
+    temperature: { type: "string" },
+  },
+});
+
+// The library reads its model config from the environment at import time.
+if (values.model) process.env.ROOT_MODEL = values.model;
+if (values.temperature) process.env.ROOT_TEMPERATURE = values.temperature;
+const {
   CHOICE_MODEL_ID,
   ROOT_MODEL_ID,
   ROOT_TEMPERATURE,
   expandPremise,
   suggestChoices,
   writeRootPrompt,
-} from "../lib/generate";
+} = await import("../lib/generate");
 
-const premiseSource = process.env.PREMISES_FILE
-  ? (await fs.readFile(process.env.PREMISES_FILE, "utf8")).split("\n")
-  : (
-      process.env.PREMISES ??
-      "zoo,dentist,first day at hogwarts,my roommate is a ghost,blind date,airport security"
-    ).split(",");
-const premises = premiseSource
-  .map((premise) => premise.trim())
-  .filter((premise) => premise.length > 0);
-const n = Number(process.env.N ?? 5);
-const durationSeconds = Number(process.env.DURATION ?? 10);
+const premises = await resolvePremises(positionals, values.from);
+const n = Number(values.n);
+const durationSeconds = Number(values.duration);
 
 type Filmed = {
   scene: string;

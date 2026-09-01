@@ -2,12 +2,25 @@
 // choice writer for N pairs of moves, flag mechanical failures, and write a
 // report under evals/choices/.
 //
-//   bun run choices                       # latest evals/expansions run as fixtures
-//   FIXTURES=evals/expansions/<run>/run.json N=3 bun run choices
+//   bun run choices                                   # latest evals/expansions run as fixtures
+//   bun run choices --fixtures evals/expansions/<run>/run.json --n 3
+//   bun run choices --model google/gemini-3.5-flash-lite
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { CHOICE_MODEL_ID, CHOICE_SYSTEM, suggestChoices } from "../lib/generate";
+import { parseArgs } from "node:util";
+
+const { values } = parseArgs({
+  options: {
+    fixtures: { type: "string" },
+    n: { type: "string", default: "2" },
+    model: { type: "string" },
+  },
+});
+
+// The library reads its model config from the environment at import time.
+if (values.model) process.env.CHOICE_MODEL = values.model;
+const { CHOICE_MODEL_ID, CHOICE_SYSTEM, suggestChoices } = await import("../lib/generate");
 
 type Fixture = { premise: string; scene: string; prompt: string };
 
@@ -18,7 +31,7 @@ async function latestExpansionRun(): Promise<string> {
   return path.join(dir, runs[runs.length - 1], "run.json");
 }
 
-const fixturePath = process.env.FIXTURES ?? (await latestExpansionRun());
+const fixturePath = values.fixtures ?? (await latestExpansionRun());
 const fixtureRun = JSON.parse(await fs.readFile(fixturePath, "utf8")) as {
   expansions: { premise: string; filmed: { scene: string; prompt: string }[] }[];
 };
@@ -29,7 +42,7 @@ const fixtures: Fixture[] = fixtureRun.expansions.flatMap((expansion) =>
     prompt: filmed.prompt,
   })),
 );
-const n = Number(process.env.N ?? 2);
+const n = Number(values.n);
 
 // Mechanical flags. Each is a failure the choice doctrine names outright.
 const FLAGS: { name: string; test: (move: string) => boolean }[] = [
