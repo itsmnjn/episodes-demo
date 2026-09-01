@@ -1,6 +1,6 @@
 # Episodes demo
 
-Branching first-person AI video stories. Watch surface is the product. Series creation is an agent skill, not UI. User-facing spec: [docs/product.md](docs/product.md).
+Branching first-person AI video stories. Two surfaces: the watch surface and the creation surface (UI/UX for creating episodes and series, in progress). Watch spec: [docs/product.md](docs/product.md).
 
 ## Product
 
@@ -22,5 +22,4 @@ Branching first-person AI video stories. Watch surface is the product. Series cr
 - Grow a series with `.cursor/skills/iterate-series/SKILL.md`. Write artifacts with `.cursor/skills/create-series/SKILL.md`.
 - Generate with fal MCP, model `minimax/h3-max` only. Root: `text-to-video`. Children: `image-to-video` from the parent last frame.
 - Choice worker returns three moves. Orchestrator picks one. Prompt worker writes the clip. Human review, then JSON. Media waits until the tree is settled, then runs per depth in parallel. See `docs/series-iteration.md`.
-- Do not build a create-series form, style locker, or character uploader.
 - `AGENTS.md` is a symlink to this file.

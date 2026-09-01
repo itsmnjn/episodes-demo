@@ -1,8 +1,6 @@
 # Watch app
 
-The product is a phone-shaped player for branching first-person stories. You pick a series, watch a clip, tap one of two moves, watch the next clip. That is the whole app.
-
-Series are baked by agents. This spec is the thing a person opens. Do not add a create form, a prompt box, a style locker, or a character uploader.
+The watch surface is a phone-shaped player for branching first-person stories. You pick a series, watch a clip, tap one of two moves, watch the next clip. This spec covers that surface; the creation surface is specced separately.
 
 This demo later sits inside Mage. Chrome can look like it belongs there. The stage itself should still look like a phone.
 
@@ -71,9 +69,8 @@ Ignore `prompt`, `startFrame`, `model`, and `lastFrame` in the UI. Last-frame jp
 
 If a video path is missing or the file is gone, do not show a generate button. Show a dead end and a way back to the shelf. An incomplete series is an agent problem.
 
-## Out of scope
+## Out of scope for the player
 
-- Creating a series
 - Job progress, percentages, or retries. The wait is a single line.
 - A map or tree peek. The story is the tree. The viewer should feel it by tapping, not by reading a graph.
 - Accounts, history, likes, comments, share sheets
