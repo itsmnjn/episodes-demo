@@ -9,7 +9,11 @@
     "lint": "eslint",
     "bench:choices": "npx tsx --env-file=.env.local scripts/bench-suggest-choices.mts",
     "hop": "npx tsx --env-file=.env.local scripts/run-hop.mts",
-    "root": "npx tsx --env-file=.env.local scripts/run-root.mts"
+    "root": "npx tsx --env-file=.env.local scripts/run-root.mts",
+    "roots": "npx tsx --env-file=.env.local scripts/run-roots.mts",
+    "expansions": "npx tsx --env-file=.env.local scripts/run-expansions.mts",
+    "choices": "npx tsx --env-file=.env.local scripts/run-choices.mts",
+    "episodes": "npx tsx --env-file=.env.local scripts/run-episodes.mts"
   },
   "dependencies": {
     "@fal-ai/client": "^1.10.1",
