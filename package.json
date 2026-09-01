@@ -7,7 +7,9 @@
     "build": "node scripts/sync-public-content.mjs && next build",
     "start": "next start",
     "lint": "eslint",
-    "bench:choices": "npx tsx --env-file=.env.local scripts/bench-suggest-choices.mts"
+    "bench:choices": "npx tsx --env-file=.env.local scripts/bench-suggest-choices.mts",
+    "hop": "npx tsx --env-file=.env.local scripts/run-hop.mts",
+    "root": "npx tsx --env-file=.env.local scripts/run-root.mts"
   },
   "dependencies": {
     "@fal-ai/client": "^1.10.1",
