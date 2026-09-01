@@ -16,7 +16,7 @@ Length is per episode, at least 5 seconds, default 10. The player uses whatever 
 
 A full binary tree of those clips. Root is `0`. Left appends `a`, right appends `b`. Default depth is 3 (15 clips). A series may ship shallower. The Invitation is depth 2 (7 clips).
 
-Every node in a shipped series already has a video. Baked forks never wait on fal. At a leaf the viewer can keep going: the app suggests two new moves or takes one the viewer types, writes the child prompt from the parent prompt, renders that episode from the held frame, and plays it. Viewer-made paths live in client memory for the demo. They survive restarts and shelf round-trips in the same tab; a refresh starts clean.
+Every node in a shipped series already has a video. Baked forks never wait on fal. At a leaf the viewer can keep going: the app suggests two new moves or takes one the viewer types, writes the child prompt from the parent prompt and its held frame, renders that episode from the held frame, and plays it. Viewer-made paths live in client memory for the demo. They survive restarts and shelf round-trips in the same tab; a refresh starts clean.
 
 The only hard lock across a series is first-person POV. When a concept uses popular IP, likeness comes from naming it in the prompt; original concepts do not require an IP. Style is otherwise loose. The player never says any of that.
 
@@ -67,7 +67,7 @@ Only what it needs to play and branch:
 
 Ignore `prompt`, `startFrame`, `model`, and `lastFrame` in the UI. Last-frame jpgs are for generation, not for the player. The player freezes the video element.
 
-If a video path is missing or the file is gone, do not show a generate button. Show a dead end and a way back to the shelf. An incomplete series is an agent problem.
+If a video path is missing or the file is gone, do not show a generate button. Show a dead end and a way back to the shelf. An incomplete series is a content problem.
 
 ## Out of scope for the player
 

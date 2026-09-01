@@ -35,8 +35,7 @@ function assemblePrompt(body: string): string {
 
 fal.config({ credentials: process.env.FAL_KEY });
 
-// Exported for scripts/bench-suggest-choices.mts, which iterates on this
-// prompt and the reasoning config against live latency.
+// Exported so the choice eval can record the prompt beside its results.
 export const CHOICE_SYSTEM = `You write the protagonist's next move in a first-person video story. You are given the scene so far; it ends on a cliffhanger. Write two moves the protagonist could make right now.
 
 A move is something the protagonist does to a person, an object, or the room in front of them, or something they say. It has to be possible from exactly where the scene stopped, and it has to change what happens next. Nothing done to their own body, and no waiting, watching, or stepping back.
@@ -56,8 +55,8 @@ export function choicePrompt(input: {
   return `The scene that just played:\n\n${input.episodePrompt}${taken}\n\nWrite the two moves.`;
 }
 
-// Two plain lines at minimal reasoning keeps this call fast; the model
-// rejects reasoning "none" outright (see scripts/bench-suggest-choices.mts).
+// Two plain lines at minimal reasoning keeps this call fast; Gemini rejects
+// reasoning "none" outright.
 export async function suggestChoices(input: {
   episodePrompt: string;
   takenLabels: string[];

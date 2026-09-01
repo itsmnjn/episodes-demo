@@ -1,21 +1,11 @@
 # Episodes
 
-Demo of branching AI video stories for a later Mage integration.
+Branching first-person AI video stories. Watch a ten-second POV clip, tap one of two moves on its frozen last frame, watch the next one.
 
-An episode is a short first-person clip that ends on a cliffhanger with two choices. Each choice is another episode, started from the last frame of the one you just watched. A series is that tree. The series look is loose; the only hard lock is first-person POV. Likeness comes from popular IP in the prompt. H3 Max has no reference images.
+The watch surface is the Next.js app: `npm run dev`. The creation pipeline is in `lib/generate.ts`: a premise expander, one episode writer, and a choice writer on OpenRouter, rendered on fal MiniMax H3 Max (text-to-video for the opening, image-to-video from the held frame for everything after). [CLAUDE.md](CLAUDE.md) describes the pipeline; [docs/product.md](docs/product.md) is the watch spec.
 
-This repo is the watch surface plus the agent skill that bakes series. There is no create-series UI.
+Needs `.env.local` with `OPENROUTER_API_KEY` and `FAL_KEY`.
 
-User-facing spec: [docs/product.md](docs/product.md).
-
-## Status
-
-The series skill, The Invitation, and the watch app are in. Run `npm run dev`.
-
-## Create a series
-
-Agents: grow a series with `.cursor/skills/iterate-series/SKILL.md`. Write artifacts with `.cursor/skills/create-series/SKILL.md`.
-
-`create-series` writes `content/series/{id}/series.json` first, then renders media wave by depth on fal MiniMax H3 Max. Root is text-to-video at 9:16. Every child is image-to-video from the parent's last frame. Why one hop at a time: [docs/series-iteration.md](docs/series-iteration.md).
-
-fal MCP must be connected (`https://mcp.fal.ai/mcp`).
+- `PREMISE="zoo" npm run root` writes and renders an opening episode.
+- `npm run hop` extends a baked leaf by one episode.
+- `npm run roots`, `npm run expansions`, `npm run choices`, `npm run episodes` are eval runs; reports land under `evals/`.
