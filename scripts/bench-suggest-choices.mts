@@ -12,22 +12,18 @@ import { generateText, Output } from "ai";
 import { z } from "zod";
 import { CHOICE_SYSTEM, choicePrompt } from "../lib/generate";
 
-const MODEL_ID = "deepseek/deepseek-v4-flash";
+const MODEL_ID = "google/gemini-3.5-flash-lite";
 const TRIALS = Number(process.env.TRIALS ?? 3);
 
 const FIXTURES = [
   {
     name: "shore-1-taken",
-    seriesTitle: "The Shore",
-    ip: "Lost",
     takenLabels: ["Take his hand"],
     episodePrompt:
       "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.\n\nPhotoreal the Island from Lost, midday. White sand beach, turquoise surf, coconut palms, wet sand at the waterline.\n\n[0 to 10 seconds] John Locke from Lost, lean man in his fifties, receding sandy-blond hair, beige linen shirt, khaki pants, stands in the surf looking into the lens, open right hand toward the camera. Hold on him looking into the lens. End on that beat.",
   },
   {
     name: "office-2-taken",
-    seriesTitle: "Closing Time",
-    ip: "The Office",
     takenLabels: ["Open the envelope", "Hand it back to her"],
     episodePrompt:
       "First-person POV. The camera is the hero's eyes. One continuous handheld take, walking pace, natural body sway.\n\nPhotoreal Dunder Mifflin office from The Office, evening. Beige cubicles, glowing monitors, drop ceiling, dark windows.\n\n[0 to 10 seconds] Pam Beesly from The Office, fair skin, brown hair pulled back, grey cardigan, stands at reception holding out a sealed manila envelope toward the camera, eyes wide. Hold on her holding out the envelope. End on that beat.",

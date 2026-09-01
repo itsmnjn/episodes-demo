@@ -40,8 +40,6 @@ export async function POST(
 
   try {
     const choices = await suggestChoices({
-      seriesTitle: source.title,
-      ip: source.ip,
       episodePrompt: prompt,
       takenLabels,
     });

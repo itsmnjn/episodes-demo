@@ -118,8 +118,6 @@ export type EpisodeSource = {
 
 export type SeriesSource = {
   id: SeriesId;
-  title: string;
-  ip: string;
   episodes: Record<EpisodeId, EpisodeSource>;
 };
 
@@ -150,12 +148,7 @@ export function loadSeriesSource(id: SeriesId): SeriesSource | null {
       childIds: parseBranches(episode.branches).map((branch) => branch.to),
     };
   }
-  return {
-    id,
-    title: rec.title,
-    ip: typeof rec.ip === "string" ? rec.ip : "",
-    episodes,
-  };
+  return { id, episodes };
 }
 
 export function loadSeries(id: SeriesId): Series | null {

@@ -68,13 +68,6 @@ export async function POST(
   }
 
   try {
-    const prompt = await writeEpisodePrompt({
-      seriesTitle: source.title,
-      ip: source.ip,
-      parentPrompt,
-      label,
-      durationSeconds,
-    });
     const frameUrl =
       cachedFrameUrl ??
       (await frameUrlForParent({
@@ -82,6 +75,12 @@ export async function POST(
         lastFramePath,
         videoUrl,
       }));
+    const prompt = await writeEpisodePrompt({
+      parentPrompt,
+      frameUrl,
+      label,
+      durationSeconds,
+    });
     const requestId = await submitEpisodeJob({
       prompt,
       imageUrl: frameUrl,
