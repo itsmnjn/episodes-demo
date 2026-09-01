@@ -3,7 +3,21 @@ import { fal } from "@fal-ai/client";
 import { openrouter } from "@openrouter/ai-sdk-provider";
 import { generateText } from "ai";
 
-const model = openrouter("google/gemini-3.5-flash-lite");
+// Flash Lite is the default for calls a viewer waits on: choices and the
+// next episode. The root writer runs once per series and gets a stronger
+// model at a high temperature so rerolls differ; ROOT_MODEL and
+// ROOT_TEMPERATURE override them for eval runs.
+export const FAST_MODEL_ID = "google/gemini-3.5-flash-lite";
+export const CHOICE_MODEL_ID = process.env.CHOICE_MODEL ?? FAST_MODEL_ID;
+export const EPISODE_MODEL_ID = process.env.EPISODE_MODEL ?? FAST_MODEL_ID;
+export const ROOT_MODEL_ID = process.env.ROOT_MODEL ?? "google/gemini-3.7-flash";
+export const ROOT_TEMPERATURE = Number(process.env.ROOT_TEMPERATURE ?? 1.5);
+// OpenRouter routes to the cheapest provider by default and only fails over
+// on errors, so a slow provider stalls the call. Sort by throughput instead.
+const routing = { extraBody: { provider: { sort: "throughput" } } };
+const choiceModel = openrouter(CHOICE_MODEL_ID, routing);
+const episodeModel = openrouter(EPISODE_MODEL_ID, routing);
+const rootModel = openrouter(ROOT_MODEL_ID, routing);
 const FAL_ENDPOINT = "minimax/h3-max/image-to-video";
 const FAL_ROOT_ENDPOINT = "minimax/h3-max/text-to-video";
 
@@ -23,19 +37,13 @@ fal.config({ credentials: process.env.FAL_KEY });
 
 // Exported for scripts/bench-suggest-choices.mts, which iterates on this
 // prompt and the reasoning config against live latency.
-export const CHOICE_SYSTEM = `You come up with the protagonist's next move in an interactive story. You are given the scene that just played, written as a video shot description. It stopped on an open moment: an offer, a demand, a threat, a discovery.
+export const CHOICE_SYSTEM = `You write the protagonist's next move in a first-person video story. You are given the scene so far; it ends on a cliffhanger. Write two moves the protagonist could make right now.
 
-Propose two moves the protagonist can make right now, from exactly where the scene stopped. A move is a provocation: something done to the situation that forces the world to respond, so the next shot has more happening in it, not less. Both moves further the action. Never a retreat, a wait, or a refusal by doing nothing — a refusal is an act that raises the stakes.
+A move is something the protagonist does to a person, an object, or the room in front of them, or something they say. It has to be possible from exactly where the scene stopped, and it has to change what happens next. Nothing done to their own body, and no waiting, watching, or stepping back.
 
-The two moves differ in kind and lead to visibly different next shots. One is the move the scene is begging for; the other is one nobody would expect.
+The two moves take the story in different directions, and they are different kinds of move: not two grabs, and not a grab and a question every time. Offers, bargains, jokes, dares, gifts, accusations, and small acts of sabotage all count.
 
-Rules:
-- 2 to 6 words. Start with the verb ("Take his hand", "Push the door open").
-- Prefer physical moves: something done with the hands to a person, an object, or the room, whose effect shows on screen. The camera only sees outward, so never a move done to the protagonist's own body — no eating, drinking, hiding, stepping back.
-- A move can also be a line the protagonist says ("Ask who is in the cold room", "Tell him the apple is poisoned") when the interesting move is a question, a lie, a threat, or a reveal. Use these less often: the viewer never hears the line, only the reaction to it.
-- Playable from exactly where the scene stopped, using what is in reach.
-- Plain text. No trailing punctuation, no quotes, no A/B labels.
-- Output exactly two lines: one move per line. Nothing else.`;
+Each move is one action in 2 to 5 words starting with a verb, like "Hand him the apple" or "Ask who sent the note". Plain text, no punctuation at the end, no quotation marks. Output exactly two lines, one move per line, nothing else.`;
 
 export function choicePrompt(input: {
   episodePrompt: string;
@@ -55,7 +63,7 @@ export async function suggestChoices(input: {
   takenLabels: string[];
 }): Promise<[string, string]> {
   const { text } = await generateText({
-    model,
+    model: choiceModel,
     system: CHOICE_SYSTEM,
     prompt: choicePrompt(input),
     providerOptions: { openrouter: { reasoning: { effort: "minimal" } } },
@@ -70,39 +78,35 @@ export async function suggestChoices(input: {
   return [choices[0], choices[1]];
 }
 
-// Shared instruction block: the H3 document format, the POV constraint, and
-// the official dialogue system. Both prompt writers embed it.
-const SHOT_RULES = `The system supplies the document's opening for you: the field label, the shot marker, and a fixed style sentence establishing photoreal live-action, first-person POV, one continuous uncut shot. Your output continues that sentence mid-timeline — begin directly with your first scene sentence. Never write "integrated_multimodal_description", a [Shot] marker, a timestamp, a cut, or any POV or camera-style sentence of your own.
+// Shared by both prompt writers: the H3 document format, the invariants,
+// and one example.
+const SHOT_RULES = `- One continuous shot. No cuts, timestamps, or camera directions.
+- The camera is the protagonist's eyes. Only their hands can appear, from the bottom of the frame. Never name them or write "you". They never speak.
+- The protagonist acts on people, objects, and the room, never on their own body.
+- Only visible characters speak, about ten words per line.
+- Write only what can be seen and heard. No feelings or mood words.
 
-Timeline rules:
-- Flowing prose in sequence. Every clause is something a viewer can see or hear. No inner states, no mood words, no talk about the clip or the camera work beyond what the opener establishes.
-- Name each visible person with likeness, clothing, and position; people look into the camera. The protagonist is behind the camera and is never named or shown: only a pair of hands may enter the frame from the bottom edge.
-- Every action is done with the hands to something in frame — a person, an object, the room — and its effect is visible there. The protagonist's body never receives an action: nothing is eaten, drunk, worn, or brought toward the face.
-- Dialogue: only visible characters speak. The protagonist has no lines — never write a voiceover, narration, or off-screen speech for them; characters speak to the camera and the story answers with action. Give each speaker a stable ID at first vocal appearance with a short voice description: (S1), (S2). Spoken words go inline where they happen, wrapped as <d>[English] ...</d> — one short sentence per line, at most about ten words, budgeting roughly 2.5 spoken words per second of clip. Quotation marks are reserved for text physically visible in the scene; never put spoken words in quotation marks.
-- The final sentence is a fresh open moment landing as the shot runs out — an offer, a demand, a threat, a discovery. Write nothing after it.
-- You are told the duration so you can size how much happens. Never write durations, seconds, aspect ratios, or resolutions.
+Output format:
 
-After the timeline, output a blank line, then exactly one line starting with "overall_soundscape:" — the ambience and physical sounds of the actions you wrote, one to four sentences, with no dialogue in it.
+[the scene as prose. Speakers are tagged at their first line, and spoken words are wrapped: (S1), a low weathered male voice, says <d>[English] line</d>. Quotation marks only for text visible in the scene.]
 
-Output only the timeline continuation and the overall_soundscape line.
+overall_soundscape: [room tone and the sounds of the actions]
 
-Example of a finished output (for a different story):
+Example:
 
 Looking across wet white sand at John Locke from Lost, a lean man in his fifties with receding sandy-blond hair, a beige linen shirt, and khaki pants, standing in the surf and looking into the camera, his open right hand reaching toward the lens. A right hand in a white dress-shirt cuff enters from the bottom of the frame and takes his hand. He grips it, turns, and walks toward the coconut palms, pulling the camera with him through shallow surf, joined hands at the bottom of the frame. At the treeline he stops, turns back to the camera, and (S1), a low weathered male voice, says <d>[English] Someone is hurt in the jungle.</d> His grip tightens, his eyes locked on the lens.
 
 overall_soundscape: Surf breaking, wind moving through palms, wet sand underfoot, fabric shifting close to the microphone.`;
 
-const PROMPT_SYSTEM = `You write the next shot of a first-person POV interactive story. The video model (MiniMax H3) generates picture and sound together from a structured document. It receives only your prompt plus one start image — the final frame of the scene that just played. It has no other context.
+const PROMPT_SYSTEM = `You write the next scene of a first-person story. You are given the previous scene, the exact frame it ended on, and the protagonist's move.
 
-You are given the previous shot's prompt, the start image, and the move the protagonist makes now. The previous prompt is narrative context: who people are, what was said, where the scene has momentum. The image is ground truth for what is visible; where they disagree, trust the image. Your shot opens on exactly what the image shows and plays the move as action now.
-
-If the move is something the protagonist says, it was said in the instant before this shot. Never write it as speech — the protagonist has no lines. Open on the characters reacting to those words, and let their reactions and their own lines make what was said unmistakable.
+Open the scene on exactly what the frame shows; if the frame and the previous scene's text differ, the frame is right. The move happens in the first seconds of the scene, as given. If the move is something the protagonist said, treat it as said just before this scene starts: do not write the words, and show the characters reacting to them instead. Then let the world respond to the move, and end the scene at a new point where the protagonist has to act.
 
 ${SHOT_RULES}`;
 
-const ROOT_SYSTEM = `You write the opening shot of a first-person POV interactive story. The video model (MiniMax H3) generates picture and sound together from a structured document, from text alone — there is no image.
+const ROOT_SYSTEM = `You write the opening scene of a first-person video story. The user gives you a premise and a duration. The scene must fit in the duration. The protagonist can move and handle things, but makes no big decision in this scene. End on a cliffhanger. The view is never covered or dark.
 
-You are given a premise. It may be one line or a whole universe — a place, a cast, a tone, rules of what happens here. Everything given is canon: what you show must match it. Never rename its people, contradict its place, replace its characters with invented ones, or flatten its tone. You choose what to show — not everything given must appear in the opening. Invent freely exactly where the premise is silent: the less you are given, the more you invent. Specific beats generic: one vivid stranger with a name-worthy face beats a crowd, one strange detail beats three ordinary ones. Land the opening on pressure: someone or something wants something from the protagonist right now, there is an instrument in the protagonist's hands that can be deployed outward — given, thrown, opened, poured — and the demand is one that several different actions could answer. The scene cannot stay as it is.
+Take the tone from the premise. "zoo" is an ordinary day at a zoo, not a horror film; "my roommate is a ghost" is a comedy unless the premise says otherwise. A cliffhanger can be funny, awkward, or strange; it does not have to be dangerous.
 
 ${SHOT_RULES}`;
 export async function writeEpisodePrompt(input: {
@@ -112,7 +116,7 @@ export async function writeEpisodePrompt(input: {
   durationSeconds: number;
 }): Promise<string> {
   const { text } = await generateText({
-    model,
+    model: episodeModel,
     system: PROMPT_SYSTEM,
     messages: [
       {
@@ -133,14 +137,47 @@ export async function writeEpisodePrompt(input: {
   return assemblePrompt(body);
 }
 
+const EXPAND_SYSTEM = `You expand a premise for a first-person video story into several different opening scenes. The user gives you a premise and how many scenes to write.
+
+Each scene is two sentences: what is happening around the protagonist, then the cliffhanger it stops on. Keep everything the premise says; invent the rest. Make the scenes different from each other in what happens, not just in wording. The tone follows the premise: a zoo is a day at the zoo, not a horror film, unless the premise says so. A cliffhanger can be funny, awkward, strange, or dangerous.
+
+The protagonist is never seen and never speaks. Things can be said to them, handed to them, or happen in front of them, but the scene ends before they do anything about it.
+
+Output one scene per line, no numbering, nothing else.
+
+Example, for the premise "zoo":
+A capybara has figured out the new lock on its enclosure gate and steps out onto the public path. A keeper in a green polo runs up with both hands raised and asks you not to move.`;
+
+export async function expandPremise(input: {
+  premise: string;
+  count: number;
+}): Promise<string[]> {
+  const { text } = await generateText({
+    model: rootModel,
+    system: EXPAND_SYSTEM,
+    prompt: `<premise>${input.premise}</premise>\n<count>${input.count}</count>`,
+    temperature: ROOT_TEMPERATURE,
+    providerOptions: { openrouter: { reasoning: { effort: "minimal" } } },
+  });
+  const scenes = text
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0);
+  if (scenes.length !== input.count) {
+    throw new Error(`The expander returned ${scenes.length} scenes, not ${input.count}.`);
+  }
+  return scenes;
+}
+
 export async function writeRootPrompt(input: {
   premise: string;
   durationSeconds: number;
 }): Promise<string> {
   const { text } = await generateText({
-    model,
+    model: rootModel,
     system: ROOT_SYSTEM,
-    prompt: `Duration: ${input.durationSeconds} seconds.\n\nPremise: ${input.premise}\n\nWrite the shot.`,
+    prompt: `<premise>${input.premise}</premise>\n<duration>${input.durationSeconds} seconds</duration>`,
+    temperature: ROOT_TEMPERATURE,
     providerOptions: { openrouter: { reasoning: { effort: "minimal" } } },
   });
   const body = text.trim();
