@@ -51,9 +51,7 @@ const FLAGS: { name: string; test: (move: string) => boolean }[] = [
   {
     name: "noise",
     test: (move) =>
-      /\b(sing|bark|meow|howl|scream|shout|yell|whistle|hum|growl|moo|quack|cluck|roar)\b/i.test(
-        move,
-      ),
+      /^(sing|bark|meow|howl|whistle|hum|growl|moo|quack|cluck|roar|purr|hiss)\b/i.test(move),
   },
   {
     name: "form",

@@ -3,12 +3,12 @@ import { fal } from "@fal-ai/client";
 import { openrouter } from "@openrouter/ai-sdk-provider";
 import { generateText } from "ai";
 
-// Flash Lite is the default for calls a viewer waits on: choices and the
-// next episode. The root writer runs once per series and gets a stronger
-// model at a high temperature so rerolls differ; ROOT_MODEL and
-// ROOT_TEMPERATURE override them for eval runs.
+// Flash Lite writes the next episode, the call a viewer waits longest on.
+// Choices and roots get Gemini 3.7 Flash: it writes clearly better moves
+// for ~1.2s more, and roots run once per series. Each is overridable by
+// env for eval runs.
 export const FAST_MODEL_ID = "google/gemini-3.5-flash-lite";
-export const CHOICE_MODEL_ID = process.env.CHOICE_MODEL ?? FAST_MODEL_ID;
+export const CHOICE_MODEL_ID = process.env.CHOICE_MODEL ?? "google/gemini-3.7-flash";
 export const EPISODE_MODEL_ID = process.env.EPISODE_MODEL ?? FAST_MODEL_ID;
 export const ROOT_MODEL_ID = process.env.ROOT_MODEL ?? "google/gemini-3.7-flash";
 export const ROOT_TEMPERATURE = Number(process.env.ROOT_TEMPERATURE ?? 1.5);
@@ -98,15 +98,11 @@ Looking across wet white sand at John Locke from Lost, a lean man in his fifties
 
 overall_soundscape: Surf breaking, wind moving through palms, wet sand underfoot, fabric shifting close to the microphone.`;
 
-const PROMPT_SYSTEM = `You write the next scene of a first-person story. You are given the previous scene, the exact frame it ended on, and the protagonist's move.
+// One episode writer, two input shapes: a premise for the opening scene, or
+// the previous scene plus its held frame and the protagonist's move.
+const EPISODE_SYSTEM = `You write one scene of a first-person video story. The user gives you either a premise for the opening scene, or the previous scene, the frame it ended on, and the protagonist's move. The scene must fit in the duration. End on a cliffhanger. The view is never covered or dark.
 
-Open the scene on exactly what the frame shows; if the frame and the previous scene's text differ, the frame is right. The move happens in the first seconds of the scene, as given. If the move is something the protagonist said, treat it as said just before this scene starts: do not write the words, and show the characters reacting to them instead. Then let the world respond to the move, and end the scene at a new point where the protagonist has to act.
-
-${SHOT_RULES}`;
-
-const ROOT_SYSTEM = `You write the opening scene of a first-person video story. The user gives you a premise and a duration. The scene must fit in the duration. The protagonist can move and handle things, but makes no big decision in this scene. End on a cliffhanger. The view is never covered or dark.
-
-Take the tone from the premise. "zoo" is an ordinary day at a zoo, not a horror film; "my roommate is a ghost" is a comedy unless the premise says otherwise. A cliffhanger can be funny, awkward, or strange; it does not have to be dangerous.
+If you are given a frame, the scene opens on exactly what it shows; if the frame and the previous scene's text differ, the frame is right. The move happens in the first seconds, as given. If the move is something the protagonist said, it was said just before this scene starts: do not write the words; show the characters reacting to them.
 
 ${SHOT_RULES}`;
 export async function writeEpisodePrompt(input: {
@@ -117,14 +113,14 @@ export async function writeEpisodePrompt(input: {
 }): Promise<string> {
   const { text } = await generateText({
     model: episodeModel,
-    system: PROMPT_SYSTEM,
+    system: EPISODE_SYSTEM,
     messages: [
       {
         role: "user",
         content: [
           {
             type: "text",
-            text: `Duration: ${input.durationSeconds} seconds.\n\nPrevious shot's prompt:\n\n${input.parentPrompt}\n\nThe start image is attached. The protagonist's move: "${input.label}"\n\nWrite the shot.`,
+            text: `<previous_scene>\n${input.parentPrompt}\n</previous_scene>\n<move>${input.label}</move>\n<duration>${input.durationSeconds} seconds</duration>`,
           },
           { type: "file", mediaType: "image/jpeg", data: new URL(input.frameUrl) },
         ],
@@ -141,7 +137,7 @@ const EXPAND_SYSTEM = `You expand a premise for a first-person video story into 
 
 Each scene is two sentences: what is happening around the protagonist, then the cliffhanger it stops on. Keep everything the premise says; invent the rest. Make the scenes different from each other in what happens, not just in wording. The tone follows the premise: a zoo is a day at the zoo, not a horror film, unless the premise says so. A cliffhanger can be funny, awkward, strange, or dangerous.
 
-The protagonist is never seen and never speaks. Things can be said to them, handed to them, or happen in front of them, but the scene ends before they do anything about it.
+The protagonist is never seen and never speaks. Things can be said to them, handed to them, or happen in front of them, but the scene ends before they do anything about it. Do not end a scene with a character telling the protagonist what to do.
 
 Output one scene per line, no numbering, nothing else.
 
@@ -175,7 +171,7 @@ export async function writeRootPrompt(input: {
 }): Promise<string> {
   const { text } = await generateText({
     model: rootModel,
-    system: ROOT_SYSTEM,
+    system: EPISODE_SYSTEM,
     prompt: `<premise>${input.premise}</premise>\n<duration>${input.durationSeconds} seconds</duration>`,
     temperature: ROOT_TEMPERATURE,
     providerOptions: { openrouter: { reasoning: { effort: "minimal" } } },

@@ -56,22 +56,27 @@ function narration(prompt: string): string {
   return prompt.replace(/<d>[\s\S]*?<\/d>/g, " ");
 }
 
-function lines(prompt: string): string[] {
-  return [...prompt.matchAll(/<d>([\s\S]*?)<\/d>/g)].map((m) => m[1].toLowerCase());
-}
-
-// The move's words showing up inside a spoken line means the protagonist's
-// line was written as speech.
-function heroLine(prompt: string, move: string): boolean {
+function moveGrams(move: string): string[] {
   const words = move.toLowerCase().split(/\s+/).slice(1);
   const grams: string[] = [];
   for (let i = 0; i + 3 <= words.length; i++) grams.push(words.slice(i, i + 3).join(" "));
   if (words.length < 3) grams.push(words.join(" "));
-  return lines(prompt).some((line) => grams.some((gram) => gram.length > 0 && line.includes(gram)));
+  return grams.filter((gram) => gram.length > 0);
+}
+
+// A character repeating the move's words in their own tagged line is an
+// echo, a fair way to show what was said. The same words in a line with no
+// speaker tag before it is the protagonist speaking.
+function linesWithMove(prompt: string, move: string): { tagged: boolean }[] {
+  const grams = moveGrams(move);
+  return [...prompt.matchAll(/<d>([\s\S]*?)<\/d>/g)]
+    .filter((m) => grams.some((gram) => m[1].toLowerCase().includes(gram)))
+    .map((m) => ({ tagged: /\(S\d\)/.test(prompt.slice(Math.max(0, m.index! - 200), m.index!)) }));
 }
 
 const FLAGS: { name: string; test: (prompt: string, move: string) => boolean }[] = [
-  { name: "hero-line", test: heroLine },
+  { name: "hero-line", test: (p, move) => linesWithMove(p, move).some((line) => !line.tagged) },
+  { name: "echo", test: (p, move) => linesWithMove(p, move).some((line) => line.tagged) },
   { name: "voiceover", test: (p) => /\b(off-screen|offscreen|voice-?over|narrat)/i.test(p) },
   { name: "you-leak", test: (p) => /\b(you|your|yours)\b/i.test(narration(p)) },
   { name: "protagonist-leak", test: (p) => /\b(protagonist|hero)\b/i.test(narration(p)) },
@@ -143,7 +148,7 @@ const allWritten = results.flatMap((result) => result.written);
 const count = (name: string) => allWritten.filter((w) => w.flags.includes(name)).length;
 const pct = (value: number, total: number) =>
   total === 0 ? "n/a" : `${Math.round((100 * value) / total)}%`;
-const clean = allWritten.filter((w) => w.flags.length === 0).length;
+const clean = allWritten.filter((w) => w.flags.every((flag) => flag === "echo")).length;
 const spokenWritten = allWritten.filter((w) => w.kind === "spoken");
 const spokenClean = spokenWritten.filter((w) => !w.flags.includes("hero-line") && !w.flags.includes("voiceover")).length;
 const sorted = allWritten.map((w) => w.ms).sort((a, b) => a - b);
