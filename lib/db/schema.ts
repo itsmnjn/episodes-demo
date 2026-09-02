@@ -11,7 +11,9 @@ export const series = pgTable("series", {
 // One row per episode, keyed by (series, id). Root is "0"; children append a
 // letter. `label` is the move that led here. A row is written when its
 // render is submitted and settled when the clip lands: video and last frame
-// move to Blob and the two choices are written from the prompt.
+// move to Blob and the two choices are written from the prompt. A settle is
+// claimed first: `settleStartedAt` is the lock and `settleAttempts` the
+// count, so one poller settles at a time and a failing settle stops.
 export const episodes = pgTable(
   "episodes",
   {
@@ -29,6 +31,8 @@ export const episodes = pgTable(
     lastFrameUrl: text("last_frame_url"),
     choices: text("choices").array(),
     error: text("error"),
+    settleAttempts: integer("settle_attempts").notNull().default(0),
+    settleStartedAt: timestamp("settle_started_at", { withTimezone: true }),
     createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   },
   (table) => [primaryKey({ columns: [table.seriesId, table.id] })],

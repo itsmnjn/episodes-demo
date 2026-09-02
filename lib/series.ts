@@ -3,7 +3,7 @@
 // `settleEpisode` finishes it once the clip lands.
 
 import { put } from "@vercel/blob";
-import { and, asc, desc, eq } from "drizzle-orm";
+import { and, asc, desc, eq, isNull, lt, or, sql } from "drizzle-orm";
 import { db } from "./db";
 import { episodes, series, type EpisodeRow, type SeriesRow } from "./db/schema";
 import {
@@ -238,10 +238,14 @@ export async function storeClip(seriesId: string, episodeId: string, falVideoUrl
   return { videoUrl: video.url, lastFrameUrl: frame.url };
 }
 
-// Called by whoever is polling. If the render has landed, move the clip and
-// its last frame to Blob, write the two choices, and mark the row ready.
-// Two pollers settling at once both upload the same files; the guarded
-// update makes the row change once.
+// Called by whoever is polling. If the render has landed, claim the settle,
+// move the clip and its last frame to Blob, write the two choices, and mark
+// the row ready. The claim is a guarded update: one settle per episode at a
+// time, and a settle that failed is not retried inside the lock window.
+// After SETTLE_ATTEMPTS failures the episode fails with the storage error.
+const SETTLE_LOCK_MS = 60_000;
+const SETTLE_ATTEMPTS = 3;
+
 export async function settleEpisode(seriesId: string, episodeId: string): Promise<EpisodeRow> {
   const row = await getEpisodeRow(seriesId, episodeId);
   if (!row) throw new Error("Unknown episode.");
@@ -249,28 +253,48 @@ export async function settleEpisode(seriesId: string, episodeId: string): Promis
 
   const job = await checkEpisodeJob(row.requestId);
   if (job.status === "generating") return row;
-  // Wall time from the row's insert, which follows the submit by milliseconds,
-  // to the poll that found it done, so it carries up to one poll interval.
-  logTiming("render", Date.now() - row.createdAt.getTime(), job.status, { series: seriesId, episode: episodeId });
+  const thisRow = and(eq(episodes.seriesId, seriesId), eq(episodes.id, episodeId), eq(episodes.status, "generating"));
   if (job.status === "failed") {
-    const [updated] = await db
-      .update(episodes)
-      .set({ status: "failed", error: job.error })
-      .where(and(eq(episodes.seriesId, seriesId), eq(episodes.id, episodeId), eq(episodes.status, "generating")))
-      .returning();
+    const [updated] = await db.update(episodes).set({ status: "failed", error: job.error }).where(thisRow).returning();
     return updated ?? row;
   }
 
-  const [media, choices] = await Promise.all([
-    timed("storeClip", { series: seriesId, episode: episodeId }, () => storeClip(seriesId, episodeId, job.videoUrl)),
-    timed("choices", { series: seriesId, episode: episodeId, model: CHOICE_MODEL_ID }, () =>
-      suggestChoices({ episodePrompt: row.prompt }),
-    ),
-  ]);
-  const [updated] = await db
+  const [claimed] = await db
     .update(episodes)
-    .set({ status: "ready", videoUrl: media.videoUrl, lastFrameUrl: media.lastFrameUrl, choices })
-    .where(and(eq(episodes.seriesId, seriesId), eq(episodes.id, episodeId), eq(episodes.status, "generating")))
+    .set({ settleAttempts: sql`${episodes.settleAttempts} + 1`, settleStartedAt: new Date() })
+    .where(
+      and(
+        thisRow,
+        or(isNull(episodes.settleStartedAt), lt(episodes.settleStartedAt, new Date(Date.now() - SETTLE_LOCK_MS))),
+      ),
+    )
     .returning();
-  return updated ?? (await getEpisodeRow(seriesId, episodeId))!;
+  if (!claimed) return row;
+  // Wall time from the row's insert, which follows the submit by milliseconds,
+  // to the poll that found it done, so it carries up to one poll interval.
+  logTiming("render", Date.now() - row.createdAt.getTime(), job.status, { series: seriesId, episode: episodeId });
+
+  try {
+    const [media, choices] = await Promise.all([
+      timed("storeClip", { series: seriesId, episode: episodeId }, () => storeClip(seriesId, episodeId, job.videoUrl)),
+      timed("choices", { series: seriesId, episode: episodeId, model: CHOICE_MODEL_ID }, () =>
+        suggestChoices({ episodePrompt: row.prompt }),
+      ),
+    ]);
+    const [updated] = await db
+      .update(episodes)
+      .set({ status: "ready", videoUrl: media.videoUrl, lastFrameUrl: media.lastFrameUrl, choices, error: null })
+      .where(thisRow)
+      .returning();
+    return updated ?? row;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Could not store the clip.";
+    const giveUp = claimed.settleAttempts >= SETTLE_ATTEMPTS;
+    const [updated] = await db
+      .update(episodes)
+      .set(giveUp ? { status: "failed", error: message } : { error: message })
+      .where(thisRow)
+      .returning();
+    return updated ?? row;
+  }
 }

@@ -305,7 +305,7 @@ export function Player({ series }: { series: Series }) {
             {pending ? (
               <div className={buttonClass}>
                 <span className="animate-pulse">
-                  {pending.label ? `Filming “${pending.label}”… a few minutes.` : "Filming the opening… a few minutes."}
+                  {pending.label ? `Filming “${pending.label}”…` : "Filming the opening…"}
                 </span>
               </div>
             ) : creating ? (

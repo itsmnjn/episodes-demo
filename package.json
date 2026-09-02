@@ -11,6 +11,7 @@
     "root": "bun scripts/run-root.mts",
     "hop": "bun scripts/run-hop.mts",
     "eval": "bun scripts/eval.mts",
+    "blob:usage": "bun scripts/blob-usage.mts",
     "db:push": "bun --env-file=.env.local run drizzle-kit push"
   },
   "dependencies": {
