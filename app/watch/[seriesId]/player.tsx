@@ -10,6 +10,19 @@ const buttonClass =
   "w-full rounded-full border border-white/25 bg-white/10 px-4 py-3 text-left text-[15px] text-paper backdrop-blur-sm transition hover:bg-white/18 disabled:text-white/60";
 const quietClass =
   "w-full rounded-full border border-white/15 bg-white/5 px-4 py-3 text-left text-[15px] text-white/60 backdrop-blur-sm";
+// A move a viewer wrote, as opposed to one the story wrote.
+const viewerClass =
+  "flex w-full items-baseline justify-between gap-3 rounded-full border border-dashed border-white/30 bg-white/5 px-4 py-3 text-left text-[15px] text-paper backdrop-blur-sm transition hover:bg-white/12";
+
+function timeAgo(iso: string): string {
+  const seconds = Math.max(0, Math.floor((Date.now() - new Date(iso).getTime()) / 1000));
+  if (seconds < 60) return `${seconds}s ago`;
+  const minutes = Math.floor(seconds / 60);
+  if (minutes < 60) return `${minutes}m ago`;
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return `${hours}h ago`;
+  return `${Math.floor(hours / 24)}d ago`;
+}
 
 // Every episode in the tree, with the tree growing as viewers walk it. The
 // server holds the truth; this component keeps a copy and refreshes the
@@ -226,12 +239,15 @@ export function Player({ series }: { series: Series }) {
     }
   }
 
-  // The two written choices, then any other path a viewer has taken from here.
-  const labels = [...current.choices];
-  for (const child of children) {
-    if (child.label && child.status !== "failed" && !labels.includes(child.label)) labels.push(child.label);
-  }
+  // The two written choices, then every move a viewer has taken from here,
+  // newest first.
   const childByLabel = new Map(children.map((child) => [child.label, child]));
+  const written = current.choices.map((label) => ({ label, child: childByLabel.get(label), viewer: undefined }));
+  const viewerMade = children
+    .filter((child) => child.label && child.status !== "failed" && !current.choices.includes(child.label))
+    .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+    .map((child) => ({ label: child.label!, child, viewer: child }));
+  const moves = [...written, ...viewerMade];
   const parentId = history.at(-1);
 
   return (
@@ -298,21 +314,30 @@ export function Player({ series }: { series: Series }) {
               </div>
             ) : (
               <>
-                {labels.map((label) => {
-                  const child = childByLabel.get(label);
-                  if (child?.status === "generating") {
+                <div className="flex max-h-[38dvh] flex-col gap-3 overflow-y-auto py-4 [mask-image:linear-gradient(to_bottom,transparent,black_16px,black_calc(100%-16px),transparent)]">
+                  {moves.map(({ label, child, viewer }) => {
+                    if (child?.status === "generating") {
+                      return (
+                        <button key={label} type="button" onClick={() => void choose(label)} className={quietClass}>
+                          <span className="animate-pulse">{label} &mdash; filming&hellip;</span>
+                        </button>
+                      );
+                    }
+                    if (viewer) {
+                      return (
+                        <button key={label} type="button" onClick={() => void choose(label)} className={viewerClass}>
+                          <span>{label}</span>
+                          <span className="shrink-0 text-[12px] text-white/50">{timeAgo(viewer.createdAt)}</span>
+                        </button>
+                      );
+                    }
                     return (
-                      <button key={label} type="button" onClick={() => void choose(label)} className={quietClass}>
-                        <span className="animate-pulse">{label} &mdash; filming&hellip;</span>
+                      <button key={label} type="button" onClick={() => void choose(label)} className={buttonClass}>
+                        {label}
                       </button>
                     );
-                  }
-                  return (
-                    <button key={label} type="button" onClick={() => void choose(label)} className={buttonClass}>
-                      {label}
-                    </button>
-                  );
-                })}
+                  })}
+                </div>
                 <form
                   onSubmit={(event) => {
                     event.preventDefault();

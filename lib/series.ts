@@ -28,6 +28,7 @@ export type Episode = {
   lastFrameUrl: string | null;
   choices: string[];
   error: string | null;
+  createdAt: string;
 };
 
 export type Series = {
@@ -56,6 +57,7 @@ export function toEpisode(row: EpisodeRow): Episode {
     lastFrameUrl: row.lastFrameUrl,
     choices: row.choices ?? [],
     error: row.error,
+    createdAt: row.createdAt.toISOString(),
   };
 }
 
