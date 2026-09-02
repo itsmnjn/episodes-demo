@@ -1,14 +1,13 @@
 // Turn a premise into opening episodes. By default: expand the premise into
 // N scenes, write each as a prompt, print everything, render nothing. With
-// --render, one scene is rendered to disk. Nothing here touches the
-// database; series are created in the app.
+// --render, every scene is rendered in parallel to disk. Nothing here
+// touches the database; series are created in the app.
 //
 //   bun run root "zoo"                      # 3 scenes, 3 prompts, no video
 //   bun run root "zoo" --n 5
-//   bun run root "zoo" --render             # also render scene 1
-//   bun run root "zoo" --render --pick 2    # render scene 2 instead
+//   bun run root "zoo" --render             # also render all 3
 //
-// A render lands in out/root/<premise>-<stamp>/ as scene-N.mp4 with the
+// A run lands in out/root/<premise>-<stamp>/ as scene-N.mp4 with the
 // scenes and every prompt beside it.
 //   bun run root --from premise.txt --direct   # film the premise as written, no expander
 //   bun run root "zoo" --duration 12 --out out
@@ -31,7 +30,6 @@ const { values, positionals } = parseArgs({
     n: { type: "string", default: "3" },
     direct: { type: "boolean", default: false },
     render: { type: "boolean", default: false },
-    pick: { type: "string", default: "1" },
     duration: { type: "string", default: "10" },
     out: { type: "string", default: "out" },
   },
@@ -42,7 +40,7 @@ const premise = values.from
   : positionals.join(" ").trim();
 if (!premise) {
   throw new Error(
-    'usage: bun run root "premise" [--n 3] [--direct] [--render] [--pick 1] [--duration 10] [--out out]',
+    'usage: bun run root "premise" [--n 3] [--direct] [--render] [--duration 10] [--out out]',
   );
 }
 const durationSeconds = Number(values.duration);
@@ -63,26 +61,8 @@ for (const [i, prompt] of prompts.entries()) {
 }
 
 if (!values.render) {
-  console.log("\n(no video: pass --render to render one)");
+  console.log("\n(no video: pass --render to render them)");
   process.exit(0);
-}
-
-const pick = Number(values.pick);
-if (!Number.isInteger(pick) || pick < 1 || pick > prompts.length) {
-  throw new Error(`--pick must be between 1 and ${prompts.length}.`);
-}
-const requestId = await submitRootJob({ prompt: prompts[pick - 1], durationSeconds });
-console.log(`\nrendering scene ${pick} (request ${requestId})...`);
-
-let videoUrl: string | null = null;
-while (!videoUrl) {
-  await new Promise((resolve) => setTimeout(resolve, 15000));
-  const job = await checkEpisodeJob(requestId);
-  if (job.status === "ready") {
-    videoUrl = job.videoUrl;
-  } else if (job.status === "failed") {
-    throw new Error(`The render failed: ${job.error}`);
-  }
 }
 
 const dir = path.join(values.out, "root", `${slug(premise)}-${stamp}`);
@@ -91,7 +71,25 @@ await fs.writeFile(path.join(dir, "scenes.txt"), scenes.map((scene, i) => `${i +
 for (const [i, prompt] of prompts.entries()) {
   await fs.writeFile(path.join(dir, `scene-${i + 1}.txt`), prompt + "\n");
 }
-const outPath = path.join(dir, `scene-${pick}.mp4`);
-const clip = await fetch(videoUrl);
-await fs.writeFile(outPath, new Uint8Array(await clip.arrayBuffer()));
-console.log(`clip: ${outPath}`);
+
+console.log(`\nrendering ${prompts.length} scenes into ${dir}...`);
+await Promise.all(
+  prompts.map(async (prompt, i) => {
+    const requestId = await submitRootJob({ prompt, durationSeconds });
+    let videoUrl: string | null = null;
+    while (!videoUrl) {
+      await new Promise((resolve) => setTimeout(resolve, 15000));
+      const job = await checkEpisodeJob(requestId);
+      if (job.status === "ready") {
+        videoUrl = job.videoUrl;
+      } else if (job.status === "failed") {
+        console.log(`scene ${i + 1} failed: ${job.error}`);
+        return;
+      }
+    }
+    const outPath = path.join(dir, `scene-${i + 1}.mp4`);
+    const clip = await fetch(videoUrl);
+    await fs.writeFile(outPath, new Uint8Array(await clip.arrayBuffer()));
+    console.log(`clip: ${outPath}`);
+  }),
+);
