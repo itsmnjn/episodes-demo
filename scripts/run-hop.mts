@@ -4,12 +4,16 @@
 //
 //   bun run hop the-invitation 0aa
 //   bun run hop mcdonalds 0bb --move "Summon a dragon" --out out
+//
+// The render lands in out/hop/<series>-<episode>-<stamp>/ as hop.mp4 with
+// the move and the prompt beside it.
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
 import { parseArgs } from "node:util";
 import { checkEpisodeJob, submitEpisodeJob, writeEpisodePrompt } from "../lib/generate";
 import { getEpisodeRow } from "../lib/series";
+import { stamp } from "./out";
 
 const { values, positionals } = parseArgs({
   allowPositionals: true,
@@ -59,8 +63,10 @@ while (!videoUrl) {
   }
 }
 
-await fs.mkdir(values.out, { recursive: true });
-const outPath = path.join(values.out, `${seriesId}-${episodeId}-hop.mp4`);
+const dir = path.join(values.out, "hop", `${seriesId}-${episodeId}-${stamp}`);
+await fs.mkdir(dir, { recursive: true });
+await fs.writeFile(path.join(dir, "prompt.txt"), `move: ${label}\n\n${prompt}\n`);
+const outPath = path.join(dir, "hop.mp4");
 const clip = await fetch(videoUrl);
 await fs.writeFile(outPath, new Uint8Array(await clip.arrayBuffer()));
 console.log(`\nclip: ${outPath}`);

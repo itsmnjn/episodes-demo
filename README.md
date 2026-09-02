@@ -8,6 +8,6 @@ Env comes from Vercel: `vercel env pull` writes `.env.local` with `DATABASE_URL`
 
 - `/create` is the creation surface: premise, three openings, one editable prompt, film it.
 - `bun run expansions "zoo"` expands a premise into five different opening scenes.
-- `bun run root "zoo"` expands the premise into three scenes and writes a prompt for each. `--render` renders one to `out/` (`--pick 2` to choose), `--direct` films the premise as written.
-- `bun run hop the-invitation 0aa` renders one more episode off a landed one, to `out/` (`--move "..."` to choose the move). Scripts never write to the database.
+- `bun run root "zoo"` expands the premise into three scenes and writes a prompt for each. `--render` renders one into a stamped folder under `out/root/` (`--pick 2` to choose), `--direct` films the premise as written.
+- `bun run hop the-invitation 0aa` renders one more episode off a landed one into a stamped folder under `out/hop/` (`--move "..."` to choose the move). Scripts never write to the database.
 - `bun run eval <pipeline|expander|episode|choices|next>` runs an eval on the whole pipeline or one piece; reports land under `evals/`. Flags are in `scripts/eval.mts`.

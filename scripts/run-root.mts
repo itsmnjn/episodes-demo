@@ -5,8 +5,11 @@
 //
 //   bun run root "zoo"                      # 3 scenes, 3 prompts, no video
 //   bun run root "zoo" --n 5
-//   bun run root "zoo" --render             # also render scene 1 to out/root.mp4
+//   bun run root "zoo" --render             # also render scene 1
 //   bun run root "zoo" --render --pick 2    # render scene 2 instead
+//
+// A render lands in out/root/<premise>-<stamp>/ as scene-N.mp4 with the
+// scenes and every prompt beside it.
 //   bun run root --from premise.txt --direct   # film the premise as written, no expander
 //   bun run root "zoo" --duration 12 --out out
 
@@ -19,6 +22,7 @@ import {
   submitRootJob,
   writeRootPrompt,
 } from "../lib/generate";
+import { slug, stamp } from "./out";
 
 const { values, positionals } = parseArgs({
   allowPositionals: true,
@@ -81,8 +85,13 @@ while (!videoUrl) {
   }
 }
 
-await fs.mkdir(values.out, { recursive: true });
-const outPath = path.join(values.out, "root.mp4");
+const dir = path.join(values.out, "root", `${slug(premise)}-${stamp}`);
+await fs.mkdir(dir, { recursive: true });
+await fs.writeFile(path.join(dir, "scenes.txt"), scenes.map((scene, i) => `${i + 1}. ${scene}`).join("\n") + "\n");
+for (const [i, prompt] of prompts.entries()) {
+  await fs.writeFile(path.join(dir, `scene-${i + 1}.txt`), prompt + "\n");
+}
+const outPath = path.join(dir, `scene-${pick}.mp4`);
 const clip = await fetch(videoUrl);
 await fs.writeFile(outPath, new Uint8Array(await clip.arrayBuffer()));
 console.log(`clip: ${outPath}`);
