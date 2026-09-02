@@ -18,8 +18,8 @@ const choiceModel = openrouter(CHOICE_MODEL_ID, routing);
 const episodeModel = openrouter(EPISODE_MODEL_ID, routing);
 const rootModel = openrouter(ROOT_MODEL_ID, routing);
 const titleModel = openrouter(FAST_MODEL_ID, routing);
-const FAL_ENDPOINT = "minimax/h3-max/image-to-video";
-const FAL_ROOT_ENDPOINT = "minimax/h3-max/text-to-video";
+const FAL_ENDPOINT = "minimax/h3-max-turbo/image-to-video";
+const FAL_ROOT_ENDPOINT = "minimax/h3-max-turbo/text-to-video";
 
 // H3 reads a structured three-field document (integrated_multimodal_description /
 // overall_soundscape / non_diegetic_music). Code owns the field label and
