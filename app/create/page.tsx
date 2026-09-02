@@ -18,7 +18,6 @@ export default function CreatePage() {
   const [scenes, setScenes] = useState<string[]>([]);
   const [scene, setScene] = useState<string | null>(null);
   const [prompt, setPrompt] = useState("");
-  const [title, setTitle] = useState("");
   const [busy, setBusy] = useState<"scenes" | "prompt" | "film" | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -69,7 +68,6 @@ export default function CreatePage() {
     setError(null);
     try {
       const data = await call<{ seriesId: string }>("/api/series", {
-        title,
         premise,
         logline: scene,
         prompt,
@@ -159,7 +157,7 @@ export default function CreatePage() {
               <form
                 onSubmit={(event) => {
                   event.preventDefault();
-                  if (title.trim() && prompt.trim()) void film();
+                  if (prompt.trim()) void film();
                 }}
                 className="flex flex-col gap-3"
               >
@@ -169,15 +167,8 @@ export default function CreatePage() {
                   rows={14}
                   className={`${fieldClass} font-mono text-[13px] leading-relaxed`}
                 />
-                <input
-                  value={title}
-                  onChange={(event) => setTitle(event.target.value)}
-                  placeholder="Title"
-                  maxLength={80}
-                  className={fieldClass}
-                />
                 <div>
-                  <button type="submit" disabled={busy !== null || !title.trim() || !prompt.trim()} className={buttonClass}>
+                  <button type="submit" disabled={busy !== null || !prompt.trim()} className={buttonClass}>
                     {busy === "film" ? <span className="animate-pulse">Starting the render&hellip;</span> : "Film it"}
                   </button>
                 </div>

@@ -17,6 +17,7 @@ const routing = { extraBody: { provider: { sort: "throughput" } } };
 const choiceModel = openrouter(CHOICE_MODEL_ID, routing);
 const episodeModel = openrouter(EPISODE_MODEL_ID, routing);
 const rootModel = openrouter(ROOT_MODEL_ID, routing);
+const titleModel = openrouter(FAST_MODEL_ID, routing);
 const FAL_ENDPOINT = "minimax/h3-max/image-to-video";
 const FAL_ROOT_ENDPOINT = "minimax/h3-max/text-to-video";
 
@@ -174,6 +175,33 @@ export async function writeRootPrompt(input: {
   const body = text.trim();
   if (!body) throw new Error("The root writer returned nothing.");
   return assemblePrompt(body);
+}
+
+const TITLE_SYSTEM = `You title a first-person video story. The user gives you the premise, the opening scene in two sentences, and the first episode in full. Write the title.
+
+The title says what happens in the episode, in three to six plain words: "Waiter Drops the Soup", "Dog Loose on the Ferry". It is literal, in the words the scene uses, and never says you, I, or me. No wordplay, no metaphor, nothing that reads like the name of a show. Title case, plain text, no quotation marks, no punctuation at the end. Output the title and nothing else.`;
+
+// Written once per series when it is filmed, from what the creator approved:
+// the premise, the scene they picked, and the prompt as they left it.
+export async function writeTitle(input: {
+  premise: string;
+  scene: string;
+  prompt: string;
+}): Promise<string> {
+  const { text } = await generateText({
+    model: titleModel,
+    system: TITLE_SYSTEM,
+    prompt: `<premise>${input.premise}</premise>\n<scene>${input.scene}</scene>\n<episode>\n${input.prompt}\n</episode>`,
+    providerOptions: { openrouter: { reasoning: { effort: "minimal" } } },
+  });
+  const lines = text
+    .split("\n")
+    .map((line) => line.trim())
+    .filter((line) => line.length > 0);
+  if (lines.length !== 1) {
+    throw new Error(`The title writer returned ${lines.length} lines.`);
+  }
+  return lines[0];
 }
 
 // The mageic-deploy frames endpoint scales frames to fit max_dimension in

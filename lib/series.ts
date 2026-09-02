@@ -13,6 +13,7 @@ import {
   submitRootJob,
   suggestChoices,
   writeEpisodePrompt,
+  writeTitle,
 } from "./generate";
 
 export type EpisodeStatus = EpisodeRow["status"];
@@ -103,18 +104,22 @@ async function mintSeriesId(title: string): Promise<string> {
   }
 }
 
+// The title is written here, not typed: the id is minted from it, and the
+// render is submitted while it is being written.
 export async function createSeries(input: {
-  title: string;
   premise: string;
   logline: string;
   prompt: string;
   durationSeconds: number;
 }): Promise<SeriesRow> {
-  const id = await mintSeriesId(input.title);
-  const requestId = await submitRootJob({ prompt: input.prompt, durationSeconds: input.durationSeconds });
+  const [title, requestId] = await Promise.all([
+    writeTitle({ premise: input.premise, scene: input.logline, prompt: input.prompt }),
+    submitRootJob({ prompt: input.prompt, durationSeconds: input.durationSeconds }),
+  ]);
+  const id = await mintSeriesId(title);
   const [row] = await db
     .insert(series)
-    .values({ id, title: input.title, premise: input.premise, logline: input.logline })
+    .values({ id, title, premise: input.premise, logline: input.logline })
     .returning();
   await db.insert(episodes).values({
     seriesId: id,
