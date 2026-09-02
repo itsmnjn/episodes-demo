@@ -55,7 +55,7 @@ export default function CreatePage() {
     setBusy("prompt");
     setError(null);
     try {
-      const data = await call<{ prompt: string }>("/api/create/prompt", { scene: chosen, durationSeconds });
+      const data = await call<{ prompt: string }>("/api/create/prompt", { premise, scene: chosen, durationSeconds });
       setPrompt(data.prompt);
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : "Could not write the prompt.");

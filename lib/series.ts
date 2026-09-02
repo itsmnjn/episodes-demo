@@ -142,6 +142,8 @@ export async function startBranch(input: {
   if (parent.status !== "ready" || !parent.lastFrameUrl) {
     throw new Error("This episode has not landed yet.");
   }
+  const story = await db.query.series.findFirst({ where: eq(series.id, input.seriesId) });
+  if (!story) throw new Error("Unknown series.");
   const siblings = await db
     .select()
     .from(episodes)
@@ -160,6 +162,7 @@ export async function startBranch(input: {
   if (!childId) throw new Error("This episode has no room for more paths.");
 
   const prompt = await writeEpisodePrompt({
+    premise: story.premise,
     parentPrompt: parent.prompt,
     frameUrl: parent.lastFrameUrl,
     label: input.label,

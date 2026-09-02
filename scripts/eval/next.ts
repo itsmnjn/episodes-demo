@@ -15,6 +15,7 @@ const SPOKEN_MOVES = ["Ask what they want", "Say you saw what happened"];
 
 type Fixture = {
   seriesId: string;
+  premise: string;
   episodeId: string;
   prompt: string;
   durationSeconds: number;
@@ -74,16 +75,16 @@ type Written = { move: string; kind: "choice" | "spoken"; prompt: string; ms: nu
 type Result = { fixture: Fixture; frameUrl: string; choiceMs: number; written: Written[]; errors: string[] };
 
 export async function runNext(args: EvalArgs): Promise<void> {
-  const seriesIds =
-    args.positionals.length > 0
-      ? args.positionals
-      : (await db.select({ id: series.id }).from(series)).map((row) => row.id);
+  const stories = await db.select({ id: series.id, premise: series.premise }).from(series);
+  const seriesIds = args.positionals.length > 0 ? args.positionals : stories.map((row) => row.id);
+  const premiseOf = new Map(stories.map((row) => [row.id, row.premise]));
   const rows = await db.select().from(episodes).where(inArray(episodes.seriesId, seriesIds));
   const parents = new Set(rows.map((row) => `${row.seriesId}/${row.parentId}`));
   const fixtures: Fixture[] = rows
     .filter((row) => row.status === "ready" && row.lastFrameUrl && !parents.has(`${row.seriesId}/${row.id}`))
     .map((row) => ({
       seriesId: row.seriesId,
+      premise: premiseOf.get(row.seriesId)!,
       episodeId: row.id,
       prompt: row.prompt,
       durationSeconds: row.durationSeconds,
@@ -112,6 +113,7 @@ export async function runNext(args: EvalArgs): Promise<void> {
           try {
             const start = Date.now();
             const prompt = await writeEpisodePrompt({
+              premise: fixture.premise,
               parentPrompt: fixture.prompt,
               frameUrl,
               label: move,

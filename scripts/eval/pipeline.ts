@@ -118,7 +118,7 @@ export async function runPipeline(piece: Piece, args: EvalArgs): Promise<void> {
         scenes.map(async (scene): Promise<Episode | null> => {
           try {
             const episodeStart = Date.now();
-            const prompt = await writeRootPrompt({ premise: scene, durationSeconds });
+            const prompt = await writeRootPrompt({ premise, scene, durationSeconds });
             const episode: Episode = { scene, prompt, episodeMs: Date.now() - episodeStart };
             if (writeChoices) {
               const choiceStart = Date.now();

@@ -11,7 +11,7 @@ Branching first-person AI video stories. Two surfaces, specced in [docs/product.
 ## Pipeline (`lib/generate.ts`)
 
 - `expandPremise`: one call turns a short premise into N different opening scenes, two sentences each, ending on a cliffhanger. Variety lives here; resampling the episode writer collapses to one scene per premise.
-- `writeRootPrompt` / `writeEpisodePrompt`: one episode writer (`EPISODE_SYSTEM`) with two inputs, a premise or the previous scene plus its held frame as an image and the move. Output is the H3 document; code prepends the field label and `[Shot 1]` and appends `non_diegetic_music: None.`. The writer's first sentence states the style and the first-person one-shot facts. Style is photoreal unless the premise says otherwise (anime, claymation); it propagates down the tree through the previous scene's prompt and its frame.
+- `writeRootPrompt` / `writeEpisodePrompt`: one episode writer (`EPISODE_SYSTEM`) that always gets the series premise, plus either the expanded scene or the previous scene with its held frame as an image and the move. The premise is where facts about the protagonist live (a cat, a ghost); the expander describes what happens around them. Output is the H3 document; code prepends the field label and `[Shot 1]` and appends `non_diegetic_music: None.`. The writer's first sentence states the style and the first-person one-shot facts. Style is photoreal unless the premise says otherwise (anime, claymation); it propagates down the tree through the previous scene's prompt and its frame.
 - `suggestChoices`: two moves of different kinds, one action each in 2 to 5 words starting with a verb, physical or spoken.
 - Rendering: root on `minimax/h3-max/text-to-video` at 9:16; children on `minimax/h3-max/image-to-video` from the parent's last frame; `prompt_expansion_mode: "disabled"`. Reference-to-video is not used for children: a reference frame is a soft attractor and broke both POV and the seam when tested.
 - Models on OpenRouter, routed by throughput: `google/gemini-3.8-flash` for roots, the expander, and choices; `google/gemini-3.5-flash-lite` for next episodes. Override with `ROOT_MODEL`, `CHOICE_MODEL`, `EPISODE_MODEL`, `ROOT_TEMPERATURE`.
@@ -24,7 +24,7 @@ Branching first-person AI video stories. Two surfaces, specced in [docs/product.
 
 ## Prompts
 
-- A writer prompt is a short brief plus a list of invariants, with the output format shown as a template and one example. No product mechanics reach a model. The user message is the creator's inputs, tagged (`<premise>`, `<duration>`, `<previous_scene>`, `<move>`), and nothing else.
+- A writer prompt is a short brief plus a list of invariants, with the output format shown as a template and one example. No product mechanics reach a model. The user message is the creator's inputs, tagged (`<premise>`, `<scene>`, `<duration>`, `<previous_scene>`, `<move>`), and nothing else.
 - A video prompt is prose for one shot: no timestamps, no camera directions, no "you", dialogue inline as `(S1), a voice, says <d>[English] ...</d>`, quotation marks only for text visible in the scene, then one `overall_soundscape:` line with no dialogue in it.
 - Do not hand-write video prompts. Change a writer and run its eval.
 

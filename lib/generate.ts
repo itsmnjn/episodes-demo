@@ -71,7 +71,7 @@ export async function suggestChoices(input: {
 // and one example.
 const SHOT_RULES = `- The first sentence states the style and the shot: "{style}, first-person POV at eye level, one continuous shot, natural head sway, no cuts." The style is photoreal live-action unless the premise or the previous scene says otherwise (anime, claymation, watercolor); a story keeps the style it started with.
 - One continuous shot. No cuts, timestamps, or camera directions.
-- The camera is the protagonist's eyes. Only their hands can appear, from the bottom of the frame. Never name them or write "you". They never speak.
+- The camera is the protagonist's eyes. The protagonist is whoever the premise says they are. Only what they reach with can appear, from the bottom of the frame: hands, or paws if the premise makes them an animal. Never name them or write "you". They never speak.
 - The protagonist acts on people, objects, and the room, never on their own body.
 - Only visible characters speak, about ten words per line.
 - Write only what can be seen and heard. No feelings or mood words.
@@ -90,12 +90,13 @@ overall_soundscape: Surf breaking, wind moving through palms, wet sand underfoot
 
 // One episode writer, two input shapes: a premise for the opening scene, or
 // the previous scene plus its held frame and the protagonist's move.
-const EPISODE_SYSTEM = `You write one scene of a first-person video story. The user gives you either a premise for the opening scene, or the previous scene, the frame it ended on, and the protagonist's move. The scene must fit in the duration. End on a cliffhanger. The view is never covered or dark.
+const EPISODE_SYSTEM = `You write one scene of a first-person video story. The user gives you the story's premise, and either an opening scene written from it, or the previous scene, the frame it ended on, and the protagonist's move. Everything the premise says holds in every scene. The scene must fit in the duration. End on a cliffhanger. The view is never covered or dark.
 
 If you are given a frame, the scene opens on exactly what it shows; if the frame and the previous scene's text differ, the frame is right. The move happens in the first seconds, as given. If the move is something the protagonist said, it was said just before this scene starts: do not write the words; show the characters reacting to them.
 
 ${SHOT_RULES}`;
 export async function writeEpisodePrompt(input: {
+  premise: string;
   parentPrompt: string;
   frameUrl: string;
   label: string;
@@ -110,7 +111,7 @@ export async function writeEpisodePrompt(input: {
         content: [
           {
             type: "text",
-            text: `<previous_scene>\n${input.parentPrompt}\n</previous_scene>\n<move>${input.label}</move>\n<duration>${input.durationSeconds} seconds</duration>`,
+            text: `<premise>${input.premise}</premise>\n<previous_scene>\n${input.parentPrompt}\n</previous_scene>\n<move>${input.label}</move>\n<duration>${input.durationSeconds} seconds</duration>`,
           },
           { type: "file", mediaType: "image/jpeg", data: new URL(input.frameUrl) },
         ],
@@ -155,14 +156,18 @@ export async function expandPremise(input: {
   return scenes;
 }
 
+// The scene is one the expander wrote from the premise. Filming the premise
+// as written passes the same text as both.
 export async function writeRootPrompt(input: {
   premise: string;
+  scene: string;
   durationSeconds: number;
 }): Promise<string> {
+  const scene = input.scene === input.premise ? "" : `\n<scene>${input.scene}</scene>`;
   const { text } = await generateText({
     model: rootModel,
     system: EPISODE_SYSTEM,
-    prompt: `<premise>${input.premise}</premise>\n<duration>${input.durationSeconds} seconds</duration>`,
+    prompt: `<premise>${input.premise}</premise>${scene}\n<duration>${input.durationSeconds} seconds</duration>`,
     temperature: ROOT_TEMPERATURE,
     providerOptions: { openrouter: { reasoning: { effort: "minimal" } } },
   });

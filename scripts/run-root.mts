@@ -54,7 +54,7 @@ if (!values.direct) {
 }
 
 const prompts = await Promise.all(
-  scenes.map((scene) => writeRootPrompt({ premise: scene, durationSeconds })),
+  scenes.map((scene) => writeRootPrompt({ premise, scene, durationSeconds })),
 );
 for (const [i, prompt] of prompts.entries()) {
   console.log(`\n--- ${i + 1} ---\n${prompt}`);

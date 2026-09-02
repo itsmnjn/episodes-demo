@@ -12,6 +12,9 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { parseArgs } from "node:util";
 import { checkEpisodeJob, submitEpisodeJob, writeEpisodePrompt } from "../lib/generate";
+import { eq } from "drizzle-orm";
+import { db } from "../lib/db";
+import { series } from "../lib/db/schema";
 import { getEpisodeRow } from "../lib/series";
 import { stamp } from "./out";
 
@@ -28,6 +31,8 @@ if (!seriesId || !episodeId) {
   throw new Error('usage: bun run hop <series> <episode> [--move "..."] [--out out]');
 }
 
+const story = await db.query.series.findFirst({ where: eq(series.id, seriesId) });
+if (!story) throw new Error(`Unknown series: ${seriesId}`);
 const parent = await getEpisodeRow(seriesId, episodeId);
 if (!parent) throw new Error(`Unknown episode: ${seriesId}/${episodeId}`);
 if (parent.status !== "ready" || !parent.lastFrameUrl) {
@@ -38,6 +43,7 @@ if (!label) throw new Error(`${episodeId} has no written choices; pass --move.`)
 console.log(`move: ${label}\n`);
 
 const prompt = await writeEpisodePrompt({
+  premise: story.premise,
   parentPrompt: parent.prompt,
   frameUrl: parent.lastFrameUrl,
   label,
