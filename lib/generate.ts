@@ -294,7 +294,9 @@ export async function checkEpisodeJob(
   if (!done) return { status: "generating" };
   try {
     const result = await fal.queue.result(FAL_ENDPOINT, { requestId });
-    const videoUrl = (result.data as { video?: { url?: string } }).video?.url;
+    const { video, ...meta } = result.data as { video?: { url?: string }; [key: string]: unknown };
+    console.log(`fal result request=${requestId} ${JSON.stringify(meta)}`);
+    const videoUrl = video?.url;
     if (!videoUrl) {
       throw new Error("The render finished without a video.");
     }

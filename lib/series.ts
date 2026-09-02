@@ -7,6 +7,9 @@ import { and, asc, desc, eq } from "drizzle-orm";
 import { db } from "./db";
 import { episodes, series, type EpisodeRow, type SeriesRow } from "./db/schema";
 import {
+  CHOICE_MODEL_ID,
+  EPISODE_MODEL_ID,
+  FAST_MODEL_ID,
   checkEpisodeJob,
   extractLastFrame,
   submitEpisodeJob,
@@ -15,6 +18,7 @@ import {
   writeEpisodePrompt,
   writeTitle,
 } from "./generate";
+import { logTiming, timed } from "./timing";
 
 export type EpisodeStatus = EpisodeRow["status"];
 
@@ -112,9 +116,14 @@ export async function createSeries(input: {
   prompt: string;
   durationSeconds: number;
 }): Promise<SeriesRow> {
+  const premise = input.premise.slice(0, 40);
   const [title, requestId] = await Promise.all([
-    writeTitle({ premise: input.premise, scene: input.logline, prompt: input.prompt }),
-    submitRootJob({ prompt: input.prompt, durationSeconds: input.durationSeconds }),
+    timed("title", { premise, model: FAST_MODEL_ID }, () =>
+      writeTitle({ premise: input.premise, scene: input.logline, prompt: input.prompt }),
+    ),
+    timed("submitRoot", { premise }, () =>
+      submitRootJob({ prompt: input.prompt, durationSeconds: input.durationSeconds }),
+    ),
   ]);
   const id = await mintSeriesId(title);
   const [row] = await db
@@ -166,18 +175,23 @@ export async function startBranch(input: {
   }
   if (!childId) throw new Error("This episode has no room for more paths.");
 
-  const prompt = await writeEpisodePrompt({
-    premise: story.premise,
-    parentPrompt: parent.prompt,
-    frameUrl: parent.lastFrameUrl,
-    label: input.label,
-    durationSeconds: parent.durationSeconds,
-  });
-  const requestId = await submitEpisodeJob({
-    prompt,
-    imageUrl: parent.lastFrameUrl,
-    durationSeconds: parent.durationSeconds,
-  });
+  const tags = { series: input.seriesId, episode: childId, move: input.label };
+  const prompt = await timed("episodePrompt", { ...tags, model: EPISODE_MODEL_ID }, () =>
+    writeEpisodePrompt({
+      premise: story.premise,
+      parentPrompt: parent.prompt,
+      frameUrl: parent.lastFrameUrl!,
+      label: input.label,
+      durationSeconds: parent.durationSeconds,
+    }),
+  );
+  const requestId = await timed("submitEpisode", tags, () =>
+    submitEpisodeJob({
+      prompt,
+      imageUrl: parent.lastFrameUrl!,
+      durationSeconds: parent.durationSeconds,
+    }),
+  );
   const [row] = await db
     .insert(episodes)
     .values({
@@ -195,22 +209,30 @@ export async function startBranch(input: {
 }
 
 export async function storeClip(seriesId: string, episodeId: string, falVideoUrl: string) {
-  const clip = await fetch(falVideoUrl);
-  if (!clip.ok) throw new Error(`Could not fetch the clip (${clip.status}).`);
+  const tags = { series: seriesId, episode: episodeId };
+  const bytes = await timed("clipDownload", tags, async () => {
+    const clip = await fetch(falVideoUrl);
+    if (!clip.ok) throw new Error(`Could not fetch the clip (${clip.status}).`);
+    return clip.arrayBuffer();
+  });
   const [video, frame] = await Promise.all([
-    put(`series/${seriesId}/${episodeId}.mp4`, await clip.arrayBuffer(), {
-      access: "public",
-      addRandomSuffix: false,
-      allowOverwrite: true,
-      contentType: "video/mp4",
-    }),
-    extractLastFrame(falVideoUrl).then((bytes) =>
-      put(`series/${seriesId}/${episodeId}.last.jpg`, Buffer.from(bytes), {
+    timed("clipUpload", { ...tags, bytes: bytes.byteLength }, () =>
+      put(`series/${seriesId}/${episodeId}.mp4`, bytes, {
         access: "public",
         addRandomSuffix: false,
         allowOverwrite: true,
-        contentType: "image/jpeg",
+        contentType: "video/mp4",
       }),
+    ),
+    timed("lastFrame", tags, () =>
+      extractLastFrame(falVideoUrl).then((bytes) =>
+        put(`series/${seriesId}/${episodeId}.last.jpg`, Buffer.from(bytes), {
+          access: "public",
+          addRandomSuffix: false,
+          allowOverwrite: true,
+          contentType: "image/jpeg",
+        }),
+      ),
     ),
   ]);
   return { videoUrl: video.url, lastFrameUrl: frame.url };
@@ -227,6 +249,9 @@ export async function settleEpisode(seriesId: string, episodeId: string): Promis
 
   const job = await checkEpisodeJob(row.requestId);
   if (job.status === "generating") return row;
+  // Wall time from the row's insert, which follows the submit by milliseconds,
+  // to the poll that found it done, so it carries up to one poll interval.
+  logTiming("render", Date.now() - row.createdAt.getTime(), job.status, { series: seriesId, episode: episodeId });
   if (job.status === "failed") {
     const [updated] = await db
       .update(episodes)
@@ -237,8 +262,10 @@ export async function settleEpisode(seriesId: string, episodeId: string): Promis
   }
 
   const [media, choices] = await Promise.all([
-    storeClip(seriesId, episodeId, job.videoUrl),
-    suggestChoices({ episodePrompt: row.prompt }),
+    timed("storeClip", { series: seriesId, episode: episodeId }, () => storeClip(seriesId, episodeId, job.videoUrl)),
+    timed("choices", { series: seriesId, episode: episodeId, model: CHOICE_MODEL_ID }, () =>
+      suggestChoices({ episodePrompt: row.prompt }),
+    ),
   ]);
   const [updated] = await db
     .update(episodes)

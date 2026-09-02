@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { writeRootPrompt } from "@/lib/generate";
+import { ROOT_MODEL_ID, writeRootPrompt } from "@/lib/generate";
+import { timed } from "@/lib/timing";
 
 export const maxDuration = 60;
 
@@ -16,7 +17,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Pick a scene first." }, { status: 400 });
   }
   try {
-    const prompt = await writeRootPrompt({ premise, scene, durationSeconds });
+    const prompt = await timed("rootPrompt", { premise: premise.slice(0, 40), model: ROOT_MODEL_ID }, () =>
+      writeRootPrompt({ premise, scene, durationSeconds }),
+    );
     return NextResponse.json({ prompt });
   } catch (error) {
     return NextResponse.json(

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { expandPremise } from "@/lib/generate";
+import { expandPremise, ROOT_MODEL_ID } from "@/lib/generate";
+import { timed } from "@/lib/timing";
 
 export const maxDuration = 60;
 
@@ -10,7 +11,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Write a premise first." }, { status: 400 });
   }
   try {
-    const scenes = await expandPremise({ premise, count: 3 });
+    const scenes = await timed("expand", { premise: premise.slice(0, 40), model: ROOT_MODEL_ID }, () =>
+      expandPremise({ premise, count: 3 }),
+    );
     return NextResponse.json({ scenes });
   } catch (error) {
     return NextResponse.json(
