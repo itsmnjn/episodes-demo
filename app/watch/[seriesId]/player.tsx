@@ -272,8 +272,9 @@ export function Player({ series }: { series: Series }) {
 
         <div className="absolute inset-x-0 top-0 z-10 flex items-start justify-between p-4">
           <Link href="/" className="text-[13px] text-white/80 drop-shadow-md">
-            {series.title}
+            &lsaquo; Episodes
           </Link>
+          <span className="text-[13px] text-white/55 drop-shadow-md">{series.title}</span>
           <button
             type="button"
             onClick={() => setMuted((value) => !value)}
@@ -331,23 +332,16 @@ export function Player({ series }: { series: Series }) {
             )}
             {error ? <p className="px-1 text-[13px] text-ember">{error}</p> : null}
 
-            <div className="mt-1 flex justify-between text-[13px] text-white/55">
-              {parentId !== undefined ? (
+            {parentId !== undefined ? (
+              <div className="mt-1 flex justify-between text-[13px] text-white/55">
                 <button type="button" onClick={() => go(parentId, history.slice(0, -1))}>
-                  Back
+                  Previous
                 </button>
-              ) : (
-                <span />
-              )}
-              <div className="flex gap-4">
-                <Link href="/">Back to shelf</Link>
-                {currentId !== "0" ? (
-                  <button type="button" onClick={() => go("0", [])}>
-                    Restart
-                  </button>
-                ) : null}
+                <button type="button" onClick={() => go("0", [])}>
+                  Start over
+                </button>
               </div>
-            </div>
+            ) : null}
           </div>
         ) : null}
       </div>

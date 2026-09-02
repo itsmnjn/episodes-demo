@@ -24,7 +24,7 @@ The only hard lock across a series is first-person POV. When a concept uses popu
 
 Two.
 
-**Shelf.** Netflix-style row of series, newest first. Poster (the root's last frame), title, logline. A series whose root is still rendering says so on the card. Tap a poster and the player opens that series at episode `0`. No hover synopsis page. No "play" confirmation.
+**Home.** Netflix-style row of series, newest first. Poster (the root's last frame), title, logline. A series whose root is still rendering says so on the card. Tap a poster and the player opens that series at episode `0`. No hover synopsis page. No "play" confirmation.
 
 **Player.** Full-bleed 9:16. Sound on. Episode `0` starts immediately. While the clip plays, do not cover the picture with chrome. At the end, freeze on the last frame and fade the two branch labels onto it. Tap a label, the next clip starts. Same gesture every time.
 
@@ -35,7 +35,7 @@ On a laptop the player is a 9:16 column on black, like a phone standing on the d
 - Autoplay the current episode when you enter it. Sound on. A mute control is fine. Do not start muted.
 - The last frame stays up until the viewer taps. Do not auto-advance.
 - The next clip should start on the same picture the last one ended on. If the seam pops, that is a content bug, not a reason to add a dissolve.
-- At the end of every episode: the two written moves, any other move a viewer has already taken from here, and a typed move, plus Back, Restart, and Back to shelf. A move whose child exists plays it. Otherwise the child is written and rendered and plays when it lands. The wait is one quiet line on the held frame, not a progress bar.
+- At the end of every episode: the two written moves, any other move a viewer has already taken from here, and a typed move, plus Previous and Start over, shown only past the root. Leaving the series is the `‹ Episodes` link in the top-left, on every screen, and nothing in the choice row. A move whose child exists plays it. Otherwise the child is written and rendered and plays when it lands. The wait is one quiet line on the held frame, not a progress bar.
 - Restart is allowed from any episode.
 - Back one episode is allowed. Replay the parent from the start, do not scrub to the last frame.
 - Do not persist the path across a refresh for v1. Opening the series always starts at `0`.
@@ -58,7 +58,7 @@ If the root is still rendering, hold black with the one quiet line and play it w
 
 ## Seed
 
-The Invitation is the first series on the shelf. Harry Potter, Cho Chang and Hermione Granger, Gryffindor dorm, depth 2. Use it to judge the player. If the tap-to-next-clip cut feels like a jump cut, fix the player seam or remake the child, do not add UI around the problem.
+The Invitation is the first series on the home page. Harry Potter, Cho Chang and Hermione Granger, Gryffindor dorm, depth 2. Use it to judge the player. If the tap-to-next-clip cut feels like a jump cut, fix the player seam or remake the child, do not add UI around the problem.
 
 ## Open
 

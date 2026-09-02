@@ -18,7 +18,7 @@ export default async function WatchPage({
             This path isn&apos;t here.
           </p>
           <Link href="/" className="mt-6 inline-block text-sm text-mute">
-            Back to shelf
+            &lsaquo; Episodes
           </Link>
         </div>
       </main>

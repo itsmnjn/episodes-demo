@@ -3,7 +3,7 @@ import { listSeries } from "@/lib/series";
 
 export const dynamic = "force-dynamic";
 
-export default async function ShelfPage() {
+export default async function HomePage() {
   const cards = await listSeries();
 
   return (
@@ -26,7 +26,7 @@ export default async function ShelfPage() {
         </p>
         {cards.length === 0 ? (
           <p className="text-sm text-mute">
-            Nothing on the shelf yet.{" "}
+            Nothing here yet.{" "}
             <Link href="/create" className="text-paper underline">
               Create the first series.
             </Link>

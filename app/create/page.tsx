@@ -87,11 +87,8 @@ export default function CreatePage() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_0%,#2a1d14_0%,transparent_55%)]" />
       <div className="relative mx-auto max-w-2xl px-6 pt-8 pb-24 sm:px-10">
         <header className="flex items-baseline justify-between">
-          <Link href="/" className="font-[family-name:var(--font-display)] text-2xl tracking-tight">
-            Episodes
-          </Link>
           <Link href="/" className="text-sm text-mute transition hover:text-paper">
-            Shelf
+            &lsaquo; Episodes
           </Link>
         </header>
 
