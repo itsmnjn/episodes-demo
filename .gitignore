@@ -12,4 +12,3 @@ out/
 next-env.d.ts
 .vercel
 .env*
-public/content

@@ -70,7 +70,7 @@ export async function runChoices(args: EvalArgs): Promise<void> {
       try {
         for (let i = 0; i < n; i++) {
           const start = Date.now();
-          const moves = await suggestChoices({ episodePrompt: fixture.prompt, takenLabels: [] });
+          const moves = await suggestChoices({ episodePrompt: fixture.prompt });
           pairs.push({ moves, ms: Date.now() - start, flags: flagPair(moves) });
         }
         return { fixture, pairs };

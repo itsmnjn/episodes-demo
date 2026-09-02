@@ -1,11 +1,11 @@
 # Episodes demo
 
-Branching first-person AI video stories. Two surfaces: the watch surface (spec: [docs/product.md](docs/product.md)) and the creation surface, in progress. Everything that writes or renders an episode is in `lib/generate.ts`.
+Branching first-person AI video stories. Two surfaces, specced in [docs/product.md](docs/product.md): the watch surface and the create page. Everything that writes or renders an episode is in `lib/generate.ts`; everything that reads or saves a series is in `lib/series.ts`.
 
 ## Product
 
 - Episode: one continuous first-person clip that ends on a cliffhanger, with two choices on the frozen last frame. Length is per episode, minimum 5s, default 10s.
-- Series: a tree of episodes rooted at `0`; children append `a` or `b`. Baked series ship whole. At a leaf, the viewer's move generates the next episode on demand, so creators author the opening and the tree grows where viewers walk.
+- Series: a tree of episodes rooted at `0`; children append a letter in the order they were made. Creators author only the opening. Every landed episode has two written moves; a move whose child does not exist yet generates it on demand, so the tree grows where viewers walk. The same move from the same episode is the same child.
 - The protagonist is the camera: never seen, never named, never speaks on screen. A choice can be a line the protagonist says; it is treated as said between clips, and the next episode opens on the reaction.
 
 ## Pipeline (`lib/generate.ts`)
@@ -16,6 +16,12 @@ Branching first-person AI video stories. Two surfaces: the watch surface (spec: 
 - Rendering: root on `minimax/h3-max/text-to-video` at 9:16; children on `minimax/h3-max/image-to-video` from the parent's last frame; `prompt_expansion_mode: "disabled"`. Reference-to-video is not used for children: a reference frame is a soft attractor and broke both POV and the seam when tested.
 - Models on OpenRouter, routed by throughput: `google/gemini-3.7-flash` for roots, the expander, and choices; `google/gemini-3.5-flash-lite` for next episodes. Override with `ROOT_MODEL`, `CHOICE_MODEL`, `EPISODE_MODEL`, `ROOT_TEMPERATURE`.
 
+## Data (`lib/series.ts`)
+
+- Postgres on Neon via Drizzle (`lib/db/schema.ts`): `series` and `episodes`, keyed by (series, id). Clips and last frames in Vercel Blob at `series/{seriesId}/{episodeId}.mp4` and `.last.jpg`. Both are provisioned from the Vercel project; `vercel env pull` gets the keys.
+- An episode row is inserted when its render is submitted (`createSeries`, `startBranch`) and finished by `settleEpisode` when whoever is polling finds the clip landed: the clip and its last frame move to Blob, the two choices are written, status goes to ready. Scripts block on `awaitEpisode`.
+- Schema changes go through `bun run db:push`, which is the user's to run.
+
 ## Prompts
 
 - A writer prompt is a short brief plus a list of invariants, with the output format shown as a template and one example. No product mechanics reach a model. The user message is the creator's inputs, tagged (`<premise>`, `<duration>`, `<previous_scene>`, `<move>`), and nothing else.
@@ -24,9 +30,9 @@ Branching first-person AI video stories. Two surfaces: the watch surface (spec: 
 
 ## Scripts and evals
 
-- `bun run expansions "zoo"` expands a premise into scenes and prints them. `bun run root "zoo"` expands and writes a prompt for each scene; `--render --pick N` renders one, `--direct` skips the expander. `bun run hop <series> <episode>` extends a baked leaf. Everything prints as it lands. Arguments are positionals and `--flags`, never env vars; model overrides are `--model` flags, which set the env the library reads at import.
-- Evals are separate from the pipeline commands: `bun run eval pipeline` (expand → episode → choices), `eval expander`, `eval episode`, `eval choices` (pairs on the latest pipeline or episode run), `eval next` (next episodes on the baked leaves, with two fixed spoken moves per leaf). Each writes `report.md` and `run.json` under `evals/<piece>/<stamp>-<model>/`, rewritten after every premise. The flags catch rule breaks; they reward blandness, so read the reports.
-- Content: `content/catalog.json` is the shelf; `content/series/{id}/series.json` plus `media/` is a series. The baked series predate the current prompt format; their prompts are data, not examples.
+- `bun run expansions "zoo"` expands a premise into scenes and prints them. `bun run root "zoo"` expands and writes a prompt for each scene; `--render --pick N` films one as a new series, `--direct` skips the expander. `bun run hop <series> <episode>` extends an episode by one. Everything prints as it lands. Arguments are positionals and `--flags`, never env vars; model overrides are `--model` flags, which set the env the library reads at import.
+- Evals are separate from the pipeline commands: `bun run eval pipeline` (expand → episode → choices), `eval expander`, `eval episode`, `eval choices` (pairs on the latest pipeline or episode run), `eval next` (next episodes on the database's leaves, with two fixed spoken moves per leaf). Each writes `report.md` and `run.json` under `evals/<piece>/<stamp>-<model>/`, rewritten after every premise. The flags catch rule breaks; they reward blandness, so read the reports.
+- The four original series were migrated from `content/` by `scripts/migrate-baked.mts`. Their prompts predate the current format; they are data, not examples.
 
 ## Rules
 

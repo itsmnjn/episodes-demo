@@ -1,90 +1,31 @@
-// Extend a baked leaf by one episode: suggest two moves, pick one, write the
-// next episode off the real held frame, render it.
+// Extend an episode by one: take a move (or the first written choice), write
+// the next episode off its held frame, render it into the series.
 //
 //   bun run hop the-invitation 0aa
-//   bun run hop mcdonalds 0bb --move "Summon a dragon" --out out
+//   bun run hop mcdonalds 0bb --move "Summon a dragon"
 
-import { promises as fs } from "node:fs";
-import path from "node:path";
 import { parseArgs } from "node:util";
-import {
-  checkEpisodeJob,
-  frameUrlForParent,
-  submitEpisodeJob,
-  suggestChoices,
-  writeEpisodePrompt,
-} from "../lib/generate";
-import { loadSeriesSource } from "../lib/content";
+import { awaitEpisode, getEpisodeRow, startBranch } from "../lib/series";
 
 const { values, positionals } = parseArgs({
   allowPositionals: true,
-  options: {
-    move: { type: "string" },
-    out: { type: "string", default: "out" },
-  },
+  options: { move: { type: "string" } },
 });
 
 const [seriesId, episodeId] = positionals;
 if (!seriesId || !episodeId) {
-  throw new Error('usage: bun run hop <series> <episode> [--move "..."] [--out out]');
+  throw new Error('usage: bun run hop <series> <episode> [--move "..."]');
 }
 
-const source = loadSeriesSource(seriesId);
-if (!source) throw new Error(`Unknown series: ${seriesId}`);
-const parent = source.episodes[episodeId];
+const parent = await getEpisodeRow(seriesId, episodeId);
 if (!parent) throw new Error(`Unknown episode: ${seriesId}/${episodeId}`);
-if (parent.childIds.length > 0) {
-  throw new Error(`${episodeId} is not a leaf; pick an episode with no branches.`);
-}
-if (!parent.lastFramePath) {
-  throw new Error(`${episodeId} has no last frame on disk.`);
-}
+const label = values.move ?? parent.choices?.[0];
+if (!label) throw new Error(`${episodeId} has no written choices; pass --move.`);
+console.log(`move: ${label}\n`);
 
-let label = values.move;
-if (!label) {
-  const choices = await suggestChoices({
-    episodePrompt: parent.prompt,
-    takenLabels: [],
-  });
-  console.log(`suggested:\n  1. ${choices[0]}\n  2. ${choices[1]}`);
-  label = choices[0];
-}
-console.log(`\nmove: ${label}\n`);
-
-const frameUrl = await frameUrlForParent({
-  name: `${seriesId}-${episodeId}`,
-  lastFramePath: parent.lastFramePath,
-});
-console.log(`held frame: ${frameUrl}\n`);
-
-const prompt = await writeEpisodePrompt({
-  parentPrompt: parent.prompt,
-  frameUrl,
-  label,
-  durationSeconds: parent.durationSeconds,
-});
-console.log(`prompt:\n\n${prompt}\n`);
-
-const requestId = await submitEpisodeJob({
-  prompt,
-  imageUrl: frameUrl,
-  durationSeconds: parent.durationSeconds,
-});
-console.log(`rendering (request ${requestId})...`);
-
-let videoUrl: string | null = null;
-while (!videoUrl) {
-  await new Promise((resolve) => setTimeout(resolve, 15000));
-  const job = await checkEpisodeJob(requestId);
-  if (job.status === "ready") {
-    videoUrl = job.videoUrl;
-  } else if (job.status === "failed") {
-    throw new Error(`The render failed: ${job.error}`);
-  }
-}
-
-await fs.mkdir(values.out, { recursive: true });
-const outPath = path.join(values.out, `${seriesId}-${episodeId}-hop.mp4`);
-const clip = await fetch(videoUrl);
-await fs.writeFile(outPath, new Uint8Array(await clip.arrayBuffer()));
-console.log(`\nclip: ${outPath}`);
+const child = await startBranch({ seriesId, parentId: episodeId, label });
+console.log(`prompt:\n\n${child.prompt}\n`);
+console.log(`filming ${child.id}...`);
+const landed = await awaitEpisode(seriesId, child.id);
+console.log(`clip: ${landed.videoUrl}\nchoices: ${landed.choices?.join(" / ")}`);
+process.exit(0);

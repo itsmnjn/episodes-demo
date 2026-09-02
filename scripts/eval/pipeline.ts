@@ -122,7 +122,7 @@ export async function runPipeline(piece: Piece, args: EvalArgs): Promise<void> {
             const episode: Episode = { scene, prompt, episodeMs: Date.now() - episodeStart };
             if (writeChoices) {
               const choiceStart = Date.now();
-              episode.moves = await suggestChoices({ episodePrompt: prompt, takenLabels: [] });
+              episode.moves = await suggestChoices({ episodePrompt: prompt });
               episode.choiceMs = Date.now() - choiceStart;
             }
             return episode;

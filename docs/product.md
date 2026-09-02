@@ -1,6 +1,6 @@
 # Watch app
 
-The watch surface is a phone-shaped player for branching first-person stories. You pick a series, watch a clip, tap one of two moves, watch the next clip. This spec covers that surface; the creation surface is specced separately.
+The watch surface is a phone-shaped player for branching first-person stories. You pick a series, watch a clip, tap one of two moves, watch the next clip. This spec covers that surface. The create surface is one page: premise, three openings, one prompt, film it.
 
 This demo later sits inside Mage. Chrome can look like it belongs there. The stage itself should still look like a phone.
 
@@ -14,17 +14,17 @@ Length is per episode, at least 5 seconds, default 10. The player uses whatever 
 
 ## What a series is
 
-A full binary tree of those clips. Root is `0`. Left appends `a`, right appends `b`. Default depth is 3 (15 clips). A series may ship shallower. The Invitation is depth 2 (7 clips).
+A tree of those clips. Root is `0`. Each child appends a letter in the order it was made. Only the root is authored; the tree grows where viewers walk. Every landed episode has two written moves. Tapping one plays the child if someone has already made it, or writes and renders it and plays it when it lands. A typed move does the same. Two viewers making the same move from the same episode get the same child.
 
-Every node in a shipped series already has a video. Baked forks never wait on fal. At a leaf the viewer can keep going: the app suggests two new moves or takes one the viewer types, writes the child prompt from the parent prompt and its held frame, renders that episode from the held frame, and plays it. Viewer-made paths live in client memory for the demo. They survive restarts and shelf round-trips in the same tab; a refresh starts clean.
+Series, episodes, and moves live in Postgres; clips and last frames in Blob. Everyone sees the same tree.
 
-The only hard lock across a series is first-person POV. When a concept uses popular IP, likeness comes from naming it in the prompt; original concepts do not require an IP. Style is otherwise loose. The player never says any of that.
+The only hard lock across a series is first-person POV. When a concept uses popular IP, likeness comes from naming it in the prompt; original concepts do not require an IP. Style follows the premise. The player never says any of that.
 
 ## Screens
 
 Two.
 
-**Shelf.** Netflix-style row of series. Poster, title, IP, logline. Tap a poster and the player opens that series at episode `0`. No hover synopsis page. No "play" confirmation.
+**Shelf.** Netflix-style row of series, newest first. Poster (the root's last frame), title, logline. A series whose root is still rendering says so on the card. Tap a poster and the player opens that series at episode `0`. No hover synopsis page. No "play" confirmation.
 
 **Player.** Full-bleed 9:16. Sound on. Episode `0` starts immediately. While the clip plays, do not cover the picture with chrome. At the end, freeze on the last frame and fade the two branch labels onto it. Tap a label, the next clip starts. Same gesture every time.
 
@@ -35,39 +35,19 @@ On a laptop the player is a 9:16 column on black, like a phone standing on the d
 - Autoplay the current episode when you enter it. Sound on. A mute control is fine. Do not start muted.
 - The last frame stays up until the viewer taps. Do not auto-advance.
 - The next clip should start on the same picture the last one ended on. If the seam pops, that is a content bug, not a reason to add a dissolve.
-- A leaf has no baked choices. Hold the last frame. Offer any paths the viewer already made, a two-move suggestion, and a typed move, plus Restart and Back to shelf. Tapping a suggested or typed move renders the child episode and plays it when it lands. The wait is one quiet line on the held frame, not a progress bar.
+- At the end of every episode: the two written moves, any other move a viewer has already taken from here, and a typed move, plus Back, Restart, and Back to shelf. A move whose child exists plays it. Otherwise the child is written and rendered and plays when it lands. The wait is one quiet line on the held frame, not a progress bar.
 - Restart is allowed from any episode.
 - Back one episode is allowed. Replay the parent from the start, do not scrub to the last frame.
 - Do not persist the path across a refresh for v1. Opening the series always starts at `0`.
 - Do not show episode ids, depth, prompts, or file names.
 
-Branch labels come from `series.json` as written. They are first person and short. Do not rewrite them in the UI. Do not prefix them with A/B or left/right.
+Move labels are shown as written. They are short and start with a verb. Do not rewrite them in the UI. Do not prefix them with A/B or left/right.
 
-## Shelf data
+## What the player reads
 
-Read `content/catalog.json`. Each row is:
+Only what it needs to play and branch: the series title for a small exit label, and for each episode its id, parent, the move that led to it, status, video URL, and its two moves. Prompts and last frames never reach the player. The player freezes the video element.
 
-- `id`
-- `title`
-- `ip`
-- `logline`
-- `poster` (path relative to `content/`)
-
-Tap uses `id` to load `content/series/{id}/series.json` and play `episodes["0"].video`.
-
-The shelf is a list, not a search product. One row is enough while there is one series. When there are more, keep one row. Do not add rows-by-genre.
-
-## What the player reads from a series
-
-Only what it needs to play and branch:
-
-- `title` for a small exit label, not an opening title card
-- `episodes[id].video`
-- `episodes[id].branches[].label` and `.to`
-
-Ignore `prompt`, `startFrame`, `model`, and `lastFrame` in the UI. Last-frame jpgs are for generation, not for the player. The player freezes the video element.
-
-If a video path is missing or the file is gone, do not show a generate button. Show a dead end and a way back to the shelf. An incomplete series is a content problem.
+If the root is still rendering, hold black with the one quiet line and play it when it lands. If a render failed, say so and offer the way back.
 
 ## Out of scope for the player
 
@@ -75,8 +55,6 @@ If a video path is missing or the file is gone, do not show a generate button. S
 - A map or tree peek. The story is the tree. The viewer should feel it by tapping, not by reading a graph.
 - Accounts, history, likes, comments, share sheets
 - Landscape, captions, or a theater mode
-
-Mage can add the untraveled-path wait later without changing the shelf or the choice chrome. The hook is an empty `video` on a node that already has labels. Do not build that hook now.
 
 ## Seed
 

@@ -1,4 +1,3 @@
-import { promises as fs } from "node:fs";
 import { fal } from "@fal-ai/client";
 import { openrouter } from "@openrouter/ai-sdk-provider";
 import { generateText } from "ai";
@@ -43,22 +42,14 @@ The two moves take the story in different directions, and they are different kin
 
 Each move is one action in 2 to 5 words starting with a verb, like "Hand him the apple" or "Ask who sent the note". Plain text, no punctuation at the end, no quotation marks. Output exactly two lines, one move per line, nothing else.`;
 
-export function choicePrompt(input: {
-  episodePrompt: string;
-  takenLabels: string[];
-}): string {
-  const taken =
-    input.takenLabels.length > 0
-      ? `\n\nThese moves were already made from this moment. Both of your moves must be clearly different from every one of them — a different action, not a reworded version:\n${input.takenLabels.map((label) => `- ${label}`).join("\n")}`
-      : "";
-  return `The scene that just played:\n\n${input.episodePrompt}${taken}\n\nWrite the two moves.`;
+export function choicePrompt(input: { episodePrompt: string }): string {
+  return `The scene that just played:\n\n${input.episodePrompt}\n\nWrite the two moves.`;
 }
 
 // Two plain lines at minimal reasoning keeps this call fast; Gemini rejects
 // reasoning "none" outright.
 export async function suggestChoices(input: {
   episodePrompt: string;
-  takenLabels: string[];
 }): Promise<[string, string]> {
   const { text } = await generateText({
     model: choiceModel,
@@ -184,7 +175,7 @@ export async function writeRootPrompt(input: {
 // both directions, upscaling included, and cannot decode at position 1 on
 // these encodes. 0.99 with the clips' native 1344 long side returns the
 // held frame untouched.
-async function extractLastFrame(
+export async function extractLastFrame(
   videoUrl: string,
 ): Promise<Uint8Array<ArrayBuffer>> {
   const response = await fetch(
@@ -215,28 +206,6 @@ async function extractLastFrame(
     throw new Error("The frame service returned no frame.");
   }
   return Uint8Array.from(Buffer.from(data.slice(prefix.length), "base64"));
-}
-
-// The child job needs the parent's last frame on the fal CDN. Baked episodes
-// read their jpg from disk; viewer-made episodes get the frame pulled out of
-// their rendered clip by mageic-deploy. The client caches the returned URL
-// and passes it back on later branches from the same parent.
-export async function frameUrlForParent(input: {
-  name: string;
-  lastFramePath?: string;
-  videoUrl?: string;
-}): Promise<string> {
-  let bytes: Uint8Array<ArrayBuffer>;
-  if (input.lastFramePath) {
-    bytes = new Uint8Array(await fs.readFile(input.lastFramePath));
-  } else if (input.videoUrl) {
-    bytes = await extractLastFrame(input.videoUrl);
-  } else {
-    throw new Error("This episode has no last frame to branch from.");
-  }
-  return fal.storage.upload(
-    new File([bytes], `${input.name}.last.jpg`, { type: "image/jpeg" }),
-  );
 }
 
 export async function submitEpisodeJob(input: {

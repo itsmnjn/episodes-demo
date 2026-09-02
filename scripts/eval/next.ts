@@ -1,10 +1,12 @@
-// next: for each baked leaf episode (real held frame on disk), write the next
-// episode for four moves — the choice writer's pair plus two fixed spoken
-// moves — and flag rule breaks. Renders nothing.
+// next: for each leaf episode in the database (a landed episode with no
+// children), write the next episode for four moves — the choice writer's
+// pair plus two fixed spoken moves — and flag rule breaks. Renders nothing.
 
 import path from "node:path";
-import { loadCatalog, loadSeriesSource } from "../../lib/content";
-import { CHOICE_MODEL_ID, EPISODE_MODEL_ID, frameUrlForParent, suggestChoices, writeEpisodePrompt } from "../../lib/generate";
+import { inArray } from "drizzle-orm";
+import { db } from "../../lib/db";
+import { episodes, series } from "../../lib/db/schema";
+import { CHOICE_MODEL_ID, EPISODE_MODEL_ID, suggestChoices, writeEpisodePrompt } from "../../lib/generate";
 import { type EvalArgs, pct, runDir, writeRun } from "./shared";
 
 // Spoken moves that fit any scene. Every fixture runs both, so the rule that
@@ -16,7 +18,7 @@ type Fixture = {
   episodeId: string;
   prompt: string;
   durationSeconds: number;
-  lastFramePath: string;
+  lastFrameUrl: string;
 };
 
 // Narration is everything outside <d>...</d>; characters may say "you".
@@ -72,40 +74,33 @@ type Written = { move: string; kind: "choice" | "spoken"; prompt: string; ms: nu
 type Result = { fixture: Fixture; frameUrl: string; choiceMs: number; written: Written[]; errors: string[] };
 
 export async function runNext(args: EvalArgs): Promise<void> {
-  const seriesIds = args.positionals.length > 0 ? args.positionals : loadCatalog().map((card) => card.id);
-
-  const fixtures: Fixture[] = [];
-  for (const seriesId of seriesIds) {
-    const source = loadSeriesSource(seriesId);
-    if (!source) throw new Error(`Unknown series: ${seriesId}`);
-    for (const episode of Object.values(source.episodes)) {
-      if (episode.childIds.length === 0 && episode.lastFramePath) {
-        fixtures.push({
-          seriesId,
-          episodeId: episode.id,
-          prompt: episode.prompt,
-          durationSeconds: episode.durationSeconds,
-          lastFramePath: episode.lastFramePath,
-        });
-      }
-    }
-  }
+  const seriesIds =
+    args.positionals.length > 0
+      ? args.positionals
+      : (await db.select({ id: series.id }).from(series)).map((row) => row.id);
+  const rows = await db.select().from(episodes).where(inArray(episodes.seriesId, seriesIds));
+  const parents = new Set(rows.map((row) => `${row.seriesId}/${row.parentId}`));
+  const fixtures: Fixture[] = rows
+    .filter((row) => row.status === "ready" && row.lastFrameUrl && !parents.has(`${row.seriesId}/${row.id}`))
+    .map((row) => ({
+      seriesId: row.seriesId,
+      episodeId: row.id,
+      prompt: row.prompt,
+      durationSeconds: row.durationSeconds,
+      lastFrameUrl: row.lastFrameUrl!,
+    }));
 
   const startedAt = new Date();
   const results: Result[] = await Promise.all(
     fixtures.map(async (fixture) => {
       const errors: string[] = [];
       const written: Written[] = [];
-      let frameUrl = "";
+      const frameUrl = fixture.lastFrameUrl;
       let choiceMs = 0;
       let moves: { move: string; kind: "choice" | "spoken" }[] = SPOKEN_MOVES.map((move) => ({ move, kind: "spoken" }));
       try {
-        frameUrl = await frameUrlForParent({
-          name: `eval-${fixture.seriesId}-${fixture.episodeId}`,
-          lastFramePath: fixture.lastFramePath,
-        });
         const choiceStart = Date.now();
-        const pair = await suggestChoices({ episodePrompt: fixture.prompt, takenLabels: [] });
+        const pair = await suggestChoices({ episodePrompt: fixture.prompt });
         choiceMs = Date.now() - choiceStart;
         moves = [...pair.map((move) => ({ move, kind: "choice" as const })), ...moves];
       } catch (error) {
@@ -159,7 +154,7 @@ export async function runNext(args: EvalArgs): Promise<void> {
     "",
     `- Episode writer: \`${EPISODE_MODEL_ID}\``,
     `- Choice writer: \`${CHOICE_MODEL_ID}\``,
-    `- Fixtures: ${fixtures.length} baked leaves from ${seriesIds.join(", ")}`,
+    `- Fixtures: ${fixtures.length} leaves from ${seriesIds.join(", ")}`,
     `- Episodes written: ${allWritten.length}/${fixtures.length * (2 + SPOKEN_MOVES.length)}`,
     `- Latency (episode write, includes the frame): ${latency}`,
     "",
@@ -204,4 +199,5 @@ export async function runNext(args: EvalArgs): Promise<void> {
   console.log(`spoken moves with no hero line: ${spokenClean}/${spoken.length}`);
   console.log(`latency: ${latency}`);
   console.log(`report: ${path.join(dir, "report.md")}`);
+  process.exit(0);
 }

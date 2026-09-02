@@ -1,18 +1,16 @@
 import Link from "next/link";
-import { loadCatalog, loadSeries } from "@/lib/content";
+import { getSeries } from "@/lib/series";
 import { Player } from "./player";
 
-export function generateStaticParams() {
-  return loadCatalog().map((card) => ({ seriesId: card.id }));
-}
+export const dynamic = "force-dynamic";
 
 export default async function WatchPage({
   params,
 }: PageProps<"/watch/[seriesId]">) {
   const { seriesId } = await params;
-  const series = loadSeries(seriesId);
+  const series = await getSeries(seriesId);
 
-  if (!series) {
+  if (!series || !series.episodes["0"]) {
     return (
       <main className="grid min-h-dvh place-items-center bg-black px-6 text-center">
         <div>
