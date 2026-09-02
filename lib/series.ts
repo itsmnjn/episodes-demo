@@ -237,13 +237,3 @@ export async function settleEpisode(seriesId: string, episodeId: string): Promis
     .returning();
   return updated ?? (await getEpisodeRow(seriesId, episodeId))!;
 }
-
-// Block until an episode lands. For scripts; the app polls per request.
-export async function awaitEpisode(seriesId: string, episodeId: string): Promise<EpisodeRow> {
-  for (;;) {
-    const row = await settleEpisode(seriesId, episodeId);
-    if (row.status === "ready") return row;
-    if (row.status === "failed") throw new Error(`The render failed: ${row.error}`);
-    await new Promise((resolve) => setTimeout(resolve, 10000));
-  }
-}

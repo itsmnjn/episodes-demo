@@ -19,7 +19,7 @@ Branching first-person AI video stories. Two surfaces, specced in [docs/product.
 ## Data (`lib/series.ts`)
 
 - Postgres on Neon via Drizzle (`lib/db/schema.ts`): `series` and `episodes`, keyed by (series, id). Clips and last frames in Vercel Blob at `series/{seriesId}/{episodeId}.mp4` and `.last.jpg`. Both are provisioned from the Vercel project; `vercel env pull` gets the keys.
-- An episode row is inserted when its render is submitted (`createSeries`, `startBranch`) and finished by `settleEpisode` when whoever is polling finds the clip landed: the clip and its last frame move to Blob, the two choices are written, status goes to ready. Scripts block on `awaitEpisode`.
+- An episode row is inserted when its render is submitted (`createSeries`, `startBranch`) and finished by `settleEpisode` when whoever is polling finds the clip landed: the clip and its last frame move to Blob, the two choices are written, status goes to ready.
 - Schema changes go through `bun run db:push`, which is the user's to run.
 
 ## Prompts
@@ -30,7 +30,7 @@ Branching first-person AI video stories. Two surfaces, specced in [docs/product.
 
 ## Scripts and evals
 
-- `bun run expansions "zoo"` expands a premise into scenes and prints them. `bun run root "zoo"` expands and writes a prompt for each scene; `--render --pick N` films one as a new series, `--direct` skips the expander. `bun run hop <series> <episode>` extends an episode by one. Everything prints as it lands. Arguments are positionals and `--flags`, never env vars; model overrides are `--model` flags, which set the env the library reads at import.
+- `bun run expansions "zoo"` expands a premise into scenes and prints them. `bun run root "zoo"` expands and writes a prompt for each scene; `--render --pick N` renders one to `out/`, `--direct` skips the expander. `bun run hop <series> <episode>` extends an episode by one, to `out/`. The scripts are the test bench: they read the database and never write it. Series are created in the app. Arguments are positionals and `--flags`, never env vars; model overrides are `--model` flags, which set the env the library reads at import.
 - Evals are separate from the pipeline commands: `bun run eval pipeline` (expand → episode → choices), `eval expander`, `eval episode`, `eval choices` (pairs on the latest pipeline or episode run), `eval next` (next episodes on the database's leaves, with two fixed spoken moves per leaf). Each writes `report.md` and `run.json` under `evals/<piece>/<stamp>-<model>/`, rewritten after every premise. The flags catch rule breaks; they reward blandness, so read the reports.
 - The four original series were migrated from `content/` by `scripts/migrate-baked.mts`. Their prompts predate the current format; they are data, not examples.
 
