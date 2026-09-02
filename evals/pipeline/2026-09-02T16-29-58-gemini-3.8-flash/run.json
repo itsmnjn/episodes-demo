@@ -1,0 +1,404 @@
+{
+  "piece": "pipeline",
+  "startedAt": "2026-09-02T16:29:58.599Z",
+  "model": "google/gemini-3.8-flash",
+  "temperature": 1.5,
+  "choiceModel": "google/gemini-3.8-flash",
+  "n": 5,
+  "durationSeconds": 10,
+  "premises": [
+    "zoo",
+    "dentist",
+    "first day at hogwarts",
+    "my roommate is a ghost",
+    "blind date",
+    "airport security"
+  ],
+  "results": [
+    {
+      "premise": "zoo",
+      "scenes": [
+        "The midday crowd is gathered thick along the rail of the otter pool as a keeper tosses silver fish into the water. One of the otters ignores the food entirely, scrambles up the artificial rock face, and drops a visitor's car keys directly into your lap.",
+        "Sunlight filters through the glass dome of the walk-through aviary while children scatter seed across the low shrubs. A scarlet macaw swoops low over the boardwalk, landing hard on your shoulder with an open beak and a frantic screech.",
+        "The heavy metal service gate swings shut behind the departing tram, leaving the walkway between the tiger habitat and the maintenance shed completely deserted. From inside the bamboo hedge lining the fence, a low, guttural growl vibrates through the soles of your sneakers.",
+        "A vendor hands across an overpriced waffle cone under the striped canvas awning of the snack pavilion. Behind the glass of the baboon enclosure directly behind him, a massive male slams both hands against the pane, spiderwebbing the safety glass from edge to edge.",
+        "Rain begins to patter against the thick acrylic panels of the undersea tunnel, emptying the corridor of all other visitors. A pair of rubber-gloved hands appears from the dark access trench beside the path and latches firmly around your ankle."
+      ],
+      "expandMs": 2597,
+      "episodes": [
+        {
+          "scene": "The midday crowd is gathered thick along the rail of the otter pool as a keeper tosses silver fish into the water. One of the otters ignores the food entirely, scrambles up the artificial rock face, and drops a visitor's car keys directly into your lap.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Standing behind a polished wooden railing, looking down into a turquoise outdoor otter pool surrounded by faux granite boulders and a bustling midday crowd. Across the water, a zoo keeper in a tan uniform and baseball cap flings whole silver fish from a bucket into the splashing pool, attracting three river otters that dive and roll in foam. To the immediate right, a fourth sleek brown otter bypasses the floating fish, lunging upward onto a sloping ledge of the artificial rock face right beneath the railing. It scrambles up the textured surface, claws scratching on concrete, carrying a silver key ring with a black car fob in its jaws. The otter reaches the top of the barrier wall directly in front, leans over the edge, opens its mouth, and drops the metallic keys straight down onto the denim-clad thighs visible at the bottom of the frame, where they land with a sharp jingle, while the animal remains perched, staring unblinkingly upward.\n\noverall_soundscape: Murmur of a large outdoor crowd, water splashes and sloshing, keeper's bucket clattering, otter claws scratching on faux rock, sharp metal jingle of keys landing on denim fabric.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1673,
+          "moves": [
+            "Pocket the car keys",
+            "Shout to the zookeeper"
+          ],
+          "choiceMs": 581
+        },
+        {
+          "scene": "Sunlight filters through the glass dome of the walk-through aviary while children scatter seed across the low shrubs. A scarlet macaw swoops low over the boardwalk, landing hard on your shoulder with an open beak and a frantic screech.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Sunlight streams down through the geometric glass panels of a towering geodesic dome, illuminating lush tropical ferns and a wooden boardwalk. Two young children in sunhats crouch several paces ahead, tossing handfuls of millet into the low bushes as finches flutter around them. A flash of vivid red and cobalt blue descends rapidly from the canopy. With a rushing blast of air and a sharp squawk, a scarlet macaw lands heavily on the right collarbone, its curved black talons digging in and long tail feathers brushing past the right side of the view. The parrot leans its head directly into the frame, beak gaping open as its round yellow eye dilates, letting out a piercing, raspy shriek toward the rafters.\n\noverall_soundscape: Echoing chatter of small birds, high-pitched rustle of seeds hitting leaves, heavy wingbeats rushing overhead, loud scrape of talons on fabric, and a sudden, deafening macaw shriek.\n\nnon_diegetic_music: None.",
+          "episodeMs": 2761,
+          "moves": [
+            "Offer your arm as perch",
+            "Shout to warn the kids"
+          ],
+          "choiceMs": 1667
+        },
+        {
+          "scene": "The heavy metal service gate swings shut behind the departing tram, leaving the walkway between the tiger habitat and the maintenance shed completely deserted. From inside the bamboo hedge lining the fence, a low, guttural growl vibrates through the soles of your sneakers.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Facing a tall chain-link fence intertwined with dense green bamboo stalks along an asphalt zoo service path, with a corrugated metal maintenance shed standing across the empty walkway. The heavy metal service gate to the right clangs shut in the distance as the rumble of the departing tram fades away. Two hands reach forward from the bottom of the frame and press flat against the cold metal mesh of the fence. Thick bamboo leaves rustle violently three feet ahead, parting to reveal a wide, orange-and-black striped snout and two glowing amber eyes pressing straight through the foliage against the wire.\n\noverall_soundscape: Distant hum of an electric tram engine, metal gate clanging shut with a heavy latch click, dry leaves scraping, low guttural tiger growl vibrating with heavy bass.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1433,
+          "moves": [
+            "Rattle the chain-link fence hard",
+            "Whisper a calming command"
+          ],
+          "choiceMs": 2253
+        },
+        {
+          "scene": "A vendor hands across an overpriced waffle cone under the striped canvas awning of the snack pavilion. Behind the glass of the baboon enclosure directly behind him, a massive male slams both hands against the pane, spiderwebbing the safety glass from edge to edge.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Under the red-and-white striped canvas awning of an outdoor snack pavilion, a vendor in a blue polo shirt extends a large waffle cone piled with two scoops of chocolate ice cream across the counter. A right hand reaches from the bottom of the frame and takes the paper-wrapped cone. Through the pavilion's open back, behind the vendor, stands the thick glass wall of a zoo exhibit. A massive male baboon leaps from an artificial rock, lunges forward, and slams both palms flat into the glass directly behind the vendor's head. The thick pane explodes into a dense, opaque white spiderweb of fractures from edge to edge with a loud boom, the vendor freezing with his arm still outstretched as the animal presses its face against the cracked glass.\n\noverall_soundscape: Ambient park chatter, distant zoo animal calls, rustling paper wrapper, sudden concussive heavy thud against thick glass, sharp crackle of fractured safety glass.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1270,
+          "moves": [
+            "Yank the vendor over counter",
+            "Toss ice cream at glass"
+          ],
+          "choiceMs": 740
+        },
+        {
+          "scene": "Rain begins to patter against the thick acrylic panels of the undersea tunnel, emptying the corridor of all other visitors. A pair of rubber-gloved hands appears from the dark access trench beside the path and latches firmly around your ankle.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Walking along a curved acrylic tunnel submerged in deep ocean water, raindrops tapping against the exterior glass far above. The tiled corridor stretches ahead completely empty, blue light rippling across the wet floor. A narrow metal maintenance grate runs along the right wall. The camera tilts downward toward the walking feet. A pair of heavy, black rubber-gloved hands suddenly thrusts up through a gap in the maintenance trench, fingers clamping hard around the left ankle. The gloved hands pull backward with sudden force, dragging the foot toward the open gap in the floor as fingers from a right hand reach down from the bottom of the frame to grip the smooth edge of the wall.\n\noverall_soundscape: Muffled patter of rain against thick glass, low mechanical hum of aquarium pumps, metallic clanking of a shifted maintenance grate, squeaking rubber against leather, harsh scraping of shoes on wet tile.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1608,
+          "moves": [
+            "Stomp the loose grate down",
+            "Shout for the tunnel security"
+          ],
+          "choiceMs": 728
+        }
+      ],
+      "failures": []
+    },
+    {
+      "premise": "dentist",
+      "scenes": [
+        "The hygienist tips your chair back under the blinding glare of the overhead lamp while humming a cheerful tune. She clips an X-ray to the lightboard, gasps softly, and drops her steel pick onto the tray.",
+        "The waiting room aquarium gurgles quietly as the receptionist steps out from behind the frosted glass window holding a clipboard. She frowns at your intake paperwork, lowers her reading glasses, and asks if you are aware that someone with your exact social security number just had their wisdom teeth removed ten minutes ago.",
+        "The pediatric dentist points to a colorful cartoon diagram of a molar while his assistant secures a heavy paper bib around your neck. He reaches into his drawer, pulls out a pair of rusted, heavy-duty industrial pliers instead of dental forceps, and wipes them on his lab coat.",
+        "The sweet, slightly fruity scent of nitrous oxide fills your rubber nose mask while the dentist casually chats about his weekend golf game. Mid-sentence, the power cuts out completely, plunging the windowless operatory into pitch darkness just as a high-pitched drill starts whining somewhere near your chin.",
+        "The dental surgeon gently taps a small metallic mirror against your upper left canine while comparing it to a row of gleaming white ceramic crowns. His eyes widen behind his plastic face shield, and he murmurs that he has never seen an enamel structure made of solid gold before."
+      ],
+      "expandMs": 4133,
+      "episodes": [
+        {
+          "scene": "The hygienist tips your chair back under the blinding glare of the overhead lamp while humming a cheerful tune. She clips an X-ray to the lightboard, gasps softly, and drops her steel pick onto the tray.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The view tilts upward as the padded dental chair reclines beneath a large, circular overhead lamp beaming white light directly downward. A dental hygienist in light-blue scrubs, paper mask, and clear protective glasses leans into view from the right, humming a bright, rising melody as she adjusts the lamp's plastic handles. She turns away toward a wall-mounted lightboard on the left, takes a square film X-ray from a counter, and slides it under the metal clips. The humming stops abruptly with a sharp intake of breath. Her gloved fingers open, letting a stainless-steel dental explorer fall from her hand, the sharp tool clattering loudly against a metal tray lined with instruments. She remains frozen, facing the illuminated X-ray of a human jaw showing dense, branching metallic shapes embedded deep inside the bone, before slowly turning her wide, unblinking eyes back toward the camera.\n\noverall_soundscape: Humming electric motor of the reclining dental chair, soft melodic humming from the hygienist, a sudden sharp gasp, the loud metallic clatter and ring of a steel pick hitting a metal instrument tray.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1620,
+          "moves": [
+            "Tear the film off the lightboard",
+            "Whisper that it isn't mine"
+          ],
+          "choiceMs": 1111
+        },
+        {
+          "scene": "The waiting room aquarium gurgles quietly as the receptionist steps out from behind the frosted glass window holding a clipboard. She frowns at your intake paperwork, lowers her reading glasses, and asks if you are aware that someone with your exact social security number just had their wisdom teeth removed ten minutes ago.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Across the beige vinyl waiting room, next to a large rectangular aquarium with green plants and orange fish, a woman in her forties with brown hair tied back and wearing blue dental scrubs steps out through a sliding door beneath a frosted glass partition. She holds an aluminum clipboard loaded with white paper forms in her hands. Walking over, she halts two feet away, gazes down at the paper, then pinches the bridge of her wire-rimmed reading glasses with one hand and slides them lower on her nose. Her eyes shift up to the lens, her forehead creasing, and (S1), a dry, measured female voice, says <d>[English] Did you know someone with this exact Social just finished surgery?</d> She turns the clipboard around and extends it forward, revealing a medical chart with identical personal details stamped in bold black ink across the header.\n\noverall_soundscape: Aquarium pump humming, water bubbling softly, vinyl floor squeaking under rubber clogs, paper rustling against aluminum.\n\nnon_diegetic_music: None.",
+          "episodeMs": 2470,
+          "moves": [
+            "Snatch the chart from her",
+            "Claim it is my twin"
+          ],
+          "choiceMs": 1395
+        },
+        {
+          "scene": "The pediatric dentist points to a colorful cartoon diagram of a molar while his assistant secures a heavy paper bib around your neck. He reaches into his drawer, pulls out a pair of rusted, heavy-duty industrial pliers instead of dental forceps, and wipes them on his lab coat.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The camera faces a brightly lit pediatric dental office with pastel green walls and a large poster of a grinning cartoon molar holding a toothbrush. A middle-aged male dentist wearing silver wire-rimmed glasses and a seafoam surgical scrub top points a finger at the poster's illustrated roots, while to the left, a dental assistant in purple scrubs reaches around to fasten a blue paper bib behind the camera's neck. (S1), a cheerful, high-pitched male voice, says <d>[English] We just need to pop this little guy right out!</d> The dental assistant tugs the paper bib tight and steps back into the corner, folding her hands. The dentist turns toward a low white cabinet, slides open the top stainless-steel drawer with a metallic rattle, and pulls out a pair of large, pitted, orange-rusted industrial fencing pliers. He rubs the rusty metal jaws back and forth against the front of his lab coat, flakes of rust falling onto the white fabric, then raises the heavy tool directly before the lens and smiles.\n\noverall_soundscape: Fluorescent light hum, crisp crinkling of paper bib being fastened, metallic slide and rattle of the drawer opening, abrasive rasp of rust scraping against starched cotton fabric.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1612,
+          "moves": [
+            "Kick the dental tray over",
+            "Demand to see his license"
+          ],
+          "choiceMs": 1085
+        },
+        {
+          "scene": "The sweet, slightly fruity scent of nitrous oxide fills your rubber nose mask while the dentist casually chats about his weekend golf game. Mid-sentence, the power cuts out completely, plunging the windowless operatory into pitch darkness just as a high-pitched drill starts whining somewhere near your chin.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking up from a reclined dental chair at a square fluorescent ceiling panel and a circular dental lamp beaming harsh white light downward. A middle-aged male dentist in light-blue scrubs, a surgical cap, and clear loupe glasses leans over from the right, holding an angled dental mirror near the mouth. (S1), a cheerful middle-aged male voice, says <d>[English] Sliced my drive straight into the bunker on nine, but—</d> The fluorescent light and circular lamp instantly snap off, along with the overhead hum. Red emergency backup LEDs instantly bathe the ceiling tiles in dim crimson light. The dentist's silhouette stands motionless against the ceiling as a handheld dental drill emits a loud, vibrating whine and rises into the lower edge of the red illumination, hovering inches below the chin.\n\noverall_soundscape: Low pneumatic hiss of gas through a nasal mask, dentist speaking, sudden electric pop followed by the hum cutting out, clicking relays, loud high-pitched mechanical dental drill whining at high RPM.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1869,
+          "moves": [
+            "Slap the drill away",
+            "Rip the gas mask off"
+          ],
+          "choiceMs": 2663
+        },
+        {
+          "scene": "The dental surgeon gently taps a small metallic mirror against your upper left canine while comparing it to a row of gleaming white ceramic crowns. His eyes widen behind his plastic face shield, and he murmurs that he has never seen an enamel structure made of solid gold before.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking up from a tilted dental chair at a bright circular overhead lamp and a dental surgeon in surgical scrubs, latex gloves, and a clear plastic face shield. His left gloved hand holds a row of gleaming white ceramic crowns on a plastic shade guide near the lens, while his right hand gently taps a small metallic dental mirror against the upper left canine tooth just out of frame. The surgeon freezes, his eyes widening behind the transparent plastic shield, and he leans in closer under the light. (S1), a quiet measured male voice, murmurs <d>[English] I've never seen an enamel structure made of solid gold.</d> He slowly lowers the shade guide, raises a sharp pointed metal explorer pick toward the lens, and brings its tip directly toward the tooth.\n\noverall_soundscape: High-frequency dental clinic hum, rhythmic metallic clicking against tooth enamel, latex gloves squeaking, muffled breath behind a surgical mask.\n\nnon_diegetic_music: None.",
+          "episodeMs": 2035,
+          "moves": [
+            "Bite down on the tool",
+            "Whisper an absurd price"
+          ],
+          "choiceMs": 2230
+        }
+      ],
+      "failures": []
+    },
+    {
+      "premise": "first day at hogwarts",
+      "scenes": [
+        "The Sorting Hat drops over your eyes into total darkness as the whisper of the Great Hall suddenly goes dead quiet. A raspy, puzzled voice mutters inside your head that it hasn't seen a mind like yours in over a thousand years.",
+        "A crowd of first-years gathers by the grand staircase just as the marble steps beneath you shudder and swing away from the landing into empty air. The portrait of a scowling medieval knight on the opposite wall gasps and points at a dark, scuttling shape clinging right under your heels.",
+        "The delicious scents of roast beef and pumpkin juice fill the Great Hall until the silver platter in front of you rattles violently. The roasted chicken leg right before your plate suddenly sprouts feathers and lets out an ear-piercing shriek.",
+        "An older prefect leads you down a chilly, torchlit corridor toward the common rooms before halting abruptly outside an unfamiliar, unmapped door. The brass knocker transforms into a living viper that snaps its jaws inches from your nose and speaks in Parseltongue.",
+        "You take a seat in the Potions dungeon while thick green vapor rolls off the neighboring cauldron, filling the damp air with the smell of burnt sulfur. Professor Snape sweeps toward your desk, slamming an ink-stained, leather-bound journal down in front of you with your own name already written across the cover."
+      ],
+      "expandMs": 2376,
+      "episodes": [
+        {
+          "scene": "The Sorting Hat drops over your eyes into total darkness as the whisper of the Great Hall suddenly goes dead quiet. A raspy, puzzled voice mutters inside your head that it hasn't seen a mind like yours in over a thousand years.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The Great Hall stretches ahead with four long, crowded dining tables beneath floating candles and an enchanted night sky, until Professor McGonagall lowers the frayed, weathered brown leather Sorting Hat downward, its wide brim sliding down to rest just above the nose, leaving only the stone floor and student robes visible below the ragged edge. The surrounding chatter and rustling fabric cut out instantly into total silence. Two hands in black school robes reach up from the bottom edge toward the brim. Above, the leather folds of the brim twitch and twist slightly, and (S1), an elderly raspy male voice, mutters softly right against the ear, <d>[English] A thousand years, yet never a mind like this.</d> The tip of the hat sharply jerks upward on its own.\n\noverall_soundscape: Abrupt transition from distant murmuring hall chatter to absolute dead silence, followed by the dry rustle of thick old leather and a close, raspy whispered voice.\n\nnon_diegetic_music: None.",
+          "episodeMs": 3519,
+          "moves": [
+            "Whisper Slytherin into the silence",
+            "Tear the hat off"
+          ],
+          "choiceMs": 1057
+        },
+        {
+          "scene": "A crowd of first-years gathers by the grand staircase just as the marble steps beneath you shudder and swing away from the landing into empty air. The portrait of a scowling medieval knight on the opposite wall gasps and points at a dark, scuttling shape clinging right under your heels.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Facing a crowd of wide-eyed first-year students in dark robes grouped on a stone landing, the heavy marble balustrade beneath two hands resting on the edge grinds as the entire staircase section jerks backward and swings out over a cavernous drop. The stone platform pulls away, opening a five-foot chasm of empty air. The hands grip the cold, carved stone railing tightly. Across the gap, an oil portrait of a scowling medieval knight in plate armor suddenly blinks, widens its eyes, and leans forward against the inner frame, pointing a gauntleted finger down toward the bottom of the view as (S1), a raspy metallic male voice from the canvas, says <d>[English] Beneath your boots! Shake the cursed thing loose!</d> The gaze tilts straight down past black leather shoes jutting over the stone lip, where a multi-jointed, chitinous black limb bristles with spines, hooking its curved claw around the back edge of the right heel.\n\noverall_soundscape: Grinding stone-on-stone friction, distant murmurs and sharp gasps of a crowd, a faint echoing clatter of armor, and the dry, chittering scrape of claws on stone.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1862,
+          "moves": [
+            "Stomp the clawed limb",
+            "Toss your shoe over"
+          ],
+          "choiceMs": 717
+        },
+        {
+          "scene": "The delicious scents of roast beef and pumpkin juice fill the Great Hall until the silver platter in front of you rattles violently. The roasted chicken leg right before your plate suddenly sprouts feathers and lets out an ear-piercing shriek.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Across the long wooden banquet table lined with golden goblets and heaped platters of roasted meats, floating candles drift under a vaulted stone ceiling. A silver platter directly in front of the viewer begins to shudder, its carved rim vibrating against the polished wood table. A boy seated across the table in a black school robe drops his fork, staring down with wide eyes. On the silver platter, a crisp golden-brown chicken leg twitches, stiff dark feathers rapidly bursting through its cooked skin in quick snaps. The meat contorts upward, snapping open an elongated yellow beak that points directly at the lens.\n\noverall_soundscape: Ambient chatter of a crowded hall, clinking cutlery, sudden metallic rattling of a silver platter, rustling feather quills bursting open, and a rising sharp avian shriek.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1482,
+          "moves": [
+            "Trap it under a goblet",
+            "Feed it a bread roll"
+          ],
+          "choiceMs": 1482
+        },
+        {
+          "scene": "An older prefect leads you down a chilly, torchlit corridor toward the common rooms before halting abruptly outside an unfamiliar, unmapped door. The brass knocker transforms into a living viper that snaps its jaws inches from your nose and speaks in Parseltongue.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Following behind a tall boy in black school robes with a silver-and-green prefect badge pinned to his chest, walking down a damp flagstone corridor lined with flickering wall torches. The prefect stops short before an archway containing a heavy oak door bound in blackened iron, holding out a hand to halt forward motion. He turns slightly to look back, and (S1), an older teenage male voice with an upper-class British accent, says <d>[English] Wait here. This wasn't on the floor plan.</d> Stepping closer to inspect the heavy door, a tarnished brass knocker shaped like an ouroboros begins to writhe against the wood. The metal turns glossy green, the looped body uncoiling into a live pit viper that rears back, flaring its hood. The serpent lunges directly toward the camera, fangs bared, stopping inches away with a violent hiss that morphs into sharp, sibilant syllables, and (S2), a raspy, dual-toned reptilian voice, says <d>[Parseltongue] Ssspeak the blood-right or feed the stone.</d>\n\noverall_soundscape: Footsteps echoing on cold stone, the steady crackle and spit of pitch torches, a sudden sharp metallic scrape turning into wet scales sliding against oak, followed by a wet, aggressive hiss and sibilant whispering.\n\nnon_diegetic_music: None.",
+          "episodeMs": 2001,
+          "moves": [
+            "Hiss back at the snake",
+            "Push the prefect forward"
+          ],
+          "choiceMs": 616
+        },
+        {
+          "scene": "You take a seat in the Potions dungeon while thick green vapor rolls off the neighboring cauldron, filling the damp air with the smell of burnt sulfur. Professor Snape sweeps toward your desk, slamming an ink-stained, leather-bound journal down in front of you with your own name already written across the cover.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The view lowers into a wooden stool at a scuffed stone workstation in a dimly lit dungeon, stone walls lined with specimen jars illuminated by flickering torches. To the left, thick neon-green vapor billows from an iron cauldron, creeping across the damp tabletop with a faint hissing sound. Black robes billow into view as Severus Snape, pale with greasy shoulder-length black hair and a hooked nose, strides forward between the benches, his dark eyes fixed on the camera. With a sudden motion of his right hand, he slams a thick, ink-stained, leather-bound journal onto the desk directly between the viewer's hands, resting flat against the stone. Embossed in gold leaf across the dark leather cover is the viewer's full name, glistening under the torchlight as Snape leans down, his sallow face filling the frame, his lips parting without a sound.\n\noverall_soundscape: Cauldron bubbling and hissing green vapor, crackling torch flames, rushing fabric of heavy robes, the loud thud of a heavy leather book hitting a stone slab, low ambient dungeon hum.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1554,
+          "moves": [
+            "Flip open the journal",
+            "Ask if he read it"
+          ],
+          "choiceMs": 1360
+        }
+      ],
+      "failures": []
+    },
+    {
+      "premise": "my roommate is a ghost",
+      "scenes": [
+        "The cereal boxes are neatly arranged by color on the kitchen counter while a transparent Victorian boy floats mid-air, aggressively scrubbing a skillet without water. He turns his pale, glowing face toward you and silently holds up an eviction notice dated 1894 with your name freshly written in ectoplasm.",
+        "Steam fills the bathroom as a translucent, glowing silhouette hums a pop tune while organizing your skincare products into an elaborate pentagram on the bathmat. The ghost drifts straight through the locked shower curtain and points an icy, translucent finger accusingly at the empty toilet paper roll.",
+        "The television remote hovers six inches above the sofa cushions, rapidly cycling through channels until it lands on a static-filled live broadcast of your own apartment from five minutes in the future. A faint, shimmering hand emerges directly from the back of the couch and drops a cold brass key into your open palm.",
+        "Frost creeps across the dining table as an invisible hand uses a glowing quill to calculate the monthly utility expenses on a piece of parchment. The ghostly woman across from you suddenly materializes, pushing a small pile of authentic seventeenth-century Spanish doubloons toward you with an expectant smile.",
+        "Your new date sits on the living room sofa, completely oblivious to the colonial specter hovering upside down directly behind their head and making exaggerated gagging faces. The room's temperature plunges to freezing just as the ghost slips two icy fingers into your date’s untouched wine glass to fish out an ice cube."
+      ],
+      "expandMs": 11618,
+      "episodes": [
+        {
+          "scene": "The cereal boxes are neatly arranged by color on the kitchen counter while a transparent Victorian boy floats mid-air, aggressively scrubbing a skillet without water. He turns his pale, glowing face toward you and silently holds up an eviction notice dated 1894 with your name freshly written in ectoplasm.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Across a kitchen counter, a rainbow gradient of cereal boxes stands in a straight line, shifting from red to purple. Two feet above the linoleum floor, a translucent boy dressed in an 1890s knickerbocker suit and suspenders hovers horizontally, his pale hands furiously rubbing a dry steel sponge against an iron skillet. His head turns slowly toward the center of the frame, his glowing, hollow eyes fixed forward as his scrubbing stops. His right hand lowers the pan and reaches into his vest, pulling out a yellowed, ragged piece of parchment. He extends it outward at arm's length, displaying printed header text reading \"NOTICE OF EVICTION - OCTOBER 12, 1894.\" In the blank tenant line below, neon-green, sizzling ectoplasm bubbles upward, spelling out fresh letters that begin to drip off the bottom of the page.\n\noverall_soundscape: Low metallic scraping of a dry scouring pad against cast iron, a high-pitched electrical hum, bubbling liquid hissing softly, and a faint clock ticking in the background.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1878,
+          "moves": [
+            "Snatch the burning eviction notice",
+            "Ask how much rent costs"
+          ],
+          "choiceMs": 844
+        },
+        {
+          "scene": "Steam fills the bathroom as a translucent, glowing silhouette hums a pop tune while organizing your skincare products into an elaborate pentagram on the bathmat. The ghost drifts straight through the locked shower curtain and points an icy, translucent finger accusingly at the empty toilet paper roll.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Through swirling warm steam inside a glass shower, a glowing, translucent silhouette floats beside the vanity outside, softly humming an upbeat pop tune while arranging small bottles of skincare serum into a geometric pentagram on the dark bathmat. The frosted sliding shower door stays shut, but the glowing vaporous figure drifts effortlessly straight through the glass panel into the shower stall. A thin, luminous female face resolves in the mist, floating inches away, her pale eyes narrowing as she extends an icy, translucent index finger, pointing directly down toward the empty cardboard toilet paper roll mounted beside the outer frame.\n\noverall_soundscape: Steady hissing spray of hot water against tile, muffled feminine melodic humming, a soft ethereal crystalline chime, and low ambient room resonance.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1580,
+          "moves": [
+            "Aim showerhead at her face",
+            "Promise to buy more paper"
+          ],
+          "choiceMs": 1556
+        },
+        {
+          "scene": "The television remote hovers six inches above the sofa cushions, rapidly cycling through channels until it lands on a static-filled live broadcast of your own apartment from five minutes in the future. A faint, shimmering hand emerges directly from the back of the couch and drops a cold brass key into your open palm.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. In a dimly lit living room, a black plastic television remote hovers suspended six inches above the grey fabric cushions of a sofa, rapidly clicking as television channels flick across a large wall-mounted screen. The screen settles on a live, static-streaked feed showing the exact same living room, where the front door hangs slightly ajar and shattered glass litters the rug. An open right hand reaches out into the lower frame, palm upward beneath the hovering remote. From the cushioned backrest of the sofa, a faint, translucent shimmering hand pushes out through the grey fabric, opens its fingers, and drops a tarnished brass skeleton key directly onto the open palm, the metal clicking against skin as the shimmering fingers instantly dissolve.\n\noverall_soundscape: Rapid rhythmic clicking of remote buttons, bursts of loud static and channel audio shifting quickly, hum of fluorescent electronics, metallic clink of a key hitting a hand.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1556,
+          "moves": [
+            "Snatch the hovering remote",
+            "Ask who broke the door"
+          ],
+          "choiceMs": 1430
+        },
+        {
+          "scene": "Frost creeps across the dining table as an invisible hand uses a glowing quill to calculate the monthly utility expenses on a piece of parchment. The ghostly woman across from you suddenly materializes, pushing a small pile of authentic seventeenth-century Spanish doubloons toward you with an expectant smile.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking across a dark oak dining table where thin white frost rapidly spreads over the wood grain. A glowing cyan quill hovers upright in the air, scratching rows of numbers beside handwritten lines like \"Gas & Electric\" on a sheet of curled yellow parchment. A misty silhouette opposite the table condenses into a translucent woman in a high-collared lace seventeenth-century gown, her skin pale and faintly luminous. She rests her pale fingers on a short stack of heavy, irregularly hammered gold Spanish doubloons and slides them across the frosty surface until they stop inches from the table edge. She tilts her head, her lips curling into a wide, expectant smile, and (S1), a breathy, resonant female voice echoing softly, says <d>[English] This should cover the heat for the coming winter, no?</d> As she speaks, the gold coins suddenly begin to glow red-hot, melting deep ruts into the frosted wood as steam bursts upward.\n\noverall_soundscape: Faint whistling drafts, the scratching of a quill on rough paper, soft clinking of heavy gold coins sliding across frosty wood, and a sharp hiss of melting ice and sizzling timber.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1741,
+          "moves": [
+            "Sweep the coins off",
+            "Ask what rent costs"
+          ],
+          "choiceMs": 933
+        },
+        {
+          "scene": "Your new date sits on the living room sofa, completely oblivious to the colonial specter hovering upside down directly behind their head and making exaggerated gagging faces. The room's temperature plunges to freezing just as the ghost slips two icy fingers into your date’s untouched wine glass to fish out an ice cube.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Sitting opposite a young woman in a green knit sweater on a grey fabric sofa, who smiles warmly while a pale, translucent man in an 18th-century powdered wig and ruffled cravat floats completely upside down directly behind her head, eyes bulging as he sticks his tongue out in exaggerated retching motions. A white mist plumes from her lips as the surrounding air chills instantly, frost rapidly feathering across the surface of the coffee table. She tilts her head slightly, (S1), a cheerful female voice, saying <d>[English] Is it suddenly really drafty in here, or just me?</d> Behind her shoulder, the floating colonial figure slowly reaches two shimmering, translucent fingers downward into the untouched glass of white wine resting on the side table, his frozen fingertips breaking the liquid's surface with a faint clink against an ice cube.\n\noverall_soundscape: Soft indoor room tone, a faint sudden icy draft whistling, a gentle clinking of glass as ice moves in wine.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1645,
+          "moves": [
+            "Slide her the wine glass",
+            "Point behind her right shoulder"
+          ],
+          "choiceMs": 719
+        }
+      ],
+      "failures": []
+    },
+    {
+      "premise": "blind date",
+      "scenes": [
+        "A smartly dressed woman sits across the candlelit booth, laughing softly as she slides a velvet ring box across the tablecloth toward you. She clicks it open to reveal an empty slot and whispers that you have twenty minutes to return what was inside.",
+        "The crowded coffee shop hums with indie music while a man in an oversized trench coat hastily slips into the chair opposite yours. He sets a ticking metal briefcase on the table between your mugs and asks if the agency told you the extraction code.",
+        "A woman holding two dessert menus sits down with an apologetic smile, brushing rain from her shoulders before looking up into your eyes. Her expression instantly freezes in absolute horror as she drops the menus and frantically reaches into her purse for pepper spray.",
+        "The dimly lit speakeasy is quiet except for the clinking glasses of the couple next to you, right until your date slides onto the barstool and eagerly introduces himself. Before you can react, an identical twin in matching clothes pushes past the bartender, slams his hands on the counter, and accuses the first man of stealing his identity.",
+        "An energetic woman with a bouquet of sunflowers slides into the park bench beside you, grinning as she announces she always brings a polygraph test to a first encounter. She clicks open a silver briefcase to reveal wires, suction cups, and a glowing digital monitor ready for your fingertips."
+      ],
+      "expandMs": 2426,
+      "episodes": [
+        {
+          "scene": "A smartly dressed woman sits across the candlelit booth, laughing softly as she slides a velvet ring box across the tablecloth toward you. She clicks it open to reveal an empty slot and whispers that you have twenty minutes to return what was inside.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Across a dark wooden restaurant booth illuminated by a single flickering candle, an elegant woman in a tailored black blazer and emerald silk blouse leans back, chuckling quietly. She pushes a small black velvet box across the white linen tablecloth until it rests directly in front of the camera. Her manicured fingers reach forward and flick the lid upward, snapping it open to reveal a vacant, molded indentation in the black satin interior. Leaning forward across the flame, her eyes steady on the lens, (S1), a smooth, quiet female voice, whispers <d>[English] You have twenty minutes to bring back what belongs inside.</d> Her right hand slides beneath the edge of the table, and the faint, rhythmic click of a mechanical timer begins beneath the wood.\n\noverall_soundscape: Soft jazz and murmuring patrons in the restaurant background, the muffled scrape of velvet across linen, the crisp plastic snap of the jewelry box lid, a candle flickering softly, and a ticking mechanical timer.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1735,
+          "moves": [
+            "Blow out the candle",
+            "Demand double your usual fee"
+          ],
+          "choiceMs": 1970
+        },
+        {
+          "scene": "The crowded coffee shop hums with indie music while a man in an oversized trench coat hastily slips into the chair opposite yours. He sets a ticking metal briefcase on the table between your mugs and asks if the agency told you the extraction code.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Across a low wooden table holding a white ceramic mug, a slender man in his thirties wearing an oversized beige trench coat pulls out a wooden chair and sits. The background is filled with patrons seated at small tables beneath hanging Edison bulbs. He sets a scuffed aluminum briefcase flat on the wood between the mugs. A steady, sharp ticking emanates from inside the case. The man leans forward, his dark eyes wide and fixed on the camera, hands resting flat on the metal latches. (S1), an urgent, raspy male voice, says <d>[English] Did the agency give you the extraction code yet?</d> His thumbs slide both latches outward, and the metal locks spring open with a loud snap.\n\noverall_soundscape: Acoustic guitar indie music from overhead speakers, low murmur of crowd chatter, chair legs scraping on floorboards, metallic clunk of briefcase on wood, rhythmic high-pitch mechanical ticking, sharp twin metallic snaps.\n\nnon_diegetic_music: None.",
+          "episodeMs": 2163,
+          "moves": [
+            "Slam the briefcase shut",
+            "Whisper a fake code"
+          ],
+          "choiceMs": 1280
+        },
+        {
+          "scene": "A woman holding two dessert menus sits down with an apologetic smile, brushing rain from her shoulders before looking up into your eyes. Her expression instantly freezes in absolute horror as she drops the menus and frantically reaches into her purse for pepper spray.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Across a small candlelit wooden table in a dimly lit restaurant, a woman in a damp trench coat holding two laminated dessert menus pulls out a chair and sits down with an apologetic smile. She shakes water droplets from her dark hair and brushes moisture from her shoulders, laughing breathlessly. As she looks directly up into the camera, her smile drops instantly, her jaw slackening and eyes widening in stark dread. Her hands jerk open, letting the dessert menus slide off the polished wood and fall to the floor with a dull thud. Leaning back hard into her seat, she violently unzips a black leather purse in her lap, her hand darting inside and reemerging gripping a black canister of pepper spray, her thumb flicking back the safety catch.\n\noverall_soundscape: Murmur of restaurant conversation, clinking silverware, a muffled thud of laminated menus hitting carpet, sharp scrape of a purse zipper, and quick, ragged breathing.\n\nnon_diegetic_music: None.",
+          "episodeMs": 4298,
+          "moves": [
+            "Flip the table forward",
+            "Beg her to stop"
+          ],
+          "choiceMs": 1835
+        },
+        {
+          "scene": "The dimly lit speakeasy is quiet except for the clinking glasses of the couple next to you, right until your date slides onto the barstool and eagerly introduces himself. Before you can react, an identical twin in matching clothes pushes past the bartender, slams his hands on the counter, and accuses the first man of stealing his identity.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Across a dark mahogany bar counter lined with amber bottles, a man in a navy wool blazer and white collared shirt slides onto the adjacent leather barstool, smiling directly into the lens, extending his right hand, as (S1), an eager mid-toned male voice, says <d>[English] Hi, I'm Julian, it's so great to meet—</d>. Footsteps rush from the service door behind the counter, and a second man with the exact same face, hair, and navy wool blazer shoves past a startled bartender in a vest, lunges forward, and slams both palms flat onto the counter, glaring at the seated man as (S2), a sharp identical male voice, yells <d>[English] Don't listen to him, he stole my entire life!</d>. Both men lock eyes with each other, their faces inches apart, chests heaving.\n\noverall_soundscape: Dim ambient room tone, soft jazz playing distantly, clinking glassware, the thud of heavy shoes, the sharp slap of palms against varnished wood.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1568,
+          "moves": [
+            "Shake the seated man's hand",
+            "Slide a drink between them"
+          ],
+          "choiceMs": 619
+        },
+        {
+          "scene": "An energetic woman with a bouquet of sunflowers slides into the park bench beside you, grinning as she announces she always brings a polygraph test to a first encounter. She clicks open a silver briefcase to reveal wires, suction cups, and a glowing digital monitor ready for your fingertips.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. On a green wooden park bench, an energetic woman in her late twenties with curly brown hair slides into the seat, holding a bright bouquet of yellow sunflowers in one arm and a sleek aluminum briefcase in the other. She turns directly to the camera, beams widely, and (S1), an upbeat, bright female voice, says <d>[English] I always bring a polygraph test to a first encounter.</d> She sets the sunflowers between herself and the camera, lays the briefcase flat across her knees, and pops both latches with sharp metal clicks. She lifts the lid toward the camera, revealing coiled black wires, rubber suction cups, and an illuminated blue digital monitor displaying fluctuating green baseline waves, beside a foam cutout holding two silver fingertip clamps. She looks up, eyes fixed on the camera, and holds out one of the open clamps directly toward the lens.\n\noverall_soundscape: Park ambiance with distant rustling leaves, birds chirping, wood creaking on the bench, metallic snapping of latches, faint high-pitched electrical hum from the digital monitor.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1860,
+          "moves": [
+            "Snap the briefcase lid shut",
+            "Clip it onto her finger"
+          ],
+          "choiceMs": 749
+        }
+      ],
+      "failures": []
+    },
+    {
+      "premise": "airport security",
+      "scenes": [
+        "The metal detector screeches with a shrill, pulsing alarm the second you take a step through the frame. Two armed TSA agents instantly drop their hands to their holsters and look you dead in the eye.",
+        "Gray plastic bins are rattling down the conveyor belt while passengers grumble about taking their shoes off. An agent slides your carry-on off the rollers, unzips the front pocket, and pulls out an ornate, antique human skull.",
+        "The backscatter X-ray machine hums to a halt, trapping you inside the glass cylinder while the yellow scan lines flash erratically on the screen. Outside the booth, the monitor turns bright red with a flashing biohazard warning symbol, and the operator runs out of the room.",
+        "A sniffer beagle trots past a dozen nervous travelers before coming to a dead stop and planting its paws firmly on your shoes. The handler crouches down, looks at the dog's rigid posture, and mutters into his shoulder radio that they have a code black.",
+        "You reach for your gray bin at the end of the belt, only to find the entire line behind you has frozen in silence. The agent holding the wand points toward your open duffel bag, where a faint, mechanical ticking sound is growing steadily louder."
+      ],
+      "expandMs": 2423,
+      "episodes": [
+        {
+          "scene": "The metal detector screeches with a shrill, pulsing alarm the second you take a step through the frame. Two armed TSA agents instantly drop their hands to their holsters and look you dead in the eye.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The camera steps forward through the gray archway of an airport security metal detector. A high-pitched, pulsing alarm shrieks from the top of the frame, and red LED strips along both interior sides flash rhythmically. Directly ahead, two TSA officers in blue uniform shirts and black tactical vests stiffen; their hands snap downward onto the holstered sidearms at their belts. The officer on the left, a tall man with a buzz cut and a square jaw, fixes his stare on the lens, his thumb unsnapping the holster strap, and (S1), a sharp, commanding male voice, says <d>[English] Freeze right there! Do not move your hands!</d> The officer on the right takes a heavy step forward, unhooking a pair of handcuffs from his utility belt while keeping his other hand locked on his pistol grip.\n\noverall_soundscape: A piercing, rhythmic electronic screech from the metal detector, heavy boot soles squeaking on polished airport tile, the metallic snap of a holster button releasing, and the clinking jangle of steel handcuffs.\n\nnon_diegetic_music: None.",
+          "episodeMs": 2145,
+          "moves": [
+            "Shove the metal detector archway",
+            "Say your pacemaker is malfunctioning"
+          ],
+          "choiceMs": 844
+        },
+        {
+          "scene": "Gray plastic bins are rattling down the conveyor belt while passengers grumble about taking their shoes off. An agent slides your carry-on off the rollers, unzips the front pocket, and pulls out an ornate, antique human skull.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Gray plastic bins rattle and screech down metal rollers under fluorescent airport lights, surrounded by standing passengers unlacing shoes and shuffling forward. Directly ahead on an inspection counter, a male security officer with short dark hair in a crisp blue uniform, wearing blue nitrile gloves, slides a black wheeled carry-on bag off the rollers. He unzips the front pouch with a quick pull, reaches inside with both hands, and lifts out a polished, honey-colored human skull inlaid with intricate floral silver filigree across the brow. The officer freezes, holding the skull at chest level, and turns his gaze directly into the camera as an alarm begins to chime overhead.\n\noverall_soundscape: Rattling plastic bins, metallic scraping on roller conveyors, muffled crowd murmurs, a zipper opening, and a high-pitched security alarm chiming.\n\nnon_diegetic_music: None.",
+          "episodeMs": 3686,
+          "moves": [
+            "Hand him an export permit",
+            "Hit the conveyor emergency stop"
+          ],
+          "choiceMs": 2350
+        },
+        {
+          "scene": "The backscatter X-ray machine hums to a halt, trapping you inside the glass cylinder while the yellow scan lines flash erratically on the screen. Outside the booth, the monitor turns bright red with a flashing biohazard warning symbol, and the operator runs out of the room.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Inside a transparent, cylindrical airport full-body scanner, curved glass panels seal shut as the mechanical rotating arm suddenly stops mid-sweep. Both hands enter from the bottom of the frame and press firmly against the curved glass, pushing outward against the locked seam. Through the glass, an airport security desk sits five feet away; its wide monitor abruptly switches from a blue silhouette to solid crimson, displaying a blinking black biohazard symbol and large white text reading \"CONTAMINATION LOCKDOWN.\" A male TSA agent in a blue uniform leaps back from the desk, eyes wide as he looks directly at the glass cylinder, drops his tablet onto the floor, and sprints through an exit door labeled \"AUTHORIZED PERSONNEL ONLY,\" slamming it behind him. The internal yellow LED scanning lights along the cylinder's frame flicker rapidly, changing to a pulsing amber while an overhead magnetic lock clicks loudly into place.\n\noverall_soundscape: Deep electrical hum winding down abruptly, muffled squeak of palms against thick acrylic glass, sharp clatter of a plastic tablet hitting linoleum, rapid heavy footsteps receding, and a rhythmic, low-frequency security klaxon echoing from the hallway.\n\nnon_diegetic_music: None.",
+          "episodeMs": 4026,
+          "moves": [
+            "Smash the glass seam",
+            "Yell through the speaker vent"
+          ],
+          "choiceMs": 3623
+        },
+        {
+          "scene": "A sniffer beagle trots past a dozen nervous travelers before coming to a dead stop and planting its paws firmly on your shoes. The handler crouches down, looks at the dog's rigid posture, and mutters into his shoulder radio that they have a code black.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. In a brightly lit airport customs hall, a line of travelers stands between stanchions. A tri-color beagle wearing a green working vest trots along the queue, sniffing luggage and trouser cuffs. The beagle suddenly turns, walks forward, and plants both front paws directly onto the brown leather shoes visible at the bottom of the frame, going entirely rigid and staring upward. The handler, a uniformed officer in navy tactical gear with a badge and radio, follows the leash, crouches down beside the dog, and inspects its posture. He presses the microphone on his left shoulder, looks up directly into the camera, and (S1), a gruff firm male voice, says <d>[English] We got a code black at gate four, move in.</d> Heavy booted footsteps immediately approach from behind.\n\noverall_soundscape: Airport terminal hum, muffled PA announcements, claws clicking on polished linoleum, fabric rustling, radio static click, fast approaching heavy boot steps.\n\nnon_diegetic_music: None.",
+          "episodeMs": 2111,
+          "moves": [
+            "Kick the metal stanchion over",
+            "Blame it on airport jerky"
+          ],
+          "choiceMs": 3430
+        },
+        {
+          "scene": "You reach for your gray bin at the end of the belt, only to find the entire line behind you has frozen in silence. The agent holding the wand points toward your open duffel bag, where a faint, mechanical ticking sound is growing steadily louder.",
+          "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Two hands reach forward to touch the rim of a gray plastic bin resting at the end of metal conveyor rollers under buzzing fluorescent lights. A glance back reveals a line of travelers standing rigid and staring silently toward the security checkpoint. Turning back, a TSA agent in a blue uniform stiffens, holding a black metal-detector wand outstretched to point directly at an open canvas duffel bag inside the bin. The agent slowly unclips a radio from his shoulder, his eyes wide and fixed on the bag, where the inner zipper seam vibrates as a crisp metallic ticking abruptly speeds into a high-pitched whine.\n\noverall_soundscape: Fluorescent hum, faint airport background noise abruptly dropping off, sharp rapid metallic ticking accelerating into an electric whine, plastic scraping on metal rollers.\n\nnon_diegetic_music: None.",
+          "episodeMs": 1481,
+          "moves": [
+            "Shove the bin forward",
+            "Yell for everyone to run"
+          ],
+          "choiceMs": 1254
+        }
+      ],
+      "failures": []
+    }
+  ],
+  "expandFailures": []
+}

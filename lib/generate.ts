@@ -3,13 +3,13 @@ import { openrouter } from "@openrouter/ai-sdk-provider";
 import { generateText } from "ai";
 
 // Flash Lite writes the next episode, the call a viewer waits longest on.
-// Choices and roots get Gemini 3.7 Flash: it writes clearly better moves
+// Choices and roots get Gemini 3.8 Flash: it writes clearly better moves
 // for ~1.2s more, and roots run once per series. Each is overridable by
 // env for eval runs.
 export const FAST_MODEL_ID = "google/gemini-3.5-flash-lite";
-export const CHOICE_MODEL_ID = process.env.CHOICE_MODEL ?? "google/gemini-3.7-flash";
+export const CHOICE_MODEL_ID = process.env.CHOICE_MODEL ?? "google/gemini-3.8-flash";
 export const EPISODE_MODEL_ID = process.env.EPISODE_MODEL ?? FAST_MODEL_ID;
-export const ROOT_MODEL_ID = process.env.ROOT_MODEL ?? "google/gemini-3.7-flash";
+export const ROOT_MODEL_ID = process.env.ROOT_MODEL ?? "google/gemini-3.8-flash";
 export const ROOT_TEMPERATURE = Number(process.env.ROOT_TEMPERATURE ?? 1.5);
 // OpenRouter routes to the cheapest provider by default and only fails over
 // on errors, so a slow provider stalls the call. Sort by throughput instead.
