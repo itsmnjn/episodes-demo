@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* Tailwind v4 preflight leaves buttons on the arrow cursor. */
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
 :root {
   --ink: #09090b;
   --paper: #f3eee4;
