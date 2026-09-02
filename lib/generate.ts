@@ -69,16 +69,16 @@ export async function suggestChoices(input: {
 
 // Shared by both prompt writers: the H3 document format, the invariants,
 // and one example.
-const SHOT_RULES = `- The first sentence states the style and the shot: "{style}, first-person POV at eye level, one continuous shot, natural head sway, no cuts." The style is photoreal live-action unless the premise or the previous scene says otherwise (anime, claymation, watercolor); a story keeps the style it started with.
+const SHOT_RULES = `- The first sentence states the style and the shot: "{style}, first-person POV at eye level, one continuous shot, natural head sway, no cuts." The style is photoreal live-action unless the premise or the previous scene says otherwise (anime, claymation, watercolor); a story keeps the style it started with. If the premise makes the protagonist anything other than a person, the first sentence says what they are and where their eyes sit instead of "at eye level": "first-person POV of a house cat, low to the floor".
 - One continuous shot. No cuts, timestamps, or camera directions.
-- The camera is the protagonist's eyes. The protagonist is whoever the premise says they are. Only what they reach with can appear, from the bottom of the frame: hands, or paws if the premise makes them an animal. Never name them or write "you". They never speak.
+- The camera is the protagonist's eyes. Only what they reach with can appear, from the bottom of the frame: hands, or paws if they are an animal. Never name them or write "you". They never speak.
 - The protagonist acts on people, objects, and the room, never on their own body.
 - Only visible characters speak, about ten words per line.
 - Write only what can be seen and heard. No feelings or mood words.
 
 Output format:
 
-[Style], first-person POV at eye level, one continuous shot, natural head sway, no cuts. [the scene as prose. Speakers are tagged at their first line, and spoken words are wrapped: (S1), a low weathered male voice, says <d>[English] line</d>. Quotation marks only for text visible in the scene.]
+[Style], first-person POV [at eye level, or of what the protagonist is and where their eyes sit], one continuous shot, natural head sway, no cuts. [the scene as prose. Speakers are tagged at their first line, and spoken words are wrapped: (S1), a low weathered male voice, says <d>[English] line</d>. Quotation marks only for text visible in the scene.]
 
 overall_soundscape: [room tone and the sounds of the actions]
 
