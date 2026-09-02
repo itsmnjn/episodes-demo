@@ -251,7 +251,7 @@ export async function submitEpisodeJob(input: {
       prompt: input.prompt,
       image_url: input.imageUrl,
       duration: input.durationSeconds,
-      resolution: "768P",
+      resolution: "480P",
       prompt_expansion_mode: "disabled",
     },
   });
@@ -267,7 +267,7 @@ export async function submitRootJob(input: {
       prompt: input.prompt,
       aspect_ratio: "9:16",
       duration: input.durationSeconds,
-      resolution: "768P",
+      resolution: "480P",
       prompt_expansion_mode: "disabled",
     },
   });
