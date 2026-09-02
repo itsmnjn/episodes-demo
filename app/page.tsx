@@ -32,12 +32,12 @@ export default async function HomePage() {
             </Link>
           </p>
         ) : null}
-        <div className="flex gap-5 overflow-x-auto pb-4">
+        <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
           {cards.map((card) => (
             <Link
               key={card.id}
               href={`/watch/${card.id}`}
-              className="group w-[44vw] max-w-56 min-w-40 shrink-0 sm:w-52"
+              className="group"
             >
               <div className="relative aspect-[9/16] overflow-hidden rounded-sm bg-card shadow-[0_18px_50px_rgba(0,0,0,0.45)]">
                 {card.posterUrl ? (

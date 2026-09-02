@@ -24,7 +24,7 @@ The only hard lock across a series is first-person POV. When a concept uses popu
 
 Two.
 
-**Home.** Netflix-style row of series, newest first. Poster (the root's last frame), title, logline. A series whose root is still rendering says so on the card. Tap a poster and the player opens that series at episode `0`. No hover synopsis page. No "play" confirmation.
+**Home.** A grid of series, newest first. Poster (the root's last frame), title, logline. A series whose root is still rendering says so on the card. Tap a poster and the player opens that series at episode `0`. No hover synopsis page. No "play" confirmation.
 
 **Player.** Full-bleed 9:16. Sound on. Episode `0` starts immediately. While the clip plays, do not cover the picture with chrome. At the end, freeze on the last frame and fade the two branch labels onto it. Tap a label, the next clip starts. Same gesture every time.
 
