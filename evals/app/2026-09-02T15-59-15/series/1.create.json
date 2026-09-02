@@ -1,0 +1,12 @@
+{
+  "n": 1,
+  "premise": "laundromat",
+  "scenes": [
+    "The row of industrial dryers hums rhythmically under the buzzing fluorescent lights as a stray tabby cat weaves between the plastic laundry baskets. Through the round glass door of the machine you just loaded, a neon pink ski mask you definitely don't own begins to tumble against your wet jeans.",
+    "Soap suds leak across the cracked linoleum floor from an overloaded top-loader while a daytime soap opera blares from a tiny corner television. An elderly woman wearing two winter coats shuffles past, drops a heavy brass key wrapped in tin foil into your detergent cap, and winks.",
+    "The smell of scorched fabric and warm lavender softener fills the humid air around the stainless-steel folding tables. A giant front-loader suddenly shudders violently off its concrete mount, spewing black smoke before the locked glass door bursts open."
+  ],
+  "chosen": 0,
+  "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The gaze fixes on the round glass portal of a spinning industrial washing machine, where dark blue denim churns past alongside a bright neon-pink knitted ski mask with black-stitched eye holes. Below, a tabby cat brushes against a cracked plastic laundry basket resting on the linoleum floor. Two bare hands enter from the bottom of the frame, pressing flat against the warm, vibrating circular glass door of the machine. The hands suddenly shift upward, fingers curling around the heavy chrome handle, and pull back sharply, but the latch stays firmly locked with an audible mechanical click. Inside, the tumbling pink mask flattens against the glass, and from one of its cut-out eyeholes, a small silver flash drive slips out and slides across the wet interior window pane.\n\noverall_soundscape: Deep industrial motor hum, rhythmic sloshing of water and heavy denim hitting the drum, dull fluorescent light buzz, sharp mechanical click of a locked door latch, linoleum floor squeaks.\n\nnon_diegetic_music: None.",
+  "notes": "expander scene 1 puts a tabby cat in the laundromat and a ski mask in the drum; writer kept both, added a flash drive as the cliffhanger beat"
+}

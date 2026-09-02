@@ -1,0 +1,1 @@
+{"root":"minimax/h3-max-turbo/text-to-video","child":"minimax/h3-max-turbo/image-to-video","root_model":"google/gemini-3.8-flash","episode_model":"google/gemini-3.5-flash-lite","choice_model":"google/gemini-3.8-flash","title_model":"google/gemini-3.5-flash-lite"}

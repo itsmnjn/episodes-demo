@@ -1,0 +1,8 @@
+[
+  {"n": 1, "premise": "laundromat", "testing": "one word, no help"},
+  {"n": 2, "premise": "night shift at a gas station", "testing": "a setting and a time"},
+  {"n": 3, "premise": "i'm a house cat in a tokyo apartment", "testing": "non-human protagonist; premise fact must hold down the tree"},
+  {"n": 4, "premise": "claymation. a bakery at dawn, the baker is my grandmother", "testing": "style plus a relationship"},
+  {"n": 5, "premise": "a stranger at a bus stop hands me a ringing phone and says don't hang up", "testing": "cliffhanger written into the premise"},
+  {"n": 6, "premise": "The Sopranos. I'm the new waiter at Vesuvio, it's past midnight and the dining room is empty except the corner booth where Tony Soprano sits with Paulie Walnuts and Silvio Dante over espresso. Tony waves me over, slides a thick envelope across the tablecloth and says I never saw it. Then the kitchen doors bang open and Artie Bucco comes out holding a phone, white as a sheet.", "testing": "detailed paragraph, named IP, three named characters, a specified cliffhanger"}
+]

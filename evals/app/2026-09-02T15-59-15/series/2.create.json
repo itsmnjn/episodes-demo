@@ -1,0 +1,12 @@
+{
+  "n": 2,
+  "premise": "night shift at a gas station",
+  "scenes": [
+    "The fluorescent ceiling panels hum faintly over the register as a raccoon carefully nudges the automatic sliding doors open with its snout. It trots down the candy aisle, makes direct eye contact from behind a display rack, and sets a crumpled twenty-dollar bill on the floor.",
+    "Through the rain-streaked front window, a vintage muscle car pulls up to pump four with its headlights off and engine purring in the dark. The driver's door swings open into the empty night, revealing a duffel bag zip-tied shut on the front passenger seat and nobody behind the wheel.",
+    "The coffee maker in the corner finishes brewing with a loud hiss, sending steam billowing across the quiet, linoleum-tiled floor. An old man in a bright yellow raincoat steps up to the counter and sets down a dripping wet, antique nautical compass right on top of the scratch-off lottery tickets."
+  ],
+  "chosen": 0,
+  "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down aisle three of the brightly lit convenience store, where a raccoon sits beside a metal rack of chocolate bars, staring directly forward with a crumpled green twenty-dollar bill resting between its front paws. Moving past the laminate register counter, steps squeak on the linoleum floor toward the animal. Two hands enter from the bottom of the frame, bending down and reaching forward to pick up the folded cash. The raccoon remains motionless until fingers graze the bill, then it lifts one paw, points a clawed digit firmly toward the glass drink cooler at the far wall, and lets out a low, distinct chittering noise as the cooler door slowly unlatches itself from within.\n\noverall_soundscape: Fluorescent light hum, rubber soles squeaking on polished linoleum, crisp paper rustling, sharp animal chitter, metallic click of a cooler latch releasing.\n\nnon_diegetic_music: None.",
+  "notes": "writer skipped the scene's door-nudging entrance and starts with the raccoon already in the aisle; the protagonist reaches for the bill, which the scene ended before; cooler unlatching is a writer-added cliffhanger beat"
+}

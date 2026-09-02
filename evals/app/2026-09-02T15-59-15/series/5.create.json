@@ -1,0 +1,12 @@
+{
+  "n": 5,
+  "premise": "a stranger at a bus stop hands me a ringing phone and says don't hang up",
+  "scenes": [
+    "Cold rain drips from the plastic bus shelter roof while an elderly woman in a drenched trench coat thrusts a buzzing flip phone into your fingers. She whispers, \"Don't hang up,\" right as the bus headlights illuminate three identical black sedans screeching to a halt around the curb.",
+    "A teenager in an oversized clown costume stumbles into the glass booth, shoving a brightly colored smartphone against your chest with a breathless plea not to hang up. Through the receiver, a digitized voice clearly begins reciting the exact sequence of your home address and social security number.",
+    "At a completely deserted downtown transit stop at midnight, a shivering man in a torn business suit frantically forces a vibrating rotary-style receiver into your hands and mutters not to hang up. Before you can process the archaic device, he leaps directly in front of the oncoming night express bus."
+  ],
+  "chosen": 0,
+  "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Under the curved plexiglass of a rain-streaked bus shelter, an elderly woman with silver hair plastered to her forehead grips a scuffed, vibrating silver flip phone and presses it firmly into a right hand that rises from the bottom of the frame. (S1), an elderly woman with a raspy, trembling voice, leans close and says <d>[English] Don't hang up.</d> She pulls her hands back, turning her head toward the street as brilliant halogen headlights wash over the shelter. Three identical glossy black sedans skid diagonally across the wet asphalt, tires hissing against the downpour, boxing in the curb just feet away. Four car doors simultaneously pop open in the glare, and the woman bolts into the rain, leaving the phone vibrating continuously in the open palm.\n\noverall_soundscape: Rain pattering against a plastic roof, the steady electronic buzzing vibration of the flip phone, car tires screeching and splashing on wet pavement, idling V8 engines, car doors clicking open.\n\nnon_diegetic_music: None.",
+  "notes": "the premise's own cliffhanger (phone + 'don't hang up') survives in all three scenes, but the expander stacks a second cliffhanger on top of it every time (sedans, SSN read-out, man jumps in front of a bus). The writer rendered 'Don't hang up' as S1 dialogue with the correct tag format."
+}

@@ -1,0 +1,412 @@
+{
+  "series": [
+    {
+      "id": "washing-machine-door-stays-locked",
+      "title": "Washing Machine Door Stays Locked",
+      "premise": "laundromat",
+      "logline": "The row of industrial dryers hums rhythmically under the buzzing fluorescent lights as a stray tabby cat weaves between the plastic laundry baskets. Through the round glass door of the machine you just loaded, a neon pink ski mask you definitely don't own begins to tumble against your wet jeans.",
+      "createdAt": "2026-09-02T20:01:48.002Z"
+    },
+    {
+      "id": "raccoon-places-twenty-dollar-bill",
+      "title": "Raccoon Places Twenty Dollar Bill",
+      "premise": "night shift at a gas station",
+      "logline": "The fluorescent ceiling panels hum faintly over the register as a raccoon carefully nudges the automatic sliding doors open with its snout. It trots down the candy aisle, makes direct eye contact from behind a display rack, and sets a crumpled twenty-dollar bill on the floor.",
+      "createdAt": "2026-09-02T20:03:30.018Z"
+    },
+    {
+      "id": "pigeon-escapes-the-balcony-rail",
+      "title": "Pigeon Escapes the Balcony Rail",
+      "premise": "i'm a house cat in a tokyo apartment",
+      "logline": "The narrow balcony door has been left sliding open just three inches, revealing the dizzying drop to the neon-lit Shibuya streets fifteen stories below. Right on the outermost railing, a fat gray pigeon lands with its back turned completely toward the opening.",
+      "createdAt": "2026-09-02T20:05:25.612Z"
+    },
+    {
+      "id": "croissant-leaps-from-the-tray",
+      "title": "Croissant Leaps From The Tray",
+      "premise": "claymation. a bakery at dawn, the baker is my grandmother",
+      "logline": "In a cozy claymation kitchen powdered with flour, grandmother pulls a tray of golden croissants from the oven with a warm, wrinkled smile. As she sets the hot tray right in front of you, one of the clay pastries suddenly blinks, wiggles its crescent tips, and lets out a tiny yawn.",
+      "createdAt": "2026-09-02T20:07:17.747Z"
+    },
+    {
+      "id": "elderly-woman-drops-phone",
+      "title": "Elderly Woman Drops Phone",
+      "premise": "a stranger at a bus stop hands me a ringing phone and says don't hang up",
+      "logline": "Cold rain drips from the plastic bus shelter roof while an elderly woman in a drenched trench coat thrusts a buzzing flip phone into your fingers. She whispers, \"Don't hang up,\" right as the bus headlights illuminate three identical black sedans screeching to a halt around the curb.",
+      "createdAt": "2026-09-02T20:08:51.988Z"
+    },
+    {
+      "id": "tony-grabs-the-envelope-back",
+      "title": "Tony Grabs the Envelope Back",
+      "premise": "The Sopranos. I'm the new waiter at Vesuvio, it's past midnight and the dining room is empty except the corner booth where Tony Soprano sits with Paulie Walnuts and Silvio Dante over espresso. Tony waves me over, slides a thick envelope across the tablecloth and says I never saw it. Then the kitchen doors bang open and Artie Bucco comes out holding a phone, white as a sheet.",
+      "logline": "The heavy aroma of marinara and espresso hangs over the deserted tables as Tony Soprano slides the fat envelope across the linen to me, Paulie and Silvio watching in dead silence while Tony rumbles that I never saw it. The kitchen doors bang open and Artie Bucco stumbles out clutching the restaurant phone, his face drained of color as he stammers that the feds are turning into the parking lot right now.",
+      "createdAt": "2026-09-02T20:20:03.844Z"
+    }
+  ],
+  "episodes": [
+    {
+      "seriesId": "washing-machine-door-stays-locked",
+      "id": "0",
+      "parentId": null,
+      "label": null,
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The gaze fixes on the round glass portal of a spinning industrial washing machine, where dark blue denim churns past alongside a bright neon-pink knitted ski mask with black-stitched eye holes. Below, a tabby cat brushes against a cracked plastic laundry basket resting on the linoleum floor. Two bare hands enter from the bottom of the frame, pressing flat against the warm, vibrating circular glass door of the machine. The hands suddenly shift upward, fingers curling around the heavy chrome handle, and pull back sharply, but the latch stays firmly locked with an audible mechanical click. Inside, the tumbling pink mask flattens against the glass, and from one of its cut-out eyeholes, a small silver flash drive slips out and slides across the wet interior window pane.\n\noverall_soundscape: Deep industrial motor hum, rhythmic sloshing of water and heavy denim hitting the drum, dull fluorescent light buzz, sharp mechanical click of a locked door latch, linoleum floor squeaks.\n\nnon_diegetic_music: None.",
+      "status": "ready",
+      "requestId": "01a063b6-9d5c-7c31-a7f8-b42b83ef590d",
+      "videoUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/washing-machine-door-stays-locked/0.mp4",
+      "lastFrameUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/washing-machine-door-stays-locked/0.last.jpg",
+      "choices": [
+        "Hit the red emergency stop",
+        "Pry the handle with keys"
+      ],
+      "error": null,
+      "createdAt": "2026-09-02T20:01:48.033Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/washing-machine-door-stays-locked/0.mp4",
+      "clipSource": "blob",
+      "falMeta": null,
+      "falClipUrl": null
+    },
+    {
+      "seriesId": "raccoon-places-twenty-dollar-bill",
+      "id": "0",
+      "parentId": null,
+      "label": null,
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down aisle three of the brightly lit convenience store, where a raccoon sits beside a metal rack of chocolate bars, staring directly forward with a crumpled green twenty-dollar bill resting between its front paws. Moving past the laminate register counter, steps squeak on the linoleum floor toward the animal. Two hands enter from the bottom of the frame, bending down and reaching forward to pick up the folded cash. The raccoon remains motionless until fingers graze the bill, then it lifts one paw, points a clawed digit firmly toward the glass drink cooler at the far wall, and lets out a low, distinct chittering noise as the cooler door slowly unlatches itself from within.\n\noverall_soundscape: Fluorescent light hum, rubber soles squeaking on polished linoleum, crisp paper rustling, sharp animal chitter, metallic click of a cooler latch releasing.\n\nnon_diegetic_music: None.",
+      "status": "ready",
+      "requestId": "01a063b8-2bcd-7432-836e-f952c29b7d07",
+      "videoUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/raccoon-places-twenty-dollar-bill/0.mp4",
+      "lastFrameUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/raccoon-places-twenty-dollar-bill/0.last.jpg",
+      "choices": [
+        "Pocket the twenty-dollar bill",
+        "Ask what drink it wants"
+      ],
+      "error": null,
+      "createdAt": "2026-09-02T20:03:30.046Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/raccoon-places-twenty-dollar-bill/0.mp4",
+      "clipSource": "blob",
+      "falMeta": null,
+      "falClipUrl": null
+    },
+    {
+      "seriesId": "washing-machine-door-stays-locked",
+      "id": "0a",
+      "parentId": "0",
+      "label": "Hit the red emergency stop",
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The gaze locks on the round glass portal where the neon-pink ski mask rests over dark denim, with a small silver flash drive wedged against the bottom edge of the wet glass. Two bare hands enter from the bottom of the frame, thrusting upward to violently slap a large red circular emergency stop button mounted on the console above the door. The deep industrial motor hum instantly pitches down into a grinding mechanical whine, and the spinning drum abruptly halts with a heavy metallic clunk. A heavy-set man in a gray hoodie steps into the left side of the frame, staring wide-eyed at the window, and (S1), a raspy male voice, says <d>[English] Don't touch that, it's federal evidence.</d> His gloved hand reaches across the chrome rim, fingers snapping down to grab the flash drive from the glass just as a sharp alarm klaxon begins to wail overhead.\n\noverall_soundscape: Deep industrial motor whining down to a sudden stop, metallic clunk, fluorescent light buzz, sharp electronic alarm klaxon wailing, heavy fabric shifting.\n\nnon_diegetic_music: None.",
+      "status": "ready",
+      "requestId": "01a063b9-8b07-7c11-96e1-529481b6e32b",
+      "videoUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/washing-machine-door-stays-locked/0a.mp4",
+      "lastFrameUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/washing-machine-door-stays-locked/0a.last.jpg",
+      "choices": [
+        "Smack his hand away",
+        "Demand to see his badge"
+      ],
+      "error": null,
+      "createdAt": "2026-09-02T20:04:59.311Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/washing-machine-door-stays-locked/0a.mp4",
+      "clipSource": "blob",
+      "falMeta": null,
+      "falClipUrl": null
+    },
+    {
+      "seriesId": "pigeon-escapes-the-balcony-rail",
+      "id": "0",
+      "parentId": null,
+      "label": null,
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV of a house cat, low to the floor, one continuous shot, natural head sway, no cuts. The glass door stands ajar three inches, framing the neon blur of Shibuya far below and the gray back of a plump pigeon perched directly on the metal balcony railing outside. Two orange-furred paws press softly against the hardwood, creeping forward in absolute silence through the gap and onto the cool concrete balcony. The view rises as the front paws mount a plastic storage box below the railing, bringing the bird into close reach. Both hindquarters bunch up below the bottom of the frame, the gaze locking onto the pigeon's twitching tail feathers, and the front paws suddenly launch off the plastic lid straight toward the outer rail as the bird begins to spread its wings.\n\noverall_soundscape: Muffled city rumble, faint siren wailing far below, soft clicking of cat claws on smooth concrete, plastic lid creaking under weight, sudden fluttering of pigeon feathers.\n\nnon_diegetic_music: None.",
+      "status": "ready",
+      "requestId": "01a063b9-f002-7561-9712-a863081643fc",
+      "videoUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/pigeon-escapes-the-balcony-rail/0.mp4",
+      "lastFrameUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/pigeon-escapes-the-balcony-rail/0.last.jpg",
+      "choices": [
+        "Swat the pigeon's wing",
+        "Snag the metal railing"
+      ],
+      "error": null,
+      "createdAt": "2026-09-02T20:05:25.647Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/pigeon-escapes-the-balcony-rail/0.mp4",
+      "clipSource": "blob",
+      "falMeta": null,
+      "falClipUrl": null
+    },
+    {
+      "seriesId": "raccoon-places-twenty-dollar-bill",
+      "id": "0a",
+      "parentId": "0",
+      "label": "Pocket the twenty-dollar bill",
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Two hands pull the crumpled green twenty-dollar bill from the raccoon's paws, folding the paper in half and sliding it down into the front pocket of a blue polyester uniform shirt. The raccoon remains frozen on the linoleum floor, its snout still tilted upward toward the open glass door of the drink cooler. Inside the dark refrigerated unit, rows of plastic bottles shift violently against the metal wire shelves without any visible hand touching them. The raccoon slowly drops its pointing paw, turns its head ninety degrees, and stares directly into the lens with unblinking black eyes.\n\noverall_soundscape: Fluorescent light hum, crisp paper sliding against fabric, heavy plastic bottles rattling inside the refrigeration unit, faint scratching sound from the linoleum floor.\n\nnon_diegetic_music: None.",
+      "status": "ready",
+      "requestId": "01a063ba-3f80-7073-b50b-2c08067cfca4",
+      "videoUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/raccoon-places-twenty-dollar-bill/0a.mp4",
+      "lastFrameUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/raccoon-places-twenty-dollar-bill/0a.last.jpg",
+      "choices": [
+        "Slam the cooler door shut",
+        "Offer the twenty back"
+      ],
+      "error": null,
+      "createdAt": "2026-09-02T20:05:45.513Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/raccoon-places-twenty-dollar-bill/0a.mp4",
+      "clipSource": "blob",
+      "falMeta": null,
+      "falClipUrl": null
+    },
+    {
+      "seriesId": "washing-machine-door-stays-locked",
+      "id": "0aa",
+      "parentId": "0a",
+      "label": "Smack his hand away",
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The heavy-set man in the gray hoodie stands beside the washing machine, his gloved fingers reaching toward the silver flash drive wedged against the bottom edge of the wet glass. Two bare hands enter from the bottom of the frame, striking sharply against the gloved wrist with a hard slap that knocks the hand away from the chrome rim. The flash drive falls from the glass into the wet dark denim inside the drum. The man stumbles back against the folding counter, his eyes fixed on the glass, and (S1), a raspy male voice, says <d>[English] You just ruined the chain of custody completely.</d> A second pair of gloved hands reaches in from the right, grabbing the metal handle of the washing machine door and pulling it outward with a sharp click.\n\noverall_soundscape: Sharp electronic alarm klaxon wailing, echoing slap on fabric, plastic laundry basket shifting, heavy mechanical click of a door latch.\n\nnon_diegetic_music: None.",
+      "status": "ready",
+      "requestId": "01a063bb-2219-74f0-af9b-df4172c73022",
+      "videoUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/washing-machine-door-stays-locked/0aa.mp4",
+      "lastFrameUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/washing-machine-door-stays-locked/0aa.last.jpg",
+      "choices": [
+        "Slam the washer door shut",
+        "Offer to split the data"
+      ],
+      "error": null,
+      "createdAt": "2026-09-02T20:06:43.516Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/washing-machine-door-stays-locked/0aa.mp4",
+      "clipSource": "blob",
+      "falMeta": null,
+      "falClipUrl": null
+    },
+    {
+      "seriesId": "pigeon-escapes-the-balcony-rail",
+      "id": "0a",
+      "parentId": "0",
+      "label": "Swat the pigeon's wing",
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV of a house cat, low to the floor, one continuous shot, natural head sway, no cuts. An orange-furred paw reaches up from the bottom of the frame and slaps the gray pigeon's wing as it lifts off the black metal railing. The pigeon thrashes in mid-air, feathers scattering against the neon-lit Shibuya backdrop, while the view tips sideways off the plastic storage box toward the concrete floor. The hind claws scrabble against the smooth plastic lid, slipping off the edge as the entire body drops four feet down onto the balcony floor with a dull thud. A glass bottle of green tea stands two inches from the nose, vibrating against the concrete as a heavy boot steps onto the hardwood inside the open door frame. A hand in a gray sleeve reaches out across the threshold, its fingers curling open right in front of the lens.\n\noverall_soundscape: Loud fluttering of wings, sharp thud of claws on plastic, heavy metallic clunk, dull impact on concrete, rumbling city traffic, faint drone of a helicopter.\n\nnon_diegetic_music: None.",
+      "status": "ready",
+      "requestId": "01a063bb-482e-7d71-b5da-f1b7a9e0a60d",
+      "videoUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/pigeon-escapes-the-balcony-rail/0a.mp4",
+      "lastFrameUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/pigeon-escapes-the-balcony-rail/0a.last.jpg",
+      "choices": [
+        "Tip over the tea bottle",
+        "Bite the reaching fingers"
+      ],
+      "error": null,
+      "createdAt": "2026-09-02T20:06:53.268Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/pigeon-escapes-the-balcony-rail/0a.mp4",
+      "clipSource": "blob",
+      "falMeta": null,
+      "falClipUrl": null
+    },
+    {
+      "seriesId": "croissant-leaps-from-the-tray",
+      "id": "0",
+      "parentId": null,
+      "label": null,
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Claymation, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The flour-dusted wooden countertop stretches forward, holding a black metal baking sheet full of golden, bumpy clay croissants. Standing across the counter, grandmother, a clay figure with textured grey hair tied in a bun, wire-rimmed glasses, and a blue calico apron, beams warmly. In the center of the tray, one curved pastry opens two dark bead eyes, flexing its crescent ends like small arms and parting a seam along its flaky body with a squeaky peep. Grandmother's smile vanishes, her sculpted mouth dropping into a small round circle behind her glasses. A right hand sculpted from pale clay extends from the bottom of the frame toward the living pastry. The croissant snaps its doughy body upward, leaping off the tray directly toward the camera with tiny clay teeth bared inside its split seam.\n\noverall_soundscape: Soft humming of an old oven cooling down, a tiny high-pitched pastry yawn and squeak, grandmother's sharp intake of breath, the metallic scrape of the baking tray, and a sudden wet clay slap as the pastry springs forward.\n\nnon_diegetic_music: None.",
+      "status": "ready",
+      "requestId": "01a063bb-a5ec-7700-8277-d8341b71bb9c",
+      "videoUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/croissant-leaps-from-the-tray/0.mp4",
+      "lastFrameUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/croissant-leaps-from-the-tray/0.last.jpg",
+      "choices": [
+        "Swat it with a spatula",
+        "Catch it in the towel"
+      ],
+      "error": null,
+      "createdAt": "2026-09-02T20:07:17.771Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/croissant-leaps-from-the-tray/0.mp4",
+      "clipSource": "blob",
+      "falMeta": null,
+      "falClipUrl": null
+    },
+    {
+      "seriesId": "raccoon-places-twenty-dollar-bill",
+      "id": "0aa",
+      "parentId": "0a",
+      "label": "Slam the cooler door shut",
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. A right hand enters from the bottom of the frame, grabbing the edge of the open glass cooler door and swinging it hard to the left. The heavy glass frame strikes the metal casing with a deafening crash, sealing the unit shut. The bottles inside immediately stop rattling, leaving only absolute silence except for the hum of the fluorescent lights. The raccoon does not blink, its dark wet nose twitching once before it turns its head completely upside down between its front paws, staring up through its own legs into the lens. A low, rhythmic scratching sound begins directly underneath the metal floor panel below the cooler.\n\noverall_soundscape: Fluorescent light hum, heavy glass door slamming shut against metal frame, sharp metallic rattle, low scratching sound vibrating from the floor.\n\nnon_diegetic_music: None.",
+      "status": "ready",
+      "requestId": "01a063bc-5861-7d30-9bc5-82f7a08f387f",
+      "videoUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/raccoon-places-twenty-dollar-bill/0aa.mp4",
+      "lastFrameUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/raccoon-places-twenty-dollar-bill/0aa.last.jpg",
+      "choices": [
+        "Stomp on the floor panel",
+        "Ask what is down there"
+      ],
+      "error": null,
+      "createdAt": "2026-09-02T20:08:02.949Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/raccoon-places-twenty-dollar-bill/0aa.mp4",
+      "clipSource": "blob",
+      "falMeta": null,
+      "falClipUrl": null
+    },
+    {
+      "seriesId": "elderly-woman-drops-phone",
+      "id": "0",
+      "parentId": null,
+      "label": null,
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Under the curved plexiglass of a rain-streaked bus shelter, an elderly woman with silver hair plastered to her forehead grips a scuffed, vibrating silver flip phone and presses it firmly into a right hand that rises from the bottom of the frame. (S1), an elderly woman with a raspy, trembling voice, leans close and says <d>[English] Don't hang up.</d> She pulls her hands back, turning her head toward the street as brilliant halogen headlights wash over the shelter. Three identical glossy black sedans skid diagonally across the wet asphalt, tires hissing against the downpour, boxing in the curb just feet away. Four car doors simultaneously pop open in the glare, and the woman bolts into the rain, leaving the phone vibrating continuously in the open palm.\n\noverall_soundscape: Rain pattering against a plastic roof, the steady electronic buzzing vibration of the flip phone, car tires screeching and splashing on wet pavement, idling V8 engines, car doors clicking open.\n\nnon_diegetic_music: None.",
+      "status": "ready",
+      "requestId": "01a063bd-162f-78d2-a9f9-e5c575e2a63b",
+      "videoUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/elderly-woman-drops-phone/0.mp4",
+      "lastFrameUrl": "https://b5qrmrlthf0bwtb8.public.blob.vercel-storage.com/series/elderly-woman-drops-phone/0.last.jpg",
+      "choices": [
+        "Answer the ringing flip phone",
+        "Fling the phone into the street"
+      ],
+      "error": null,
+      "createdAt": "2026-09-02T20:08:52.012Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/elderly-woman-drops-phone/0.mp4",
+      "clipSource": "blob",
+      "falMeta": null,
+      "falClipUrl": null
+    },
+    {
+      "seriesId": "pigeon-escapes-the-balcony-rail",
+      "id": "0aa",
+      "parentId": "0a",
+      "label": "Tip over the tea bottle",
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV of a house cat, low to the floor, one continuous shot, natural head sway, no cuts. An orange-furred paw reaches up from the bottom of the frame and strikes the side of the green plastic bottle, sending it rolling across the concrete balcony floor with a sharp clatter. The bright yellow-green liquid sloshes violently against the clear plastic walls. The hand in the gray sleeve pulls backward across the wooden threshold, and the black leather shoe shifts on the floorboards. (S1), a young male voice, says <d>[Japanese] Hey, what are you doing out here?</d> The metal sliding door begins to glide along its tracks toward the frame, narrowing the gap of daylight as it slides shut.\n\noverall_soundscape: Sharp plastic clatter of the rolling bottle, sloshing liquid, fabric friction against the door frame, heavy slide of a metal door, distant street traffic.\n\nnon_diegetic_music: None.",
+      "status": "generating",
+      "requestId": "01a063bd-6a5e-7442-9765-330c40a54a58",
+      "videoUrl": null,
+      "lastFrameUrl": null,
+      "choices": null,
+      "error": null,
+      "createdAt": "2026-09-02T20:09:13.091Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/pigeon-escapes-the-balcony-rail/0aa.mp4",
+      "clipSource": "fal",
+      "falMeta": {
+        "expanded_prompt": null,
+        "timings": {
+          "inference": 4.496410249033943
+        }
+      },
+      "falClipUrl": "https://v3b.fal.media/files/b/0aa8d9d7/Ll4E1bou8a6jt2bg7RyGk_minimax-h3.mp4"
+    },
+    {
+      "seriesId": "croissant-leaps-from-the-tray",
+      "id": "0a",
+      "parentId": "0",
+      "label": "Swat it with a spatula",
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Claymation, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The living croissant lunges forward with bared white clay teeth, its brown bead eyes locked on the lens. A pale clay right hand enters from the bottom of the frame, gripping a wooden spatula by the handle and swinging it sideways across the counter. The broad flat blade strikes the side of the pastry with a sharp wooden thwack, sending it spinning through the air and crashing into a flour bin. Grandmother gasps, her sculpted hands flying to her wire-rimmed glasses, and (S1), a crackling elderly female voice, says <d>[English] Heavens above, the whole batch is waking up!</d> Across the wooden countertop, the remaining golden croissants on the black metal baking sheet all at once snap open dark bead eyes and part their flaky seams.\n\noverall_soundscape: A high-pitched aggressive pastry growl, the loud wooden thwack of the spatula strike, a heavy clay clatter against the flour bin, and a chorus of tiny metallic squeaks.\n\nnon_diegetic_music: None.",
+      "status": "generating",
+      "requestId": "01a063be-2b9b-7c82-8b29-ebceb8868070",
+      "videoUrl": null,
+      "lastFrameUrl": null,
+      "choices": null,
+      "error": null,
+      "createdAt": "2026-09-02T20:10:02.566Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/croissant-leaps-from-the-tray/0a.mp4",
+      "clipSource": "fal",
+      "falMeta": {
+        "expanded_prompt": null,
+        "timings": {
+          "inference": 4.4509236049998435
+        }
+      },
+      "falClipUrl": "https://v3b.fal.media/files/b/0aa8d9dc/YqsczZRNNQPbN3XoBfSz3_minimax-h3.mp4"
+    },
+    {
+      "seriesId": "washing-machine-door-stays-locked",
+      "id": "0ab",
+      "parentId": "0a",
+      "label": "Ask him who sent the mask",
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. The heavy-set man in the gray hoodie freezes, his gloved fingers hovering over the glass rim. He slowly turns his head away from the neon-pink ski mask, his jaw tightening as he glares toward the lens. (S1), a raspy male voice, says <d>[English] Nobody sent it. I found it spinning in the drum.</d> He pulls his hand back from the washer door, his knuckles brushing the chrome rim. A bare right hand enters from the bottom of the frame, fingers pointing sharply at the glowing red emergency stop button above. The man's eyes dart to the hand, then snap back up to meet the gaze. A heavy metal clank echoes from the rear hallway as the fire door slams shut.\n\noverall_soundscape: Sharp electronic alarm klaxon wailing, fluorescent light buzz, heavy metal door slamming shut, fabric shifting.\n\nnon_diegetic_music: None.",
+      "status": "generating",
+      "requestId": "01a063bf-73fa-7a71-a755-bc4800f29639",
+      "videoUrl": null,
+      "lastFrameUrl": null,
+      "choices": null,
+      "error": null,
+      "createdAt": "2026-09-02T20:11:26.733Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/washing-machine-door-stays-locked/0ab.mp4",
+      "clipSource": "fal",
+      "falMeta": {
+        "expanded_prompt": null,
+        "timings": {
+          "inference": 4.225769408978522
+        }
+      },
+      "falClipUrl": "https://v3b.fal.media/files/b/0aa8d9e4/izPP7eBhB2O0Uv7ZGBrnE_minimax-h3.mp4"
+    },
+    {
+      "seriesId": "raccoon-places-twenty-dollar-bill",
+      "id": "0ab",
+      "parentId": "0a",
+      "label": "Ask the raccoon its name",
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Looking down at the raccoon sitting upright on the linoleum floor with its unblinking black eyes locked onto the lens, its front paws pressed flat against the white tiles in front of the open drink cooler. The raccoon's lower jaw drops slightly, and (S1), a raspy, deep human voice originating from the small animal's open mouth, says <d>[English] People call me Barnaby.</d> The plastic water bottles inside the open refrigerator unit behind the raccoon suddenly stop rattling, and the heavy glass door slowly swings inward on its hinges toward the shelves.\n\noverall_soundscape: Fluorescent light hum, low mechanical refrigeration rattle stopping abruptly, metal hinges squeaking softly, a gravelly voice speaking close to the floor.\n\nnon_diegetic_music: None.",
+      "status": "generating",
+      "requestId": "01a063bf-d061-7422-b7a3-4cf680ab2401",
+      "videoUrl": null,
+      "lastFrameUrl": null,
+      "choices": null,
+      "error": null,
+      "createdAt": "2026-09-02T20:11:50.285Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/raccoon-places-twenty-dollar-bill/0ab.mp4",
+      "clipSource": "fal",
+      "falMeta": {
+        "expanded_prompt": null,
+        "timings": {
+          "inference": 4.502997253999638
+        }
+      },
+      "falClipUrl": "https://v3b.fal.media/files/b/0aa8d9e7/3Lo00z_IXjZ8R_677TbQ3_minimax-h3.mp4"
+    },
+    {
+      "seriesId": "elderly-woman-drops-phone",
+      "id": "0a",
+      "parentId": "0",
+      "label": "Answer the ringing flip phone",
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Under the curved plexiglass of a rain-streaked bus shelter, a scuffed silver flip phone vibrates in a right hand extended from the bottom of the frame. A thumb presses the metal hinge, snapping the clamshell open. Beyond the phone, four figures in black coats emerge from the idling sedans, striding fast toward the shelter through the sheeting downpour. The phone speaker emits a sharp, electronic clicking sound against the steady rain. A deep, gruff male voice comes from the tiny speaker, saying <d>[English] She gave you the device, didn't she?</d> The figures step beneath the shelter roof, surrounding the opening.\n\noverall_soundscape: Rain drumming on plastic and metal, rhythmic electronic phone vibration, boot heels splashing on wet concrete, idling car engines, heavy breathing close to the microphone.\n\nnon_diegetic_music: None.",
+      "status": "generating",
+      "requestId": "01a063c3-2d99-77c3-a33d-51ea28f852ae",
+      "videoUrl": null,
+      "lastFrameUrl": null,
+      "choices": null,
+      "error": null,
+      "createdAt": "2026-09-02T20:15:30.755Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/elderly-woman-drops-phone/0a.mp4",
+      "clipSource": "fal",
+      "falMeta": {
+        "expanded_prompt": null,
+        "timings": {
+          "inference": 4.2019986000377685
+        }
+      },
+      "falClipUrl": "https://v3b.fal.media/files/b/0aa8d9fd/7tjitgqjJhRbHyhWsWITt_minimax-h3.mp4"
+    },
+    {
+      "seriesId": "tony-grabs-the-envelope-back",
+      "id": "0",
+      "parentId": null,
+      "label": null,
+      "durationSeconds": 10,
+      "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV at eye level, one continuous shot, natural head sway, no cuts. Across the white tablecloth of the corner booth, Tony Soprano, a heavy-set man in a dark polo shirt, pushes a thick manila envelope across the linen with a cigar in his mouth, flanked by Paulie Walnuts in a track jacket and Silvio Dante in a tailored suit. Tony looks up into the camera, and (S1), a heavy, gravelly male voice, says <d>[English] You never saw this, kid. Take it.</d> Behind them, the double kitchen doors swing open with a loud thud, and Artie Bucco, a bald man in an apron, runs out holding a cordless phone to his ear, his eyes wide. Artie stops by the booth, looking directly into the camera, and (S2), a high-pitched, panicked male voice, says <d>[English] Tony, the feds just pulled into the lot!</d> Tony drops his cigar onto his saucer, his eyes darting to the envelope, and reaches across the table to grab the envelope back just as blue and red emergency lights begin strobing through the blinds on the dining room windows.\n\noverall_soundscape: Murmur of late-night HVAC, heavy thud of swinging kitchen doors, squeak of rubber soles on tile, clink of ceramic saucer, muffled distant sirens whining outside.\n\nnon_diegetic_music: None.",
+      "status": "generating",
+      "requestId": "01a063c7-5662-7553-affc-ae263037a620",
+      "videoUrl": null,
+      "lastFrameUrl": null,
+      "choices": null,
+      "error": null,
+      "createdAt": "2026-09-02T20:20:03.869Z",
+      "clipFile": "/Users/itsmnjn/Developer/Projects/episodes-demo/out/app-eval/2026-09-02T15-59-15/tony-grabs-the-envelope-back/0.mp4",
+      "clipSource": "fal",
+      "falMeta": {
+        "expanded_prompt": null,
+        "timings": {
+          "inference": 4.2734634630032815
+        }
+      },
+      "falClipUrl": "https://v3b.fal.media/files/b/0aa8da2e/FHjjrKihBp5FByEwTQU0Q_minimax-h3.mp4"
+    }
+  ]
+}

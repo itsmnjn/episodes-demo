@@ -1,0 +1,12 @@
+{
+  "n": 3,
+  "premise": "i'm a house cat in a tokyo apartment",
+  "scenes": [
+    "The narrow balcony door has been left sliding open just three inches, revealing the dizzying drop to the neon-lit Shibuya streets fifteen stories below. Right on the outermost railing, a fat gray pigeon lands with its back turned completely toward the opening.",
+    "Morning light filters through the paper shoji screens as a human hurries past in work clothes, accidentally dropping an open, freshly drained tin of expensive bonito flakes onto the tatami mat. From beneath the low kotatsu table on the opposite side of the room, two green eyes belonging to the neighbor's visiting stray reflect the sunlight, fixed intensely on the same tin.",
+    "A robotic vacuum hums peacefully across the hardwood floor, inching closer to the towering scratching post in the corner. Balanced precariously on the absolute edge of the highest perch, a fragile, vintage porcelain beckoning cat statue begins to wobble as the vacuum forcefully bumps the base."
+  ],
+  "chosen": 0,
+  "prompt": "integrated_multimodal_description: [Shot 1] Photoreal live-action, first-person POV of a house cat, low to the floor, one continuous shot, natural head sway, no cuts. The glass door stands ajar three inches, framing the neon blur of Shibuya far below and the gray back of a plump pigeon perched directly on the metal balcony railing outside. Two orange-furred paws press softly against the hardwood, creeping forward in absolute silence through the gap and onto the cool concrete balcony. The view rises as the front paws mount a plastic storage box below the railing, bringing the bird into close reach. Both hindquarters bunch up below the bottom of the frame, the gaze locking onto the pigeon's twitching tail feathers, and the front paws suddenly launch off the plastic lid straight toward the outer rail as the bird begins to spread its wings.\n\noverall_soundscape: Muffled city rumble, faint siren wailing far below, soft clicking of cat claws on smooth concrete, plastic lid creaking under weight, sudden fluttering of pigeon feathers.\n\nnon_diegetic_music: None.",
+  "notes": "writer took the cat POV rule: 'first-person POV of a house cat, low to the floor', orange paws. Ends on the pounce toward the rail: a real cliffhanger 15 stories up. Scene said the door reveals the street 'fifteen stories below' and the writer kept that."
+}

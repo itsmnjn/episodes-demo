@@ -1,0 +1,191 @@
+{
+  "rubric": ["pov", "style", "premise", "adherence", "cliffhanger", "seam", "move", "choices"],
+  "rubricLabels": {
+    "pov": "POV held",
+    "style": "Style held",
+    "premise": "Premise facts held",
+    "adherence": "Prompt on screen",
+    "cliffhanger": "Ends open",
+    "seam": "Seam to parent",
+    "move": "Move landed",
+    "choices": "Choices"
+  },
+  "episodes": {
+    "washing-machine-door-stays-locked/0": {
+      "pov": ["pass", "Only two bare hands appear, frames 20 to 40 percent."],
+      "style": ["pass", "Photoreal, as the default asks."],
+      "premise": ["pass", "A laundromat, front-loader, baskets, linoleum."],
+      "adherence": ["pass", "Mask in the drum, tabby at the basket, hands on the glass, a hand at the handle at 80 percent, a small silver object at the drum base at 80 to 99 percent."],
+      "cliffhanger": ["weak", "The held frame is a mask in a drum. The flash-drive beat is a few pixels; nothing in the frame demands a move."],
+      "seam": ["na", ""],
+      "move": ["na", ""],
+      "choices": ["weak", "\"Hit the red emergency stop\" / \"Pry the handle with keys\": both physical acts on the machine, so not two kinds. Both doable from the frame."]
+    },
+    "washing-machine-door-stays-locked/0a": {
+      "pov": ["pass", "Hands only; the man is a separate person."],
+      "style": ["pass", "Matches the root."],
+      "premise": ["pass", "Same room, same machine."],
+      "adherence": ["pass", "Hand slaps the red button at 20 percent, a man in a gray hoodie enters at 40, his gloved hand reaches for the drive at 99."],
+      "cliffhanger": ["pass", "A stranger's gloved hand on the evidence."],
+      "seam": ["pass", "Mean gray difference 1.9; the pair is visually identical."],
+      "move": ["pass", "The red button is under the hand by frame 20 percent."],
+      "choices": ["pass", "\"Smack his hand away\" / \"Demand to see his badge\": physical and spoken, both aimed at him."]
+    },
+    "washing-machine-door-stays-locked/0aa": {
+      "pov": ["pass", "Bare hands strike at 20 to 40 percent."],
+      "style": ["pass", ""],
+      "premise": ["pass", ""],
+      "adherence": ["weak", "The slap reads as motion blur at 20 to 40 percent. The prompt's second pair of gloved hands arrives at 99 percent as blue gloves at the bottom right, which a viewer can read as the protagonist's own hands now gloved."],
+      "cliffhanger": ["pass", "The door is being pulled open by someone else."],
+      "seam": ["pass", "Mean gray difference 2.2."],
+      "move": ["pass", "Slap in the first 40 percent."],
+      "choices": ["pass", "\"Slam the washer door shut\" / \"Offer to split the data\": physical and a bargain."]
+    },
+    "washing-machine-door-stays-locked/0ab": {
+      "pov": ["pass", "A bare hand points at 80 to 99 percent."],
+      "style": ["pass", ""],
+      "premise": ["pass", ""],
+      "adherence": ["pass", "The man turns to the lens and talks at 20 to 60 percent, then the hand points at the lit red button."],
+      "cliffhanger": ["weak", "A stare and a pointing finger. The prompt's fire-door slam is sound only."],
+      "seam": ["pass", "Mean gray difference 1.9."],
+      "move": ["pass", "Spoken move: the clip opens on his answer and the protagonist's words are never written or shown."],
+      "choices": ["na", "Never written: settle blocked by the Blob quota."]
+    },
+    "raccoon-places-twenty-dollar-bill/0": {
+      "pov": ["pass", "Hands reach in at 60 to 99 percent."],
+      "style": ["pass", ""],
+      "premise": ["pass", "Convenience store at night, empty."],
+      "adherence": ["weak", "The first 40 percent is a walk down the aisle with the raccoon far away. The raccoon holds the bill at 60 and the hands take it at 80 to 99. The pointing paw is partial at 99; the cooler unlatching is not visible."],
+      "cliffhanger": ["weak", "A raccoon with a raised paw."],
+      "seam": ["na", ""],
+      "move": ["na", ""],
+      "choices": ["pass", "\"Pocket the twenty-dollar bill\" / \"Ask what drink it wants\": physical and spoken."]
+    },
+    "raccoon-places-twenty-dollar-bill/0a": {
+      "pov": ["pass", "Hands and a blue uniform shirt pocket."],
+      "style": ["pass", ""],
+      "premise": ["pass", ""],
+      "adherence": ["pass", "Bill folded into the pocket at 0 to 60 percent; raccoon points at the cooler then turns to the lens at 80 to 99. The cooler looks closed, so the rattling-bottles beat is not on screen."],
+      "cliffhanger": ["weak", "The raccoon stares. Nothing new is in motion."],
+      "seam": ["pass", "Mean gray difference 1.9."],
+      "move": ["pass", "Pocketing is under way by 20 percent."],
+      "choices": ["pass", "\"Slam the cooler door shut\" / \"Offer the twenty back\": physical and an offer."]
+    },
+    "raccoon-places-twenty-dollar-bill/0aa": {
+      "pov": ["pass", "No face; also no hands at all."],
+      "style": ["pass", ""],
+      "premise": ["pass", ""],
+      "adherence": ["fail", "No hand and no cooler door in any sampled frame; the cooler stays closed in the background. The prompt's head-upside-down beat rendered as a second, deformed face at 80 to 99 percent."],
+      "cliffhanger": ["fail", "A deformed raccoon. The scratching under the floor is sound only."],
+      "seam": ["pass", "Mean gray difference 2.1."],
+      "move": ["fail", "\"Slam the cooler door shut\" does not happen on screen."],
+      "choices": ["weak", "\"Stomp on the floor panel\" / \"Ask what is down there\": both refer to a sound the viewer may not register, and no floor panel is visible."]
+    },
+    "raccoon-places-twenty-dollar-bill/0ab": {
+      "pov": ["pass", ""],
+      "style": ["pass", ""],
+      "premise": ["pass", ""],
+      "adherence": ["pass", "Open cooler at the left of frame 0; the raccoon's mouth moves at 20 to 99 percent as the speaking character."],
+      "cliffhanger": ["weak", "The raccoon keeps talking; the door swing is not visible."],
+      "seam": ["pass", "Mean gray difference 1.8."],
+      "move": ["pass", "Spoken move: the raccoon answers with a name. The writer gave it a human voice, a fantasy turn the premise never set up, but a fair consequence of asking."],
+      "choices": ["na", "Never written: settle blocked."]
+    },
+    "pigeon-escapes-the-balcony-rail/0": {
+      "pov": ["fail", "An orange cat is visible from behind in all six frames. The camera follows the cat; it is not the cat's eyes."],
+      "style": ["pass", ""],
+      "premise": ["fail", "The premise makes the viewer the cat. The clip makes the cat the subject."],
+      "adherence": ["weak", "Door gap, Shibuya, pigeon on the rail, cat mounts the box at 60 to 80, wings at 99: the beats are all there, in the wrong person."],
+      "cliffhanger": ["pass", "Pigeon spreading its wings, cat about to pounce."],
+      "seam": ["na", ""],
+      "move": ["na", ""],
+      "choices": ["weak", "\"Swat the pigeon's wing\" / \"Snag the metal railing\": two paw acts of the same kind."]
+    },
+    "pigeon-escapes-the-balcony-rail/0a": {
+      "pov": ["fail", "Third person through 60 percent, then at 80 to 99 a human hand in a gray sleeve enters from the bottom with the cat in front of it: the camera has become the human's."],
+      "style": ["pass", ""],
+      "premise": ["fail", "The protagonist changed species mid-episode."],
+      "adherence": ["weak", "Swat at 0, pigeon flaps at 20, cat tips off the box at 40 to 60, tea bottle at 80, hand at 99. Every beat present, none from the cat's eyes."],
+      "cliffhanger": ["pass", "A hand reaching for the lens."],
+      "seam": ["pass", "Mean gray difference 2.1."],
+      "move": ["weak", "The swat is in the first frame, performed by an on-screen cat."],
+      "choices": ["pass", "\"Tip over the tea bottle\" / \"Bite the reaching fingers\": two physical acts on different targets."]
+    },
+    "pigeon-escapes-the-balcony-rail/0aa": {
+      "pov": ["fail", "The human's own hand and black shoes sit at the bottom of frame; the cat is small at the left. The viewer is the human now."],
+      "style": ["pass", ""],
+      "premise": ["fail", ""],
+      "adherence": ["weak", "Bottle on its side from 20 percent on, door sliding shut at 80 to 99 as written. The hand that did it is human at 0 to 20, a paw at 40 to 60."],
+      "cliffhanger": ["pass", "The door closing on the balcony."],
+      "seam": ["pass", "Mean gray difference 1.6."],
+      "move": ["weak", "The bottle goes over early, but the actor is ambiguous."],
+      "choices": ["na", "Never written: settle blocked. Prompt note: dialogue tagged [Japanese] but written in English."]
+    },
+    "croissant-leaps-from-the-tray/0": {
+      "pov": ["pass", "A clay hand in a blue sleeve enters at 80 percent."],
+      "style": ["pass", "Claymation throughout, including the protagonist's hand."],
+      "premise": ["pass", "Bakery, grandmother at the counter."],
+      "adherence": ["pass", "Croissant opens its eyes at 20 to 60, grandmother's smile drops at 80, the leap with teeth fills the frame at 99."],
+      "cliffhanger": ["pass", "Teeth at the lens."],
+      "seam": ["na", ""],
+      "move": ["na", ""],
+      "choices": ["weak", "\"Swat it with a spatula\" / \"Catch it in the towel\": two defensive physical acts of the same kind."]
+    },
+    "croissant-leaps-from-the-tray/0a": {
+      "pov": ["pass", "Clay hand with the spatula at 40 percent."],
+      "style": ["pass", "Held from the root."],
+      "premise": ["pass", ""],
+      "adherence": ["pass", "Spatula at 40, croissant gone, grandmother's hands to her face at 60 to 99, the whole tray wakes at 99."],
+      "cliffhanger": ["pass", "A tray of teeth."],
+      "seam": ["pass", "Mean gray difference 1.5, the best of the run."],
+      "move": ["pass", "The swat lands between 20 and 40 percent."],
+      "choices": ["na", "Never written: settle blocked."]
+    },
+    "elderly-woman-drops-phone/0": {
+      "pov": ["pass", "One hand holding the phone from 40 percent on."],
+      "style": ["pass", "Photoreal, cinematic rain."],
+      "premise": ["pass", "Bus shelter, stranger, ringing phone, the line is said."],
+      "adherence": ["pass", "Phone pressed into the hand at 0 to 20, she turns at 40, sedans at 60 to 80, doors open and figures at 99."],
+      "cliffhanger": ["pass", "Four figures getting out of three cars."],
+      "seam": ["na", ""],
+      "move": ["na", ""],
+      "choices": ["pass", "\"Answer the ringing flip phone\" / \"Fling the phone into the street\": both physical, opposite intents, both on the object in hand."]
+    },
+    "elderly-woman-drops-phone/0a": {
+      "pov": ["pass", ""],
+      "style": ["pass", ""],
+      "premise": ["pass", ""],
+      "adherence": ["pass", "Phone open from frame 0, men crossing at 20 to 60, surrounding the shelter at 80 to 99."],
+      "cliffhanger": ["pass", "Boxed in."],
+      "seam": ["pass", "Mean gray difference 2.1; the phone is already open in the parent's held frame."],
+      "move": ["pass", "The open phone is the move; the snap itself is inside the first two seconds."],
+      "choices": ["na", "Never written: settle blocked. Prompt note: the phone voice has no speaker tag, since only visible characters may speak."]
+    },
+    "tony-grabs-the-envelope-back/0": {
+      "pov": ["pass", "No hands appear; the camera is seated across the table. A standing waiter would look down more."],
+      "style": ["pass", "Photoreal; the show's look."],
+      "premise": ["pass", "Tony center with a cigar, Silvio right, Paulie left, Artie in an apron with a phone. Likeness from names alone."],
+      "adherence": ["pass", "Envelope pushed across at 0 to 40, Artie at 40 to 80, Tony grabs it back at 99, red and blue lights in the window at 80 to 99."],
+      "cliffhanger": ["pass", "Envelope pulled back as the lights arrive."],
+      "seam": ["na", ""],
+      "move": ["na", ""],
+      "choices": ["na", "Never written: settle blocked."]
+    }
+  },
+  "expander": {
+    "washing-machine-door-stays-locked": ["pass", "Three different situations, all a laundromat, light absurdism for a one-word premise."],
+    "raccoon-places-twenty-dollar-bill": ["pass", "Raccoon, an empty muscle car at the pump, a wet compass: three different genres for one setting."],
+    "pigeon-escapes-the-balcony-rail": ["pass", "All three keep the viewer as the cat: balcony, bonito flakes, robot vacuum."],
+    "croissant-leaps-from-the-tray": ["weak", "Every scene goes surreal (living croissant, radio batter, dough that pins her). The premise asked for a bakery at dawn, nothing more."],
+    "elderly-woman-drops-phone": ["weak", "The premise's own cliffhanger survives in all three, and each scene stacks a second one on top: sedans, a social security number read out, a man jumping in front of a bus."],
+    "tony-grabs-the-envelope-back": ["weak", "Same stacking: feds in the lot, a house fire, a caller asking for the waiter. The scenes also copied the premise's first person (\"to me\", \"my knuckles\"), which the writer then had to strip."]
+  },
+  "titles": {
+    "washing-machine-door-stays-locked": ["pass", "Literal and true."],
+    "raccoon-places-twenty-dollar-bill": ["pass", "Literal; the placing is in the scene text, not the clip."],
+    "pigeon-escapes-the-balcony-rail": ["weak", "The pigeon only starts to spread its wings. \"Escapes\" is an inference."],
+    "croissant-leaps-from-the-tray": ["pass", "Exactly what happens."],
+    "elderly-woman-drops-phone": ["weak", "She hands it over and runs; nothing is dropped."],
+    "tony-grabs-the-envelope-back": ["pass", "Exactly what happens."]
+  }
+}

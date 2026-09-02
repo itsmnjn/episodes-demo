@@ -1,0 +1,209 @@
+{
+  "steps": {
+    "expand": {
+      "n": 6,
+      "median_ms": 2162,
+      "min_ms": 1476,
+      "max_ms": 5125
+    },
+    "rootPrompt": {
+      "n": 6,
+      "median_ms": 2109,
+      "min_ms": 1547,
+      "max_ms": 5551
+    },
+    "submitRoot": {
+      "n": 6,
+      "median_ms": 134,
+      "min_ms": 125,
+      "max_ms": 149
+    },
+    "title": {
+      "n": 6,
+      "median_ms": 588,
+      "min_ms": 544,
+      "max_ms": 742
+    },
+    "render": {
+      "n": 16,
+      "median_ms": 6180,
+      "min_ms": 4660,
+      "max_ms": 6923
+    },
+    "clipDownload": {
+      "n": 16,
+      "median_ms": 2135,
+      "min_ms": 1085,
+      "max_ms": 12541
+    },
+    "choices": {
+      "n": 16,
+      "median_ms": 1103,
+      "min_ms": 605,
+      "max_ms": 3760
+    },
+    "clipUpload": {
+      "n": 10,
+      "median_ms": 2177,
+      "min_ms": 990,
+      "max_ms": 3178
+    },
+    "lastFrame": {
+      "n": 10,
+      "median_ms": 3287,
+      "min_ms": 2724,
+      "max_ms": 8437
+    },
+    "storeClip": {
+      "n": 10,
+      "median_ms": 5591,
+      "min_ms": 4337,
+      "max_ms": 10281
+    },
+    "episodePrompt": {
+      "n": 10,
+      "median_ms": 2428,
+      "min_ms": 1874,
+      "max_ms": 2878
+    },
+    "submitEpisode": {
+      "n": 10,
+      "median_ms": 149,
+      "min_ms": 57,
+      "max_ms": 408
+    }
+  },
+  "waits": [
+    {
+      "series": "washing-machine-door-stays-locked",
+      "episode": "0",
+      "kind": "root",
+      "submit_to_settle_attempt_done_s": 14.2,
+      "settle_outcome": "ok"
+    },
+    {
+      "series": "raccoon-places-twenty-dollar-bill",
+      "episode": "0",
+      "kind": "root",
+      "submit_to_settle_attempt_done_s": 11.3,
+      "settle_outcome": "ok"
+    },
+    {
+      "series": "washing-machine-door-stays-locked",
+      "episode": "0a",
+      "kind": "child",
+      "submit_to_settle_attempt_done_s": 16.4,
+      "settle_outcome": "ok"
+    },
+    {
+      "series": "pigeon-escapes-the-balcony-rail",
+      "episode": "0",
+      "kind": "root",
+      "submit_to_settle_attempt_done_s": 12.0,
+      "settle_outcome": "ok"
+    },
+    {
+      "series": "raccoon-places-twenty-dollar-bill",
+      "episode": "0a",
+      "kind": "child",
+      "submit_to_settle_attempt_done_s": 13.9,
+      "settle_outcome": "ok"
+    },
+    {
+      "series": "washing-machine-door-stays-locked",
+      "episode": "0aa",
+      "kind": "child",
+      "submit_to_settle_attempt_done_s": 11.4,
+      "settle_outcome": "ok"
+    },
+    {
+      "series": "pigeon-escapes-the-balcony-rail",
+      "episode": "0a",
+      "kind": "child",
+      "submit_to_settle_attempt_done_s": 13.2,
+      "settle_outcome": "ok"
+    },
+    {
+      "series": "croissant-leaps-from-the-tray",
+      "episode": "0",
+      "kind": "root",
+      "submit_to_settle_attempt_done_s": 10.1,
+      "settle_outcome": "ok"
+    },
+    {
+      "series": "raccoon-places-twenty-dollar-bill",
+      "episode": "0aa",
+      "kind": "child",
+      "submit_to_settle_attempt_done_s": 11.5,
+      "settle_outcome": "ok"
+    },
+    {
+      "series": "elderly-woman-drops-phone",
+      "episode": "0",
+      "kind": "root",
+      "submit_to_settle_attempt_done_s": 10.5,
+      "settle_outcome": "ok"
+    },
+    {
+      "series": "pigeon-escapes-the-balcony-rail",
+      "episode": "0aa",
+      "kind": "child",
+      "submit_to_settle_attempt_done_s": 10.9,
+      "settle_outcome": "failed"
+    },
+    {
+      "series": "croissant-leaps-from-the-tray",
+      "episode": "0a",
+      "kind": "child",
+      "submit_to_settle_attempt_done_s": 9.4,
+      "settle_outcome": "failed"
+    },
+    {
+      "series": "washing-machine-door-stays-locked",
+      "episode": "0ab",
+      "kind": "child",
+      "submit_to_settle_attempt_done_s": 18.1,
+      "settle_outcome": "failed"
+    },
+    {
+      "series": "raccoon-places-twenty-dollar-bill",
+      "episode": "0ab",
+      "kind": "child",
+      "submit_to_settle_attempt_done_s": 24.3,
+      "settle_outcome": "failed"
+    },
+    {
+      "series": "elderly-woman-drops-phone",
+      "episode": "0a",
+      "kind": "child",
+      "submit_to_settle_attempt_done_s": 20.7,
+      "settle_outcome": "failed"
+    },
+    {
+      "series": "tony-grabs-the-envelope-back",
+      "episode": "0",
+      "kind": "root",
+      "submit_to_settle_attempt_done_s": 7.1,
+      "settle_outcome": "failed"
+    }
+  ],
+  "choicesCallsTotal": 269,
+  "failedSettleAttempts": {
+    "pigeon-escapes-the-balcony-rail/0aa": 76,
+    "croissant-leaps-from-the-tray/0a": 51,
+    "washing-machine-door-stays-locked/0ab": 70,
+    "raccoon-places-twenty-dollar-bill/0ab": 28,
+    "elderly-woman-drops-phone/0a": 20,
+    "tony-grabs-the-envelope-back/0": 2
+  },
+  "bytesPushedAllAttempts": 3365963742,
+  "healthyDoubleSettles": {
+    "washing-machine-door-stays-locked/0": 2,
+    "raccoon-places-twenty-dollar-bill/0": 2,
+    "washing-machine-door-stays-locked/0a": 4,
+    "pigeon-escapes-the-balcony-rail/0": 2,
+    "raccoon-places-twenty-dollar-bill/0a": 3,
+    "pigeon-escapes-the-balcony-rail/0a": 3,
+    "raccoon-places-twenty-dollar-bill/0aa": 3
+  }
+}

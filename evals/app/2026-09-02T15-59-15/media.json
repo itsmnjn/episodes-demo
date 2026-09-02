@@ -1,0 +1,208 @@
+{
+  "clips": {
+    "washing-machine-door-stays-locked/0": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 11356302
+    },
+    "raccoon-places-twenty-dollar-bill/0": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 19177097
+    },
+    "washing-machine-door-stays-locked/0a": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 11683051
+    },
+    "pigeon-escapes-the-balcony-rail/0": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 14677015
+    },
+    "raccoon-places-twenty-dollar-bill/0a": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 18288592
+    },
+    "washing-machine-door-stays-locked/0aa": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 12901566
+    },
+    "pigeon-escapes-the-balcony-rail/0a": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 15380441
+    },
+    "croissant-leaps-from-the-tray/0": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 9202479
+    },
+    "raccoon-places-twenty-dollar-bill/0aa": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 17253486
+    },
+    "elderly-woman-drops-phone/0": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 9470285
+    },
+    "pigeon-escapes-the-balcony-rail/0aa": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 14323800
+    },
+    "croissant-leaps-from-the-tray/0a": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 9245317
+    },
+    "washing-machine-door-stays-locked/0ab": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 11126790
+    },
+    "raccoon-places-twenty-dollar-bill/0ab": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 16027287
+    },
+    "elderly-woman-drops-phone/0a": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 12051096
+    },
+    "tony-grabs-the-envelope-back/0": {
+      "duration": 10.144,
+      "resolution": "768x1344",
+      "fps": "24/1",
+      "audio": true,
+      "bytes": 7843800
+    }
+  },
+  "seams": [
+    {
+      "series": "washing-machine-door-stays-locked",
+      "episode": "0a",
+      "parent": "0",
+      "parentLastFrom": "blob last frame",
+      "seam": 1.91,
+      "withinClip0to20": 69.61,
+      "unrelatedRoot": 57.12
+    },
+    {
+      "series": "raccoon-places-twenty-dollar-bill",
+      "episode": "0a",
+      "parent": "0",
+      "parentLastFrom": "blob last frame",
+      "seam": 1.9,
+      "withinClip0to20": 54.83,
+      "unrelatedRoot": 65.13
+    },
+    {
+      "series": "washing-machine-door-stays-locked",
+      "episode": "0aa",
+      "parent": "0a",
+      "parentLastFrom": "blob last frame",
+      "seam": 2.18,
+      "withinClip0to20": 58.19,
+      "unrelatedRoot": 69.94
+    },
+    {
+      "series": "pigeon-escapes-the-balcony-rail",
+      "episode": "0a",
+      "parent": "0",
+      "parentLastFrom": "blob last frame",
+      "seam": 2.14,
+      "withinClip0to20": 57.81,
+      "unrelatedRoot": 68.94
+    },
+    {
+      "series": "raccoon-places-twenty-dollar-bill",
+      "episode": "0aa",
+      "parent": "0a",
+      "parentLastFrom": "blob last frame",
+      "seam": 2.08,
+      "withinClip0to20": 59.02,
+      "unrelatedRoot": 62.4
+    },
+    {
+      "series": "pigeon-escapes-the-balcony-rail",
+      "episode": "0aa",
+      "parent": "0a",
+      "parentLastFrom": "blob last frame",
+      "seam": 1.56,
+      "withinClip0to20": 34.84,
+      "unrelatedRoot": 77.3
+    },
+    {
+      "series": "croissant-leaps-from-the-tray",
+      "episode": "0a",
+      "parent": "0",
+      "parentLastFrom": "blob last frame",
+      "seam": 1.5,
+      "withinClip0to20": 43.88,
+      "unrelatedRoot": 69.64
+    },
+    {
+      "series": "washing-machine-door-stays-locked",
+      "episode": "0ab",
+      "parent": "0a",
+      "parentLastFrom": "blob last frame",
+      "seam": 1.94,
+      "withinClip0to20": 55.22,
+      "unrelatedRoot": 69.94
+    },
+    {
+      "series": "raccoon-places-twenty-dollar-bill",
+      "episode": "0ab",
+      "parent": "0a",
+      "parentLastFrom": "blob last frame",
+      "seam": 1.75,
+      "withinClip0to20": 47.14,
+      "unrelatedRoot": 62.4
+    },
+    {
+      "series": "elderly-woman-drops-phone",
+      "episode": "0a",
+      "parent": "0",
+      "parentLastFrom": "blob last frame",
+      "seam": 2.07,
+      "withinClip0to20": 40.69,
+      "unrelatedRoot": 72.97
+    }
+  ]
+}
