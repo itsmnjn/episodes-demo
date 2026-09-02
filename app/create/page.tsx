@@ -113,7 +113,7 @@ export default function CreatePage() {
             />
             <div className="flex items-center gap-4">
               <button type="submit" disabled={busy !== null || !premise.trim()} className={buttonClass}>
-                {busy === "scenes" ? <span className="animate-pulse">Finding three openings&hellip;</span> : "Find openings"}
+                {busy === "scenes" ? <span className="animate-pulse">Expanding&hellip;</span> : "Expand"}
               </button>
               <label className="flex items-center gap-2 text-sm text-mute">
                 <input
@@ -132,7 +132,7 @@ export default function CreatePage() {
 
         {scenes.length > 0 ? (
           <section className="mt-12">
-            <p className="mb-3 text-xs font-medium tracking-[0.22em] text-mute uppercase">Opening</p>
+            <p className="mb-3 text-xs font-medium tracking-[0.22em] text-mute uppercase">Scenes</p>
             <div className="flex flex-col gap-3">
               {scenes.map((item) => (
                 <button
@@ -157,7 +157,7 @@ export default function CreatePage() {
           <section className="mt-12">
             <p className="mb-3 text-xs font-medium tracking-[0.22em] text-mute uppercase">Prompt</p>
             {busy === "prompt" ? (
-              <p className="animate-pulse text-sm text-mute">Writing the opening&hellip;</p>
+              <p className="animate-pulse text-sm text-mute">Writing the prompt&hellip;</p>
             ) : (
               <form
                 onSubmit={(event) => {
